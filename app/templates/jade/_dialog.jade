@@ -1,0 +1,60 @@
+mixin dialog(index)
+  if index === 1
+    // 首页
+    .btn-word-wrap
+      a.btn1(href="###") 弹层一
+      a.btn2(href="###") 弹层二
+      a.btn3(href="###") 弹层三
+    .dialog
+      span.side
+      a.dialog-close.ti(href="###") 关闭
+      h3.title 2016 S1英雄联盟5V5战队联赛
+      .video-wrap
+        | <iframe class="video" height="450" width="805" src="http://player.youku.com/embed/XODQ1NzA0NDE2" border="0" marginheight="0" scrolling="no" frameborder="no" allowtransparency="true"></iframe>
+    .dialog.txt
+      span.side
+      a.dialog-close.ti(href="###") 关闭
+      p.content 下赛个人版，报名查看全部赛事
+      .btn-wrap
+        button.btn-sure 立即下载
+    .dialog.download
+      span.side
+      a.dialog-close.ti(href="###") 关闭
+      .tab
+        ul
+          li.sel
+            a(href="###") IOS版
+          li
+            a(href="###").mr0 Android版
+      .img-wrap
+        img(src="./images/ios.jpg", alt="")
+        //- a.dl(href="###")
+        //-   span App Store下载
+      .img-wrap.none
+        img(src="./images/android.jpg", alt="")
+  else if index === 2
+    // 赛事列表
+    .btn-word-wrap
+      a.btn2(href="###") 弹层一
+      a.btn3(href="###") 弹层二
+    .dialog.txt
+      span.side
+      a.dialog-close.ti(href="###") 关闭
+      p.content 下赛个人版，报名查看全部赛事
+      .btn-wrap
+        button.btn-sure 立即下载
+    .dialog.download
+      span.side
+      a.dialog-close.ti(href="###") 关闭
+      .tab
+        ul
+          li.sel
+            a(href="###") IOS版
+          li
+            a(href="###").mr0 Android版
+      .img-wrap
+        img(src="./images/ios.jpg", alt="")
+        //- a.dl(href="###")
+        //-   span App Store下载
+      .img-wrap.none
+        img(src="./images/android.jpg", alt="")

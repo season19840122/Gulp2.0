@@ -1,0 +1,202 @@
+.center_modal_box{
+    width: 1070px;
+    position: relative;
+    .v_middle{display: inline-block;vertical-align: middle;}
+    .state_red{color: #ff3600;}
+    .state_blue{color: #0892da;}
+    .state_grey{color: #555e67}
+    .state_green{color: #00b308}
+    .state_lBlue{
+        padding-right: 10px;
+        cursor: pointer;
+        color: #04cde0;
+        position: relative;
+        &:after{
+            content: "!";
+            color: #000;
+            width: 12px;
+            height: 12px;
+            background: #04cde0;
+            border-radius: 10px;
+            text-align: center;
+            line-height: 12px;
+            position: absolute;
+            left: 39px;
+            font-weight: bold;
+            top: 4px;
+            cursor: pointer;
+        }
+        span{
+            display: none;
+            position: absolute;
+            padding: 10px 15px;
+            left: 0px;
+            top: 31px;
+            z-index: 100;
+            width: 230px;
+            color: #fff;
+            background: rgba(9, 101, 104, 0.9);
+            text-align: left;
+            &:before{
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 10px;
+                border-color: transparent transparent rgba(9, 101, 104, 0.9) transparent;
+                content: " ";
+                position: absolute;
+                top: -19px;
+                left: 35px;
+            }
+        }
+    }
+    .modal_list{
+        font-size: 12px;
+        color: #59626c;
+        &:after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+        & > li{
+            .li_box{padding-left: 10px;}
+            width: 250px;
+            height: 296px;
+            position: relative;
+            background: #111417;
+            margin: 0px 14px 14px 0px;
+            float: left;
+            cursor: pointer;
+            text-align: center;
+            &:hover{box-shadow: 0px 0px 10px 2px #004b76;}
+            .title_bg_lol{background: url(../images/lol_bg.jpg) no-repeat;}
+            .title_bg_m3g{background: url(../images/msg_bg.jpg) no-repeat;}
+            .title_bg_tk{background: url(../images/tank_bg.jpg) no-repeat;}
+            .title_bg_300{background: url(../images/300_bg.jpg) no-repeat;}
+            .modal_title{
+                width: 250px;
+                height: 100px;
+                position: relative;
+                text-align: center;
+                p{position: absolute;left: 10px;top: 10px;}
+                img{margin-top: 6px;}
+                span.p_left_10{padding-left: 10px;}
+                span.p_right_10{padding-right: 10px;}
+            }
+            .modal_title_bottom{
+                position: absolute;
+                background: url(../images/lol_title_bottom.png) no-repeat;
+                width: 250px;
+                height: 26px;
+                bottom: 0px;
+                line-height: 26px;
+            }
+            .modal_middle{
+                background: url(../images/modal_flower.png) -4px 0px;
+                height: 40px;
+                font-size: 14px;
+                font-weight: bold;
+                color: #e9c000;
+                line-height: 40px;
+            }
+            .time_limit{
+                li{
+                    text-align: left;
+                    .lowRemind{color:#363f48}
+                }
+            }
+            .style_limit{
+                width: 250px;
+                padding-top: 10px;
+                &:after{
+                    content: "";
+                    display: block;
+                    clear: both;
+                }
+                li{
+                    display: inline-block;
+                    float: left;
+                    color:#23516c;
+                    padding: 0px 7px;
+                    border-radius: 5px;
+                    border: 1px #23516c solid;
+                    margin: 0px 4px 4px 0px;
+                }
+            }
+            .rank_list{
+                margin-top: -4px;
+                li{
+                    height: 28px;
+                    text-align: left;
+                    line-height: 28px;
+                    border-bottom: 1px #1a1c1e solid;
+                }
+                li:last-child{border: 0;}
+                div{
+                    width: 68px;
+                    display: inline-block;
+                    text-align: center;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    vertical-align: middle;
+                }
+                span{
+                    width: 14px;
+                    height: 14px;
+                    display: inline-block;
+                    border-radius: 7px;
+                    text-align: center;
+                    line-height: 14px;
+                    margin: 0px 0px 0px 3px;
+                    vertical-align: middle;
+                }
+                .rank_c_1{background: #a8a600;color: white;}
+                .rank_c_2{background: #8f8f8f;color: white;}
+                .rank_c_3{background: #484823;color: white;}
+                .rank_my{text-align: right;color: #a63516;padding-right: 19px;}
+            }
+            .foot_status{
+                text-align: right;
+                position: absolute;
+                width: 250px;
+                height:26px;
+                bottom: 5px;
+                right: 5px;
+                a{
+                    display: inline-block;
+                    text-decoration: none;
+                    width: 90px;
+                    height: 26px;
+                    text-align: center;
+                    line-height: 26px;
+                    color: white;
+                    box-sizing: border-box;
+                }
+            }
+        }
+    }
+}
+.status_button{
+    background: url(../images/sprite_button.jpg) 0 0;
+    &:hover{background-position-y: -26px;}
+    &:active{background-position-y: -52px;}
+}
+.btn_status_1{background-position-x: 0px;
+}
+.btn_status_2{background-position-x: -90px;
+}
+.btn_status_3{background-position-x: -180px;
+}
+.btn_status_4{
+    background: #151617;
+    margin-top: 1px;
+    border: 1px #1e3441 solid;
+    color: #335467 !important;
+    cursor: default;
+}
+.icon-hand{background-image: url('../images/sprite_icon.png');background-repeat: no-repeat;background-position: 0px 0px;width:15px;height:16px;}
+.icon-people{background-image: url('../images/sprite_icon.png');background-repeat: no-repeat;background-position: 0px -19px;width:14px;height:14px;}
+.icon-pos{background-image: url('../images/sprite_icon.png');background-repeat: no-repeat;background-position: -18px 0px;width:15px;height:16px;}
+.icon-war{background-image: url('../images/sprite_icon.png');background-repeat: no-repeat;background-position: -17px -19px;width:15px;height:13px;}
+.icon_width15{width: 15px;}

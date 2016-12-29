@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>弹窗</title>
+  <link rel="stylesheet" href="styles/index.css"/>
+  <link rel="stylesheet" href="styles/modal.css"/>
+</head>
+<body>
+<br>个人：
+<button type="button" data-toggle="modal" data-target="#bind-switch">绑定更换成功</button>
+<button type="button" data-toggle="modal" data-target="#sure-modal">绑定确认</button>
+<button type="button" data-toggle="modal" data-target="#transferTo-modal">转入顺豆确认</button>
+<button type="button" data-toggle="modal" data-target="#bind-modal1">微信扫码绑定</button>
+<button type="button" data-toggle="modal" data-target="#bind-modal2">手机绑定</button>
+<button type="button" data-toggle="modal" data-target="#text-modal1" data-text='手机更换成功！'>手机更换成功</button>
+<button type="button" data-toggle="modal" data-target="#text-modal1" data-text='微信更换成功！'>微信更换成功</button>
+<button type="button" data-toggle="modal" data-target="#text-modal1" data-text='绑定失败，每个游戏帐号仅能绑定一个星云帐号~<br>帐号 <span class="blue">2440663620( 皮尔特沃夫-金猫）</span>已绑定其他账户。'>绑定失败-已绑定其他</button>
+<button type="button" data-toggle="modal" data-target="#text-modal1" data-text='恭喜，成功转入顺16000顺豆~ <a class="blue txt-unl" href="">查看我的顺豆</a>'>绑定-转入顺豆成功</button>
+<button type="button" data-toggle="modal" data-target="#text-modal1" data-text="<p>微信验证失败！扫描的微信与绑定的微信号不符！</p>" >微信验证失败</button>
+
+
+<br/>首页报名：
+<button type="button" data-toggle="modal" data-target="#success-modal">报名成功</button>
+<button type="button" data-toggle="modal" data-target="#fail-modal">报名失败</button>
+<button type="button" data-toggle="modal" data-target="#sure-modal2">报名绑定确认</button>
+<button type="button" data-toggle="modal" data-target="#quick-switch">快速更换账号</button>
+<button type="button" data-toggle="modal" data-target="#text-modal2" data-text="<p>请先登录<span class='blue'>英雄联盟（游戏名称）</span>，才能报名参加比赛哦</p>" data-foot='登录游戏'>请先登录</button>
+<button type="button" data-toggle="modal" data-target="#text-modal2" data-text="<p>确认为<span class='blue'>2440663620(皮尔特沃夫-金猫)</span>报名参赛吗？</p>" data-foot='确定'>确定为**报名？</button>
+<button type="button" data-toggle="modal" data-target="#text-modal2" data-text='<p class="pb10 fontSize18">报名费：<s>1000顺豆</s><span class="orange">&nbsp;&nbsp;免费</span></p><p>确定为召唤师“<span class="blue">依旧不知所谓（皮城警备）</span>”报名吗？' data-checkbox="show" data-foot='确定'>报名-免费</button>
+
+<button type="button" data-toggle="modal" data-target="#way-sign">报名-1000顺豆</button>
+<button type="button" data-toggle="modal" data-target="#way-sign2">报名-顺豆不足</button>
+
+<br/>战队赛：
+<button type="button" data-toggle="modal" data-target="#text-modal1" data-text="<p>已报名<span class='blue'>艾欧尼亚7月1日常规赛</span>，不可重复报名</p>" >已报名</button>
+<button type="button" data-toggle="modal" data-target="#text-modal1" data-text="<p>投票成功！战区票选有您一臂之力，感谢参与~</p>" >投票成功</button>
+
+<div id="text-modal1" tabindex="-1" role="dialog" aria-hidden="true" class="modal hide fade modal-s"
+     data-backdrop="static">
+  <div class="modal-dialog modal-md">
+    <div class="modal-content">
+      <div class="modal-header">
+        <a data-dismiss="modal" aria-hidden="true" class="close"></a>
+      </div>
+      <div class="modal-body">
+        <div class="info">
+          <p class="modal-text">此处填写文字</p>
+        </div>
+      </div>
+      <div class="modal-footer text-right">
+        <div class="modal-btns">
+          <a href="javascript:void(0)" data-dismiss="modal" aria-hidden="true" class="btn_sure close">关闭</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="text-modal2" tabindex="-1" role="dialog" aria-hidden="true" class="modal hide fade  modal-s"
+     data-backdrop="static">
+  <div class="modal-dialog modal-md">
+    <div class="modal-content">
+      <div class="modal-header">
+        <a data-dismiss="modal" aria-hidden="true" class="close"></a>
+      </div>
+      <div class="modal-body">
+        <div class="info">
+
+        </div>
+      </div>
+      <div class="modal-footer text-right">
+        <span class="user_agreement">
+          <input type="checkbox" checked />
+          <a data-toggle="modal" data-target="#user_agreement_con" class="blue txt-unl mr50">阅读并同意赛事报名协议</a>
+        </span>
+        <div class="modal-btns">
+          <a href="javascript:void(0)" data-dismiss="modal" aria-hidden="true" class="btn_sure close">确定</a>
+          <a href="javascript:void(0)" data-dismiss="modal" aria-hidden="true" class="btn_cancel close">取消</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--个人-->
+<div id="bind-switch" tabindex="-1" role="dialog" aria-hidden="true" class="modal hide fade  modal-s"
+     data-backdrop="static">
+  <div class="modal-dialog modal-md">
+    <div class="modal-content">
+      <div class="modal-header">
+        <a data-dismiss="modal" aria-hidden="true" class="close"></a>
+      </div>
+      <div class="modal-body">
+        <div class="info">
+          <p>恭喜，<span class="blue">2440663620(皮尔特沃夫-金猫)</span>成功绑定到星云账号！</p>
+        </div>
+      </div>
+      <div class="modal-footer text-right">
+        <div class="modal-btns">
+          <a href="javascript:void(0)" data-dismiss="modal" aria-hidden="true" class="btn_sure close">立即开始游戏</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="sure-modal" tabindex="-1" role="dialog" aria-hidden="true" class="modal hide fade  modal-s"
+     data-backdrop="static">
+  <div class="modal-dialog modal-md">
+    <div class="modal-content">
+      <div class="modal-header">
+        <a data-dismiss="modal" aria-hidden="true" class="close"></a>
+      </div>
+      <div class="modal-body">
+        <div class="instro w355">
+          <p class="mt0">确认绑定帐号<span class="blue">2440663620(皮尔特沃夫-金猫)</span>吗?</p>
+          <ul class="mt20 text-left">
+            <li class="orange">●绑定后，才可参与全民电竞、本吧活动和胜场有你活动</li>
+            <!--梦三不要第2条-->
+            <li class="orange">●顺豆(首次绑定)、参赛和获奖记录也会同步转入火马账号</li>
+            <li class="orange">●1个火马账号最多可绑定5个同游戏账号，暂不支持解绑</li>
+          </ul>
+          <!--手机验证码绑定-->
+            <p>为保护你的账号安全，请输入手机验证码进行安全验证</p>
+            <p><label for="" class="w90">登录手机号</label><input type="text" class="w124"/><!--<a href="" class="get_code">获取验证码</a>--><a href="javascript:void(0)" class="get_code disabled" >59秒</a></p>
+            <p><label for="" class="w90">已绑定手机号</label><input type="text" class="w124" disabled value="12333333333"/><a href="" class="get_code">获取验证码</a></p>
+            <p><label for="" class="w90">手机验证码</label><input type="text" class="w212"/></p>
+            <p class="tip_error">手机号错误</p>
+          <!--手机验证码绑定 end-->
+          <!--微信扫码绑定-->
+            <!--<div class="code-sm"><img src="images/pics/erweima.jpg" alt="" width="130" height="130"></div>-->
+            <!--<p class="text-center">为保护你的账号安全，请用微信扫码验证</p>-->
+          <!--微信扫码绑定 end-->
+        </div>
+      </div>
+      <div class="modal-footer text-right">
+        <div class="modal-btns">
+          <a href="javascript:void(0)" data-dismiss="modal" aria-hidden="true" class="btn_sure close">确定</a>
+          <a href="javascript:void(0)" data-dismiss="modal" aria-hidden="true" class="btn_cancel close">取消</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="transferTo-modal" tabindex="-1" role="dialog" aria-hidden="true" class="modal hide fade  modal-s"
+     data-backdrop="static">
+  <div class="modal-dialog modal-md">
+    <div class="modal-content">
+      <div class="modal-header">
+        <a data-dismiss="modal" aria-hidden="true" class="close"></a>
+      </div>
+      <div class="modal-body">
+        <div class="info">
+          <div class="rect_box">每个星云账户支持 <span class="yellow">3次</span>顺豆转入，您还有<span class="yellow">2次</span>转入顺豆的机会哦~</div>
+          <table width="100%" class="sd_table">
+            <tr>
+              <td>游戏账号：</td>
+              <td>3479283429</td>
+            </tr>
+            <tr>
+              <td>顺豆总数：</td>
+              <td>2222</td>
+            </tr>
+            <tr>
+              <td>转入手续费：</td>
+              <td>顺豆总数*20%</td>
+            </tr>
+            <tr>
+              <td class="yellow">可转入顺豆：</td>
+              <td class="yellow">16000</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <div class="modal-footer text-right">
+        <div class="modal-btns">
+          <a href="javascript:void(0)" data-dismiss="modal" aria-hidden="true" class="btn_sure close" >确认转入顺豆</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="bind-modal1" tabindex="-1" role="dialog" aria-hidden="true" class="modal hide fade modal-top-s "
+     data-backdrop="static">
+  <div class="modal-dialog modal-md">
+    <div class="modal-content">
+      <div class="modal-header">
+        <a data-dismiss="modal" aria-hidden="true" class="close"></a>
+      </div>
+      <div class="modal-body">
+        <div class="info">
+          <p>请用微信扫描此二维码，完成微信绑定！</p>
+          <div class="code-sm"><img src="images/pics/erweima.jpg" alt="" width="130" height="130"/></div>
+        </div>
+      </div>
+      <div class="modal-footer text-right">
+        <div class="modal-btns">
+          <a href="javascript:void(0)" data-dismiss="modal" aria-hidden="true" class="btn_sure close">关闭</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="bind-modal2" tabindex="-1" role="dialog" aria-hidden="true" class="modal hide fade  modal-s"
+     data-backdrop="static">
+  <div class="modal-dialog modal-md">
+    <div class="modal-content">
+      <div class="modal-header">
+        <a data-dismiss="modal" aria-hidden="true" class="close"></a>
+      </div>
+      <div class="modal-body">
+        <p>
+          <label class="w130">手机号：</label>
+          <input type="text" >
+          <a class="get_code" href="">发送验证码</a>
+        </p>
+        <p>
+          <label class="w130">验证码：</label>
+          <input type="text" >
+          <span class="red">验证码1错误</span>
+        </p>
+      </div>
+      <div class="modal-footer text-right">
+        <div class="modal-btns">
+          <a href="javascript:void(0)" data-dismiss="modal" aria-hidden="true" class="btn_sure close">关闭</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--首页报名-->
+<div id="success-modal" tabindex="-1" role="dialog" aria-hidden="true" class="modal hide fade  modal-s"
+     data-backdrop="static">
+  <div class="modal-dialog modal-md">
+    <div class="modal-content">
+      <div class="modal-header">
+        <a data-dismiss="modal" aria-hidden="true" class="close"></a>
+      </div>
+      <div class="modal-body">
+        <div class="intro">
+          <h2 class="txt_success"><span>恭喜，报名成功！</span></h2>
+          <div class="clearfix condition">
+            <span class="fl fontSize14">特别提醒，本场比赛有如下限制：</span>
+            <span class="condition_rect condition_type">击杀赛</span>
+            <span class="condition_rect condition_type">匹配</span>
+            <span class="condition_rect condition_type">排位</span>
+            <span class="condition_rect condition_type">大乱斗</span>
+            <span class="condition_rect condition_restrict">限单人</span>
+            <span class="condition_rect condition_restrict">限段位(2)</span>
+            <span class="condition_rect condition_restrict">限时间</span>
+            <span class="condition_rect condition_restrict">限英雄(3)</span>
+          </div>
+
+        </div>
+      </div>
+      <div class="modal-footer text-right">
+        <div class="modal-btns">
+          <a href="javascript:void(0)" data-dismiss="modal" aria-hidden="true" class="btn_sure close">立即开始游戏</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="fail-modal" tabindex="-1" role="dialog" aria-hidden="true" class="modal hide fade  modal-s"
+     data-backdrop="static">
+  <div class="modal-dialog modal-md">
+    <div class="modal-content">
+      <div class="modal-header">
+        <a data-dismiss="modal" aria-hidden="true" class="close"></a>
+      </div>
+      <div class="modal-body">
+        <div class="info">
+          <h2 class="txt_fail"><span>报名失败</span></h2>
+          <p>此赛期中，每个星云帐号只能报名参加一场比赛哦~</p>
+        </div>
+      </div>
+      <div class="modal-footer text-right">
+        <div class="modal-btns">
+          <a href="javascript:void(0)" data-dismiss="modal" aria-hidden="true" class="btn_sure close" >关闭</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="quick-switch" tabindex="-1" role="dialog" aria-hidden="true" class="modal hide fade  modal-s"
+     data-backdrop="static">
+  <div class="modal-dialog modal-md">
+    <div class="modal-content">
+      <div class="modal-header">
+        <a data-dismiss="modal" aria-hidden="true" class="close"></a>
+      </div>
+      <div class="modal-body pt15pb30">
+        <p class="mt0"><span class="blue">2440663620(皮尔特沃夫-金猫)</span>已绑定过星云帐号，并已报名参赛！</p>
+      </div>
+      <div class="modal-footer text-center pb10">
+        <p>快速更换星云账号:</p>
+
+        <div class="list_pics pics_login">
+          <ul>
+            <li>
+              <a href=""><img src="images/pics/img01.jpg" alt=""></a>
+            </li>
+          </ul>
+        </div>
+        <!--<p ><span class="blue">或者</span>更换英雄联盟游戏账号，重新登录并报名比赛</p>-->
+      </div>
+    </div>
+  </div>
+</div>
+<div id="sure-modal2" tabindex="-1" role="dialog" aria-hidden="true" class="modal hide fade  modal-s"
+     data-backdrop="static">
+  <div class="modal-dialog modal-md">
+    <div class="modal-content">
+      <div class="modal-header">
+        <a data-dismiss="modal" aria-hidden="true" class="close"></a>
+      </div>
+      <div class="modal-body">
+        <div class="info">
+          <p class="">确认绑定帐号<span class="blue">2440663620(皮尔特沃夫-金猫)</span>并为其报名参赛吗？</p>
+          <ul class="mt20 text-left">
+            <li class="orange">● 顺豆(首次绑定账号)、参赛、获奖记录也将同步转入星云账号。</li>
+            <li class="orange">● 绑定后，可直接报名参加星云平台的相关比赛活动。</li>
+          </ul>
+        </div>
+      </div>
+      <div class="modal-footer text-right">
+        <div class="modal-btns">
+          <a href="javascript:void(0)" data-dismiss="modal" aria-hidden="true" class="btn_sure close">确定</a>
+          <a href="javascript:void(0)" data-dismiss="modal" aria-hidden="true" class="btn_cancel close">取消</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="way-sign" tabindex="-1" role="dialog" aria-hidden="true" class="modal hide fade  modal-s" data-backdrop="static">
+  <div class="modal-dialog modal-md">
+    <div class="modal-content">
+      <div class="modal-header">
+        <a data-dismiss="modal" aria-hidden="true" class="close"></a>
+      </div>
+      <div class="modal-body dl">
+        <div class="info">
+          <p>为帐号<span class="blue">2440663620</span>，需报名费￥3(或3000顺豆)，你可以</p>
+          <ul class="app-wrap">
+            <li class="sel">扫码下载APP，免费报名</li>
+            <li>付费报名</li>
+          </ul>
+          <div class="line"></div>
+          <div class="app-wrap-content">
+            <div class="qrcode-wrap">
+              <img src="images/pics/qrcode.png" alt="">
+              <p class="describe">支持<i class="icon ios"></i>IOS/<i class="icon android"></i>Android扫码下载</p>
+              <p class="info">仅限已完成微信、手机认证的火马电竞用户(点击右上角头像完成认证)</p>
+            </div>
+            <div class="ffbm-wrap none">
+              <a href="" class="btn_sign mt30">扣除1000顺豆，立即报名</a>
+              <div class="p-text"><b>·</b> 请网吧安装顺网网吧管家，免费报名</div>
+              <div class="protocol">
+                <span class="user_agreement">
+                    <input type="checkbox" checked/>
+                    <a data-toggle="modal" data-target="#user_agreement_con" class="blue txt-unl mr50">阅读并同意赛事报名协议</a>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="way-sign2" tabindex="-1" role="dialog" aria-hidden="true" class="modal hide fade  modal-s" data-backdrop="static">
+  <div class="modal-dialog modal-md">
+    <div class="modal-content">
+      <div class="modal-header">
+        <a data-dismiss="modal" aria-hidden="true" class="close"></a>
+      </div>
+      <div class="modal-body dl">
+        <div class="info">
+          <p>为帐号<span class="blue">2440663620(皮尔特沃夫-金猫)</span>报名将消耗1000顺豆,你可以</p>
+          <ul class="app-wrap">
+            <li class="sel">扫码下载APP，免费报名</li>
+            <li>付费报名</li>
+          </ul>
+          <div class="line"></div>
+          <div class="app-wrap-content">
+            <div class="qrcode-wrap">
+              <img src="images/pics/qrcode.png" alt="">
+              <p class="describe">支持<i class="icon ios"></i>IOS/<i class="icon android"></i>Android扫码下载</p>
+              <p class="info">仅限已完成微信、手机认证的火马电竞用户(点击右上角头像完成认证)</p>
+            </div>
+            <div class="ffbm-wrap none">
+              <div class="rect mt20">
+                <div class="fl text-left">
+                <span class="blue">用微信扫码支付:1元充值1000顺豆来报名</span>
+                <br/>
+                <span class="user_agreement">
+                  <input type="checkbox" checked/>
+                  <a data-toggle="modal" data-target="#user_agreement_con" class="blue txt-unl mr50">阅读并同意赛事报名协议</a>
+                </span>
+                </div>
+                <div id="qrcode" class="fr"></div>
+              </div>
+              <div class="p-text"><b>·</b> 请网吧安装顺网网吧管家，免费报名</div>
+              <div class="p-text"><b>·</b> 去游戏里参加竞猜活动，赢取更多顺豆再来报名</div>
+            </div>
+          </div>
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="user_agreement_con" tabindex="-1" role="dialog" aria-hidden="true" class="modal hide fade modal-s" data-backdrop="static">
+  <div class="modal-dialog modal-md">
+    <div class="modal-content">
+      <div class="modal-header">
+        <a data-dismiss="modal" aria-hidden="true" class="close"></a>
+      </div>
+      <div class="modal-body ptb20">
+        <p class="blue mt0">报名协议</p>
+        <div class="agreement_text smallScroll">
+          <p>请仔细阅读以下内容，继续进行报名将视为同意本协议并按照本协议享受权利承担义务。</p>
+          <p>1. 本站网上报名系统的所有权归属于杭州顺网科技股份有限公司（以下简称“顺网”）。</p>
+          <p>2. 参赛玩家报名所提交的个人信息（身份证件号码，联系电话等）必须真实有效。顺网有权在赛事期间核实参赛玩家信息，若参赛玩家信息与报名时提交的个人信息不符，顺网将取消参赛玩家的参赛资格。如因个人信息虚假或错误而导致无法领取奖品等后果的，由参赛玩家自行承担。</p>
+          <p>3. 顺网可根据比赛情况，在比赛过程中要求参赛玩家提供更为详尽的信息资料，参赛玩家应按照顺网的要求及时提交。</p>
+          <p>4. 参赛玩家需承担个人信息风险，如帐号信息泄露导致的一切后果（包括但不限于奖品被冒领），参赛玩家需自行承担责任。</p>
+          <p>5. 实际参赛人数以报名开始日到截止日期间的报名并通过顺网审核的人数为准。</p>
+          <p>6. 比赛前，参赛玩家必须详细认真阅读赛事相关规则，并在指定赛区参加比赛；如因个人或者网络环境等原因影响比赛的，参赛玩家需自行承担责任。比赛期间，参赛玩家必须遵循赛事相关规则，若在比赛过程中违反赛事规则（包括但不限于使用外挂作弊、恶意刷榜、贿赂对手、盗用或冒用他人账号进行比赛或者领奖等），顺网有权根据赛事规则对参赛玩家进行相关惩罚，或后续禁止参赛封号。</p>
+          <p>7. 参赛玩家需对自身行为负责，若因自身行为违法违规或造成第三人损害的，由参赛玩家自行负责，若给顺网造成损失的，由参赛玩家承担。</p>
+          <p>8. 比赛相关的数据、资料归顺网所有，且参赛玩家同意顺网有权获取比赛视频、影音、摄影作品等相关文件，并进行剪辑、传播、直播、制作成视频等。</p>
+          <p>9. 本协议最终解释权归杭州顺网科技股份有限公司</p>
+        </div>
+
+      </div>
+      <div class="modal-footer text-right">
+        <div class="modal-btns">
+          <a href="javascript:void(0)" data-dismiss="modal" aria-hidden="true" class="btn_sure close" >我已了解</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="scripts/jquery-3.1.0.min.js"></script>
+<script src="scripts/bootstrap.min.js"></script>
+<script src="scripts/jquery.qrcode.min.js"></script>
+<script src="scripts/index.js"></script>
+
+<script>
+  $("#qrcode").qrcode({width:100, height:100, render:"canvas", correctLevel:1, text:"http://www.baidu.com"});
+  //弹窗 文本替换
+  var textModal = $('#text-modal1');
+  textModal.on('show.bs.modal', function(e) {
+    var trigger = $(e.relatedTarget),
+        text = trigger.data('text');
+    if (text) {
+      textModal.find('.modal-text').html(text);
+    }
+  });
+  var textModal2 = $('#text-modal2');
+  textModal2.on('show.bs.modal', function(e) {
+    var trigger = $(e.relatedTarget),
+        target = $(e.target),
+        text = trigger.data('text'),
+        checkbox = trigger.data('checkbox'),
+        foot = trigger.data('foot');
+    if(trigger.text() =='报名-免费'){
+      target.find('.user_agreement').show()
+    }else{
+      target.find('.user_agreement').hide()
+    }
+    if (text) {
+      textModal2.find('.info').html(text);
+    }
+    if(typeof(foot)!="undefined" || foot!=""){
+      textModal2.find('.btn_sure').html(foot);
+    }
+  });
+
+  (function($){
+    $('body').on('mouseenter', '.app-wrap li', function(event) {
+      var index = $(this).index();
+      $(this).addClass('sel').siblings().removeClass('sel');
+      $(this).parent().siblings('.app-wrap-content').children('div').eq(index).show().siblings().hide();
+    });
+  })(jQuery);
+
+</script>
+</body>
+</html>

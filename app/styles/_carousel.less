@@ -1,0 +1,88 @@
+@import '_bootstrap-carousel';
+
+// Carousel
+.absoluteTop(@width:100px,@height:100px,@top:0px) {
+    position: absolute;
+    width: @width;
+    height: @height;
+    top: @top;
+}
+
+.absoluteBottom(@width:100px,@height:100px,@bottom:0px) {
+    position: absolute;
+    width: @width;
+    height: @height;
+    bottom: @bottom;
+}
+
+#indexArousel{
+    font-family: "microsoft yahei";
+    font-size: 12px;
+    color: #8f8f8f;
+    width: 778px;
+    height: 221px;
+    img{width: 778px;}
+    .carousel-control{
+        .absoluteTop(30px,90px,53px);
+        background: url(../images/carousel_control_bg.png);
+    }
+    .carousel-control.left{
+        left: 0px;
+        background-position: 0 0px;
+        &:hover{
+            background-position: 30px 0px;
+        }
+        &:active{
+            background-position: 60px 0px;
+        }
+    }
+    .carousel-control.right{
+        right: 0px;
+        background-position: 0 90px;
+        &:hover{
+            background-position: 30px 90px;
+        }
+        &:active{
+            background-position: 60px 90px;
+        }
+    }
+    .carousel-indicators{
+        .absoluteBottom(778px,30px,0px);
+        overflow: hidden;
+        left: 0px;
+        padding: 0px;
+        margin: 0px;
+        list-style: none;
+        li{
+            float: left;
+            padding: 0px 10px;
+            height: 30px;
+            text-align: center;
+            line-height: 30px;
+            background: rgba(0,0,0,0.8);
+            cursor: pointer;
+            border: 0;
+            margin: 0;
+            text-indent: 0;
+            margin-right: 1px;
+            border-radius: 0;
+             white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            margin-left: 0;
+            &:hover{
+                background: rgba(30,57,72,0.8);
+            }
+        }
+        li.active{
+            margin: 0;
+            margin-left: 0;
+            margin-right: 1px;
+            background: #1e3948;
+        }
+        li:last-child{
+            margin: 0;
+            margin-right: 0px;
+        }
+    }
+}

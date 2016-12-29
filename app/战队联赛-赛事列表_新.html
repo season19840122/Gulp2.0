@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html>
+
+	<head lang="en">
+		<meta charset="UTF-8">
+		<title>战队联赛-赛事列表-新</title>
+		<link rel="stylesheet" href="styles/bootstrap.min.css" />
+		<link rel="stylesheet" href="styles/style.css" />
+		<link rel="stylesheet" href="styles/modal.css" />
+		<link rel="stylesheet" href="styles/tabBar.css" />
+		<link rel="stylesheet" href="styles/team_game.css" />
+	</head>
+
+	<body>
+		<div class="box instro">
+			<div class="team_game">
+				<!-- 左边导航开始 -->
+				<div class="left_main_menu">
+					<ul class="menu_list">
+						<li class="active" data-href="3#">
+							<img src="images/left_tab3.png" />
+							<p>战队赛</p>
+						</li>
+						<li data-href="3#">
+							<img src="images/left_tab6.png" />
+							<p>我的战队</p>
+						</li>
+					</ul>
+				</div>
+				<!-- 左边导航结束 -->
+				<div class="tab-content">
+					<div class="team_header">
+						<ul class="team_nav">
+							<li class="active" data-tab="tab_box_1">
+								排名赛
+							</li>
+							<li data-tab="tab_box_2">
+								邀请赛
+							</li>
+						</ul>
+						<a class="btn_create" href="">&plus;&nbsp;创建战队</a>
+					</div>
+
+					<div id="tab_box_1" class="game_list">
+						<table id="table_game_list">
+							<thead>
+								<tr>
+									<th width="12%">
+										<div class="drop-select">
+											<input type="text" readonly="readonly" value="全部战区" class="">
+											<ul class="smallScroll smallScroll2" style="display: none;">
+												<li>
+													<a href="#" rel="1">艾欧尼亚</a>
+												</li>
+												<li>
+													<a href="#" rel="2">诺克萨斯</a>
+												</li>
+												<li>
+													<a href="#" rel="3">黑色玫瑰</a>
+												</li>
+												<li>
+													<a href="#" rel="4">祖安狂人</a>
+												</li>
+											</ul>
+										</div>
+
+									</th>
+									<th width="12%">
+										<pan>赛事名称</span>
+									</th>
+									<th width="12%" class="no_hidden">
+										<span>总奖金</span>
+										<span class="tip_remind">!</span>
+										<span class="tip_box">温馨提醒：以下各项现金奖励均为税前金额，敬请知晓。</span>
+									</th>
+									<th width="20%"><span>比赛时间</span></th>
+									<th width="12%"><span>参赛名额</span></th>
+									<th width="12%"><span>赛事状态</span></th>
+									<th width="20%"><span>战队状态</span></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>艾欧尼亚</td>
+									<td>练习赛第一轮</td>
+									<td>￥10000</td>
+									<td>09.01 12:00-09.01 12:00</td>
+									<td>0/8</td>
+									<td><span class="blue">预告</span></td>
+									<td>
+										<span>9.19 10:00开始报名</span>
+										<span class="deep_blue">（<a class="btn_remind" href="#">报名提醒</a>）</span>
+									</td>
+								</tr>
+								<tr>
+									<td>艾欧尼亚</td>
+									<td>练习赛第一轮</td>
+									<td>￥10000</td>
+									<td>09.01 12:00-09.01 12:00</td>
+									<td>0/8</td>
+									<td><span class="blue">预告</span></td>
+									<td>
+										<span>9.19 10:00开始报名</span>
+									</td>
+								</tr>
+								<tr>
+									<td>艾欧尼亚</td>
+									<td>练习赛第一轮</td>
+									<td>￥10000</td>
+									<td>09.01 12:00-09.01 12:00</td>
+									<td>0/8</td>
+									<td><span class="blue">预告</span></td>
+									<td>
+									</td>
+								</tr>
+								<tr>
+									<td>艾欧尼亚</td>
+									<td>练习赛第一轮</td>
+									<td>￥10000</td>
+									<td>09.01 12:00-09.01 12:00</td>
+									<td>2/8</td>
+									<td><span class="red">报名中</span></td>
+									<td>
+										<a href="" class="btn_ btn_orange">战队报名</a>
+									</td>
+								</tr>
+								<tr>
+									<td>艾欧尼亚</td>
+									<td>练习赛第一轮</td>
+									<td>￥10000</td>
+									<td>09.01 12:00-09.01 12:00</td>
+									<td>2/8</td>
+									<td><span class="red">报名中</span></td>
+									<td>
+										<span>未报名</span>
+										<span class="deep_blue">（<a class="btn_remind" href="#">提醒队长</a>）</span>
+									</td>
+								</tr>
+								<tr>
+									<td>艾欧尼亚</td>
+									<td>练习赛第一轮</td>
+									<td>￥10000</td>
+									<td>09.01 12:00-09.01 12:00</td>
+									<td>8/8（满）</td>
+									<td>
+										<span class="red">报名中</span>
+									</td>
+									<td><span>未报名</span></td>
+								</tr>
+								<tr>
+									<td>艾欧尼亚</td>
+									<td>练习赛第一轮</td>
+									<td>￥10000</td>
+									<td>09.01 12:00-09.01 12:00</td>
+									<td>8/8（满）</td>
+									<td><span class="red">报名中</span></td>
+									<td><span class="deep_green">已报名</span></td>
+								</tr>
+								<tr>
+									<td>艾欧尼亚</td>
+									<td>练习赛第一轮</td>
+									<td>￥10000</td>
+									<td>09.01 12:00-09.01 12:00</td>
+									<td>8/8</td>
+									<td><span class="green">进行中</span></td>
+									<td>
+										<span>未报名</span>
+									</td>
+								</tr>
+								<tr>
+									<td>艾欧尼亚</td>
+									<td>练习赛第一轮</td>
+									<td>￥10000</td>
+									<td>09.01 12:00-09.01 12:00</td>
+									<td>8/8</td>
+									<td><span class="green">进行中</span></td>
+									<td>
+										<a class="btn_ btn_blue" href="">进入比赛</a>
+									</td>
+								</tr>
+								<tr>
+									<td>艾欧尼亚</td>
+									<td>练习赛第一轮</td>
+									<td>￥10000</td>
+									<td>09.01 12:00-09.01 12:00</td>
+									<td>8/8</td>
+									<td><span class="green">进行中</span></td>
+									<td>
+										<span class="deep_orange">四强赛</span>
+										<span>（等待开赛）</span>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<div class="game_page">
+							<div class="pageBox">
+								<a href="javascript:void(0)" class="pageCur">1</a>
+								<a href="javascript:void(0)">2</a>
+								<a href="javascript:void(0)">3</a>
+								<a href="javascript:void(0)">4</a>
+							</div>
+						</div>
+					</div>
+					<div id="tab_box_2" class="game_list hide">
+						<table id="table_game_list">
+							<thead>
+								<tr>
+									<th width="12%">
+										<div class="drop-select">
+											<input type="text" readonly="readonly" value="全部战区" class="">
+											<ul class="smallScroll smallScroll2" style="display: none;">
+												<li>
+													<a href="#" rel="1">艾欧尼亚</a>
+												</li>
+												<li>
+													<a href="#" rel="2">诺克萨斯</a>
+												</li>
+												<li>
+													<a href="#" rel="3">黑色玫瑰</a>
+												</li>
+												<li>
+													<a href="#" rel="4">祖安狂人</a>
+												</li>
+											</ul>
+										</div>
+
+									</th>
+									<th width="12%">
+										<pan>赛事名称</span>
+									</th>
+									<th width="12%" class="no_hidden">
+										<span>总奖金</span>
+										<span class="tip_remind">!</span>
+										<span class="tip_box">温馨提醒：以下各项现金奖励均为税前金额，敬请知晓。</span>
+									</th>
+									<th width="20%"><span>比赛时间</span></th>
+									<th width="12%"><span>参赛名额</span></th>
+									<th width="12%"><span>赛事状态</span></th>
+									<th width="20%"><span>战队状态</span></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>艾欧尼亚</td>
+									<td>练习赛第一轮</td>
+									<td>￥10000</td>
+									<td>09.01 12:00-09.01 12:00</td>
+									<td>8</td>
+									<td><span class="blue">未开始</span></td>
+									<td>
+										<span class="deep_orange">待开赛</span>
+									</td>
+								</tr>
+								<tr>
+									<td>艾欧尼亚</td>
+									<td>练习赛第一轮</td>
+									<td>￥10000</td>
+									<td>09.01 12:00-09.01 12:00</td>
+									<td>8</td>
+									<td><span class="blue">未开始</span></td>
+									<td>
+									</td>
+								</tr>
+								<tr>
+									<td>艾欧尼亚</td>
+									<td>练习赛第一轮</td>
+									<td>￥10000</td>
+									<td>09.01 12:00-09.01 12:00</td>
+									<td>8</td>
+									<td><span class="green">进行中</span></td>
+									<td>
+										<a class="btn_ btn_blue" href="">进入比赛</a>
+									</td>
+								</tr>
+								<tr>
+									<td>艾欧尼亚</td>
+									<td>练习赛第一轮</td>
+									<td>￥10000</td>
+									<td>09.01 12:00-09.01 12:00</td>
+									<td>8</td>
+									<td><span class="green">进行中</span></td>
+									<td>
+										<span class="deep_orange">四强赛</span>
+										<span>（等待开赛）</span>
+									</td>
+								</tr>
+								<tr>
+									<td>艾欧尼亚</td>
+									<td>练习赛第一轮</td>
+									<td>￥10000</td>
+									<td>09.01 12:00-09.01 12:00</td>
+									<td>8</td>
+									<td><span class="green">进行中</span></td>
+									<td>
+									</td>
+								</tr>
+								<tr>
+									<td>艾欧尼亚</td>
+									<td>练习赛第一轮</td>
+									<td>￥10000</td>
+									<td>09.01 12:00-09.01 12:00</td>
+									<td>8</td>
+									<td>
+										<span>已结束</span>
+									</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>艾欧尼亚</td>
+									<td>练习赛第一轮</td>
+									<td>￥10000</td>
+									<td>09.01 12:00-09.01 12:00</td>
+									<td>8</td>
+									<td>
+										<span>已结束</span>
+									</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>艾欧尼亚</td>
+									<td>练习赛第一轮</td>
+									<td>￥10000</td>
+									<td>09.01 12:00-09.01 12:00</td>
+									<td>8</td>
+									<td>
+										<span>已结束</span>
+									</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>艾欧尼亚</td>
+									<td>练习赛第一轮</td>
+									<td>￥10000</td>
+									<td>09.01 12:00-09.01 12:00</td>
+									<td>8</td>
+									<td>
+										<span>已结束</span>
+									</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>艾欧尼亚</td>
+									<td>练习赛第一轮</td>
+									<td>￥10000</td>
+									<td>09.01 12:00-09.01 12:00</td>
+									<td>8</td>
+									<td>
+										<span>已结束</span>
+									</td>
+									<td></td>
+								</tr>
+
+							</tbody>
+						</table>
+						<div class="game_page">
+							<div class="pageBox">
+								<a href="javascript:void(0)" class="pageCur">1</a>
+								<a href="javascript:void(0)">2</a>
+								<a href="javascript:void(0)">3</a>
+								<a href="javascript:void(0)">4</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				
+			</div>
+
+		</div>
+		
+		
+		<!-- 提示 -->
+		<div id="alert_msg" tabindex="-1" role="dialog" aria-hidden="true" class="modal modal-s" data-backdrop="static">
+			<div class="modal-dialog modal_width_500">
+				<div class="modal-content modal_content_bg">
+					<div class="modal-header">
+						<div class="header_style"></div>
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+					</div>
+
+					<div class="modal-body modal_height_110">
+						<h1 class="alert_title_h1 modal_padding_top_40">请确认进入</h1>
+					</div>
+
+					<div class="modal-footer">
+						<div class="btn_sure" data-dismiss="modal">确认</div>
+						<div class="btn_cancel" data-dismiss="modal">取消</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<!-- 提示 -->
+
+		<div id="success-modal" tabindex="-1" role="dialog" aria-hidden="true" class="modal modal-s" data-backdrop="static">
+			<div class="modal-dialog modal_width_500">
+				<div class="modal-content modal_content_bg">
+					<div class="modal-header">
+						<div class="header_style"></div>
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+					</div>
+					<div class="modal-body modal_height_110">
+						<div class="intro modal_padding_top_30">
+							<h2 class="txt_success">
+							<span>恭喜，报名成功！</span>
+						</h2>
+						</div>
+					</div>
+					<div class="modal-footer text-right">
+						<div class="btn_sure" data-dismiss="modal">立即开始游戏</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="fail-modal" tabindex="-1" role="dialog" aria-hidden="true" class="modal modal-s" data-backdrop="static" style="z-index: 99999;">
+			<div class="modal-dialog modal_width_500">
+				<div class="modal-content modal_content_bg">
+					<div class="modal-header">
+						<div class="header_style"></div>
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+					</div>
+					<div class="modal-body">
+						<div class="info modal_padding_30">
+							<h2 class="txt_fail">
+							<span>报名失败</span>
+						</h2>
+							<p class="cause"></p>
+						</div>
+					</div>
+					<div class="modal-footer text-right">
+						<div class="btn_sure" data-dismiss="modal">关闭</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="text-modal2" tabindex="-1" role="dialog" aria-hidden="true" class="modal modal-s" data-backdrop="static">
+			<div class="modal-dialog modal_width_500">
+				<div class="modal-content modal_content_bg">
+					<div class="modal-header">
+						<div class="header_style"></div>
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+					</div>
+					<div class="modal-body modal_height_110">
+						<div class="info modal_padding_top_30">接待室里看风景了圣诞节福利的积分</div>
+					</div>
+					<div class="modal-footer text-right">
+						<span class="user_agreement"> 
+							<input type="checkbox"
+						checked="checked" disabled="disabled" /> <a data-toggle="modal"
+						data-target="#user_agreement_con" class="blue txt-unl mr50">阅读并同意报名协议</a>
+						</span>
+						<div class="btn_sure" data-dismiss="modal">确定</div>
+						<div class="btn_cancel" data-dismiss="modal">取消</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="way-sign" tabindex="-1" role="dialog" aria-hidden="true" class="modal modal-s" data-backdrop="static">
+			<div class="modal-dialog modal_width_500">
+				<div class="modal-content modal_content_bg">
+					<div class="modal-header">
+						<div class="header_style"></div>
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+					</div>
+					<div class="modal-body">
+						<div class="info">
+							<p class="contips">为战队赛报名将消耗0顺豆</p>
+							<div class="line"></div>
+							<a href="javascript:void(0);" class="btn_sign mt20">打发打发打发</a>
+				           <div class="rect mt20 stewardFree">
+				           		<p>请网吧安装<span class="orange">顺网宇酷网吧管家</span>，免费报名</p>
+				           </div> 
+							<div class="m20 text-left">
+								<span class="user_agreement"> <input type="checkbox"
+								disabled="disabled" checked="checked" /> <a data-toggle="modal"
+								data-target="#user_agreement_con" class="blue txt-unl mr50">阅读并同意报名协议</a>
+							</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="way-sign2" tabindex="-1" role="dialog" aria-hidden="true" class="modal modal-s"  data-backdrop="static">
+			<div class="modal-dialog modal_width_500">
+				<div class="modal-content modal_content_bg">
+					<div class="modal-header">
+						<div class="header_style"></div>
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+					</div>
+					<div class="modal-body modal_height_300">
+						<div class="info">
+							<p class="contips">为战队赛报名将消耗0顺豆</p>
+							<div class="line"></div>
+							<div class="rect mt20">
+								<div class="fl text-left">
+									<span class="blue howmoney"></span> <br /> <span class="user_agreement"> <input type="checkbox"
+									checked="checked" disabled="disabled" /> <a
+									data-toggle="modal" data-target="#user_agreement_con"
+									class="blue txt-unl mr50">阅读并同意报名协议</a>
+								</span>
+								</div>
+								<div id="qrcode" class="fr"></div>
+							</div>
+							<!--<div class="rect mt20 stewardFree" style=""><p>请网吧安装<span class="orange">顺网宇酷网吧管家</span>，免费报名</p></div>-->
+							<div class="rect mt20">
+								<p>去游戏里参加胜场有你活动，赢取更多顺豆再来报名</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="user_agreement_con" tabindex="-1" role="dialog" aria-hidden="true" class="modal modal-s mt10" data-backdrop="static">
+			<div class="modal-dialog modal_width_500">
+				<div class="modal-content modal_content_bg">
+					<div class="modal-header">
+						<div class="header_style"></div>
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+					</div>
+					<div class="modal-body modal_height_330">
+						<p class="blue mt0">报名协议</p>
+						<div class="agreement_text smallScroll">
+							<p>请仔细阅读以下内容，继续进行报名将视为同意本协议并按照本协议享受权利承担义务。</p>
+							<p>1. 本站网上报名系统的所有权归属于杭州顺网宇酷科技有限公司（以下简称“顺网宇酷”）。</p>
+							<p>2. 参赛玩家报名所提交的个人信息（身份证件号码，联系电话等）必须真实有效。顺网宇酷有权在赛事期间核实参赛玩家信息，若参赛玩家信息与报名时提交的个人信息不符，顺网宇酷将取消参赛玩家的参赛资格。如因个人信息虚假或错误而导致无法领取奖品等后果的，由参赛玩家自行承担。
+							</p>
+							<p>3. 顺网宇酷可根据比赛情况，在比赛过程中要求参赛玩家提供更为详尽的信息资料，参赛玩家应按照顺网宇酷的要求及时提交。</p>
+							<p>4. 参赛玩家需承担个人信息风险，如账号信息泄露导致的一切后果（包括但不限于奖品被冒领），参赛玩家需自行承担责任。</p>
+							<p>5. 实际参赛人数以报名开始日到截止日期间的报名并通过顺网宇酷审核的人数为准。</p>
+							<p>6. 比赛前，参赛玩家必须详细认真阅读赛事相关规则，并在指定赛区参加比赛；如因个人或者网络环境等原因影响比赛的，参赛玩家需自行承担责任。比赛期间，参赛玩家必须遵循赛事相关规则，若在比赛过程中违反赛事规则（包括但不限于使用外挂作弊、恶意刷榜、贿赂对手、盗用或冒用他人账号进行比赛或者领奖等），顺网宇酷有权根据赛事规则对参赛玩家进行相关惩罚，或后续禁止参赛封号。
+							</p>
+							<p>7. 参赛玩家需对自身行为负责，若因自身行为违法违规或造成第三人损害的，由参赛玩家自行负责，若给顺网宇酷造成损失的，由参赛玩家承担。
+							</p>
+							<p>8. 比赛相关的数据、资料归顺网宇酷所有，且参赛玩家同意顺网宇酷有权获取比赛视频、影音、摄影作品等相关文件，并进行剪辑、传播、直播、制作成视频等。
+							</p>
+							<p>9. 本协议最终解释权归杭州顺网宇酷科技有限公司</p>
+						</div>
+					</div>
+					<div class="modal-footer text-right">
+						<div class="btn_sure" data-dismiss="modal">我已了解</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="combatTeamSaveDiv">
+			<form id="combatTeamSaveForm" method="post">
+				<div id="create-modal" tabindex="-1" role="dialog" aria-hidden="true" data-backdrop="static" class="modal modal-s in" style="//display: block; //padding-left: 17px;">
+					<div class="modal-dialog modal_width_500">
+						<div class="modal-content modal_content_bg">
+							<div class="modal-header">
+								<div class="header_style"></div>
+								<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+							</div>
+							<div class="modal-body modal_height_480">
+								<div class="intro">
+									<p><label class="w130">请选择战区：</label>
+										<select name="create_combat_team_gameId" id="create_combat_team_gameId" class="w133">
+											<option value="13216">英雄联盟</option>
+										</select>
+										<select name="create_combat_team_serverId" id="create_combat_team_serverId" class="w133">
+											<option value="">请选择</option>
+											<option value="2561">黑色玫瑰</option>
+											<option value="257">艾欧尼亚</option>
+											<option value="514">德玛西亚</option>
+											<option value="769">诺克萨斯</option>
+										</select>
+									</p>
+									<p><label class="w130">战队名称：</label><input id="create_combat_team_teamName" name="create_combat_team_teamName" class="w260" placeholder="不超过8个字" type="text"></p>
+									<p><label class="w130">火马昵称：</label><input id="create_combat_team_nickName" name="create_combat_team_nickName" class="w260" value="石头3145" placeholder="火马昵称会显示在优胜战队榜上" type="text"></p>
+									<p><label class="w130">参战游戏账号：</label>
+										<select id="create_combat_team_gameAccount" name="create_combat_team_gameAccount" class="w160">
+											<option value="">请选择</option>
+											<option value="6000002">6000002</option>
+											<option value="100016">100016</option>
+										</select>
+									</p>
+									<p><label class="w130">真实姓名：</label><input id="create_combat_team_realName" name="create_combat_team_realName" class="w160" value="" type="text"></p>
+									<p></p>
+									<p><label class="w130">身份证号码：</label><input id="create_combat_team_identityCard" name="create_combat_team_identityCard" class="w160" value="" type="text"></p>
+									<p><label class="w130">手机号：</label><input id="send_sms_phone" name="send_sms_phone" class="w160" value="18814817885" placeholder="请填写有效的手机号码！" type="text">
+										<a id="send_sms_code" href="javascript:SendMobileSMS.sendMoibleCode('send_sms_phone','send_sms_code','CREATE_COMBAT_TEAM');" class="get_code">获取验证码</a>
+									</p>
+									<p><label class="w130">手机验证码：</label><input id="create_combat_team_verifyCode" name="create_combat_team_verifyCode" class="w160" type="text">&nbsp;&nbsp;</p>
+									<p id="create_tip_error" class="tip_error f12"></p>
+									<p id="accept-modal-message" class="f12 red text-center" style="color:green">友情提示：<span style="color:red">身份证上的姓名和真实姓名必须保证一致</span><br>这将作为你参加线下赛的唯一识别方式，请如实填写</p>
+								</div>
+							</div>
+							<div class="modal-footer text-right">
+								<div class="btn_sure" data-dismiss="modal">确认</div>
+								<div class="btn_cancel" data-dismiss="modal">取消</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+
+
+		<button type="button" data-toggle="modal" data-target="#alert_msg" >button1</button>
+		<button type="button" data-toggle="modal" data-target="#success-modal" >button1</button>
+		<button type="button" data-toggle="modal" data-target="#fail-modal" >button1</button>
+		<button type="button" data-toggle="modal" data-target="#text-modal2" >button1</button>
+		<button type="button" data-toggle="modal" data-target="#way-sign" >button1</button>
+		<button type="button" data-toggle="modal" data-target="#way-sign2" >button1</button>
+		<button type="button" data-toggle="modal" data-target="#user_agreement_con" >button1</button>
+		<button type="button" data-toggle="modal" data-target="#create-modal" >button1</button>
+		
+		
+		
+		<script type="text/javascript" src="scripts/jquery-3.1.0.min.js"></script>
+		<script type="text/javascript" src="scripts/bootstrap.min.js"></script>
+		<script type="text/javascript" src="scripts/tabBar.js"></script>
+		<script>
+			$(function() {
+
+				//进入详情页
+				$("#table_game_list tr>td:not(:last-child)").click(function() {
+					location.href = "战队联赛-详情页.html";
+				});
+
+				$('.game_list .tip_remind,.game_list .tip_box').hover(function() {
+					$('.game_list .tip_box').show();
+				}, function() {
+					$('.game_list .tip_box').hide();
+				})
+
+				// 自定义下拉框
+				$(document).on('click', function(e) {
+					var target = e.target;
+					if(target.localName != 'input') $(".drop-select input").removeClass("open").siblings("ul").hide();
+				});
+
+				$(".drop-select input").click(function(e) {
+					var ul = $(this).siblings("ul");
+					if(ul.css("display") == "none") {
+						ul.slideDown("fast");
+						$(this).addClass("open")
+					} else {
+						ul.slideUp("fast");
+						$(this).removeClass("open")
+					}
+				});
+
+				$(".drop-select ul li a").click(function() {
+					var txt = $(this).text();
+					$(this).parents(".drop-select ul").siblings("input").val(txt).removeClass("open");
+					$(".drop-select ul").hide();
+				});
+
+				//title点击
+				$(".team_nav li").click(function() {
+					var tab_name = $(this).attr('data-tab');
+					if(!$(this).hasClass('active')) {
+						$('.game_list').addClass('hide')
+						$('#' + tab_name).removeClass('hide')
+					}
+
+					$(this).siblings().removeClass('active');
+					$(this).addClass('active');
+				});
+
+			})
+
+			//展示提示框
+			function showMsg(str) {
+				$('#alert_msg .alert_title_h1').html(str);
+				$('#alert_msg').modal();
+			}
+
+			//展示提示框
+			showMsg("已报名<span class='blue'>艾欧尼亚7月1日常规赛</span>，不可重复报名");
+		</script>
+	</body>
+
+</html>

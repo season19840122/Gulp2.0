@@ -1,0 +1,132 @@
+.nav {
+  height: 40px;
+  border-bottom: 1px solid  #232830;
+}
+.nav .menu-wrap {
+  padding-left: 20px;
+}
+.nav .menu-wrap li {
+  float: left;
+  min-width: 100px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  margin-right: 5px;
+}
+.nav .menu-wrap li a {
+  color: #b1b2b2;
+  text-decoration: none;
+  display: inline-block;
+}
+.nav .menu-wrap li a:hover {
+  color: #00a2ff;
+}
+.nav .menu-wrap li.active {
+  border-bottom: 2px solid  #0970ab;
+}
+.nav .menu-wrap li.active a {
+  color: #00a2ff;
+}
+.nav .menu-wrap .menu_lol {
+  background: url(../images/lol_logo.png) no-repeat 0 center;
+  padding-left: 20px;
+}
+.nav .menu-wrap .menu_m3 {
+  background: url(../images/m3_logo.png) no-repeat 0 center;
+  padding-left: 20px;
+}
+.nav .menu-wrap .menu_over {
+  background: url(../images/over_logo.png) no-repeat 0 center;
+  padding-left: 20px;
+}
+.nav .menu-wrap .menu_tank {
+  background: url(../images/tk_logo.png) no-repeat 0 center;
+  padding-left: 20px;
+}
+.nav .menu-wrap .menu_mohuan {
+  background: url(../images/mohuan_logo.png) no-repeat 0 center;
+  padding-left: 20px;
+}
+.nav .menu-wrap .menu_300 {
+  background: url(../images/300_logo.png) no-repeat 10px center;
+  padding-left: 30px;
+}
+.nav .menu-wrap .menu_doubleT {
+  background: url(../images/doubleT.png) no-repeat 10px center;
+  padding-left: 30px;
+}
+.nav .form {
+  position: absolute;
+  right: 6px;
+  top: 8px;
+}
+.nav .form .box_search {
+  float: left;
+  display: inline-block;
+  width: 198px;
+  margin-right: 7px;
+  border: 1px solid #0f1417;
+}
+.nav .form .box_search input {
+  width: 165px;
+  height: 22px;
+  line-height: 22px;
+  border: 0;
+  background: none;
+  outline: 0;
+  padding: 0 5px;
+  color: #4f5f5e;
+}
+.nav .form .box_search .btn_search {
+  display: inline-block;
+  width: 14px;
+  height: 12px;
+  margin: 4px 0 0 4px;
+  background: url(../images/icon_search.png) no-repeat left top;
+}
+.nav .form .box_search .btn_search:hover {
+  background-position-y: -12px;
+}
+.nav .form .box_search .btn_search:active {
+  background-position-y: -24px;
+}
+.nav .form .drop-select {
+  float: left;
+  width: 120px;
+  margin-left: 8px;
+}
+.nav .form .drop-select input {
+  height: 22px;
+  width: 90px;
+  line-height: 22px;
+  color: #999797;
+  border-radius: 0;
+  border: 1px solid #1d232b;
+  box-sizing: content-box;
+  padding: 0 22px 0 5px ;
+  background: url(../images/icon_dropdown.png) no-repeat 95% top;
+}
+.nav .form .drop-select input:hover {
+  background-position-y: -22px;
+}
+.nav .form .drop-select input:active,
+.nav .form .drop-select input.open {
+  background-position-y: -44px;
+}
+.nav .form .drop-select input:hover,
+.nav .form .drop-select input.open {
+  border: 1px solid #00497f;
+}
+.nav .form .drop-select ul {
+  width: 120px;
+  background: #000b12;
+  box-sizing: border-box;
+  border-color: #00497f;
+  max-height: 410px;
+}
+.nav .form .drop-select ul li a {
+  color: #999797;
+}
+.nav .form .drop-select ul li a:hover {
+  background: #052842;
+}

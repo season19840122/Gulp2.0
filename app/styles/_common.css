@@ -1,0 +1,127 @@
+* {
+  box-sizing: border-box;
+}
+img {
+  vertical-align: middle;
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+p {
+  margin: 0;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+.button-sure,
+.button-no {
+  padding: 0;
+  width: 158px;
+  height: 35px;
+  line-height: 35px;
+  color: #271708;
+  border: 0;
+  background-image: -webkit-linear-gradient(top, #c49f58, #c49f58);
+  background-image: -moz-linear-gradient(top, #c49f58, #c49f58);
+  background-image: -o-linear-gradient(top, #c49f58, #c49f58);
+  background-image: -ms-linear-gradient(top, #c49f58, #c49f58);
+  background-image: linear-gradient(top, #c49f58, #c49f58);
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorStr=#c49f58, endColorStr=#c49f58);
+}
+.button-no {
+  color: #271708;
+  background-image: -webkit-linear-gradient(top, #c49f58, #c49f58);
+  background-image: -moz-linear-gradient(top, #c49f58, #c49f58);
+  background-image: -o-linear-gradient(top, #c49f58, #c49f58);
+  background-image: -ms-linear-gradient(top, #c49f58, #c49f58);
+  background-image: linear-gradient(top, #c49f58, #c49f58);
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorStr=#c49f58, endColorStr=#c49f58);
+}
+/*下拉列表*/
+.drop-select {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+}
+.drop-select ul {
+  width: 100%;
+  margin-top: 2px;
+  border: 1px solid #212a36;
+  position: absolute;
+  display: none;
+  z-index: 10;
+  overflow: auto;
+}
+.drop-select ul li {
+  height: 24px;
+  line-height: 24px;
+  text-indent: 10px;
+}
+.drop-select ul li a {
+  display: block;
+  text-decoration: none;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.drop-select ul li a:hover {
+  background: #1d232a;
+}
+/*容器滚动条*/
+.mainScroll::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+}
+.mainScroll::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  background: #000;
+}
+.mainScroll::-webkit-scrollbar-thumb {
+  -webkit-box-shadow: inset 0 0 5px #2d3a48;
+  border-radius: 5px;
+  background: #33383e;
+}
+.mainScroll::-webkit-scrollbar-thumb:hover {
+  background: #5b626c;
+}
+.mainScroll::-webkit-scrollbar-thumb:active {
+  background: #4d525a;
+}
+.smallScroll::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+.smallScroll::-webkit-scrollbar-track {
+  border-radius: 3px;
+  background: #0f1114;
+}
+.smallScroll::-webkit-scrollbar-thumb {
+  border-radius: 3px;
+  background: #2e3740;
+}
+.smallScroll.smallScroll2::-webkit-scrollbar {
+  width: 6px;
+}
+body {
+  font: 12px/1.5 'microsoft yahei';
+}
+.box {
+  width: 1196px;
+  height: 600px;
+  overflow: hidden;
+  position: relative;
+}

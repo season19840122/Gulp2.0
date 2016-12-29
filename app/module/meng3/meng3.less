@@ -1,0 +1,434 @@
+@import '../../styles/_base';
+@import '../../styles/_common';
+.box {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    overflow: hidden;
+    width: 316px;
+    height: 265px;
+    &>div {
+        float: left;
+    }
+    .hide_ {
+        display: none;
+    }
+    .meng_box {
+        width: 316px;
+        height: 265px;
+        background: url("../../images/meng3/meng3_bg.png");
+        position: relative;
+        text-align: center;
+        &>i {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            right: 5px;
+            top: 5px;
+            cursor: pointer;
+        }
+        .logo {
+            z-index: 50;
+            cursor: pointer;
+            position: absolute;
+            left: 18px;
+            top: 112px;
+        }
+        .my_sd{
+            position: absolute;
+            font-size: 12px;
+            color: #db7317;
+            bottom: 14px;
+            left: 15px;
+        }
+        .vip{
+            position: absolute;
+            width: 52px;
+            height: 23px;
+            right: 8px;
+            bottom: 10px;
+        }
+        .vip_on{background: url(../../images/meng3/vip_on.png);}
+        .vip_off{background: url(../../images/meng3/vip_off.png);}
+        .tip_box {
+            text-align: center;
+            position: relative;
+            p{
+                position: absolute;
+                top: -32px;
+                width: 100%;
+                color: #db7317;
+                font-size: 14px;
+            }
+            h1 {
+                margin-top: 93px;
+                font-size: 36px;
+                color: #bd9943;
+                background-image: -webkit-gradient(linear, 0 0, 0 bottom, from(#fada8e), to(#ac862e));
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+            h2 {
+                margin-top: 13px;
+                font-size: 14px;
+                color: #edca63;
+                span,
+                img {
+                    vertical-align: middle;
+                }
+            }
+        }
+        .qrcode_box {
+            text-align: center;
+            h1 {
+                margin-top: 35px;
+                font-size: 14px;
+                color: #bd9943;
+                font-weight: bold;
+                background-image: -webkit-gradient(linear, 0 0, 0 bottom, from(#fada8e), to(#ac862e));
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+            .back{
+                color: #00a7ef;
+                font-size: 12px;
+                text-decoration: underline;
+                margin-top: -4px;
+                cursor: pointer;
+            }
+            .qrcode_content {
+                background: #282318;
+                position: relative;
+                margin: 10px auto;
+                width: 110px;
+                height: 130px;
+                .alert_img_qrcode{
+                    position: absolute;
+                    top: 5px;
+                    left: 5px;
+                    width: 100px;
+                    height: 100px;
+                    background: white;
+                }
+                .wechat_logo {
+                    position: absolute;
+                    width: 15px;
+                    height: 15px;
+                    bottom: 5px;
+                    right: 23px;
+                }
+                .alipay_logo {
+                    position: absolute;
+                    width: 15px;
+                    height: 15px;
+                    bottom: 5px;
+                    right: 5px;
+                }
+                span {
+                    position: absolute;
+                    color: #bfbfbf;
+                    width: 100px;
+                    font-size: 12px;
+                    left: 5px;
+                    bottom: 4px;
+                    text-align: left;
+                }
+            }
+        }
+        
+        .apply_box{
+            position: relative;
+            text-align: center;
+            h1{
+                margin-top: 25px;
+                font-size: 20px;
+                color: #bd9943;
+                font-weight: bold;
+                background-image: -webkit-gradient(linear, 0 0, 0 bottom, from(#fada8e), to(#ac862e));
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+            .content_box{
+                ul{
+                    width: 124px;
+                    margin: 28px auto;
+                    &:after{
+                        content: "";
+                        width: 0;
+                        display: block;
+                        clear: both;
+                    }
+                    li{
+                        cursor: pointer;
+                        display: inline-block;
+                        width: 54px;
+                        height: 54px;
+                        position: relative;
+                        overflow: hidden;
+                        float: left;
+                        background: url(../../images/meng3/box1.png) no-repeat;
+                        margin-bottom: 10px;
+                        color: #28787b;
+                        div{
+                            position: absolute;
+                            width: 50px;
+                            height: 50px;
+                            left: 2px;
+                            top: 0px;
+                            overflow: hidden;
+                        }
+                        &:first-child{
+                            margin-right: 15px;
+                        }
+                        &:last-child{
+                            margin-left: 15px;
+                        }
+                        h1,h3{
+                            margin-top: 16px;
+                            font-size: 16px;
+                            background-image: -webkit-gradient(linear, 0 0, 0 bottom, from(#5e450a), to(#342604));
+                            -webkit-background-clip: text;
+                            -webkit-text-fill-color: transparent;
+                            font-weight: bold;
+                        }
+                        h3{
+                            display: none;
+                            margin-top: 14px;
+                        }
+                        h2{
+                            display: none;
+                            font-size: 16px;
+                            margin-top: 10px;
+                            position: relative;
+                            background-image: -webkit-gradient(linear, 0 0, 0 bottom, from(#5e450a), to(#342604));
+                            -webkit-background-clip: text;
+                            -webkit-text-fill-color: transparent;
+                            font-weight: bold;
+                            &:after{
+                                content: "";
+                                position: absolute;
+                                background: url(../../images/SD.png);
+                                width: 23px;
+                                height: 17px;
+                                top: 19px;
+                                left: 16px;
+                            }
+                        }
+                    }
+                    li.off{
+                        background: url(../../images/meng3/box2.png) no-repeat;
+                    }
+                    div.tip_vip{
+                        &:before{
+                            z-index: 50;
+                            content: "VIP";
+                            position: absolute;
+                            font-weight: bold;
+                            width: 52px;
+                            height: 15px;
+                            line-height: 15px;
+                            bottom: 4px;
+                            right: -15px;
+                            transform: rotate(-45deg);
+                            -webkit-transform: rotate(-45deg);
+                            color: white;
+                            font-size: 12px;
+                            background:-webkit-gradient(linear,0 50%,100% 50%,from(#831600),to(#ed3600));/*Old gradient for webkit*/
+                            background:-webkit-linear-gradient(left,#831600,#ed3600);/*new gradient for Webkit*/
+                        }
+                    }
+                    div.tip_free{
+                        &:before{
+                            z-index: 50;
+                             content: "免费";
+                            position: absolute;
+                            width: 52px;
+                            height: 15px;
+                            font-size: 12px;
+                            line-height: 15px;
+                            bottom: 4px;
+                            right: -15px;
+                            -webkit-transform: rotate(-45deg);
+                            transform: rotate(-45deg);
+                            color: white;
+                            background:-webkit-gradient(linear,0 50%,100% 50%,from(#831600),to(#ed3600));/*Old gradient for webkit*/
+                            background:-webkit-linear-gradient(left,#831600,#ed3600);/*new gradient for Webkit*/
+                        }
+                    }
+                }
+    
+            }
+            .tip{
+                position: absolute;
+                text-align: center;
+                bottom: -16px;
+                font-weight: bold;
+                width: 316px;
+                font-size: 14px;
+                background-image: -webkit-gradient(linear, 0 0, 0 bottom, from(#fada8e), to(#ac862e));
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+        }
+        .ld_box{
+            position: relative;
+            text-align: center;
+            &>h1{
+                text-indent: 20px;
+                margin-top: 25px;
+                font-size: 20px;
+                color: #bd9943;
+                font-weight: bold;
+                background-image: -webkit-gradient(linear, 0 0, 0 bottom, from(#fada8e), to(#ac862e));
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+            .content_box{
+                padding: 1px;
+                position: relative;
+                margin: 30px 0px 0px 55px;
+                width: 222px;
+                height: 112px;
+                background: url(../../images/meng3/box_border.png);
+                text-align: center;
+                h1{
+                    margin-top: -8px;
+                    font-size: 15px;
+                    color: #bd9943;
+                    font-weight: bold;
+                    background-image: -webkit-gradient(linear, 0 0, 0 bottom, from(#fada8e), to(#ac862e));
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                }
+                &>div{
+                    position: absolute;
+                    width: 59px;
+                    height: 60px;
+                    background: url(../../images/meng3/box_big.png);
+                    cursor: pointer;
+                    top: 30px;
+                    h1,h3{
+                        background-image: -webkit-gradient(linear, 0 0, 0 bottom, from(#5e450a), to(#342604));
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                        font-weight: bold;
+                    }
+                    h1{
+                        position: relative;
+                        font-size: 12px;
+                        top: 38px;
+                        &:before{
+                            position: absolute;
+                            content: "";
+                            top: -18px;
+                            left: 24px;
+                            width: 13px;
+                            height: 14px;
+                            background: url(../../images/meng3/meng_sword.png);
+                        }
+                    }
+                    h3{
+                        display: none;
+                        margin-top: 16px;
+                        font-size: 14px;
+                        margin-top: 21px;
+                    }
+                    h2{
+                        display: none;
+                        font-size: 14px;
+                        margin-top: 10px;
+                        position: relative;
+                        background-image: -webkit-gradient(linear, 0 0, 0 bottom, from(#5e450a), to(#342604));
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                        font-weight: bold;
+                        &:after{
+                            content: "";
+                            position: absolute;
+                            background: url(../../images/SD.png);
+                            width: 23px;
+                            height: 17px;
+                            top: 19px;
+                            left: 18px;
+                        }
+                    }
+                    &.left{
+                        left: 40px;
+                    }
+                    &.right{
+                        left: 123px;
+                    }
+                    p{
+                        position: absolute;
+                        bottom: -18px;
+                        width: 100%;
+                        color: #6cb921;
+                        font-size: 12px;
+                    }
+                }
+            }
+            .tip{
+                text-indent: 13px;
+                position: absolute;
+                text-align: center;
+                bottom: -26px;
+                font-weight: bold;
+                width: 316px;
+                font-size: 13px;
+                background-image: -webkit-gradient(linear, 0 0, 0 bottom, from(#fada8e), to(#ac862e));
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+        }
+        
+        .rules_box{
+            display: none;
+            position: absolute;
+            width: 269px;
+            height: 209px;
+            background: url(../../images/meng3/float_bg.png);
+            left: 50%;
+            margin-left: -133px;
+            top: 25px;
+            padding: 28px 0px 0px 18px;
+            z-index: 99;
+             &>i {
+                position: absolute;
+                width: 20px;
+                height: 20px;
+                right: 5px;
+                top: 5px;
+                cursor: pointer;
+            }
+            .rule_content{
+                width: 240px;
+                height: 177px;
+                overflow-x: hidden;
+                overflow-y: auto;
+                font-size: 12px;
+                color: #9b6621;
+                text-align: left;
+                p.indent{
+                    text-indent: 24px;
+                }
+            }
+            .smallScroll::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+            }
+            .smallScroll::-webkit-scrollbar-track {
+                border-radius: 10px;
+                background: #9b6621;
+                box-shadow: 1px 1px 0px #9b6621 inset;
+            }
+            .smallScroll::-webkit-scrollbar-thumb {
+                border-radius: 10px;
+                background: #373126;
+                box-shadow: 0px 0px 2px #9b6621 inset;
+            }
+            .smallScroll.smallScroll2::-webkit-scrollbar {
+                width: 6px;
+            }
+        }
+    }
+}

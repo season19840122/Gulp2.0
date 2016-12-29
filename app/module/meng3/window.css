@@ -1,0 +1,99 @@
+.window_box {
+  width: 300px;
+  height: 213px;
+  position: absolute;
+  background: url(../../images/meng3/meng_win.png);
+  overflow: hidden;
+}
+.window_box > i {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  right: 5px;
+  top: 5px;
+  cursor: pointer;
+}
+.window_box .hide_ {
+  display: none;
+}
+.window_box .btn {
+  position: absolute;
+  background: url(../../images/meng3/meng_btn.png);
+  width: 114px;
+  height: 39px;
+  text-indent: 30px;
+  color: #2e271b;
+  font-size: 14px;
+  line-height: 28px;
+  font-weight: bold;
+  right: 25px;
+  bottom: 8px;
+}
+.window_box p {
+  position: absolute;
+  height: 20px;
+  color: #DB7317;
+  font-size: 12px;
+  left: 27px;
+  bottom: 10px;
+}
+.window_box p.up:before {
+  content: "";
+  color: limegreen;
+  position: absolute;
+  width: 0;
+  border-style: solid;
+  border-width: 5px;
+  border-color: transparent transparent limegreen transparent;
+  right: -13px;
+  top: -4px;
+}
+.window_box p.up:after {
+  content: "";
+  color: limegreen;
+  position: absolute;
+  width: 4px;
+  height: 7px;
+  background: limegreen;
+  right: -10px;
+  top: 5px;
+}
+.window_box .success_box {
+  text-align: center;
+}
+.window_box .success_box .title {
+  position: absolute;
+  left: 45px;
+  top: 14px;
+}
+.window_box .success_box .sd {
+  position: absolute;
+  top: 87px;
+  left: 93px;
+}
+.window_box .success_box h1 {
+  position: absolute;
+  font-size: 36px;
+  color: #d7af69;
+  left: 129px;
+  top: 77px;
+}
+.window_box .fail_box {
+  text-align: center;
+}
+.window_box .fail_box .title {
+  position: absolute;
+  left: 26px;
+  top: -3px;
+}
+.window_box .fail_box h2 {
+  position: relative;
+  top: 85px;
+  font-size: 18px;
+  color: #bd9943;
+  font-weight: bold;
+  background-image: -webkit-gradient(linear, 0 0, 0 bottom, from(#fada8e), to(#ac862e));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+/*# sourceMappingURL=window.css.map */

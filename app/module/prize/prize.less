@@ -1,0 +1,516 @@
+@import '../../styles/_base';
+@import '../../styles/_common';
+.box {
+    background: url("../../images/prize_bg.jpg");
+    position: absolute;
+    .back {
+      z-index: 100;
+      cursor: pointer;
+      position: absolute;
+      left: 19px;
+      top: 15px;
+      padding: 1px 13px 1px 10px;
+      color: #aaaaaa;
+      background: rgba(0,0,0,0.5);
+      img{
+          margin-right: 7px;
+      }
+      span{
+          line-height: 20px;
+      }
+      span,img{display: inline-block;vertical-align: middle;}
+    }
+    .overD {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+    .title2 {
+        position: absolute;
+        top: 0;
+        left: 715px;
+    }
+    .title_box {
+        position: absolute;
+        width: 100%;
+        top: 0;
+        padding: 60px 160px;
+        .title_time {
+            font-size: 16px;
+            color: white;
+            margin-bottom: 5px;
+            margin-top: -3px;
+        }
+        .title_rules {
+            width: 103px;
+            height: 33px;
+            font-size: 16px;
+            position: absolute;
+            margin-left: 236px;
+            margin-top: -35px;
+            font-weight: bold;
+            line-height: 33px;
+            text-indent: 16px;
+            background: #ffa629;
+            border-radius: 20px;
+            cursor: pointer;
+            color: #2a2a2a;
+            box-shadow: 0 2px 2px 1px #9b4a1f, inset 0 0 1px 3px #ffb33e;
+            &:after {
+                content: "";
+                width: 0;
+                cursor: pointer;
+                border-style: solid;
+                display: block;
+                margin: -22px 3px 0 86px;
+                border-width: 6px;
+                border-color: transparent transparent #2a2a2a transparent;
+                transform: rotate(90deg);
+                transform: -webkit-rotate(90deg);
+            }
+            &:hover {
+                background: -webkit-linear-gradient(top, #e16f28 0%,#e84c39 100%);
+                background: linear-gradient(top, #e16f28 0%,#e84c39 100%);
+                box-shadow: 0 2px 2px 1px #9f4c20, inset 0 0 1px 3px #ea7243;
+            }
+        }
+    }
+    .prize_box {
+        width: 353px;
+        height: 353px;
+        top: 222px;
+        left: 166px;
+        position: absolute;
+        background: url("../../images/prize_pan.png");
+        text-align: center;
+        padding: 5px 0 0 6px; //      z-index: 20;
+        img {
+            cursor: pointer;
+        }
+        .prize_div,
+        .prize_enter_box {
+            position: relative;
+            width: 106px;
+            height: 106px;
+            float: left;
+            margin: 4px;
+        }
+        .prize_div {
+            border-radius: 10px;
+            background: white;
+            img {
+                display: none;
+                position: absolute;
+                width: 106px;
+                height: 106px;
+                left: 0;
+                top: 0;
+                border-radius: 10px;
+                animation: bigInto 0.3s linear;
+                -webkit-animation: bigInto 0.3s linear;
+            }
+            p {
+                   overflow: hidden;
+                display: none;
+                position: absolute;
+                top: 70px;
+                width: 106px;
+                height: 35px;
+                color: #202020;
+                font-size: 12px;
+                text-align: center;
+                animation: bigInto 0.3s linear;
+                -webkit-animation: bigInto 0.3s linear;
+            }
+        }
+        .prize_enter_box {
+            .prize_enter {
+                z-index: 100;
+                position: absolute;
+                width: 115px;
+                height: 115px;
+                background: url("../../images/prize_enter.png") no-repeat;
+                cursor: pointer;
+                left: -4px;
+                top: -3px;
+                padding-top: 20px;
+                &.normal {
+                    background-position: -3px -5px;
+                }
+                &:hover {
+                    background-position-y: -119px;
+                }
+                &.enter {
+                    background-position: -3px -233px;
+                }
+                p {
+                    color: white;
+                    font-size: 30px;
+                    font-weight: bold;
+                    margin-top: -12px;
+                }
+                h2 {
+                    display: none;
+                    color: white;
+                    font-size: 30px;
+                    font-weight: bold;
+                    margin-top: 19px;
+                }
+                h3 {
+                    font-size: 12px;
+                    font-weight: normal;
+                    color: #3e4403;
+                }
+            }
+        }
+        .bg {
+            z-index: 0;
+            display: none;
+            width: 334px;
+            height: 334px;
+            position: absolute;
+            left: 10px;
+            top: 9px;
+            border-radius: 10px;
+            background: rgba(0,0,0,0.7);
+        }
+    }
+    .rules_box {
+        z-index: 100;
+        width: 900px;
+        height: 561px;
+        position: absolute;
+        bottom: -900px;
+        left: 50%;
+        margin-left: -450px;
+        font-size: 14px;
+        color: white;
+        padding: 50px 60px;
+        background: url("../../images/prize_rule_bg.png");
+        img {
+            position: absolute;
+            right: 18px;
+            top: 18px;
+            width: 35px;
+            cursor: pointer;
+        }
+        h1 {
+            font-weight: bold;
+            font-size: 20px;
+            color: #ef722b;
+            margin-top: 10px;
+        }
+        span {
+            color: #ef722b;
+        }
+        .text_indent24 {
+            text-indent: 24px;
+        }
+    }
+    .guide_box {
+        display: none;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.7);
+        z-index: 100;
+        position: absolute;
+        img {
+            position: absolute;
+        }
+        .guide1 {
+            cursor: pointer;
+            display: none;
+            left: 980px;
+            top: 505px;
+        }
+        .guide2 {
+            display: none;
+            left: 506px;
+            top: 168px;
+        }
+        .guide3 {
+            cursor: pointer;
+            left: 980px;
+            top: 505px;
+        }
+        .guide4 {
+            display: none;
+            left: 500px;
+            top: 125px;
+        }
+        .guide5 {
+            left: 420px;
+            top: 250px;
+        }
+    }
+    .alert_box {
+        display: none;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.7);
+        z-index: 100;
+        position: absolute;
+        .alert_content {
+            width: 365px;
+            height: 160px;
+            z-index: 100;
+            background: white;
+            border: 4px #d55f02 solid;
+            border-radius: 10px;
+            position: absolute;
+            left: 50%;
+            margin-left: -182px;
+            top: 50%;
+            margin-top: -80px;
+            .pic_close {
+                position: absolute;
+                width: 28px;
+                height: 28px;
+                right: -35px;
+                cursor: pointer;
+                top: 0;
+            }
+            .prize_msg {
+                text-align: center;
+                h1 {
+                    margin-top: 5px;
+                    font-size: 20px;
+                    font-weight: bold;
+                    color: #e1641c;
+                }
+                img {
+                    position: absolute;
+                    width: 60px;
+                    top: 50px;
+                    left: 25px;
+                }
+                p {
+                    color: #404040;
+                    margin: 23px 0 0 100px;
+                    text-align: left;
+                    font-size: 14px;
+                    width: 250px;
+                }
+                span {
+                    color: #e1641c;
+                }
+            }
+            .remind_msg {
+                display: none;
+                color: #404040;
+                padding: 54px 10px;
+                text-align: center;
+                font-size: 14px;
+            }
+        }
+    }
+    .lottery_box {
+        position: absolute;
+        width: 490px;
+        height: 328px;
+        right: 155px;
+        top: 250px;
+        .award {
+            border: 3px solid #f19c1a;
+            background: #fcc04d;
+            width: 487px;
+            height: 142px;
+            padding: 10px 24px;
+            position: relative;
+            .t3 {
+                background: url('../../images/sprite-lottery.png') no-repeat 0 -59px;
+                width: 71px;
+                height: 19px;
+                margin-bottom: 15px;
+            }
+            .rule-wrap {
+                position: absolute;
+                right: 30px;
+                top: 12px;
+                .ico-rule {
+                    background: url('../../images/sprite-lottery.png') no-repeat;
+                    width: 18px;
+                    height: 17px;
+                    display: inline-block;
+                    cursor: pointer;
+                    float: right;
+                    position: relative;
+                    z-index: 10;
+                }
+                .rule {
+                    position: absolute;
+                    bottom: 28px;
+                    right: -33px;
+                    background: #000;
+                    opacity: 0.84;
+                    color: #c2efff;
+                    width: 487px;
+                    min-height: 130px;
+                    padding: 14px 18px;
+                    z-index: 10;
+                    &:before {
+                        width: 0;
+                        height: 0;
+                        border-left: 12px solid transparent;
+                        border-right: 12px solid transparent;
+                        border-top: 12px solid rgba(0, 0, 0, 0.84);
+                        content: " ";
+                        position: absolute;
+                        bottom: -10px;
+                        right: 29px;
+                    }
+                    h4 {
+                        font-size: 14px;
+                    }
+                }
+            }
+            .ul-award {
+                width: 487px;
+                li {
+                    float: left;
+                    margin-right: 16px;
+                    &:last-of-type {
+                        margin-right: 0;
+                    }
+                    .item {
+                        .img-wrap {
+                            position: relative;
+                            background: #f19c1a;
+                            width: 75px;
+                            height: 67px;
+                            img {
+                                width: 75px;
+                                height: 67px;
+                                display: block;
+                            }
+                            p {
+                                overflow: hidden;
+                                white-space: nowrap;
+                                text-overflow: ellipsis;
+                                width: 75px;
+                                text-align: center;
+                                margin-top: -18px;
+                                font-size: 12px;
+                                color: #202020;
+                            }
+                            .tip {
+                                    cursor: pointer;
+                            position: absolute;
+                            left: 0;
+                            bottom: 0;
+                            text-align: center;
+                            width: 100%;
+                            line-height: 68px;
+                            height: 66px;
+                            background: rgba(0,0,0,0.5);
+                            color: #fff;
+                            }
+                        }
+                        .progress {
+                            margin-top: 2px;
+                            background: #f5f5f5;
+                            border: 1px solid #f19c1a;
+                            width: 75px;
+                            height: 13px;
+                            line-height: 13px;
+                            text-align: center;
+                            position: relative;
+                            i {
+                                display: inline-block;
+                                background: #b4c40b;
+                                width: 100%;
+                                height: 100%;
+                                position: absolute;
+                                left: 0;
+                                top: 0;
+                            }
+                            .count {
+                                position: absolute;
+                                left: 50%;
+                                top: 0;
+                                width: 100%;
+                                margin-left: -50%;
+                                color: #202020;
+                            }
+                            &.al_get{
+                                i{
+                                    background: transparent;
+                                }
+                                .count{
+                                    color: #81827d;;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .record {
+            margin-top: 12px;
+            width: 487px;
+            height: 168px;
+            padding: 10px 0 0 24px;
+            position: relative;
+            border: 3px solid #f19c1a;
+            background: #fcc04d;
+            .t3 {
+                background: url('../../images/sprite-lottery.png') no-repeat 0 -114px;
+                width: 71px;
+                height: 19px;
+                margin-bottom: 10px;
+            }
+            .ul-record {
+                height: 120px;
+                overflow-x: hidden;
+                position: absolute;
+                width: 467px;
+                left: 15px;
+                top: 35px;
+                li {
+                    p {
+                        color: #202020;
+                        line-height: 2;
+                        .b {
+                            font-weight: bold;
+                        }
+                    }
+                }
+            }
+        }
+        .smallScroll::-webkit-scrollbar {
+            width: 10px;
+            height: 10px;
+        }
+        .smallScroll::-webkit-scrollbar-track {
+            border-radius: 3px;
+            background: #fcc04d;
+        }
+        .smallScroll::-webkit-scrollbar-thumb {
+            border-radius: 5px;
+            background: #bb4403;
+        }
+        .smallScroll.smallScroll2::-webkit-scrollbar {
+            width: 6px;
+        }
+    }
+}
+@keyframes bigInto {
+  from {
+    transform: scale(1.1);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes bigInto {
+  from {
+    -webkit-transform: scale(1.1);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>抽奖</title>
+    <link rel="stylesheet" href="styles/_lottery.css">
+    <link rel="stylesheet" href="styles/tabBar.css">
+  </head>
+  <body>
+    <section class="lottery-wrap">
+      <div class="award">
+        <h3 class="t3 ti">我的奖品</h3>
+        <div class="rule-wrap"><i class="ico-rule"></i>
+          <div class="rule none">
+            <h4 class="t4">奖品兑换规则：</h4>
+            <p class="content">
+              1.Apple Watch和红米手机每人限换1部；<br>
+              2.英雄联盟点券单词兑换额度为3000点券/次；<br>
+              3.Q币单次兑换额度为10Q币/次；<br>
+              4.实物奖品碎片在活动期内有效，结束后所有碎片会按照1：1000比例返还顺豆到当前火马账户内;<br>
+              5.点券和Q币碎片会保留，后续活动仍然可继续累加。
+            </p>
+          </div>
+        </div>
+        <ul class="ul-award">
+          <li>
+            <div class="item">
+              <div class="img-wrap"><img src="images/pics/iwatch.jpg" alt=""><a href="###" class="tip none">点击兑换</a>
+              </div>
+              <div class="progress"><i style="width:0%;"></i><span class="count">0/25</span>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="item">
+              <div class="img-wrap"><img src="images/pics/hm3.jpg" alt=""><a href="###" class="tip none">点击兑换</a>
+              </div>
+              <div class="progress"><i style="width:0%;"></i><span class="count">0/10</span>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="item">
+              <div class="img-wrap"><img src="images/pics/lol.jpg" alt=""><a href="###" class="tip none">点击兑换</a>
+              </div>
+              <div class="progress"><i style="width:0%;"></i><span class="count">0/1</span>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="item">
+              <div class="img-wrap"><img src="images/pics/3000dq.jpg" alt=""><a href="###" class="tip none">点击兑换</a>
+              </div>
+              <div class="progress"><i style="width:30%;"></i><span class="count">3/10</span>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="item">
+              <div class="img-wrap"><img src="images/pics/qb.jpg" alt=""><a href="###" class="tip">点击兑换</a>
+              </div>
+              <div class="progress"><i></i><span class="count">10/10</span>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="record">
+        <h3 class="t3 ti">获奖记录</h3>
+        <ul class="ul-record smallScroll">
+          <li>
+            <p><span class="b">· </span>这里显示的是一条获奖记录</p>
+          </li>
+          <li>
+            <p><span class="b">· </span>这里显示的是一条获奖记录</p>
+          </li>
+          <li>
+            <p><span class="b">· </span>这里显示的是一条获奖记录</p>
+          </li>
+          <li>
+            <p><span class="b">· </span>这里显示的是一条获奖记录</p>
+          </li>
+          <li>
+            <p><span class="b">· </span>这里显示的是一条获奖记录</p>
+          </li>
+          <li>
+            <p><span class="b">· </span>这里显示的是一条获奖记录</p>
+          </li>
+          <li>
+            <p><span class="b">· </span>这里显示的是一条获奖记录</p>
+          </li>
+          <li>
+            <p><span class="b">· </span>这里显示的是一条获奖记录</p>
+          </li>
+          <li>
+            <p><span class="b">· </span>这里显示的是一条获奖记录</p>
+          </li>
+          <li>
+            <p><span class="b">· </span>这里显示的是一条获奖记录</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <script src="scripts/jquery-3.1.0.min.js"></script>
+    <script>
+      ;(function($){
+      
+        $('.rule-wrap').hover(function(){
+          $(this).find('div').show();
+        }, function(){
+          $(this).find('div').hide();
+        })
+      
+      })(jQuery);
+    </script>
+  </body>
+</html>

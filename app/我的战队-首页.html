@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>我的战队-首页</title>
+  <link href="styles/style.css" rel="stylesheet" type="text/css"/>
+  <link href="styles/myPrize.css" rel="stylesheet" type="text/css"/>
+  <link href="styles/modal.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="styles/tabBar.css" />
+	<link rel="stylesheet" href="styles/team_game.css" />
+  <!--日历css-->
+  <link href="styles/dropdown.css" rel="stylesheet" type="text/css"/>
+</head>
+
+<body>
+<div class="container award new">
+	
+	<!-- 左边导航开始 -->
+	<div class="left_main_menu">
+		<ul class="menu_list">
+         <li data-href="3#">
+            <img src="images/left_tab3.png"/>
+            <p>战队赛</p>
+          </li>
+          <li class="active" data-href="3#">
+            <img src="images/left_tab6.png"/>
+            <p>我的战队</p>
+          </li>
+        </ul>
+	</div>
+	<!-- 左边导航结束 -->
+
+  <div class="tab-content tableW1086">
+    <div class="tab tab-pane fade  active in" id="myTeam">
+      <div class="myTeam">
+        <div class="team_pane new fl">
+          <h2 class="pane_title">我的战队
+            <select name="" id="" class="fr">
+              <option>英雄联盟</option>
+              <option>梦三国</option>
+            </select>
+          </h2>
+          <div class="team_info clearfix">
+            <img class="info_left fl" src="images/img_team.jpg" alt=""/>
+            <div class="fl info_center">
+              <h3 class="name yellow">马栏山一枝花</h3>
+              <p><span class="point">战点：1505 </span><span class="rankPos">排名：999+</span></p>
+            </div>
+            <div class="info_right fr"><img src="images/pics/server_ico_01.png" alt="" /></div>
+<!--            <div class="fl info_center"><p class="noTeam">你还没有战队呢~</p></div>
+            <div class="info_right fr"><a class="btn btn_create " href="">创建战队</a></div>-->
+          </div>
+          
+          <!--<h2 class="subtitle">
+          	<span>战队成员</span> 
+          	<span class="floatR">
+          		<a class="diss" href="#">解散
+          			<div class="diss_tip">
+	          			战队成员多于三人不允许解散
+	          		</div>
+          		</a>
+	          	<a href="#">招募</a>
+	          	<a href="#">邀请</a>
+	          </span>
+          </h2>-->
+          
+          <h2 class="subtitle">
+          	<span>战队成员</span>
+          	<span class="floatR">
+          		<a class="diss" href="#">解散
+          			<div class="diss_tip">
+	          			战队成员多于三人不允许解散
+	          		</div>
+          		</a>
+	          	<a href="#">邀请队友</a>
+          	</span>
+          </h2>
+          
+          
+          <div id="myCombatTeamMember">
+            <div class="loading-layer" style="display:none;">
+              <img src="images/loading.gif" alt=""/>
+            </div>
+            <div class="noData hide">比赛火热进行中，你还没有战队成员哦~</div>
+            
+            <!-- 我的战队-队长 -->
+            <ul class="member smallScroll">
+            	<li>
+            		<div class="team_info clearfix">
+            			
+	            		<img class="info_left fl" src="images/img_team.jpg" alt=""/>
+	            		<div class="fl info_center">
+		            		<h3 class="name">马栏山一枝花</h3>
+		            		<p class="clearfix"><span class="num_qq">66666666 </span><span class="nick">依旧不知所谓</span><span class="num_kill">13</span></p>
+            			</div>
+            		</div>
+            	</li>
+            	<li class="my">
+		            <div class="team_info clearfix">
+		            	<div class="member_option">
+	            			<span>申请退出</span>
+		            		<span>
+		            			<a class="yes" href="">同意</a>
+		            			<a class="no" href="">拒绝</a>
+		            		</span>
+	            		</div>
+		            	<img class="info_left fl" src="images/img_team.jpg" alt=""/>
+			            <div class="fl info_center">
+		            		<h3 class="name">马栏山一枝花</h3>
+		            		<p class="clearfix"><span class="num_qq">66666666 </span><span class="nick">依旧不知所谓</span><span class="num_kill">13</span></p>
+            			</div>
+            		</div>
+            	</li>
+            	<li>
+            		<div class="team_info clearfix">
+		            	<img class="info_left fl" src="images/img_team.jpg" alt=""/>
+		            	<div class="fl info_center">
+		            		<h3 class="name">马栏山一枝花</h3>
+		            		<p class="clearfix"><span class="num_qq">66666666 </span><span class="nick">依旧不知所谓</span><span class="num_kill">13</span></p>
+            			</div>
+            		</div>
+            	</li>
+            </ul>
+            
+          </div>
+
+
+        </div>
+        <div class="team_pane new fl">
+          <h2 class="pane_title">战队成绩</h2>
+          <ul class="score_list new">
+            <li>
+              <div class="score_left fl">
+                <p class="fontSize12">2016.5.10  10:25</p>
+                <p class="fontSize14 blue">2016S1第五轮赛场1-艾欧尼亚</p>
+                <p class="fontSize12">战队奖励：+100战点  +500元现金</p>
+              </div>
+              <div class="score_right">
+                <p>22</p>
+                <a href="#" class="btn btn_assign">分配奖励</a>
+              </div>
+            </li>
+            <li>
+              <div class="score_left fl">
+                <p class="fontSize12">2016.5.10  10:25</p>
+                <p class="fontSize14 blue">2016S1第五轮赛场1-艾欧尼亚</p>
+                <p class="fontSize12">战队奖励：+100战点  +500元现金</p>
+              </div>
+              <div class="score_right">
+                <img src="images/team_prize_ico.png" alt=""/>
+                <a href="#" class="btn btn_assign">分配奖励</a>
+              </div>
+            </li>
+            <li>
+              <div class="score_left fl">
+                <p class="fontSize12">2016.5.10  10:25</p>
+                <p class="fontSize14 blue">2016S1第五轮赛场1-艾欧尼亚</p>
+                <p class="fontSize12">战队奖励：+100战点  +500元现金</p>
+              </div>
+              <div class="score_right"><span>十八强</span></div>
+            </li>
+            <li></li>
+            <li></li>
+          </ul>
+          <div class="pageBg">
+            <div class="pageBox">
+              <a href="javascript:void(0)" class="pageCur">1</a>
+              <a href="javascript:void(0)">2</a>
+              <a href="javascript:void(0)">3</a>
+              <a href="javascript:void(0)">4</a>
+            </div>
+          </div>
+          <div class="noData" style="display: none;">比赛火热进行中，你还没有战队哦~</div>
+        </div>
+        <div class="team_pane new fl">
+          <h2 class="pane_title">战队消息</h2>
+          <ul class="news_list new smallScroll">
+            <li>
+              <p>有<span class="yellow">20</span>人申请加入你的战队 <a href="" class="blue txt-unl ml20">查看详情</a></p>
+            </li>
+            <li>
+              <p>欢迎新队员“<span class="yellow">云一样的男子</span>”加入战队 <span class="time">09:35</span></p>
+            </li>
+            <li>
+              <p>S1第五轮艾欧尼亚四强赛对手已创建好房间，房间名<span class="yellow">S1-5-4</span>，
+                房间密码<span class="yellow">88763343</span>，请尽快进入房间开始比赛 <span class="time">4-12 10:00</span></p>
+            </li>
+            <li>
+              <p>S1第五轮艾欧尼亚四强赛对手已创建好房间，房间名<span class="yellow">S1-5-4</span>，
+                房间密码<span class="yellow">88763343</span>，请尽快进入房间开始比赛 <span class="time">4-12 10:00</span></p>
+            </li>
+            <li>
+              <p>S1第五轮艾欧尼亚四强赛对手已创建好房间，房间名<span class="yellow">S1-5-4</span>，
+                房间密码<span class="yellow">88763343</span>，请尽快进入房间开始比赛 <span class="time">4-12 10:00</span></p>
+            </li>
+            <li>
+              <p>S1第五轮艾欧尼亚四强赛对手已创建好房间，房间名<span class="yellow">S1-5-4</span>，
+                房间密码<span class="yellow">88763343</span>，请尽快进入房间开始比赛请尽快进入房间开始比赛请尽快进入房间开始比赛 <span class="time">4-12 10:00</span></p>
+            </li>
+
+            <li>
+              <p>有<span class="yellow">20</span>人申请加入你的战队 <a href="" class="blue txt-unl ml20">查看详情</a></p>
+            </li>
+            <li>
+              <p>风一样的男子邀请你加入战队“哈哈哈哈哈”，战队赛区为英雄联盟－艾欧尼亚 <a class="blue txt-unl ml20" href="">接受</a><a class="orange txt-unl ml20" href="">拒绝</a></p>
+            </li>
+            <li>
+            <p>风一样的男子邀请你加入战队“哈哈哈哈哈”，战队赛区为英雄联盟－艾欧尼亚 <a class="blue txt-unl ml20" href="">接受</a><a class="orange txt-unl ml20" href="">拒绝</a></p>
+            </li>
+            <li>
+              <p>有<span class="yellow">20</span>人申请加入你的战队 <a href="" class="blue txt-unl ml20">查看详情</a></p>
+            </li>
+            <li>
+              <p>风一样的男子邀请你加入战队“哈哈哈哈哈”，战队赛区为英雄联盟－艾欧尼亚 <a class="blue txt-unl ml20" href="">接受</a><a class="orange txt-unl ml20" href="">拒绝</a></p>
+            </li>
+            <li>
+            <p>风一样的男子邀请你加入战队“哈哈哈哈哈”，战队赛区为英雄联盟－艾欧尼亚 <a class="blue txt-unl ml20" href="">接受</a><a class="orange txt-unl ml20" href="">拒绝</a></p>
+            </li>
+            <li>
+              <p>有<span class="yellow">20</span>人申请加入你的战队 <a href="" class="blue txt-unl ml20">查看详情</a></p>
+            </li>
+            <li>
+              <p>风一样的男子邀请你加入战队“哈哈哈哈哈”，战队赛区为英雄联盟－艾欧尼亚 <a class="blue txt-unl ml20" href="">接受</a><a class="orange txt-unl ml20" href="">拒绝</a></p>
+            </li>
+            <li>
+            <p>风一样的男子邀请你加入战队“哈哈哈哈哈”，战队赛区为英雄联盟－艾欧尼亚 <a class="blue txt-unl ml20" href="">接受</a><a class="orange txt-unl ml20" href="">拒绝</a></p>
+            </li>
+          </ul>
+          <div class="pageBg">
+            <div class="pageBox">
+              <a href="javascript:void(0)" class="pageCur">1</a>
+              <a href="javascript:void(0)">2</a>
+              <a href="javascript:void(0)">3</a>
+              <a href="javascript:void(0)">4</a>
+            </div>
+          </div>
+          <div class="noData" style="display: none;">比赛火热进行中，你还没有战队消息哦~</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!--我的战队弹窗-->
+<button type="button" data-toggle="modal" data-target="#apply-detail-modal" >申请加入-查看详情</button>
+<button type="button" data-toggle="modal" data-target="#assign-modal" >奖励分配-队长分配</button>
+<button type="button" data-toggle="modal" data-target="#assign-modal2" >奖励分配-队员同意</button>
+<button type="button" data-toggle="modal" data-target="#assign-modal3" >奖励分配-发放奖金</button>
+<button type="button" data-toggle="modal" data-target="#text-modal" >普通提示</button>
+
+
+<!-- 提示 -->
+		<div id="text-modal" tabindex="-1" role="dialog" aria-hidden="true"
+         class="modal hide modal-s" data-backdrop="static">
+        <div class="modal-dialog modal-md">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <a data-dismiss="modal" aria-hidden="true" class="close"></a>
+                </div>
+                <div class="modal-body modal_height_110">
+                    <div class="info modal_padding_top_30">
+                        <p id="resultMsgId" class="modal-text"></p>
+                    </div>
+                </div>
+                <div class="modal-footer text-right">
+                    <div class="modal-btns">
+                        <a href="javascript:void(0)" data-dismiss="modal"
+                           aria-hidden="true" class="btn_sure close">关闭</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+		<!-- 提示 -->
+		
+<div id="apply-detail-modal" tabindex="-1" role="dialog" aria-hidden="true" class="modal hide  modal-s" data-backdrop="static">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <a data-dismiss="modal" aria-hidden="true" class="close"></a>
+      </div>
+      <div class="modal-body ">
+        <div class="intro text-center">
+          <table class="table-team">
+            <thead>
+            <tr>
+              <th width="19%">召唤师</th>
+              <th width="14%">段位</th>
+              <th width="14%">申请位置</th>
+              <th width="14%">真实姓名</th>
+              <th width="19%">联系方式</th>
+              <th>状态</th>
+            </tr>
+            </thead>
+            <tbody >
+            <tr>
+              <td >依旧不知所谓</td>
+              <td >王者</td>
+              <td >上单</td>
+              <td >丫丫的</td>
+              <td >15847265896</td>
+              <td><a class="blue txt-unl" href="">同意</a> <a class="orange ml10 txt-unl" href="">拒绝</a></td>
+            </tr>
+            <tr>
+              <td >依旧不知所谓</td>
+              <td >王者</td>
+              <td >上单</td>
+              <td >丫丫的</td>
+              <td >15847265896</td>
+              <td><a class="blue txt-unl" href="">同意</a> <a class="orange ml10 txt-unl" href="">拒绝</a></td>
+            </tr>
+            <tr>
+              <td >依旧不知所谓</td>
+              <td >王者</td>
+              <td >上单</td>
+              <td >丫丫的</td>
+              <td >15847265896</td>
+              <td><a class="blue txt-unl" href="">同意</a> <a class="orange ml10 ml10 txt-unl" href="">拒绝</a></td>
+            </tr>
+            <tr>
+              <td >依旧不知所谓</td>
+              <td >王者</td>
+              <td >上单</td>
+              <td >丫丫的</td>
+              <td >15847265896</td>
+              <td><a class="blue txt-unl" href="">同意</a> <a class="orange ml10 txt-unl" href="">拒绝</a></td>
+            </tr>
+            </tbody>
+          </table>
+          <div class="pageBox">
+            <a href="javascript:void(0)" class="pageCur">1</a>
+            <a href="javascript:void(0)" >2</a>
+            <a href="javascript:void(0)">3</a>
+            <a href="javascript:void(0)">4</a>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer text-right">
+        <div class="modal-btns">
+          <a href="javascript:void(0)" data-dismiss="modal" aria-hidden="true" class="btn_sure close" >关闭</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="assign-modal" tabindex="-1" role="dialog" aria-hidden="true" class="modal hide  modal-s" data-backdrop="static">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <a data-dismiss="modal" aria-hidden="true" class="close"></a>
+      </div>
+      <div class="modal-body ">
+        <div class="intro text-center">
+          <table class="table-team">
+            <thead>
+            <tr>
+              <th width="27%">召唤师</th>
+              <th width="20%">本轮参与场次</th>
+              <th width="23%">奖励分配（元）</th>
+              <th>状态<span class="state_checking"></span>
+                <div class="checkTips" style="display: none">参赛队员需在24小时内处理奖金分配方案，否则将按“同意”此方案来发放奖金。</div>
+              </th>
+            </tr>
+            </thead>
+          </table>
+          <div class="smallScroll maxH170">
+            <table class="table-team">
+              <tbody >
+              <tr class="my">
+                <td width="27%">依旧不知所谓丶魔（队长）</td>
+                <td width="20%">5</td>
+                <td width="23%"><input type="text" value="150"/></td>
+                <td><a class="blue txt-unl" href="">同意</a> <a class="blue txt-unl ml10" href="">不同意</a></td>
+              </tr>
+              <tr>
+                <td width="27%">依旧不</td>
+                <td width="20%">5</td>
+                <td width="23%"><input type="text" value="150"/></td>
+                <td><span class="green">已同意</span></td>
+              </tr>
+              <tr>
+                <td width="27%">依旧不</td>
+                <td width="20%">5</td>
+                <td width="23%"><input type="text" value="150"/></td>
+                <td><span class="orange">不同意</span></td>
+              </tr>
+              <tr>
+                <td width="27%">依旧不</td>
+                <td width="20%">5</td>
+                <td width="23%"><input type="text" value="150"/></td>
+                <td><span class="gray">待确认</span></td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+          <table class="table-team">
+            <tfoot>
+            <tr>
+              <td colspan="2" width="47%" align="right"><span class="orange">本轮奖励：500元现金</span></td>
+              <td colspan="2" align="left">分配合计：500</td>
+            </tr>
+            </tfoot>
+          </table>
+          </table>
+        </div>
+      </div>
+      <div class="modal-footer text-right">
+        <div class="dialog-tips fl">*全部队员“同意”奖励分配方案后，方可进入领奖流程。</div>
+        <div class="modal-btns">
+          <a href="javascript:void(0)" data-dismiss="modal" aria-hidden="true" class="btn_sure close" >关闭</a>
+          <a href="javascript:void(0)" data-dismiss="modal" aria-hidden="true" class="btn_cancel close" >取消</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="assign-modal2" tabindex="-1" role="dialog" aria-hidden="true" class="modal hide  modal-s" data-backdrop="static">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <a data-dismiss="modal" aria-hidden="true" class="close"></a>
+      </div>
+      <div class="modal-body">
+        <div class="intro text-center">
+          <table class="table-team">
+            <thead>
+            <tr>
+              <th width="27%">召唤师</th>
+              <th width="20%">本轮参与场次</th>
+              <th width="23%">奖励分配（元）</th>
+              <th>状态<span class="state_checking"></span>
+                <div class="checkTips" style="display: none">参赛队员需在24小时内处理奖金分配方案，否则将按“同意”此方案来发放奖金。</div>
+              </th>
+            </tr>
+            </thead>
+          </table>
+          <div class="smallScroll maxH170">
+            <table class="table-team">
+              <tbody >
+              <tr>
+                <td width="27%">依旧不知所谓丶魔（队长）</td>
+                <td width="20%">5</td>
+                <td width="23%"><input type="text" value="150" disabled/></td>
+                <td><a class="blue txt-unl" href="">同意</a> <a class="blue ml10 txt-unl" href="">不同意</a></td>
+              </tr>
+              <tr class="my">
+                <td width="27%">依旧不</td>
+                <td width="20%">5</td>
+                <td width="23%"><input type="text" value="150" disabled/></td>
+                <td><span class="green">已同意</span></td>
+              </tr>
+              <tr>
+                <td width="27%">依旧不</td>
+                <td width="20%">5</td>
+                <td width="23%"><input type="text" value="150" disabled/></td>
+                <td><span class="orange">不同意</span></td>
+              </tr>
+              <tr>
+                <td width="27%">依旧不</td>
+                <td width="20%">5</td>
+                <td width="23%"><input type="text" value="150" disabled/></td>
+                <td><span class="gray">待确认</span></td>
+              </tr>
+              <tr>
+                <td width="27%">依旧不</td>
+                <td width="20%">5</td>
+                <td width="23%"><input type="text" value="150" disabled/></td>
+                <td><span class="green">已同意</span></td>
+              </tr>
+              <tr>
+                <td width="27%">依旧不</td>
+                <td width="20%">5</td>
+                <td width="23%"><input type="text" value="150" disabled/></td>
+                <td><span class="green">已同意</span></td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+          <table class="table-team">
+            <tfoot>
+            <tr>
+              <td colspan="2" width="47%" align="right"><span class="orange">本轮奖励：500元现金</span></td>
+              <td colspan="2" align="left">分配合计：500</td>
+            </tr>
+            </tfoot>
+          </table>
+          </table>
+        </div>
+      </div>
+      <div class="modal-footer text-right">
+        <div class="dialog-tips fl">*全部队员“同意”奖励分配方案后，方可进入领奖流程。</div>
+        <div class="modal-btns">
+          <a href="javascript:void(0)" data-dismiss="modal" aria-hidden="true" class="btn_sure close" >关闭</a>
+          <a href="javascript:void(0)" data-dismiss="modal" aria-hidden="true" class="btn_cancel close" >取消</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="assign-modal3" tabindex="-1" role="dialog" aria-hidden="true" class="modal hide  modal-s" data-backdrop="static">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <a data-dismiss="modal" aria-hidden="true" class="close"></a>
+      </div>
+      <div class="modal-body ">
+        <div class="intro text-center">
+          <table class="table-team">
+            <thead>
+            <tr>
+              <th width="27%">召唤师</th>
+              <th width="20%">本轮参与场次</th>
+              <th width="23%">奖励分配（元）</th>
+              <th>状态</th>
+            </tr>
+            </thead>
+          </table>
+          <div class="smallScroll maxH170">
+            <table class="table-team">
+              <tbody >
+              <tr>
+                <td width="27%">依旧不知所谓丶魔（队长）</td>
+                <td width="20%">5</td>
+                <td width="23%"><input type="text" value="150" disabled/></td>
+                <td><a class="blue txt-unl" href="">领取</a></td>
+              </tr>
+              <tr class="my">
+                <td width="27%">依旧不</td>
+                <td width="20%">5</td>
+                <td width="23%"><input type="text" value="150" disabled/></td>
+                <td><span class="green">已领取</span></td>
+              </tr>
+              <tr>
+                <td width="27%">依旧不</td>
+                <td width="20%">5</td>
+                <td width="23%"><input type="text" value="150" disabled/></td>
+                <td><span class="gray">待领取</span></td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+          <table class="table-team">
+            <tfoot>
+            <tr>
+              <td colspan="2" width="47%" align="right"><span class="orange">本轮奖励：500元现金</span></td>
+              <td colspan="2" align="left">分配合计：500</td>
+            </tr>
+            </tfoot>
+          </table>
+          </table>
+        </div>
+      </div>
+      <div class="modal-footer text-right">
+        <div class="modal-btns">
+          <a href="javascript:void(0)" data-dismiss="modal" aria-hidden="true" class="btn_sure close" >关闭</a>
+          <a href="javascript:void(0)" data-dismiss="modal" aria-hidden="true" class="btn_cancel close" >取消</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="scripts/jquery-3.1.0.min.js"></script>
+<script type="text/javascript" src="scripts/bootstrap.min.js"></script>
+<script src="scripts/tabBar.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+
+  $(function () {
+    //阻止空连接默认行为
+
+    $(".state_checking").hover(function(){
+      $(this).siblings(".checkTips").show();
+    },function(){
+      $(this).siblings(".checkTips").hide();
+    });
+	
+  	$('.diss').hover(function(e) {
+  		$('.diss_tip').show();
+  	},function(e) {
+  		$('.diss_tip').hide();
+  	})
+
+    //十人场百人场 - 我的比赛下拉框
+    $('body').on('click', '.tab_award li', function(){
+      $(".select-wrap").hide();
+    });
+
+    $("#myGame").click(function(event){
+      event.stopPropagation();
+      $(this).tab('show');
+      var ul = $(".select-wrap");
+      if(ul.css("display")=="none"){
+        ul.slideDown("fast");
+      }else{
+        ul.slideUp("fast");
+      }
+    });
+
+  })
+
+</script>
+
+</body>
+</html>

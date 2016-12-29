@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>守望先锋弹窗</title>
+  <link rel="stylesheet" href="styles/shouwang.css"/>
+  <link rel="stylesheet" href="styles/modal.css"/>
+</head>
+<body>
+<br>守望先锋弹层：
+<button type="button" data-toggle="modal" data-target="#bind-modal1">试玩扫码</button>
+<button type="button" data-toggle="modal" data-target="#bind-modal2">无空闲扫码</button>
+<button type="button" data-toggle="modal" data-target="#bind-modal3">已玩过扫码</button>
+<button type="button" data-toggle="modal" data-target="#text-modal-try">获得试玩账号</button>
+<button type="button" data-toggle="modal" data-target="#text-modal-rule">试玩规则</button>
+<button type="button" data-toggle="modal" data-target="#text-modal-rule1">单次免费</button>
+<button type="button" data-toggle="modal" data-target="#text-modal-buy">排队等候</button>
+<button type="button" data-toggle="modal" data-target="#text-modal-nofree">无空闲</button>
+<button type="button" data-toggle="modal" data-target="#text-modal-end">试玩结束</button>
+<button type="button" data-toggle="modal" data-target="#text-modal-num">试玩次数已用完</button>
+<button type="button" data-toggle="modal" data-target="#text-modal-news">试玩公告</button>
+
+<div id="text-modal-try" tabindex="-1" role="dialog" aria-hidden="true" class="modal hide fade modal-s"
+     data-backdrop="static">
+  <div class="modal-dialog dialog-new modal-md">
+    <div class="modal-content">
+      <!-- <div class="modal-header-new">
+        <a data-dismiss="modal" aria-hidden="true" class="close"></a>
+      </div> -->
+      <div class="modal-body-new">
+        <div class="info-wrap w420">
+          <p class="txt-b pt85">你已获得《守望先锋》免费试玩资格，是否立即开始游戏？</p>
+          <p class="txt">*若1小时内未开始试玩则视为放弃</p>
+        </div>
+      </div>
+      <div class="modal-footer text-right">
+        <div class="modal-btns">
+          <a href="javascript:void(0)" data-dismiss="modal" aria-hidden="true" class="btn_sure close">立即开始试玩</a>
+          <a href="javascript:void(0)" data-dismiss="modal" aria-hidden="true" class="btn_cancel close">放弃试玩</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="text-modal-rule" tabindex="-1" role="dialog" aria-hidden="true" class="modal hide fade modal-s"
+     data-backdrop="static">
+  <div class="modal-dialog dialog-new modal-md">
+    <div class="modal-content">
+      <div class="modal-body-new large">
+        <div class="info-wrap">
+          <h3 class="title">守望先锋免费试玩规则</h3>
+          <ul class="lists">
+            <li>单次试玩退出游戏即表示试玩结束，最长<span class="blue">不超过24小时</span>，连续试玩24小时后将会自动下线，请注意试玩时间；</li>
+            <li>每次免费试玩的账号都是随机的，由于免费试玩账号数量有限，先到先得；</li>
+            <li>若在获得试玩资格后<span class="blue">20分钟</span>未开始游戏，则视为放弃试玩；</li>
+            <li>本活动的最终解释权归火马电竞所有。</li>
+          </ul>
+        </div>
+      </div>
+      <div class="modal-footer text-right">
+        <div class="modal-btns">
+          <a href="javascript:void(0)" data-dismiss="modal" aria-hidden="true" class="btn_sure close">我了解了，开始试玩</a>
+          <a href="javascript:void(0)" data-dismiss="modal" aria-hidden="true" class="btn_cancel close">取消</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="text-modal-news" tabindex="-1" role="dialog" aria-hidden="true" class="modal hide fade modal-s"
+     data-backdrop="static">
+  <div class="modal-dialog dialog-new modal-md">
+    <div class="modal-content">
+      <div class="modal-header-new">
+        <a data-dismiss="modal" aria-hidden="true" class="close"></a>
+      </div>
+      <div class="modal-body-new large">
+        <div class="info-wrap">
+          <h3 class="title">守望先锋试玩公告</h3>
+          <ul class="lists">
+            <li>您可以打开<span class="blue">好友列表（快捷键O）</span>，选择“附近玩家”和身边的好友一起组队战斗不超过24小时</li>
+            <li>我们将<span class="blue">严惩使用外挂进行游戏等作弊行为</span>，您可以右单击作弊玩家头像进行举报</li>
+            <li>试玩账号<span class="blue">无法解锁竞技比赛模式</span>，您可以购买畅玩版或典藏版守望先锋体验相关内容</li>
+          </ul>
+        </div>
+      </div>
+      <div class="modal-footer text-center">
+        <div class="modal-btns">
+          <a href="javascript:void(0)" data-dismiss="modal" aria-hidden="true" class="btn_sure close" style="margin-right: 0;">我了解了</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="text-modal-rule1" tabindex="-1" role="dialog" aria-hidden="true" class="modal hide fade modal-s"
+     data-backdrop="static">
+  <div class="modal-dialog dialog-new modal-md">
+    <div class="modal-content">
+      <div class="modal-body-new large">
+        <div class="info-wrap">
+          <h3 class="title other">守望先锋免费试玩规则</h3>
+          <ul class="lists">
+            <li>每个火马用户可以免费试玩守望先锋一次，如需继续游戏，<span class="blue">请购买正式版</span>；</li>
+            <li>单次试玩退出游戏即表示试玩结束，最长<span class="blue">不超过24小时</span>，连续试玩24小时后将会自动下线，请注意试玩时间；</li>
+            <li>每次免费试玩的账号都是随机的，由于免费试玩账号数量有限，先到先得；</li>
+            <li>若在获得试玩资格后<span class="blue">1小时内</span>未开始游戏，则视为放弃试玩；</li>
+            <li>本活动的最终解释权归火马电竞所有。</li>
+          </ul>
+        </div>
+      </div>
+      <div class="modal-footer text-right">
+        <div class="modal-btns">
+          <a href="javascript:void(0)" data-dismiss="modal" aria-hidden="true" class="btn_sure close">我了解了，开始试玩</a>
+          <a href="javascript:void(0)" data-dismiss="modal" aria-hidden="true" class="btn_cancel close">取消</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="text-modal-buy" tabindex="-1" role="dialog" aria-hidden="true" class="modal hide fade modal-s"
+     data-backdrop="static">
+  <div class="modal-dialog dialog-new modal-md">
+    <div class="modal-content">
+      <div class="modal-body-new large">
+        <div class="info-wrap">
+          <p class="txt-b pt35">当前无空闲的试玩账号，你前面有<span class="big-font">14</span>人正在排队等候</p>
+          <p class="txt">你也可以点击购买游戏立即加入未来之战！</p>
+          <div class="img-wrap">
+            <a href="#" target="_blank"><img src="images/pics/buy.jpg" alt=""></a>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer text-right">
+        <div class="modal-btns">
+          <a href="javascript:void(0)" id="timer" class="btn_sure">继续等待</a>
+          <a href="javascript:void(0)" data-dismiss="modal" aria-hidden="true" class="btn_cancel close">取消</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="text-modal-nofree" tabindex="-1" role="dialog" aria-hidden="true" class="modal hide fade modal-s"
+     data-backdrop="static">
+  <div class="modal-dialog dialog-new modal-md">
+    <div class="modal-content">
+      <div class="modal-body-new large">
+        <div class="info-wrap">
+          <p class="txt-b pt35">当前无空闲试玩账号，请稍后再试！</p>
+          <p class="txt">你也可以点击购买游戏立即加入未来之战！</p>
+          <div class="img-wrap">
+            <a href="#" target="_blank"><img src="images/pics/buy.jpg" alt=""></a>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer text-right">
+        <div class="modal-btns">
+          <a href="javascript:void(0)" data-dismiss="modal" aria-hidden="true" class="btn_sure close">继续等待</a>
+          <a href="javascript:void(0)" data-dismiss="modal" aria-hidden="true" class="btn_cancel close">取消</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="text-modal-end" tabindex="-1" role="dialog" aria-hidden="true" class="modal hide fade modal-s"
+     data-backdrop="static">
+  <div class="modal-dialog dialog-new modal-md">
+    <div class="modal-content">
+      <div class="modal-body-new large">
+        <div class="info-wrap">
+          <p class="txt-b pt35">本次试玩已结束！<span class="sub-txt">《守望先锋》邀请你正式加入全球千万特工行列，这个世界需要更多英雄！</span></p>
+          <div class="img-wrap">
+            <a href="#" target="_blank"><img src="images/pics/buy2.jpg" alt=""></a>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer text-right">
+        <div class="modal-btns">
+          <a href="javascript:void(0)" data-dismiss="modal" aria-hidden="true" class="btn_sure close">继续等待</a>
+          <a href="javascript:void(0)" data-dismiss="modal" aria-hidden="true" class="btn_cancel close">取消</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="text-modal-num" tabindex="-1" role="dialog" aria-hidden="true" class="modal hide fade modal-s"
+     data-backdrop="static">
+  <div class="modal-dialog dialog-new modal-md">
+    <div class="modal-content">
+      <div class="modal-body-new large">
+        <div class="info-wrap">
+          <p class="txt-b pt35">你的免费试玩次数已用完！<span class="sub-txt">《守望先锋》邀请你正式加入全球千万特工行列，这个世界需要更多英雄！</span></p>
+          <div class="img-wrap">
+            <a href="#" target="_blank"><img src="images/pics/buy2.jpg" alt=""></a>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer text-right">
+        <div class="modal-btns">
+          <a href="javascript:void(0)" data-dismiss="modal" aria-hidden="true" class="btn_sure close">继续等待</a>
+          <a href="javascript:void(0)" data-dismiss="modal" aria-hidden="true" class="btn_cancel close">取消</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="bind-modal1" tabindex="-1" role="dialog" aria-hidden="true" class="modal hide fade modal-top-s "
+     data-backdrop="static">
+  <div class="modal-dialog dialog-new modal-md">
+    <div class="modal-content">
+      <div class="modal-body-new large">
+        <div class="info-wrap center">
+          <p class="txt-b pt35">本次试玩已结束，守望先锋邀请你购买正式版继续游戏！</p>
+          <p class="txt">扫码或点击<a href="#" target="_blank" class="blue">购买正式版</a></p>
+          <div class="qrcode-wrap">
+            <img src="images/pics/erweima.jpg" alt="" width="130" height="130"/>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer text-right">
+        <div class="modal-btns">
+          <a href="javascript:void(0)" data-dismiss="modal" aria-hidden="true" class="btn_sure close">关闭</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="bind-modal2" tabindex="-1" role="dialog" aria-hidden="true" class="modal hide fade modal-top-s "
+     data-backdrop="static">
+  <div class="modal-dialog dialog-new modal-md">
+    <div class="modal-content">
+      <div class="modal-body-new large">
+        <div class="info-wrap center">
+          <p class="txt-b pt35">当前无空闲的试玩账号，请稍后再试！</p>
+          <p class="txt">扫码或点击<a href="#" target="_blank" class="blue">购买正式版</a></p>
+          <div class="qrcode-wrap">
+            <img src="images/pics/erweima.jpg" alt="" width="130" height="130"/>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer text-right">
+        <div class="modal-btns">
+          <a href="javascript:void(0)" data-dismiss="modal" aria-hidden="true" class="btn_sure close">关闭</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="bind-modal3" tabindex="-1" role="dialog" aria-hidden="true" class="modal hide fade modal-top-s "
+     data-backdrop="static">
+  <div class="modal-dialog dialog-new modal-md">
+    <div class="modal-content">
+      <div class="modal-body-new large">
+        <div class="info-wrap center auto">
+          <p class="txt-b pt35">你已免费试玩过守望先锋，如需继续游戏，请购买正式版！</p>
+          <p class="txt">扫码或点击<a href="#" target="_blank" class="blue">购买正式版</a></p>
+          <div class="qrcode-wrap">
+            <img src="images/pics/erweima.jpg" alt="" width="130" height="130"/>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer text-right">
+        <div class="modal-btns">
+          <a href="javascript:void(0)" data-dismiss="modal" aria-hidden="true" class="btn_sure close">关闭</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="scripts/jquery-3.1.0.min.js"></script>
+<script src="scripts/bootstrap.min.js"></script>
+<script src="scripts/jquery.qrcode.min.js"></script>
+<script src="scripts/timer.jquery.min.js"></script>
+<script src="scripts/index.js"></script>
+
+<script>
+  $("#qrcode").qrcode({width:100, height:100, render:"canvas", correctLevel:1, text:"http://www.baidu.com"});
+
+  (function($){
+    $('body').on('mouseenter', '.app-wrap li', function(event) {
+      var index = $(this).index();
+      $(this).addClass('sel').siblings().removeClass('sel');
+      $(this).parent().siblings('.app-wrap-content').children('div').eq(index).show().siblings().hide();
+    });
+
+    $('body').on('click', '#timer', function(event){
+      $(this).timer({
+          // seconds: 24*3600-10,
+          duration: '24h',
+          callback: function() {
+            $('#timer').timer('reset').timer('pause');
+          },
+          format: '%H:%M:%S'
+      });
+    })
+  })(jQuery);
+
+</script>
+</body>
+</html>

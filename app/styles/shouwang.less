@@ -1,0 +1,66 @@
+@import '_base';
+@import '_common';
+@import '_nav';
+@import '_bootstrap-modal';
+
+.shouwang{
+  background: url(../images/bg4shouwang.jpg) no-repeat;
+}
+.main{
+  float: left;
+  .over_rule_box{
+    width: 1075px;
+    height: 558px;
+    position: relative;
+    a.confirm{
+        position: absolute;
+        width: 223px;
+        height: 39px;
+        left: 50%;
+        margin-left: -117.5px;
+        bottom: 32px;
+    }
+    .over_alert1,.over_alert2{
+        width: 605px;
+        height: 401px;
+        position: absolute;
+        left: 50%;
+        top: 24%;
+        margin-left: -(605px/2);
+        img{position: absolute;}
+        .over_top{top: 18px;left:-104px;}
+        .over_bottom{bottom: 32px;left: 36px;}
+        .content{
+            margin: 100px 38px 10px 65px;
+            color: #333333;
+            font-size: 16px;
+            font-weight: bold;
+            p{
+                margin-top: 8px;
+                position: relative;
+                &:before{
+                    content: "";
+                    width: 7px;
+                    height: 7px;
+                    position: absolute;
+                    border-radius: 10px;
+                    background: #ff7000;
+                    left: -20px;
+                    top: 8px;
+                }
+            }
+            span{
+               color: #ff7000;
+            }
+        }
+    }
+    .over_alert2{
+        width: 650px;
+        .content{
+            p{
+                margin-top: 3px;
+            }
+        }
+    }
+  }
+}

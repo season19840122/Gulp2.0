@@ -1,0 +1,361 @@
+/*css RESET  */
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td {
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: 100%;
+}
+
+address, cite, dfn, em, var {
+    font-style: normal;
+}
+
+code, kbd, pre, samp {
+  font-family: courier new, courier, monospace;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:focus, input:focus {
+    outline: 0
+}
+
+
+legend {
+    color: #000;
+}
+
+fieldset, img {
+    border: 0;
+}
+
+button, input, select, textarea {
+    font-size: 100%;
+}
+select{
+  -webkit-appearance:none;
+  appearance:none;
+  padding-right:15px !important;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    table-layout: fixed;
+}
+.text-ellipse{display:block; overflow: hidden; white-space: nowrap;  text-overflow: ellipsis;}
+th,td{overflow: hidden; white-space: nowrap;  text-overflow: ellipsis;}
+body {
+    font-family:'Microsoft YaHei', 'Microsoft JhengHei','Arial','sans-serif';
+    -webkit-font-smoothing:antialiased;
+    font-size: 12px;
+    line-height: 1.5;
+    color:#b2b3b5;
+}
+
+.txt-unl{
+    text-decoration: underline;
+}
+.txt-hide {
+    text-indent: -9999px;
+    display: block;
+    overflow: hidden
+}
+
+.pr {
+    position: relative;
+}
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden
+}
+
+.fl{float:left;}
+.fr{float:right;}
+.text-left{text-align:left !important;}
+.text-center{text-align:center;}
+.text-right{text-align:right;}
+.half{width:50%; display:inline-block; float:left;}
+.text-overflow{display:block; overflow: hidden;white-space: nowrap; text-overflow:ellipsis;}
+.ti{text-indent: -9999px;}
+.eps{
+  white-space:nowrap;
+  text-overflow:ellipsis;
+  overflow:hidden;
+}
+
+.green{color:#06d11c;}
+.red{color:#ff0000;}
+.redBlack{color:#a21414;}
+.gray{color:#707782;}
+.light_gray{color:#acbac5;}
+.orange{color:#de3e0e;}
+.white{color: white;}
+.brown{color:#e19b0e;}
+.blue{color:#0892da;}
+
+.mt20{margin-top:20px;}
+.pb10{padding-bottom: 10px;}
+.pl20{padding-left:20px;}
+.ml10{margin-left:10px;}
+
+.fontSize12{font-size:12px;}
+.fontSize14{font-size:14px;}
+.fontSize15{font-size:15px;}
+.fontSize16{font-size:16px;}
+.fontSize18{font-size:18px;}
+
+/*外容器背景大小*/
+.container { width: 1196px; height: 600px; overflow:hidden; position:relative;color:#88bbe1;}
+.poster>img{vertical-align: middle}
+
+/*容器滚动条*/
+.mainScroll::-webkit-scrollbar
+{
+  width: 16px;
+  height:10px;
+}
+
+.mainScroll::-webkit-scrollbar-track
+{
+  -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.1);
+  border-radius: 0px;
+  background: rgba(10,26,29,1);
+}
+
+.mainScroll::-webkit-scrollbar-thumb
+{
+
+  -webkit-box-shadow: inset 0 0 5px rgba(45,58,72,1);
+  background: rgba(45,58,72,1);
+}
+
+.mainScroll::-webkit-scrollbar-thumb:hover
+{
+  background: #506172;
+}
+.mainScroll::-webkit-scrollbar-thumb:active{
+  background:#3b4f64;
+}
+
+.smallScroll::-webkit-scrollbar
+{
+  width: 10px;
+  height:10px;
+}
+
+.smallScroll::-webkit-scrollbar-track
+{
+  border-radius: 3px;
+  background: #0f1114;
+}
+
+.smallScroll::-webkit-scrollbar-thumb
+{
+  border-radius: 3px;
+  background:#2e3740;
+}
+.smallScroll.smallScroll2::-webkit-scrollbar{
+  width:6px;
+}
+/*tab切换*/
+.tab-content .tab{display:none;}
+.tab-content .tab.active{display:block;}
+
+/*翻页*/
+.pageBox{margin:0 auto; height:35px; text-align:center; margin-top:9px;}
+.pageBox span, .pageBox a {
+  display:inline-block;
+  width:30px; height:30px;
+  text-align: center;
+  color: #4d5c6d;
+  font: 500 14px/30px 'Microsoft YaHei';
+}
+.pageBox span,.pageBox a:hover{
+   color:#8298b1;
+ }
+.pageBox span,.pageBox a:active{
+  color:#325b8a;
+}
+.pageBox .pageCur {
+  border-radius: 3px;
+  background:#3a516c;
+  color: #cacccd;
+}
+
+/*下拉列表*/
+.drop-select{display:inline-block; vertical-align:middle; position:relative;}
+.drop-select ul{width:100%; margin-top:2px; border:1px solid #212a36; position:absolute; display:none; z-index:10; overflow:auto;}
+.drop-select ul li{height:24px; line-height:24px; text-indent:10px}
+.drop-select ul li a{display:block; text-decoration:none;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;}
+.drop-select ul li a:hover{background:#1d232a;}
+
+/*首页&详情页新增复核状态*/
+.state_checking{
+  z-index:10;
+  color:#04cde0;
+  background:url(img/index_check_ico.png) no-repeat right center;
+  padding-right:18px;
+}
+.checkTips {
+  display:none;
+  z-index: 10;
+  position: absolute;
+  right: 6px;
+  top: 43px;
+  color: #fff;
+  width: 192px;
+  line-height: 19px;
+  padding: 5px 15px;
+  text-shadow: none;
+  background: rgba(9, 101, 104, 0.9);
+}
+.checkTips:before {
+  width: 0;
+  height: 0;
+  border-left: 14px solid transparent;
+  border-right: 14px solid transparent;
+  border-bottom: 14px solid rgba(9, 101, 104, 0.9);
+  content: " ";
+  position: absolute;
+  top: -10px;
+  right: 20px;
+}
+th .checkTips:before{
+  top: 47px;
+  right: 80px;
+  border-bottom: none;
+  border-top: 14px solid rgba(9, 101, 104, 0.9);}
+th .checkTips{
+  display:block;
+  width:240px;
+  white-space: normal;
+  text-align:left;
+  top: -50px;
+  font-size: 12px;
+  right: -5px;
+}
+th .tip_r67{
+    right: -67px;
+}
+.condition_rect {
+  font-size: 12px;
+  display: inline-block;
+  min-width: 60px;
+  height: 16px;
+  line-height: 16px;
+  text-align: center;
+  float: left;
+  text-shadow: none;
+  margin: 0 2px 3px 0;
+}
+.condition_type {
+  background: #11586c;
+  color: #b3dae5;
+}
+.condition_restrict {
+  background: #871818;
+  color: #debf9b;
+}
+.condition_restrict-brown{
+  background:#702f07;
+  color:#debe98;
+}
+
+/*返回按钮*/
+.link_back{position: absolute;left: 40px; top:30px; z-index: 5;min-width: 12px;padding:0 12px; text-indent:15px;height: 26px;display: inline-block; text-align: center; line-height: 26px; background:#22282f url(img/bg_detail_back.png)  no-repeat 15px center; color:#b1b2b3; }
+.link_back:hover{background-color:#38414c;}
+.link_back:active{background-color:#313943;}
+
+/** 守望先锋规则页面  **/
+.over_rule_box{
+    width: 1196px;
+    height: 558px;
+    overflow: hidden;
+    background: url(img/over_rule_bg.jpg);
+    position: relative;
+    a.confirm{
+        position: absolute;
+        width: 223px;
+        height: 39px;
+        left: 50%;
+        margin-left: -138px;
+        bottom: 32px;
+        }
+    .over_alert1,.over_alert2{
+        width: 605px;
+        height: 401px;
+        position: absolute;
+        left: 50%;
+        top: 24%;
+        margin-left: -285px;
+        img{position: absolute;}
+        .over_top{top: 18px;left:-121px;}
+        .over_bottom{bottom: 33px;left: 11px;}
+        .content{
+            margin: 100px 38px 10px 65px;
+            color: #333333;
+            font-size: 16px;
+            font-weight: bold;
+            p{
+                margin-top: 8px;
+                position: relative;
+                &:before{
+                    content: "";
+                    width: 7px;
+                    height: 7px;
+                    position: absolute;
+                    border-radius: 10px;
+                    background: #ff7000;
+                    left: -20px;
+                    top: 8px;
+                }
+            }
+            span{
+               color: #ff7000;
+            }
+        }
+    }
+    .over_alert2{
+        width: 650px;
+        .content{
+            p{
+                margin-top: 3px;
+            }
+        }
+    }
+}
+
+.hide{display: none;}
+.text_center{
+    text-align: center;
+}
+
+.lol_top,.lol_apc,.lol_sup,.lol_jun,.lol_adc{
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  border-radius: 10px;
+  color: white;
+  font-size: 12px;
+  line-height: 20px;
+  text-align: center;
+  margin-left: 4px;
+}
+.lol_top{background: #017bb4;}
+.lol_apc{background: #9f3624;}
+.lol_sup{background: #6601b4;}
+.lol_jun{background: #056219;}
+.lol_adc{background: #b46601;}
+

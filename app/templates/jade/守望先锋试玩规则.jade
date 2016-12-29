@@ -1,0 +1,35 @@
+extends _layouts
+block title
+  title 守望先锋试玩规则
+block style
+  link(rel='stylesheet', href='styles/shouwang.css')
+block box
+  .box.shouwang
+    block tabBar
+      include _tabBar
+    block main
+      article.main
+        include _nav
+        section.content.
+          <div class="over_rule_box">
+            <div class="over_alert1">
+              <img class="over_top" src="images/over_rule_top.png"/>
+              <div class="content">
+                <p>单次试玩退出即表示试玩结束，最长<span>不超过24小时</span>，连续试玩24小时后会被自动下线，请注意试玩时间；</p>
+                <p>每次免费试玩的账号都是随机的，免费试玩账号数量有限，先到先得；</p>
+                <p>若在获得试玩资格后<span>20分钟</span>未开始游戏，则视为放弃试玩；</p>
+                <p><span>本系统目前处于测试阶段，为更好地为玩家提供服务体验，会定期停机维护，敬请谅解；</span></p>
+                <p>本活动的最终解释权归官方运营商和顺网宇酷科技有限公司所有。</p>
+              </div>
+              <img class="over_bottom" src="images/over_rule_bottom.png"/>
+              <a href="###" class="confirm"></a>
+            </div>
+          </div>
+    
+block script
+  script(src='scripts/jquery-3.1.0.min.js')
+  script(src='scripts/bootstrap.min.js')
+  script(src='scripts/index.js')
+  script(src='scripts/tabBar.js')
+  //- script.
+

@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>详情页</title>
+    <link href="styles/style.css" rel="stylesheet" type="text/css"/>
+    <link href="styles/detail-3.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="styles/modal.css"/>
+</head>
+
+<body class="bg bg-300">
+<div id="snow">
+    <canvas width="100%" height="100%" class="snow"></canvas>
+</div>
+<div class="detail mainScroll">
+    <!--detail_banner-->
+    <div class="datail_box detail_banner">
+        <a href="#" class="link_back">返回</a>
+        <img src="images/detail-logo-300.png" class="banner">
+        <div class="match_info">
+            <p class="match_time">比赛时间：2016.5.19－2016.5.23</p>
+            <p class="match_area">郑州赛区</p>
+        </div>
+    </div>
+
+    <!--timeline-->
+    <div class="datail_box timeline">
+        <div class="timeline_base"></div>
+        <ul class="timeline_point">
+            <!--当前时间加curr-->
+            <li class="curr">
+                <b><i></i></b>
+                <div class="timeline_txt"><p>11.11</p><p>报名中</p></div>
+                <div class="timeline_detail">
+                    <dl class="clearfix">
+                        <dt><img src="images/pics/img_48X48_300.png" class="user_pic"></dt>
+                        <dd><span class="play_info"><span class="name">xxxxxxxxxxxxxx</span><span class="area blue">(皮城警备)</span></span><span class="signed txt-hide">已报名</span>
+                        </dd>
+                        <dd><p>参与比赛即有<strong class="yellow">90%的机会</strong>获得大奖哦！</p></dd>
+                    </dl>
+                </div>
+            </li>
+            <li>
+              <b><i></i></b>
+              <div class="timeline_txt"><p>11.11</p><p>报名中</p></div>
+              <div class="timeline_detail">
+                <dl class="clearfix">
+                  <dt><img src="images/pics/img_48X48.png" class="user_pic"></dt>
+                  <dd><span class="play_info"><span class="name">请先登录星云</span></span><a href="#" class="btn_blue">快速登录</a>
+                  </dd>
+                  <dd><p>绑定游戏账号后方可报名</p></dd>
+                </dl>
+              </div>
+            </li>
+            <li>
+                <b><i></i></b>
+                <div class="timeline_txt"><p>11.12</p><p>比赛开始</p></div>
+                <div class="timeline_detail">
+                    <dl class="clearfix">
+                        <dt><img src="images/pics/img_48X48.png" class="user_pic"></dt>
+                    </dl>
+                </div>
+            </li>
+
+            <li>
+                <b><i></i></b>
+                <div class="timeline_txt"><p>11.14</p> <p>一滴血</p></div>
+                <div class="timeline_detail">
+                    <dl>
+                        <dt><img src="images/pics/img_48X48.png" class="user_pic"></dt>
+                        <dd><span class="play_info"><span class="name">xxxxxxxxxxxxxxxxxxxxxxxxxxxx</span><span class="area blue">(皮城警备)</span></span><a href="#" class="btn_blue">立即报名</a>
+                        </dd>
+                        <dd>
+                            <div class="col_1">排名：<span class="org">198</span></div>
+                            <div class="col_2">累计杀敌：<span class="org">598</span></div>
+                        </dd>
+                    </dl>
+                </div>
+            </li>
+            <li>
+                <b><i></i></b>
+                <div class="timeline_txt"><p>11.15</p><p>竞技达人</p></div>
+                <div class="timeline_detail">
+                    <dl>
+                        <dt><img src="images/pics/img_48X48.png" class="user_pic"></dt>
+                        <dd><span class="play_info"><span class="name">xxxxxxxxxxxxxxxxxxxxxxxxxxxx</span><span class="area blue">(皮城警备)</span></span><a href="#" class="btn_blue">立即报名</a>
+                        </dd>
+                        <dd>
+                            <div class="col_1">排名：<span class="org">198</span></div>
+                            <div class="col_2">累计杀敌：<span class="org">598</span></div>
+                        </dd>
+                    </dl>
+                </div>
+            </li>
+            <li class="curr">
+                <b><i></i></b>
+                <div class="timeline_txt"><p>11.16</p> <p>竞技王者</p></div>
+                <div class="timeline_detail">
+                    <dl>
+                        <dt><img src="images/pics/img_48X48_msg.png" class="user_pic"></dt>
+                        <dd><span class="play_info"><span class="name">xxxxxxxxxxxxxxxxxxxxxxxxxxxx</span><span class="area blue">(皮城警备)</span></span><a href="#" class="btn_blue">立即报名</a>
+                        </dd>
+                        <dd>
+                            <div class="col_1">排名：<span class="org">198</span></div>
+                            <div class="col_2">累计杀敌：<span class="org">598</span></div>
+                        </dd>
+                    </dl>
+                </div>
+            </li>
+            <li>
+                <b><i></i></b>
+                <div class="timeline_txt"><p>11.18</p> <p>比赛结束</p></div>
+                <div class="timeline_detail">
+                    <dl>
+                        <dt><img src="images/pics/img_48X48.png" class="user_pic"></dt>
+                        <dd><span class="play_info"><span class="name">xxxxxxxxxxxxxxxxxxxxxxxxxxxx</span><span class="area blue">(皮城警备)</span>
+                          </span><span class="over">已结束</span></dd>
+                        <dd>
+                            <div class="col_1">排名：<span class="org">198</span></div>
+                            <div class="col_2">累计杀敌：<span class="org">598</span></div>
+                        </dd>
+                    </dl>
+                </div>
+                <div class="timeline_detail_b">
+                    <div class="ico_first"></div>
+                    <div class="p1">冠军独享5000</div>
+                    <div class="p2">总奖金20000|总奖项1500个</div>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <!--match-info-->
+    <div class="datail_box match_info clearfix">
+        <div class="match_left">
+            <div class="hd"><h3>比赛规则</h3></div>
+            <div class="match-wrap">
+                <!--match-info-a-->
+                <div class="match_info_a">
+                    <ul class="clearfix">
+                        <li class="a1">召唤师满30级即可</li>
+                        <li class="a2">装有顺网娱乐助手的网吧</li>
+                        <li class="a3">10场累计杀敌数</li>
+                        <li class="a4">匹配赛或排位赛</li>
+                    </ul>
+                </div>
+                <!--match-info-b-->
+                <div class="match_info_b">
+                    <h4>活动限定英雄-共16位</h4>
+                    <ul class="clearfix">
+                        <li>
+                            <img src="http://placehold.it/60x60">
+                            <p>英雄名</p>
+                        </li>
+                        <li>
+                            <img src="http://placehold.it/60x60">
+                            <p>英雄名称英雄名称</p>
+                        </li>
+                        <li>
+                            <img src="http://placehold.it/60x60">
+                            <p>英雄名称英雄名称</p>
+                        </li>
+                        <li>
+                            <img src="http://placehold.it/60x60">
+                            <p>英雄名称英雄名称</p>
+                        </li>
+                        <li>
+                            <img src="http://placehold.it/60x60">
+                            <p>英雄名称英雄名称</p>
+                        </li>
+                        <li>
+                            <img src="http://placehold.it/60x60">
+                            <p>英雄名称英雄名称</p>
+                        </li>
+                        <li>
+                            <img src="http://placehold.it/60x60">
+                            <p>英雄名称英雄名称</p>
+                        </li>
+                        <li>
+                            <img src="http://placehold.it/60x60">
+                            <p>英雄名称英雄名称</p>
+                        </li>
+                        <li>
+                            <img src="http://placehold.it/60x60">
+                            <p>英雄名称英雄名称</p>
+                        </li>
+                        <li>
+                            <img src="http://placehold.it/60x60">
+                            <p>英雄名称英雄名称</p>
+                        </li>
+                        <li>
+                            <img src="http://placehold.it/60x60">
+                            <p>英雄名称英雄名称</p>
+                        </li>
+                        <li>
+                            <img src="http://placehold.it/60x60">
+                            <p>英雄名称英雄名称</p>
+                        </li>
+                        <li>
+                            <img src="http://placehold.it/60x60">
+                            <p>英雄名称英雄名称</p>
+                        </li>
+                        <li>
+                            <img src="http://placehold.it/60x60">
+                            <p>英雄名称英雄名称</p>
+                        </li>
+                        <li>
+                            <img src="http://placehold.it/60x60">
+                            <p>英雄名称英雄名称</p>
+                        </li>
+                        <li>
+                            <img src="http://placehold.it/60x60">
+                            <p>英雄名称英雄名称</p>
+                        </li>
+
+                    </ul>
+                </div>
+                <!--match-info-c-->
+                <div class="match_info_c">
+                    <h4>比赛规则</h4>
+                    <p>
+                        1.召唤师须满30级方可报名，一个QQ号仅可报名一次；<br>
+
+                        2.玩家在参与赛事的网吧进行的游戏才会计入比赛成绩；<br>
+
+                        3.按照比赛期间最高连胜场次数进行排名，最高连胜数相同的按照连胜场的平均激战指数进行排名；<br>
+
+                        4.只计算玩家对战-经典对战模式- 召唤师峡谷下匹配和排位赛的成绩，单人参赛，不允许组队。<br>
+
+                    </p>
+                </div>
+                <div class="match_info_c">
+                    <h4>奖励规则</h4>
+
+                    <p>
+                        1.比赛冠军将获得11的奖励，亚军将获得1的奖励，季军将获得0的奖励；<br>
+
+                        2.本期幸运数字为1，从第1到11111名之间，所有排名尾号为1的玩家都将获得1111的幸运奖励；<br>
+
+                        3.玩家需在得奖后在“ 我的奖品”页面提交领奖信息，奖品将会于信息提交后的7个工作日内发放完成，点券和皮肤类的奖品只能发放到参赛QQ上，比赛结束15天内未提交领奖信息的视为放弃奖励；<br>
+
+                        4.恶意刷榜者一经发现，永久取消参赛资格；获奖名单中如发现恶意刷榜者，奖励取消，其之后玩家的名次递进1名；<br>
+
+                        5.如有疑问或建议，请拨打客服热线：0571-81020365（请在工作日10:00-17:00拨打）；另外也可以加入我们的玩家QQ群：514445914；<a class="blue txt-unl"  href="">联系在线客服>></a><br>
+
+                        6.本赛事的最终解释权归杭州顺网科技股份有限公司所有。<br>
+
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="match_right">
+            <div class="match_info_d">
+                <div class="hd"><h3>奖项分布</h3><span class="sub_hd">所有现金奖励皆为授权奖励</span></div>
+                <div class="bd">
+                    <div class="total">总奖金：￥20000</div>
+                    <ul class="bonus">
+                        <li class="spec">冠军独享 ￥5000现金</li>
+                        <li class="spec">亚军独享 ￥5000现金</li>
+                        <li class="spec">季军独享 ￥5000现金</li>
+                        <li><span class="col_1">4-10名</span><span class="col_2">￥200现金/人</span></li>
+                        <li><span class="col_1">11-30名</span><span class="col_2">￥200现金/人</span></li>
+                        <li><span class="col_1">31-100名</span><span class="col_2">￥200现金/人</span></li>
+                        <li><span class="col_1">101-500名</span><span class="col_2">￥200现金/人</span></li>
+                        <li><span class="col_1">501-1000名</span><span class="col_2">￥200现金/人</span></li>
+                        <li><span class="col_1">幸运奖(排名尾号为6)10名</span><span class="col_2">500顺圆/人</span></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!--game-ranklist-->
+    <div class="datail_box game_ranklist">
+        <div class="hd">
+          <!--<div class="game_state"><a href="#" class="operation">刷新</a></div>-->
+          <!--<div class="game_state">火热进行中</div>-->
+          <div class="game_state">
+            <span class="state_checking">成绩复核中</span>
+            <div class="checkTips">为确保比赛成绩真实有效，官方将在2个工作日内完成赛绩核查。</div>
+          </div>
+          <h3>赛事排行榜</h3>
+        </div>
+        <div class="bd">
+          <table class="ranklist_table">
+            <thead>
+                <tr>
+                  <th width="10%">名次</th>
+                  <th width="10%">角色名</th>
+                  <th width="15%">所在区服</th>
+                  <th width="15%">报名网吧</th>
+                  <th width="15%">活动场次</th>
+                  <th width="10%">段位</th>
+                  <th width="10%">10场累计杀敌</th>
+                  <th>奖励</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="spec">
+                  <td>冠军</td>
+                  <td>吾问无为谓</td>
+                  <td>xxxxxxxxxxxxxxx</td>
+                  <td>xxxxxxxxxxxxxxx</td>
+                  <td>xxxxxxxxxxxx</td>
+                  <td>青铜</td>
+                  <td>1111<i class="ico-top10"></i></td>
+                  <td></td>
+                </tr>
+                <tr class="spec">
+                  <td>亚军</td>
+                  <td>吾问无为谓</td>
+                  <td>xxxxxxxxxxxxxxx</td>
+                  <td>xxxxxxxxxxxxxxx</td>
+                  <td>xxxxxxxxxxxx</td>
+                  <td>青铜</td>
+                  <td>1111<i class="ico-top10"></i></td>
+                  <td></td>
+                </tr>
+                <tr class="spec">
+                  <td>季军</td>
+                  <td>吾问无为谓</td>
+                  <td>xxxxxxxxxxxxxxx</td>
+                  <td>xxxxxxxxxxxxxxx</td>
+                  <td>xxxxxxxxxxxx</td>
+                  <td>青铜</td>
+                  <td>1111<i class="ico-top10"></i></td>
+                  <td></td>
+                </tr>
+            </tbody>
+          </table>
+          <div class="detailScroll h222">
+            <table class="ranklist_table">
+              <tbody>
+              <tr>
+                <td width="10%">5</td>
+                <td width="10%">吾问无为谓</td>
+                <td width="15%">xxxxxxxxxxxxxxx</td>
+                <td width="15%">xxxxxxxxxxxxxxx</td>
+                <td width="15%">xxxxxxxxxxxx</td>
+                <td width="10%">青铜</td>
+                <td width="10%">1111<i class="ico-top10"></i></td>
+                <td></td>
+              <tr>
+                <td>5</td>
+                <td>吾问无为谓</td>
+                <td>xxxxxxxxxxxxxxx</td>
+                <td>xxxxxxxxxxxxxxx</td>
+                <td>xxxxxxxxxxxx</td>
+                <td>青铜</td>
+                <td>1111<i class="ico-top10"></i></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>吾问无为谓</td>
+                <td>xxxxxxxxxxxxxxx</td>
+                <td>xxxxxxxxxxxxxxx</td>
+                <td>xxxxxxxxxxxx</td>
+                <td>青铜</td>
+                <td>1111<i class="ico-top10"></i></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>吾问无为谓</td>
+                <td>xxxxxxxxxxxxxxx</td>
+                <td>xxxxxxxxxxxxxxx</td>
+                <td>xxxxxxxxxxxx</td>
+                <td>青铜</td>
+                <td>1111<i class="ico-top10"></i></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>吾问无为谓</td>
+                <td>xxxxxxxxxxxxxxx</td>
+                <td>xxxxxxxxxxxxxxx</td>
+                <td>xxxxxxxxxxxx</td>
+                <td>青铜</td>
+                <td>1111<i class="ico-top10"></i></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>吾问无为谓</td>
+                <td>xxxxxxxxxxxxxxx</td>
+                <td>xxxxxxxxxxxxxxx</td>
+                <td>xxxxxxxxxxxx</td>
+                <td>青铜</td>
+                <td>1111<i class="ico-top10"></i></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>吾问无为谓</td>
+                <td>xxxxxxxxxxxxxxx</td>
+                <td>xxxxxxxxxxxxxxx</td>
+                <td>xxxxxxxxxxxx</td>
+                <td>青铜</td>
+                <td>1111<i class="ico-top10"></i></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>吾问无为谓</td>
+                <td>xxxxxxxxxxxxxxx</td>
+                <td>xxxxxxxxxxxxxxx</td>
+                <td>xxxxxxxxxxxx</td>
+                <td>青铜</td>
+                <td>1111<i class="ico-top10"></i></td>
+                <td></td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+          <table class="ranklist_table">
+            <tbody>
+                <tr class="my">
+                    <td width="10%">5</td>
+                    <td width="10%">吾问无为谓</td>
+                    <td width="15%">xxxxxxxxxxxxxxx</td>
+                    <td width="15%">xxxxxxxxxxxxxxx</td>
+                    <td width="15%">xxxxxxxxxxxx</td>
+                    <td width="10%">青铜</td>
+                    <td width="10%">1111<i class="ico-top10"></i></td>
+                    <td></td>
+                </tr>
+            </tbody>
+          </table>
+        </div>
+    </div>
+</div>
+<!--container end-->
+
+  <button type="button" data-toggle="modal" data-target="#top10-modal" style="position:absolute; top:620px;">10场最高累计杀敌</button>
+
+  <div id="top10-modal" tabindex="-1" role="dialog" aria-hidden="true" class="modal hide fade  modal-s"
+       data-backdrop="static">
+    <div class="modal-dialog modal-md">
+      <div class="modal-content">
+        <div class="modal-header">
+          <a data-dismiss="modal" aria-hidden="true" class="close"></a>
+        </div>
+        <div class="modal-body pt0">
+          <div class="info top10">
+            <h5>10场最高击杀记录</h5>
+            <table width="435" align="center" class="mt10">
+              <thead>
+              <tr>
+                <th width="60">场次</th>
+                <th width="298">时间</th>
+                <th>杀敌</th>
+              </tr>
+              </thead>
+              <tbody class="smallScroll">
+              <tr>
+                <td width="60">1</td>
+                <td width="298">2016/01/05 10:30 - 2016/01/15 10:30</td>
+                <td width="77">56</td>
+              </tr>
+              <tr>
+                <td width="60">1</td>
+                <td width="298">2016/01/05 10:30 - 2016/01/15 10:30</td>
+                <td width="77">56</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>2016/01/05 10:30 - 2016/01/15 10:30</td>
+                <td>56</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>2016/01/05 10:30 - 2016/01/15 10:30</td>
+                <td>56</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>2016/01/05 10:30 - 2016/01/15 10:30</td>
+                <td>56</td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>2016/01/05 10:30 - 2016/01/15 10:30</td>
+                <td>56</td>
+              </tr>
+              <tr>
+                <td>6</td>
+                <td>2016/01/05 10:30 - 2016/01/15 10:30</td>
+                <td>56</td>
+              </tr>
+              <tr>
+                <td>7</td>
+                <td>2016/01/05 10:30 - 2016/01/15 10:30</td>
+                <td>56</td>
+              </tr>
+              <tr>
+                <td>8</td>
+                <td>2016/01/05 10:30 - 2016/01/15 10:30</td>
+                <td>56</td>
+              </tr>
+              <tr>
+                <td>9</td>
+                <td>2016/01/05 10:30 - 2016/01/15 10:30</td>
+                <td>56</td>
+              </tr>
+              <tr>
+                <td>10</td>
+                <td>2016/01/05 10:30 - 2016/01/15 10:30</td>
+                <td>56</td>
+              </tr>
+			        <tr>
+                <td>11</td>
+                <td>2016/01/05 10:30 - 2016/01/15 10:30</td>
+                <td>56</td>
+              </tr>
+              </tbody>
+
+              <tfoot>
+              <tr>
+                <td>总计</td>
+                <td></td>
+                <td>560</td>
+              </tr>
+              </tfoot>
+            </table>
+          </div>
+        </div>
+        <div class="modal-footer text-right">
+          <div class="modal-btns">
+            <a href="javascript:void(0)" data-dismiss="modal" aria-hidden="true" class="btn_sure close">确定</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <script src="scripts/jquery-3.1.0.min.js"></script>
+    <script src="scripts/bootstrap.min.js"></script>
+    <!--<script src="js/jquery.let_it_snow.js"></script>-->
+    <script>
+        $(window).ready(function(){
+          $(".mainScroll").scroll(function() {
+            if($(".mainScroll").scrollTop()>0 && !$(".link_back").hasClass("min_back")){
+              $(".link_back").addClass("min_back");
+            }
+            else if($(".mainScroll").scrollTop()<=0){
+              $(".link_back").removeClass("min_back");
+            }
+          });
+
+          //复核中
+          $(".state_checking").hover(function(){
+            $(this).siblings(".checkTips").show();
+          },function(){
+            $(this).siblings(".checkTips").hide();
+          });
+        })
+
+        $(".timeline_point li:gt(1)").each(function(){
+          var len= $(".timeline_point li").length;
+          var $detail= $(this).find(".timeline_detail");
+          if ($(this).index()==len-1) {
+            $detail.css("right", 0);
+          }else{
+            $detail.css("margin-left", -10 - 40 * ($(this).index()) + 'px');
+          }
+        });
+        function scrollInit() {
+          var $parent=$(".detailScroll");
+          var $my=$(".detailScroll").find(".my");
+          if($my.length){
+            $parent.removeClass("h222");
+            var _H = $my.offset().top-$parent.offset().top-110;
+            $parent.scrollTop(_H);
+          }else{
+            $parent.addClass("h222");
+          }
+        };
+
+        //    $(window).load(function(){
+        //      $("canvas.snow").let_it_snow({
+        //        windPower: 6,
+        //        speed: 1,
+        //        count: 40,
+        //        size: 5,
+        //        image: ["images/pics/dot.png"],
+        //        interaction: false
+        //      });
+        //      scrollInit();
+        //    })
+    </script>
+</body>
+</html>

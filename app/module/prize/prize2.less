@@ -1,0 +1,334 @@
+@import '../../styles/_base';
+@import '../../styles/_common';
+.box {
+    z-index: 100;
+    position: absolute;
+    .second_title{
+       color: #cd99fd;
+        position: absolute;
+        font-size: 14px;
+        top: 82px;
+        left: 256px;
+        span{
+            color: #0ab9fd;
+        }
+    }
+    .back {
+      z-index: 100;
+      cursor: pointer;
+      position: absolute;
+      left: 19px;
+      top: 15px;
+      padding: 1px 13px 1px 10px;
+      color: #aaaaaa;
+      background: rgba(0,0,0,0.5);
+      img{
+          margin-right: 7px;
+      }
+      span{
+          line-height: 20px;
+      }
+      span,img{display: inline-block;vertical-align: middle;}
+    }
+    .overD {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+    .title2 {
+        position: absolute;
+            top: 85px;
+    left: 930px;
+    }
+    .title_box {
+        position: absolute;
+        width: 100%;
+        top: 0;
+        padding: 60px 160px;
+        .title_time {
+            font-size: 16px;
+            color: white;
+            margin-bottom: 5px;
+            margin-top: -3px;
+        }
+        .title_rules {
+            width: 103px;
+            height: 33px;
+            font-size: 16px;
+            position: absolute;
+            margin-left: 236px;
+            margin-top: -35px;
+            font-weight: bold;
+            line-height: 33px;
+            text-indent: 16px;
+            background: #ffa629;
+            border-radius: 20px;
+            cursor: pointer;
+            color: #2a2a2a;
+            box-shadow: 0 2px 2px 1px #9b4a1f, inset 0 0 1px 3px #ffb33e;
+            &:after {
+                content: "";
+                width: 0;
+                cursor: pointer;
+                border-style: solid;
+                display: block;
+                margin: -22px 3px 0 86px;
+                border-width: 6px;
+                border-color: transparent transparent #2a2a2a transparent;
+                transform: rotate(90deg);
+                transform: -webkit-rotate(90deg);
+            }
+            &:hover {
+                background: -webkit-linear-gradient(top, #e16f28 0%,#e84c39 100%);
+                background: linear-gradient(top, #e16f28 0%,#e84c39 100%);
+                box-shadow: 0 2px 2px 1px #9f4c20, inset 0 0 1px 3px #ea7243;
+            }
+        }
+    }
+    .prize_box {
+        width: 353px;
+        height: 353px;
+        top: 158px;
+        left: 166px;
+        position: absolute;
+        background: url("../../images/prize_pan2.png");
+        text-align: center;
+        padding: 5px 0 0 6px; //      z-index: 20;
+        img {
+            cursor: pointer;
+        }
+        .prize_div,
+        .prize_enter_box {
+            position: relative;
+            width: 106px;
+            height: 106px;
+            float: left;
+            margin: 4px;
+        }
+        .prize_div {
+            border-radius: 10px;
+            background: white;
+            img {
+                display: none;
+                position: absolute;
+                width: 106px;
+                height: 106px;
+                left: 0;
+                top: 0;
+                border-radius: 10px;
+                animation: bigInto 0.3s linear;
+                -webkit-animation: bigInto 0.3s linear;
+            }
+            p {
+                   overflow: hidden;
+                display: none;
+                position: absolute;
+                top: 70px;
+                width: 106px;
+                height: 35px;
+                color: #202020;
+                font-size: 12px;
+                text-align: center;
+                animation: bigInto 0.3s linear;
+                -webkit-animation: bigInto 0.3s linear;
+            }
+        }
+        .prize_enter_box {
+            .prize_enter {
+                z-index: 100;
+                position: absolute;
+                width: 115px;
+                height: 115px;
+                background: url("../../images/prize_enter.png") no-repeat;
+                cursor: pointer;
+                left: -4px;
+                top: -3px;
+                padding-top: 20px;
+                &.normal {
+                    background-position: -3px -5px;
+                }
+                &:hover {
+                    background-position-y: -119px;
+                }
+                &.enter {
+                    background-position: -3px -233px;
+                }
+                p {
+                    color: white;
+                    font-size: 30px;
+                    font-weight: bold;
+                    margin-top: -12px;
+                }
+                h2 {
+                    display: none;
+                    color: white;
+                    font-size: 30px;
+                    font-weight: bold;
+                    margin-top: 19px;
+                }
+                h3 {
+                    font-size: 12px;
+                    font-weight: normal;
+                    color: #3e4403;
+                }
+            }
+        }
+        .bg {
+            z-index: 0;
+            display: none;
+            width: 334px;
+            height: 334px;
+            position: absolute;
+            left: 10px;
+            top: 9px;
+            border-radius: 10px;
+            background: rgba(0,0,0,0.7);
+        }
+    }
+    .alert_box {
+        display: none;
+        background: rgba(0,0,0,0.6);
+        width: 100%;
+        height: 100%;
+        z-index: 100;
+        position: absolute;
+        .alert_content {
+            width: 530px;
+            height: 193px;
+            z-index: 100;
+            background: #6128a3;
+            border-radius: 10px;
+            position: absolute;
+            left: 50%;
+            margin-left: -182px;
+            top: 50%;
+            margin-top: -80px;
+            color: white;
+            .pic_close {
+                position: absolute;
+                width: 25px;
+                height: 25px;
+                right: -30px;
+                cursor: pointer;
+                top: 2px;
+            }
+            .prize_msg {
+                text-align: center;
+                h1 {
+                        margin-top: 70px;
+    font-size: 18px;
+    color: white;
+                }
+                p {
+                        color: #cea4ff;
+    margin: 3px auto;
+    text-align: center;
+    font-size: 14px;
+    width: 250px;
+                }
+                span {
+                    color: #e1641c;
+                }
+            }
+            .remind_msg {
+                display: none;
+                color: white;
+                padding: 54px 10px;
+                text-align: center;
+                font-size: 18px;
+            }
+        }
+    }
+    .lottery_box {
+        position: absolute;
+        width: 490px;
+        height: 328px;
+        right: 155px;
+        top: 185px;
+        &>h1{
+           color: #753db3;
+           font-size: 12px;
+           position: absolute;
+           top: -18px;
+           left: 0px;
+        }
+        .record {
+            width: 487px;
+            height: 325px;
+            padding: 15px 0 0 15px;
+            position: relative;
+            border: 3px solid rgba(157,46,255,0.2);
+            background: rgba(135,0,255,0.2);
+            .t3 {
+                font-size: 18px;
+                color: #dec3ff;
+                width: 100%;
+                height: 19px;
+                font-weight: bold;
+                margin-bottom: 15px;
+                span{
+                    font-size: 12px;
+                    color: #6c4398;
+                }
+                strong{
+                    cursor: pointer;
+                    font-size: 12px;
+                    color: #cd9bff;
+                    text-decoration: underline;
+                }
+            }
+            .ul-record {
+                height: 265px;
+                overflow-x: hidden;
+                position: absolute;
+                width: 467px;
+                left: 15px;
+                top: 45px;
+                li {
+                    p {
+                        color: #cd9bff;
+                        line-height: 2;
+                        .b {
+                            font-weight: bold;
+                        }
+                    }
+                }
+            }
+        }
+        .smallScroll::-webkit-scrollbar {
+            width: 10px;
+            height: 10px;
+        }
+        .smallScroll::-webkit-scrollbar-track {
+            border-radius: 5px;
+            background:transparent;
+        }
+        .smallScroll::-webkit-scrollbar-thumb {
+            border-radius: 5px;
+            background: #9d61d9;
+        }
+        .smallScroll.smallScroll2::-webkit-scrollbar {
+            width: 6px;
+        }
+    }
+}
+@keyframes bigInto {
+  from {
+    transform: scale(1.1);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes bigInto {
+  from {
+    -webkit-transform: scale(1.1);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

@@ -1,0 +1,112 @@
+// nav
+.nav {
+  height: 40px;
+  border-bottom: 1px solid  #232830;
+  .menu-wrap {
+    padding-left: 20px;
+    li {
+      float: left;
+      min-width: 100px;
+      height: 40px;
+      line-height: 40px;
+      text-align: center;
+      margin-right: 5px;
+      a{
+        color: #b1b2b2;
+        text-decoration: none; 
+        display: inline-block;
+        &:hover {
+          color: #00a2ff;
+        }
+      }
+      &.active {
+        a{
+          color: #00a2ff;
+        }
+        border-bottom: 2px solid  #0970ab;
+      }
+    }
+    .menu_lol{background: url(../images/lol_logo.png) no-repeat 0 center;padding-left: 20px;}
+    .menu_m3{background: url(../images/m3_logo.png) no-repeat 0 center;padding-left: 20px;}
+    .menu_over{background: url(../images/over_logo.png) no-repeat 0 center;padding-left: 20px;}
+    .menu_tank{background: url(../images/tk_logo.png) no-repeat 0 center;padding-left: 20px;}
+    .menu_mohuan{background: url(../images/mohuan_logo.png) no-repeat 0 center;padding-left: 20px;}
+    .menu_300{background: url(../images/300_logo.png) no-repeat 10px center;padding-left: 30px;}
+    .menu_doubleT{background: url(../images/doubleT.png) no-repeat 10px center;padding-left: 30px;}
+  }
+  .form{
+    position: absolute;
+    right: 6px;
+    top: 8px;
+    .box_search{
+      float: left;
+      display: inline-block;
+      width: 198px;
+      margin-right: 7px;
+      border:1px solid #0f1417;
+      input{
+        width: 165px;
+        height: 22px;
+        line-height: 22px;
+        border:0;
+        background:none;
+        outline: 0;
+        padding:0 5px;
+        color:#4f5f5e;
+      }
+      .btn_search{
+        display:inline-block;
+        width: 14px;
+        height: 12px;
+        margin: 4px 0 0 4px;
+        background: url(../images/icon_search.png) no-repeat left top;
+        &:hover{
+          background-position-y: -12px;
+        }
+        &:active{
+          background-position-y: -24px;
+        }
+      }
+    }
+
+    .drop-select{
+      float:left;
+      width: 120px;
+      margin-left:8px;
+      input{
+        height: 22px;
+        width: 90px;
+        line-height: 22px;
+        color:#999797;
+        border-radius: 0;
+        border:1px solid #1d232b;
+        box-sizing: content-box;
+        padding:0 22px 0 5px ;
+        background: url(../images/icon_dropdown.png) no-repeat 95% top;
+        &:hover{
+          background-position-y: -22px;
+        }
+        &:active,&.open{
+          background-position-y: -44px;
+        }
+        &:hover,&.open{
+          border:1px solid #00497f;
+        }
+      }
+
+      ul{
+        width: 120px;
+        background:#000b12;
+        box-sizing: border-box;
+        border-color: #00497f;
+        max-height: 410px;
+        li a{
+          color:#999797;
+          &:hover{
+            background: #052842;
+          }
+        }
+      }
+    }
+  }
+}

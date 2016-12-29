@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>梦三国胜场有你</title>
+		<link rel="stylesheet" type="text/css" href="../../styles/bootstrap.min.css"/>
+		<link rel="stylesheet" type="text/css" href="window.css"/>
+	</head>
+	<body>
+		<!-- 升窗开始 -->
+		<div class="window_box">
+			<i></i>
+			<div class="success_box ">
+				<img class="title" src="../../images/meng3/meng_success.png"/>
+				<img class="sd" src="../../images/meng3/meng_sd.png"/>
+				<h1>889</h1>
+				<p class="up">我的顺豆：3986</p>
+				<div class="btn">兑换话费</div>
+			</div>
+			<div class="fail_box hide_">
+				<img class="title" src="../../images/meng3/meng_fail.png"/>
+				<div class="btn">兑换话费</div>
+				<h2>别灰心，下次活动赚得更多</h2>
+				<p>我的顺豆：3986</p>
+			</div>
+		</div>
+		<!-- 升窗结束 -->
+		
+		
+	</body>
+	<script src="../../scripts/jquery-3.1.0.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../scripts/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+			//绑定关闭事件
+			$('.window_box > i').on('click',function() {
+				console.log('点击关闭');
+			})
+			
+			//绑定成功兑换
+			$('.window_box .success_box .btn').on('click',function() {
+				console.log('成功兑换');
+			})
+			
+			//绑定失败兑换
+			$('.window_box .fail_box .btn').on('click',function() {
+				console.log('失败兑换');
+			})
+			
+	</script>
+</html>

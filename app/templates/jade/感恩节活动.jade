@@ -1,0 +1,53 @@
+extends _layouts
+block title
+  title 火马电竞 感恩有你
+block style
+  link(rel='stylesheet', href='styles/thanksgiving.css')
+block box
+  section.active-wrap.
+    <ul class="fp-Menu">
+      <li data-menuanchor="secondPage" class="active"><a href="#secondPage"><span class="hl">一重礼：</span>LOL点券免费领</a></li>
+      <li data-menuanchor="thirdPage"><a href="#thirdPage"><span class="hl">二重礼：</span>不限次数等值顺豆返还</a></li>
+      <li data-menuanchor="fourthPage"><a href="#fourthPage"><span class="hl">三重礼：</span>战队赛得好礼</a></li>
+      <li data-menuanchor="fifthPage"><a href="#fifthPage"><span class="hl">四重礼：</span>VIP月卡强势出击</a></li>
+      <li data-menuanchor="lastPage"><a href="#lastPage"><span class="hl">五重礼：</span>火马定制周边限时兑换</a></li>
+    </ul>
+    <div class="fullpage">
+      <div class="section active">
+        <img data-src="images/pics/part.webp" alt="">  
+      </div>
+      <div class="section">
+        <img data-src="images/pics/part01.webp" alt="">
+      </div>
+      <div class="section">
+        <img data-src="images/pics/part02.webp" alt="">
+        <a href="https://client.huoma.cn/challenge/index  " class="challenge">立即挑战</a>
+      </div>
+      <div class="section">
+        <img data-src="images/pics/part03.webp" alt="">
+        <a href="https://client.huoma.cn/combatMatch/getCombatMatchServer " class="apply">我要报名</a>
+      </div>
+      <div class="section">
+        <img data-src="images/pics/part04.webp" alt="">
+        <a href="https://client.huoma.cn/vip/index" class="buyMonthCard">购买月卡</a>
+      </div>
+      <div class="section">
+        <img data-src="images/pics/part05.webp" alt="">
+      </div>
+    </div>
+block script
+  script(src='scripts/jquery-3.1.0.min.js')
+  script(src='scripts/jquery.easings.min.js')
+  script(src='scripts/scrolloverflow.min.js')
+  script(src='scripts/jquery.fullPage.min.js')
+  script.
+    ;(function($){
+
+      $('.fullpage').fullpage({
+        anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'fifthPage', 'lastPage'],
+        menu: '.fp-Menu'
+      });
+
+    })(jQuery);
+
+  

@@ -1,0 +1,21 @@
+extends _layouts
+block title
+  title 首页
+block tabBar
+  include _tabBar
+block main
+  article.main
+    include _nav
+    section.content.mainScroll
+      .up-wrap
+        include _carousel
+        .ad-wrap
+          a(target="_blank", href="#")
+            img(src="images/pics/ad.jpg", alt="")
+      include _center
+    
+block script
+  script(src='scripts/jquery-3.1.0.min.js')
+  script(src='scripts/bootstrap.min.js')
+  script(src='scripts/index.js')
+  script(src='scripts/tabBar.js')

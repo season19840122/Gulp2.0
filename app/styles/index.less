@@ -1,0 +1,71 @@
+@import '_base';
+@import '_common';
+
+@import '_nav';
+@import '_carousel';
+@import '_center';
+
+.box{
+  background: url('../images/bg.jpg') no-repeat;
+}
+
+.main{
+  float: left;
+  width: 1075px;
+  .content{
+    width: 1075px;
+    height: 558px;
+    padding-left: 15px;
+    padding-top: 11px;
+    margin-top: 4px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    .up-wrap{
+      height: 220px;
+      .carousel-wrap{
+        float: left;
+        position: relative;
+      }
+      .ad-wrap{
+          width: 250px;
+          height: 220px;
+          position: relative;
+          overflow: hidden;
+        float: left;
+        margin-left: 15px;
+        img{
+          width: 250px;
+          height: 220px;
+          display: block;
+        }
+        .third_ad{
+            width: 250px;
+            height: 250px;
+            position: absolute;
+            left: 0px;
+            top: 50%;
+            margin-top: -125px;
+        }
+      }
+    }
+    
+    .center-wrap{
+      clear: both;
+      margin-top: 15px;
+      min-height: 296px;
+      &.msg{
+        background: url('../images/center-msg.jpg') left top no-repeat;
+      }
+      &.yx300{
+        background: url('../images/center-300.jpg') left top no-repeat;
+      }
+      &.tank{
+        background: url('../images/center-tank.jpg') left top no-repeat;
+      }
+      &.swxf{
+        background: url('../images/center-swxf.jpg') left top no-repeat;
+      }
+    }
+  }
+
+}
