@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html>
+
+	<head lang="en">
+		<meta charset="UTF-8">
+		<title>战队联赛-赛事列表-新</title>
+		<link rel="stylesheet" href="styles/bootstrap.min.css" />
+		<link rel="stylesheet" href="styles/tabBar.css" />
+		<link rel="stylesheet" href="styles/team_game.css" />
+	</head>
+
+	<body>
+		<div class="box instro">
+			<div class="team_game">
+				<!-- 左边导航开始 -->
+				<div class="left_main_menu">
+					<ul class="menu_list">
+						<li data-href="1#">
+							<img src="images/left_tab1.png" />
+							<p>赛事中心</p>
+						</li>
+						<li data-href="2#">
+							<img src="images/left_tab2.png" />
+							<p>十/百人场</p>
+						</li>
+						<li class="active" data-href="3#">
+							<img src="images/left_tab3.png" />
+							<p>战队赛</p>
+						</li>
+						 <!--li data-href="4#">
+				            <img src="images/left_tab4.png"/>
+				            <p>SOLO赛</p>
+				          </li-->
+				      	  <li data-href="">
+				            <div class="live"></div>
+				            <p>直播</p>
+				          </li>
+					</ul>
+				</div>
+				<!-- 左边导航结束 -->
+				<div class="tab-content">
+					<div class="team_header">
+						<ul class="team_nav">
+							<li class="active" data-tab="tab_box_1">
+								排名赛
+							</li>
+							<li data-tab="tab_box_2">
+								邀请赛
+							</li>
+						</ul>
+						<a class="btn_create" href="">&plus;&nbsp;创建战队</a>
+					</div>
+
+					<div id="tab_box_1" class="game_list">
+						<table id="table_game_list">
+							<thead>
+								<tr>
+									<th width="12%">
+										<div class="drop-select">
+											<input type="text" readonly="readonly" value="全部战区" class="">
+											<ul class="smallScroll smallScroll2" style="display: none;">
+												<li>
+													<a href="#" rel="1">艾欧尼亚</a>
+												</li>
+												<li>
+													<a href="#" rel="2">诺克萨斯</a>
+												</li>
+												<li>
+													<a href="#" rel="3">黑色玫瑰</a>
+												</li>
+												<li>
+													<a href="#" rel="4">祖安狂人</a>
+												</li>
+											</ul>
+										</div>
+
+									</th>
+									<th width="12%">
+										<pan>赛事名称</span>
+									</th>
+									<th width="12%" class="no_hidden">
+										<span>总奖金</span>
+										<span class="tip_remind">!</span>
+										<span class="tip_box">温馨提醒：以下各项现金奖励均为税前金额，敬请知晓。</span>
+									</th>
+									<th width="20%"><span>比赛时间</span></th>
+									<th width="12%"><span>参赛名额</span></th>
+									<th width="12%"><span>赛事状态</span></th>
+									<th width="20%"><span>战队状态</span></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>艾欧尼亚</td>
+									<td>练习赛第一轮</td>
+									<td>￥10000</td>
+									<td>09.01 12:00-09.01 12:00</td>
+									<td>0/8</td>
+									<td><span class="blue">预告</span></td>
+									<td>
+										<span>9.19 10:00开始报名</span>
+										<span class="deep_blue">（<a class="btn_remind" href="#">报名提醒</a>）</span>
+									</td>
+								</tr>
+								<tr>
+									<td>艾欧尼亚</td>
+									<td>练习赛第一轮</td>
+									<td>￥10000</td>
+									<td>09.01 12:00-09.01 12:00</td>
+									<td>0/8</td>
+									<td><span class="blue">预告</span></td>
+									<td>
+										<span>9.19 10:00开始报名</span>
+									</td>
+								</tr>
+								<tr>
+									<td>艾欧尼亚</td>
+									<td>练习赛第一轮</td>
+									<td>￥10000</td>
+									<td>09.01 12:00-09.01 12:00</td>
+									<td>0/8</td>
+									<td><span class="blue">预告</span></td>
+									<td>
+									</td>
+								</tr>
+								<tr>
+									<td>艾欧尼亚</td>
+									<td>练习赛第一轮</td>
+									<td>￥10000</td>
+									<td>09.01 12:00-09.01 12:00</td>
+									<td>2/8</td>
+									<td><span class="red">报名中</span></td>
+									<td>
+										<a href="" class="btn_ btn_orange">战队报名</a>
+									</td>
+								</tr>
+								<tr>
+									<td>艾欧尼亚</td>
+									<td>练习赛第一轮</td>
+									<td>￥10000</td>
+									<td>09.01 12:00-09.01 12:00</td>
+									<td>2/8</td>
+									<td><span class="red">报名中</span></td>
+									<td>
+										<span>未报名</span>
+										<span class="deep_blue">（<a class="btn_remind" href="#">提醒队长</a>）</span>
+									</td>
+								</tr>
+								<tr>
+									<td>艾欧尼亚</td>
+									<td>练习赛第一轮</td>
+									<td>￥10000</td>
+									<td>09.01 12:00-09.01 12:00</td>
+									<td>8/8（满）</td>
+									<td>
+										<span class="red">报名中</span>
+									</td>
+									<td><span>未报名</span></td>
+								</tr>
+								<tr>
+									<td>艾欧尼亚</td>
+									<td>练习赛第一轮</td>
+									<td>￥10000</td>
+									<td>09.01 12:00-09.01 12:00</td>
+									<td>8/8（满）</td>
+									<td><span class="red">报名中</span></td>
+									<td><span class="deep_green">已报名</span></td>
+								</tr>
+								<tr>
+									<td>艾欧尼亚</td>
+									<td>练习赛第一轮</td>
+									<td>￥10000</td>
+									<td>09.01 12:00-09.01 12:00</td>
+									<td>8/8</td>
+									<td><span class="green">进行中</span></td>
+									<td>
+										<span>未报名</span>
+									</td>
+								</tr>
+								<tr>
+									<td>艾欧尼亚</td>
+									<td>练习赛第一轮</td>
+									<td>￥10000</td>
+									<td>09.01 12:00-09.01 12:00</td>
+									<td>8/8</td>
+									<td><span class="green">进行中</span></td>
+									<td>
+										<a class="btn_ btn_blue" href="">进入比赛</a>
+									</td>
+								</tr>
+								<tr>
+									<td>艾欧尼亚</td>
+									<td>练习赛第一轮</td>
+									<td>￥10000</td>
+									<td>09.01 12:00-09.01 12:00</td>
+									<td>8/8</td>
+									<td><span class="green">进行中</span></td>
+									<td>
+										<span class="deep_orange">四强赛</span>
+										<span>（等待开赛）</span>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<div class="game_page">
+							<div class="pageBox">
+								<a href="javascript:void(0)" class="pageCur">1</a>
+								<a href="javascript:void(0)">2</a>
+								<a href="javascript:void(0)">3</a>
+								<a href="javascript:void(0)">4</a>
+							</div>
+						</div>
+					</div>
+					<div id="tab_box_2" class="game_list hide">
+						<table id="table_game_list">
+							<thead>
+								<tr>
+									<th width="12%">
+										<div class="drop-select">
+											<input type="text" readonly="readonly" value="全部战区" class="">
+											<ul class="smallScroll smallScroll2" style="display: none;">
+												<li>
+													<a href="#" rel="1">艾欧尼亚</a>
+												</li>
+												<li>
+													<a href="#" rel="2">诺克萨斯</a>
+												</li>
+												<li>
+													<a href="#" rel="3">黑色玫瑰</a>
+												</li>
+												<li>
+													<a href="#" rel="4">祖安狂人</a>
+												</li>
+											</ul>
+										</div>
+
+									</th>
+									<th width="12%">
+										<pan>赛事名称</span>
+									</th>
+									<th width="12%" class="no_hidden">
+										<span>总奖金</span>
+										<span class="tip_remind">!</span>
+										<span class="tip_box">温馨提醒：以下各项现金奖励均为税前金额，敬请知晓。</span>
+									</th>
+									<th width="20%"><span>比赛时间</span></th>
+									<th width="12%"><span>参赛名额</span></th>
+									<th width="12%"><span>赛事状态</span></th>
+									<th width="20%"><span>战队状态</span></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>艾欧尼亚</td>
+									<td>练习赛第一轮</td>
+									<td>￥10000</td>
+									<td>09.01 12:00-09.01 12:00</td>
+									<td>8</td>
+									<td><span class="blue">未开始</span></td>
+									<td>
+										<span class="deep_orange">待开赛</span>
+									</td>
+								</tr>
+								<tr>
+									<td>艾欧尼亚</td>
+									<td>练习赛第一轮</td>
+									<td>￥10000</td>
+									<td>09.01 12:00-09.01 12:00</td>
+									<td>8</td>
+									<td><span class="blue">未开始</span></td>
+									<td>
+									</td>
+								</tr>
+								<tr>
+									<td>艾欧尼亚</td>
+									<td>练习赛第一轮</td>
+									<td>￥10000</td>
+									<td>09.01 12:00-09.01 12:00</td>
+									<td>8</td>
+									<td><span class="green">进行中</span></td>
+									<td>
+										<a class="btn_ btn_blue" href="">进入比赛</a>
+									</td>
+								</tr>
+								<tr>
+									<td>艾欧尼亚</td>
+									<td>练习赛第一轮</td>
+									<td>￥10000</td>
+									<td>09.01 12:00-09.01 12:00</td>
+									<td>8</td>
+									<td><span class="green">进行中</span></td>
+									<td>
+										<span class="deep_orange">四强赛</span>
+										<span>（等待开赛）</span>
+									</td>
+								</tr>
+								<tr>
+									<td>艾欧尼亚</td>
+									<td>练习赛第一轮</td>
+									<td>￥10000</td>
+									<td>09.01 12:00-09.01 12:00</td>
+									<td>8</td>
+									<td><span class="green">进行中</span></td>
+									<td>
+									</td>
+								</tr>
+								<tr>
+									<td>艾欧尼亚</td>
+									<td>练习赛第一轮</td>
+									<td>￥10000</td>
+									<td>09.01 12:00-09.01 12:00</td>
+									<td>8</td>
+									<td>
+										<span>已结束</span>
+									</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>艾欧尼亚</td>
+									<td>练习赛第一轮</td>
+									<td>￥10000</td>
+									<td>09.01 12:00-09.01 12:00</td>
+									<td>8</td>
+									<td>
+										<span>已结束</span>
+									</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>艾欧尼亚</td>
+									<td>练习赛第一轮</td>
+									<td>￥10000</td>
+									<td>09.01 12:00-09.01 12:00</td>
+									<td>8</td>
+									<td>
+										<span>已结束</span>
+									</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>艾欧尼亚</td>
+									<td>练习赛第一轮</td>
+									<td>￥10000</td>
+									<td>09.01 12:00-09.01 12:00</td>
+									<td>8</td>
+									<td>
+										<span>已结束</span>
+									</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>艾欧尼亚</td>
+									<td>练习赛第一轮</td>
+									<td>￥10000</td>
+									<td>09.01 12:00-09.01 12:00</td>
+									<td>8</td>
+									<td>
+										<span>已结束</span>
+									</td>
+									<td></td>
+								</tr>
+
+							</tbody>
+						</table>
+						<div class="game_page">
+							<div class="pageBox">
+								<a href="javascript:void(0)" class="pageCur">1</a>
+								<a href="javascript:void(0)">2</a>
+								<a href="javascript:void(0)">3</a>
+								<a href="javascript:void(0)">4</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- 提示 -->
+				<div id="alert_msg" tabindex="-1" role="dialog" aria-hidden="true" class="modal modal-s" data-backdrop="static">
+					<div class="modal-dialog modal_width_500">
+						<div class="modal-content modal_content_bg">
+							<div class="modal-header">
+								<div class="header_style"></div>
+								<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+							</div>
+
+							<div class="modal-body modal_height_110">
+								<h1 class="alert_title_h1 modal_padding_top_40">请确认进入</h1>
+							</div>
+
+							<div class="modal-footer">
+								<div class="btn_sure" data-dismiss="modal">确认</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+				<!-- 提示 -->
+			</div>
+		</div>
+		<script type="text/javascript" src="scripts/jquery-3.1.0.min.js"></script>
+		<script type="text/javascript" src="scripts/bootstrap.min.js"></script>
+		<script type="text/javascript" src="scripts/tabBar.js"></script>
+		<script>
+			$(function() {
+
+				//进入详情页
+				$("#table_game_list tr>td:not(:last-child)").click(function() {
+					location.href = "战队联赛-详情页.html";
+				});
+
+				$('.game_list .tip_remind,.game_list .tip_box').hover(function() {
+					$('.game_list .tip_box').show();
+				}, function() {
+					$('.game_list .tip_box').hide();
+				})
+
+				// 自定义下拉框
+				$(document).on('click', function(e) {
+					var target = e.target;
+					if(target.localName != 'input') $(".drop-select input").removeClass("open").siblings("ul").hide();
+				});
+
+				$(".drop-select input").click(function(e) {
+					var ul = $(this).siblings("ul");
+					if(ul.css("display") == "none") {
+						ul.slideDown("fast");
+						$(this).addClass("open")
+					} else {
+						ul.slideUp("fast");
+						$(this).removeClass("open")
+					}
+				});
+
+				$(".drop-select ul li a").click(function() {
+					var txt = $(this).text();
+					$(this).parents(".drop-select ul").siblings("input").val(txt).removeClass("open");
+					$(".drop-select ul").hide();
+				});
+
+				//title点击
+				$(".team_nav li").click(function() {
+					var tab_name = $(this).attr('data-tab');
+					if(!$(this).hasClass('active')) {
+						$('.game_list').addClass('hide')
+						$('#' + tab_name).removeClass('hide')
+					}
+
+					$(this).siblings().removeClass('active');
+					$(this).addClass('active');
+				});
+
+			})
+			
+			//展示提示框
+			function showMsg(str) {
+				$('#alert_msg .alert_title_h1').html(str);
+				$('#alert_msg').modal();
+			}
+			
+			//展示提示框
+			showMsg("已报名<span class='blue'>艾欧尼亚7月1日常规赛</span>，不可重复报名");
+		</script>
+	</body>
+
+</html>
