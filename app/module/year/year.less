@@ -1,0 +1,396 @@
+@import '../../styles/_base';
+@import '../../styles/_common';
+.box {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    overflow: hidden;
+    background: url(../../images/year/year_bg.jpg);
+    width: 1196px;
+    height: 600px;
+    .go_back{
+        position: absolute;
+        width: 90px;
+        height: 28px;
+        line-height: 28px;
+        text-align: center;
+        font-style: 14px;
+        color: #ababab;
+        background: #292d34;
+        cursor: pointer;
+        left: 20px;
+        top: 15px;
+        &:hover{
+            color: white;
+        }
+    }
+    .left_menu{
+        position: absolute;
+        width: 123px;
+        left: 74px;
+        top: 105px;
+        li{
+            position: relative;
+            cursor: pointer;
+            padding-top: 7px;
+            text-align: center;
+            width: 123px;
+            height: 60px;
+            h2{
+                position: absolute;
+                width: 100%;
+                margin-bottom: 5px;
+                font-size: 14px;
+                z-index: 10;
+                font-weight: bold;
+            }
+            h1{
+                position: absolute;
+                width: 100%;
+                font-size: 16px;
+                z-index: 10;
+                top: 24px;
+            }
+        }
+        li.over{
+            h1,h2{
+                color: #8c7764;
+            }
+        }
+        li.ing{
+            h1,h2{
+                color: #00ff00;
+            }
+        }
+        li.noStart{
+            h1,h2{
+                color: #c5a22c;
+            }
+        }
+        li:hover{
+            background: url(../../images/year/hover.png) no-repeat;
+        }
+        li.on{
+            &:before{
+                position: absolute;
+                content: "";
+                background: url(../../images/year/active.png);
+                width: 118px;
+                height: 47px;
+                left: 5px;
+                top: 1px;
+            }
+        }
+    }
+    .title_box{
+        position: absolute;
+        width: 787px;
+        height: 60px;
+        left: 206px;
+        top: 0px;
+        h1,h2,h3{
+            position: absolute;
+            bottom: 8px;
+        }
+        h1{
+            font-size: 18px;
+            color: #7a85ea;
+            left: 0px;
+        }
+        h2{
+            width: 260px;
+            height: 44px;
+            background: url(../../images/year/year_title.png);
+            left: 270px;
+            bottom: 5px;
+        }
+        h3{
+            font-size: 14px;
+            color: white;
+            left: 534px;
+        }
+    }
+    .rules_pointer{
+        position: absolute;
+        width: 185px;
+        height: 170px;
+        right: 40px;
+        top: 55px;
+        cursor: pointer;
+    }
+    .live_box{
+        position: absolute;
+        width: 726px;
+        height: 436px;
+        top: 75px;
+        left: 238px;
+        border-radius: 10px;
+        .game_status{
+            margin: 170px;
+            text-align: center;
+            h1{
+                font-size: 24px;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-image: -webkit-gradient(linear,0 0,0 bottom,from(#fee461),to(#e17405));
+            }
+            h2{
+                margin-top: 5px;
+                font-size: 14px;
+                color: #9b6022;
+            }
+        }
+        &.noLive{
+            background: url(../../images/year/noLive.png);
+        }
+        #live_if{
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width:726px;
+            height:433px;
+            border-radius: 5px;
+        }
+    }
+    .status_box{
+        position: absolute;
+        width: 790px;
+        height: 77px;
+        bottom: 0px;
+        left: 210px;
+        .vs{
+            position: absolute;
+            width: 47px;
+            height: 63px;
+            top: 4px;
+            left: 50%;
+            margin-left: -27px;
+        }
+        .team_box1,.team_box2{
+            position: absolute;
+            width: 365px;
+            height: 77pc;
+            top: 18px;
+            h1,h2,h3,h4{
+                position: absolute;
+            }
+            h1{
+                width: 110px;
+                height: 34px;
+                top: 2px;
+                line-height: 33px;
+                text-align: center;
+                &.zan{
+                    cursor: pointer;
+                    background: url(../../images/year/year_btn1.png) no-repeat;
+                    font-size: 18px;
+                    color: #640f0a;
+                    font-weight: bold;
+                    &:hover{
+                        background-position-y: -34px;
+                    }
+                }
+                &.normal{
+                    background: #272960;
+                    color:#404390;
+                    font-size: 18px;
+                    font-weight: bold;
+                    border-radius: 3px;
+                }
+                &.zanEd{
+                    background: url(../../images/year/year_btn3.png) no-repeat;
+                }
+            }
+            h2{
+                top: 8px;
+                width: 77px;
+                height: 20px;
+                font-size: 14px;
+                color: #6e7093;
+                line-height: 22px;
+                text-indent: 18px;
+                overflow: hidden;
+                &:before{
+                    position: absolute;
+                    content: "";
+                    width: 14px;
+                    height: 14px;
+                    background: url(../../images/year/zan.png);
+                    left: 0px;
+                    top: 3px;
+                }
+            }
+            h3{
+                width: 140px;
+                height: 38px;
+                border-radius: 30px;
+                font-size: 14px;
+                font-weight: bold;
+                text-align: center;
+                line-height: 36px;
+                color: white;
+                top: 0px;
+                &.noTeam{
+                    color: #2d2f71;
+                    font-size: 28px;
+                    font-weight: bold;
+                    border: 0px;
+                }
+                &.win{
+                   &:before{
+                        position: absolute;
+                        content: "";
+                        top: -16px;
+                        left: 43px;
+                        width: 53px;
+                        height: 21px;
+                        background: url(../../images/year/win.png);
+                   } 
+                }
+            }
+            h4{
+                display: none;
+                width: 120px;
+                height: 20px;
+                top: 8px;
+                &.right{
+                    color:#00ff2a;
+                    font-size: 18px;
+                    font-weight: bold;
+                }
+                &.wrong{
+                    color:#b50909;
+                    font-size: 18px;
+                    font-weight: bold;
+                }
+            }
+        }
+        .team_box1{
+            left: 0px;
+            h3{
+                right: 3px;
+                border: 2px solid #097e9b;
+            }
+            h2{
+                left: 120px;
+            }
+            h1{
+                left: 0px;
+            }
+            h4{
+                left: 0px;
+            }
+        }
+        .team_box2{
+            right: 0px;
+            h3{
+                left: 3px;
+                border: 2px solid #6717ca;
+            }
+            h2{
+                right: 125px;
+            }
+            h1{
+                right: 7px;
+            }
+            h4{
+                right: 0px;
+            }
+        }
+    }
+    .rules_box{
+        z-index: 40;
+        display: none;
+        position: absolute;
+        width: 1196px;
+        height: 600px;
+        top: 0px;
+        left: 0px;
+        .bg{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,1,24,0.8);
+        }
+        .content{
+            position: absolute;
+            width: 632px;
+            height: 350px;
+            background: url(../../images/year/rules_bg.png);
+            top: 114px;
+            left: 310px;
+            padding: 86px 50px 0px 55px;
+            i{
+                position: absolute;
+                width: 52px;
+                height: 52px;
+                right: 0px;
+                top: 0px;
+                cursor: pointer;
+            }
+            h1{
+                color: #ffc000;
+                font-weight: bold;
+                font-size: 18px;
+                margin-bottom: 10px;
+                margin-top: 20px;
+                position: relative;
+                &:before{
+                    position: absolute;
+                    content: "";
+                    width: 13px;
+                    height: 13px;
+                    left: -21px;
+                    top: 3px;
+                    background: #ffc000;
+                    transform: rotate(45deg);
+                    -webkit-transform: rotate(45deg);
+                }
+            }
+            p{
+                font-size: 14p;
+                color: #ffb983;
+            }
+        }
+    }
+    .alert_box{
+        display: none;
+        position: absolute;
+        width: 1196px;
+        height: 600px;
+        top: 0px;
+        left: 0px;
+        .bg{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,1,24,0.8);
+        }
+        .content{
+            position: absolute;
+            width: 632px;
+            height: 350px;
+            background: url(../../images/year/alert_bg.png);
+            top: 114px;
+            left: 310px;
+            i{
+                position: absolute;
+                width: 52px;
+                height: 52px;
+                right: 0px;
+                top: 0px;
+                cursor: pointer;
+            }
+            h1{
+                color: #ffc000;
+                font-weight: bold;
+                font-size: 18px;
+                margin-top: 150px;
+                padding-right: 50px;
+                position: relative;
+                text-align: center;
+            }
+        }
+    
+    }
+}

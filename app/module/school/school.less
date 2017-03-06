@@ -1,0 +1,637 @@
+@import '../../styles/_base';
+@import '../../styles/_common';
+.container {
+    width: 1196px;
+    height: 600px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    padding: 0px;
+    .smallScroll::-webkit-scrollbar {
+        width: 10px;
+        height: 10px;
+    }
+    .smallScroll::-webkit-scrollbar-track {
+        border-radius: 5px;
+        background:transparent;
+    }
+    .smallScroll::-webkit-scrollbar-thumb {
+        border-radius: 5px;
+        background: #9d61d9;
+    }
+    .smallScroll.smallScroll2::-webkit-scrollbar {
+        width: 6px;
+    }
+    .school_menu{
+        position: fixed;
+        top: 200px;
+        right: 10px;
+        width: 115px;
+        height: 267px;
+        background: url(../../images/school/school_menu.png);
+        z-index: 100;
+        a{
+            display: block;
+            width: 100%;
+            height: 80px;
+            &:first-child{
+                height: 25px;
+            }
+        }
+    }
+    .content{
+        position: relative;
+        background: url(../../images/school/school_under.png);
+        .top_bg{
+            position: relative;
+            width: 1196px;
+            height: 289px;
+            text-align: center;
+            background: url(../../images/school/school_bg_top.png);
+            p{
+                position: absolute;
+                font-size: 14px;
+                color: #27262c;
+                width: 300px;
+                height: 30px;
+                top: 205px;
+                left: 50%;
+                text-align: center;
+                margin-left: -150px;
+            }
+        }
+        .middle{
+            position: relative;
+            width: 849px;
+            height: 441px;
+            margin: 0 auto;
+            margin-top: -70px;
+            padding-top: 1px;
+            background: url(../../images/school/school_bg_middle.png);
+            span.icon_flush{
+                position: absolute;
+                right: 50px;
+                top: 62px;
+                width: 105px;
+                height: 30px;
+                font-size: 14px;
+                cursor: pointer;
+                color: #f56b52;
+                &:after{
+                    position: absolute;
+                    content: "";
+                    width: 85px;
+                    height: 1px;
+                    background: #f56b52;
+                    top: 20px;
+                    left: 13px;
+                }
+            }
+             &:after{
+                position: absolute;
+                width: 503px;
+                height: 528px;
+                content: "";
+                left: -170px;
+                top: -220px;
+                background: url(../../images/school/school_people.png);
+                z-index: 0;
+            }
+            &>h1{
+                font-size: 29px;
+                color: white;
+                font-weight: bold;
+                text-align: center;
+                margin-top: 55px;
+            }
+            &>h2{
+                font-weight: normal;
+                font-size: 13px;
+                color: white;
+                text-align: center;
+                margin-top: 10px;
+            }
+            ul{
+                position: absolute;
+                width: 100%;
+                top: 164px;
+                z-index: 10;
+                list-style: none;
+                text-align: center;
+                li{
+                    display: inline-block;
+                    width: 263px;
+                    text-align: center;
+                    h1{
+                        font-size: 16px;
+                        color: white;
+                        margin-bottom: 10px;
+                    }
+                    h2,h3{
+                        font-size: 12px;
+                        margin-bottom: 4px;
+                        color: #6d9da0;
+                    }
+                    .bao{
+                        position: relative;
+                        width: 101px;
+                        height: 87px;
+                        margin: 0 auto;
+                        margin-top: 20px;
+                        margin-bottom: 15px;
+                        background: url(../../images/school/school_bao4.png);
+                        cursor: pointer;
+                        .tip{
+                            display: none;
+                            position: absolute;
+                            width: 300px;
+                            height: 110px;
+                            background: rgba(0,0,0,0.7);
+                            color: white;
+                            font-size: 12px;
+                            top: -17px;
+                            left: -93px;
+                            border-radius: 10px;
+                            padding: 10px;
+                            &:after{
+                                position: absolute;
+                                content: "宝箱开启概率获得";
+                                color: #ff4d28;
+                                bottom: 5px;
+                                left: 100px;
+                            }
+                        }
+                    }
+                    .btn{
+                        position: relative;
+                        margin: 0 auto;
+                        width: 116px;
+                        height: 31px;
+                        color: white;
+                        font-size: 16px;
+                        cursor: default;
+                        font-weight: bold;
+                        line-height: 18px;
+                        &.on{
+                            background: url(../../images/school/school_btn1.png) no-repeat 0 0;
+                            cursor: pointer;
+                        }
+                        &.off{
+                            background: url(../../images/school/school_btn1.png) no-repeat 0 0;
+                            background-position-y: -31px;
+                            cursor: default;
+                        }
+                    }
+                }
+            }
+        }
+        .middle2{
+            padding-top: 90px;
+            width: 745px;
+            height: 665px;
+            position: relative;
+            text-align: center;
+            margin: 0 auto;
+            &>h1{
+                font-size: 29px;
+                color: #f56b52;
+                font-weight: bold;
+                text-align: center;
+            }
+            &>h2{
+                font-weight: normal;
+                font-size: 13px;
+                color: #27262c;
+                text-align: center;
+                margin-top: 15px;
+            }
+            .tip{
+                margin-top: 40px;
+                span{
+                    font-size: 14px;
+                    color: #f56b52;
+                    &:first-child{
+                        padding-left: 10px;
+                        float: left;
+                    }
+                    &:last-child{
+                        position: relative;
+                        padding-right: 10px;
+                        float: right;
+                        width: 122px;
+                        cursor: pointer;
+                         &:after{
+                            position: absolute;
+                            content: "";
+                            width: 99px;
+                            height: 1px;
+                            background: #f56b52;
+                            top: 20px;
+                            left: 13px;
+                        }
+                    }
+                }
+            }
+            ul{
+                position: absolute;
+                width: 100%;
+                top: 243px;
+                list-style: none;
+                text-align: center;
+                &:after{
+                    display: block;
+                    width: 0;
+                    content: "";
+                    clear: both;
+                }
+                li{
+                    display: inline-block;
+                    position: relative;
+                    width: 219px;
+                    height: 336px;
+                    text-align: center;
+                    background: url(../../images/school/school_page.png) no-repeat;
+                    &:first-child{float: left;}
+                    &:last-child{float: right;}
+                    h1{
+                        font-size: 14px;
+                        color: #27262c;
+                        margin-bottom: 10px;
+                    }
+                    h2{
+                        font-size: 16px;
+                        margin-top: 45px;
+                        color: #27262c;
+                    }
+                    .bao{
+                        cursor: pointer;
+                        position: relative;
+                        width: 104px;
+                        height: 104px;
+                        margin: 0 auto;
+                        margin-top: 97px;
+                        margin-bottom: 10px;
+                        .tip{
+                            display: none;
+                            position: absolute;
+                            width: 300px;
+                            height: 110px;
+                            background: rgba(0,0,0,0.7);
+                            color: white;
+                            font-size: 12px;
+                            top: -17px;
+                            left: -93px;
+                            border-radius: 10px;
+                            padding: 10px;
+                            &:after{
+                                position: absolute;
+                                content: "宝箱开启概率获得";
+                                color: #ff4d28;
+                                bottom: 5px;
+                                left: 100px;
+                            }
+                        }
+                    }
+                    #bao1{
+                        background: url(../../images/school/school_bao1.png) no-repeat;
+                    }
+                    #bao2{
+                        background: url(../../images/school/school_bao2.png) no-repeat;
+                    }
+                    #bao3{
+                        background: url(../../images/school/school_bao3.png) no-repeat;
+                    }
+                    .btn{
+                        position: relative;
+                        margin: 0 auto;
+                        width: 116px;
+                        height: 31px;
+                        color: white;
+                        font-size: 16px;
+                        cursor: default;
+                        font-weight: bold;
+                        line-height: 18px;
+                        &.on{
+                            background: url(../../images/school/school_btn1.png) no-repeat 0 0;
+                            cursor: pointer;
+                        }
+                        &.off{
+                            background: url(../../images/school/school_btn1.png) no-repeat 0 0;
+                            background-position-y: -31px;
+                            cursor: default;
+                        }
+                    }
+                    &.score60:after{
+                        width: 59px;
+                        height: 49px;
+                        content: "";
+                        background: url(../../images/school/score60_off.png);
+                        position: absolute;
+                        right: 30px;
+                        top: 30px;
+                    }
+                    &.score60.on:after{
+                        background: url(../../images/school/score60_on.png);
+                    }
+                    &.score80:after{
+                        width: 59px;
+                        height: 49px;
+                        content: "";
+                        background: url(../../images/school/score80_off.png);
+                        position: absolute;
+                        right: 30px;
+                        top: 30px;
+                    }
+                    &.score80.on:after{
+                        background: url(../../images/school/score80_on.png);
+                    }
+                    &.score100:after{
+                        width: 68px;
+                        height: 49px;
+                        content: "";
+                        background: url(../../images/school/score100_off.png);
+                        position: absolute;
+                        right: 30px;
+                        top: 30px;
+                    }
+                    &.score100.on:after{
+                        background: url(../../images/school/score100_on.png);
+                    }
+                }
+            }
+        }
+        .bottom_box{
+            position: relative;
+            width: 100%;
+            padding-top: 50px;
+            height: 991px;
+            background: url(../../images/school/school_bg_bottom.jpg);
+            text-align: center;
+            span.icon_flush{
+                position: absolute;
+                right: 113px;
+                top: 56px;
+                width: 105px;
+                height: 30px;
+                font-size: 14px;
+                cursor: pointer;
+                color: #f56b52;
+                &:after{
+                    position: absolute;
+                    content: "";
+                    width: 85px;
+                    height: 1px;
+                    background: #f56b52;
+                    top: 20px;
+                    left: 17px;
+                }
+            }
+            &>p{
+                text-align: center;
+                color: white;
+                font-size: 12px;
+                margin-top: 40px;
+            }
+            &>h1{
+                font-size: 29px;
+                color: #fc9227;
+                font-weight: bold;
+                text-align: center;
+                margin-bottom: 10px;
+            }
+            &>h2,&>h3{
+                font-weight: normal;
+                margin-bottom: 3px;
+                font-size: 14px;
+                color: #e2e2e2;
+                text-align: center;
+            }
+            ul.ul_rank{
+                position: relative;
+                width: 950px;
+                margin: 0 auto;
+                margin-top: 77px;
+                z-index: 10;
+                list-style: none;
+                text-align: center;
+                li{
+                    display: inline-block;
+                    position: relative;
+                    width: 284px;
+                    height: 492px;
+                    text-align: center;
+                    background: #2c2b2f;
+                    border-radius: 10px;
+                    &:first-child{float: left;}
+                    &:last-child{float: right;}
+                    &>img{
+                       width: 191px;
+                       height: 33px;
+                       position: absolute;
+                       top: -33px;
+                       left: 50px;
+                    }
+                    h1{
+                        font-size: 16px;
+                        color: white;
+                        margin-bottom: 10px;
+                    }
+                    h2,h3{
+                        font-size: 12px;
+                        margin-bottom: 4px;
+                        color: #6d9da0;
+                    }
+                    .btn_box{
+                        width: 100%;
+                        height: 45px;
+                        border-top: 1px dashed #3b3939;
+                        position: absolute;
+                        bottom: 0px;
+                        .btn{
+                            position: relative;
+                            margin: 6px auto;
+                            width: 116px;
+                            height: 29px;
+                            color: white;
+                            cursor: default;
+                            font-size: 14px;
+                            line-height: 16px;
+                            &.on{
+                                background: url(../../images/school/school_btn2.png) no-repeat 0 0;
+                                background-position-y: -29px;
+                                cursor: pointer;
+                            }
+                            &.off{
+                                background: url(../../images/school/school_btn2.png) no-repeat 0 0;
+                                cursor: default;
+                            }
+                        }
+                    }
+                    ul{
+                        width: 100%;
+                        li{
+                            height: 37px;
+                            color: #d4c7a0;
+                            font-size: 12px;
+                            padding-top: 10px;
+                            padding-bottom: 10px;
+                            span{
+                                display: inline-block;
+                                text-align: center;
+                                width: 45%;
+                                white-space: nowrap;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                &:first-child{width: 10%;}
+                                &:last-child{width: 30%;}
+                            }
+                            &.active{
+                                color: #fc9227;
+                                font-weight: bold;
+                            }
+                        }
+                    }
+                    ul.list{
+                        li{
+                            span{
+                                display: inline-block;
+                                text-align: center;
+                                width: 47%;
+                                &:first-child{width: 15%;}
+                                &:last-child{width: 30%;}
+                            }
+                        }
+                    }
+                }
+            }
+            ul.ul_detail{
+                position: relative;
+                width: 956px;
+                margin: 0 auto;
+                margin-top: 27px;
+                z-index: 10;
+                list-style: none;
+                text-align: center;
+                &>li{
+                    display: inline-block;
+                    position: relative;
+                    width: 234px;
+                    height: 170px;
+                    text-align: center;
+                    margin-right: 2px;
+                    &:after{
+                        position: absolute;
+                        content: "或";
+                        right: 111px;
+                        top: 107px;
+                    }
+                    &:last-child:after{
+                        content: "";
+                    }
+                    .top{
+                        width: 234px;
+                        height: 50px;
+                        background: #70624a;
+                        line-height: 50px;
+                        text-align: center;
+                        color: white;
+                        font-size: 18px;
+                    }
+                    .bottom{
+                        margin-top: 5px;
+                        width: 100%;
+                        height: 116px;
+                        background: #d5b272;
+                        ul{
+                            text-align: center;
+                            width: 100%;
+                            height: 116px;
+                            list-style: none;
+                            position: relative;
+                            li{
+                                width: 100px;
+                                display: inline-block;
+                                padding-top: 18px;
+                                div{
+                                    position: relative;
+                                    width: 55px;
+                                    height: 55px;
+                                    margin: 0 auto;
+                                }
+                                p{
+                                    font-size: 12px;
+                                    color: #2f1919;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .alert_box{
+        display: none;
+        z-index: 100;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.6);
+        top: 0px;
+        left: 0px;
+        .alert_content{
+            position: fixed;
+            width: 440px;
+            height: 170px;
+            background: white;
+            border-radius: 5px;
+            top: 50%;
+            left: 50%;
+            margin-left: -220px;
+            margin-top: -85px;
+            padding: 20px 25px;
+            p{font-size: 14px;margin-bottom: 15px;}
+            span,a{
+                font-size: 12px;
+                color: #2f1919;
+                cursor: pointer;
+                display: inline-block;
+                width: 85px;
+                height: 30px;
+                line-height: 30px;
+                text-align: center;
+                background: #e0e0e0;
+                margin-right: 15px;
+                &.on{
+                    background: white;
+                    box-shadow: 0px 0px 0px 2px #359be0;
+                }
+            }
+            a{
+                border: 0;
+                position: absolute;
+                right: 5px;
+                bottom: 15px;
+                background: white;
+                box-shadow: 0px 0px 0px 1px #359be0;
+            }
+            h1{
+                position: absolute;
+                right: 4px;
+                top: -5px;
+                color: #969696;
+                cursor: pointer;
+                font-size: 30px;
+                transform: rotate(-45deg);
+                -webkit-transform: rotate(-45deg);
+            }
+            .msg{
+                display: none;
+                font-size: 16px;
+                padding: 10px;
+            }
+        }
+        
+    }
+}

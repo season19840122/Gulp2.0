@@ -77,11 +77,6 @@ var DOMFUN = function(initObj,actions) {
 			location.replace(hostUrl);
 		})
 
-		//左边导航点击切换
-		$('.menu-wrap ul li').on('click', function(data) {
-			if(!$(this).hasClass('active')) actions.do_getAllChallengeMatchInfo();
-		});
-		
 		//二维码失败后点击再试一次
 		$('#alert_all #tab3 .try').on('click', function(data) {
 			$('#alert_all').modal('hide');

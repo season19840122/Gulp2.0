@@ -3,6 +3,7 @@ var ACTIONFUN = function(initObj) {
 	var isGuid = true;
 	var scrollTime = null,speed=50,isClickAgain = true;
 	var awardObj = {};
+	var closeFlag = false;
 	/**
 	 * 10001;//抽奖按钮免费
 	 * 10002;//抽奖按钮可以抽奖
@@ -175,7 +176,7 @@ var ACTIONFUN = function(initObj) {
 					var data = obj['data'];
 					for(var i = 0;i<data.length;i++) {
 						var prizeObj = new Array();
-						var imgSrc = data[i].pic || initObj.options.hostImg+'images/prize_no1.png';
+						var imgSrc = initObj.options.hostImg+"images/"+data[i].pic || initObj.options.hostImg+'images/prize_no1.png';
 						prizeObj.push("<img src='"+imgSrc+"' >");
 						prizeObj.push("<p>"+data[i].productName+"</p>");
 						prizeObj.push("<input type=hidden value='"+data[i].awardProductId+"'>");
@@ -191,6 +192,7 @@ var ACTIONFUN = function(initObj) {
 	}
 	
 	function isChou(flag) {
+		if(closeFlag) return;
 		//true标示点击开始抽奖
 		if(flag) {
 			isClickAgain = false;
@@ -265,6 +267,13 @@ var ACTIONFUN = function(initObj) {
 	
 	//获取按钮状态
 	this.go_btn = function() {
+		closeFlag = true;
+		$('.prize_enter').removeClass('normal').addClass('enter');
+		$('.prize_enter p').eq(0).html("活动");
+		$('.prize_enter p').eq(1).html("结束");
+		$('.prize_enter h3').hide();
+		return;
+		
 		$.AJAX({
 			name:"获取状态",
 			url: urlList.url_btn(),
@@ -304,6 +313,8 @@ var ACTIONFUN = function(initObj) {
 		//点击抽奖
 		$('.prize_enter').off('click');
 		$('.prize_enter').on('click',function() {
+			if(closeFlag) return;
+			
 			if(btnStatus == 10007) {//去登陆
 				ClientAPI.startLogin('VC_LOGIN');
 				return;
@@ -420,4 +431,5 @@ var ACTIONFUN = function(initObj) {
 		}
 		return user.userId;
 	}
+	
 }

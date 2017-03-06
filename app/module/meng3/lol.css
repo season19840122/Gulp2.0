@@ -1,0 +1,718 @@
+/*css RESET  */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+p,
+blockquote,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+pre,
+form,
+fieldset,
+legend,
+button,
+input,
+textarea,
+th,
+td {
+  margin: 0;
+  padding: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+}
+address,
+cite,
+dfn,
+em,
+var {
+  font-style: normal;
+}
+code,
+kbd,
+pre,
+samp {
+  font-family: courier new, courier, monospace;
+}
+ul,
+ol {
+  list-style: none;
+}
+body {
+  font-size: 12px;
+  font-family: 微软雅黑;
+  color: #d7af69;
+}
+* {
+  box-sizing: border-box;
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.f14 {
+  font-size: 14px;
+}
+.white {
+  color: #fff;
+}
+.orange {
+  color: #db7317;
+}
+.blue {
+  color: #00b3fe;
+}
+.mt-10 {
+  margin-top: -10px;
+}
+/*投注*/
+.betBg {
+  width: 258px;
+  height: 438px;
+  overflow: hidden;
+  background: url(../../images/lol/bg_container.png) no-repeat;
+  padding-top: 15px;
+  padding-left: 2px;
+}
+.container {
+  width: 255px;
+  height: 423px;
+  background: url(../../images/lol/bg.png) no-repeat left top;
+  position: relative;
+  overflow: hidden;
+}
+.fluid {
+  width: 76px;
+  height: 76px;
+  position: absolute;
+  left: 89px;
+  top: 19px;
+  border-radius: 50%;
+  background-position-y: 20%;
+  transition: background-position 5s;
+  overflow: hidden;
+}
+#anim {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: url(../../images/lol/fluid.png) no-repeat;
+  width: 100px;
+  height: 0;
+  animation: dong 4s step-start infinite;
+  animation-fill-mode: forwards ;
+  transition: height 1.5s 1s;
+}
+.full {
+  position: absolute;
+  bottom: 0 ;
+  left: 0px;
+  background: url(../../images/lol/fluid_full.png) no-repeat left center;
+  width: 76px;
+  border-radius: 50px;
+  height: 100%;
+  animation: dong 6s step-start infinite;
+  transition: opacity 1s 2.3s;
+}
+.bet_select {
+  background-image: url(../../images/lol/bg2.png);
+}
+.bet_select .full,
+.bet_select p {
+  opacity: 0;
+}
+@keyframes dong {
+  0.0% {
+    background-position-x: 0px;
+  }
+  1.7% {
+    background-position-x: -100px;
+  }
+  3.4% {
+    background-position-x: -200px;
+  }
+  5.2% {
+    background-position-x: -300px;
+  }
+  6.9% {
+    background-position-x: -400px;
+  }
+  8.6% {
+    background-position-x: -500px;
+  }
+  10.3% {
+    background-position-x: -600px;
+  }
+  12.0% {
+    background-position-x: -700px;
+  }
+  13.8% {
+    background-position-x: -800px;
+  }
+  15.5% {
+    background-position-x: -900px;
+  }
+  17.2% {
+    background-position-x: -1000px;
+  }
+  18.9% {
+    background-position-x: -1100px;
+  }
+  20.6% {
+    background-position-x: -1200px;
+  }
+  22.4% {
+    background-position-x: -1300px;
+  }
+  24.1% {
+    background-position-x: -1400px;
+  }
+  25.8% {
+    background-position-x: -1500px;
+  }
+  27.5% {
+    background-position-x: -1600px;
+  }
+  29.2% {
+    background-position-x: -1700px;
+  }
+  31.0% {
+    background-position-x: -1800px;
+  }
+  32.7% {
+    background-position-x: -1900px;
+  }
+  34.4% {
+    background-position-x: -2000px;
+  }
+  36.1% {
+    background-position-x: -2100px;
+  }
+  37.8% {
+    background-position-x: -2200px;
+  }
+  39.6% {
+    background-position-x: -2300px;
+  }
+  41.3% {
+    background-position-x: -2400px;
+  }
+  43.0% {
+    background-position-x: -2500px;
+  }
+  44.7% {
+    background-position-x: -2600px;
+  }
+  46.4% {
+    background-position-x: -2700px;
+  }
+  48.2% {
+    background-position-x: -2800px;
+  }
+  50.0% {
+    background-position-x: -2900px;
+  }
+  51.7% {
+    background-position-x: -2800px;
+  }
+  53.5% {
+    background-position-x: -2700px;
+  }
+  55.2% {
+    background-position-x: -2600px;
+  }
+  56.9% {
+    background-position-x: -2500px;
+  }
+  58.6% {
+    background-position-x: -2400px;
+  }
+  60.3% {
+    background-position-x: -2300px;
+  }
+  62.1% {
+    background-position-x: -2200px;
+  }
+  63.8% {
+    background-position-x: -2100px;
+  }
+  65.5% {
+    background-position-x: -2000px;
+  }
+  67.2% {
+    background-position-x: -1900px;
+  }
+  68.9% {
+    background-position-x: -1800px;
+  }
+  70.7% {
+    background-position-x: -1700px;
+  }
+  72.4% {
+    background-position-x: -1600px;
+  }
+  74.1% {
+    background-position-x: -1500px;
+  }
+  75.8% {
+    background-position-x: -1400px;
+  }
+  77.5% {
+    background-position-x: -1300px;
+  }
+  79.3% {
+    background-position-x: -1200px;
+  }
+  81.0% {
+    background-position-x: -1100px;
+  }
+  82.7% {
+    background-position-x: -1000px;
+  }
+  84.4% {
+    background-position-x: -900px;
+  }
+  86.1% {
+    background-position-x: -800px;
+  }
+  87.9% {
+    background-position-x: -700px;
+  }
+  89.6% {
+    background-position-x: -600px;
+  }
+  91.3% {
+    background-position-x: -500px;
+  }
+  93.0% {
+    background-position-x: -400px;
+  }
+  94.7% {
+    background-position-x: -300px;
+  }
+  96.5% {
+    background-position-x: -200px;
+  }
+  98.2% {
+    background-position-x: -100px;
+  }
+  99.9% {
+    background-position-x: 0px;
+  }
+}
+.fluid p {
+  text-align: center;
+  width: 76px;
+  position: absolute;
+  margin-top: 25px;
+  font-size: 24px;
+  background-image: -webkit-gradient(linear, 0 0, 0 bottom, from(#fdfdf8), to(#cac423));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: opacity 1s;
+}
+/*投注选择*/
+.lay_bet {
+  width: 166px;
+  height: 132px;
+  background: url(../../images/lol/bg_bet.png) no-repeat;
+  margin: 115px auto 0;
+  padding-top: 60px;
+  text-align: center;
+  line-height: 22px;
+}
+.lay_bet ul {
+  width: 132px;
+  margin: 0 auto;
+  height: 132px;
+}
+.lay_bet ul li {
+  width: 60px;
+  height: 60px;
+  margin: 0 3px 2px 3px;
+  float: left;
+}
+.lay_bet ul li:hover {
+  background: url(../../images/lol/li_dou.png) no-repeat 1px 1px;
+}
+.lay_bet ul li a {
+  background: url(../../images/lol/bg_sd.png) no-repeat;
+  color: #5e450a;
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: none;
+  line-height: 50px;
+  display: block;
+  width: 52px;
+  height: 51px;
+  margin: 5px;
+}
+.lay_bet ul li a.hover {
+  background-position: -52px 0;
+  line-height: 35px;
+  font-size: 18px;
+}
+/*.lay_bet ul li a.bet{background-position: 0 0;}*/
+.lay_bet ul li.lock .bet {
+  background-position-y: -51px;
+  cursor: not-allowed;
+  color: #585858;
+}
+.lay_bet ul li.lock:hover {
+  background: none;
+}
+.txt_bet {
+  line-height: 22px;
+  text-align: center;
+}
+/*活动说明*/
+#state_btn {
+  display: block;
+  position: absolute;
+  top: 373px;
+  left: 114px;
+  width: 26px;
+  height: 26px;
+}
+.statement {
+  display: none;
+  position: absolute;
+  top: 113px;
+  left: 44px;
+  width: 148px;
+  height: 235px;
+  line-height: 20px;
+  font-size: 11px;
+  color: #cab479;
+  padding: 6px 10px 6px 12px;
+  background: url(../../images/lol/statement.png) no-repeat;
+}
+.state_close {
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  right: 5px;
+  top: 7px;
+}
+.state_con {
+  height: 200px;
+  outline: none;
+}
+.state_con p {
+  text-indent: 24px;
+}
+.state_con p.no_indent {
+  text-indent: 0;
+}
+/*投注充值*/
+.lay_cz {
+  text-align: center;
+  background: url(../../images/lol/cz_text.png) no-repeat center 37px;
+  margin-top: 125px;
+  height: 185px;
+}
+.lay_cz .code {
+  margin: 45px auto 0;
+  width: 104px;
+  height: 104px;
+}
+/*投注成功*/
+.lay_success {
+  margin-top: 125px;
+  height: 185px;
+  text-align: center;
+  color: #edca63;
+  overflow: hidden;
+  position: relative;
+}
+.lay_success h1 {
+  font-size: 36px;
+  color: #d7af69;
+  font-weight: normal;
+  height: 60px;
+  line-height: 60px;
+  background-image: -webkit-gradient(linear, 0 0, 0 bottom, from(#f6d68a), to(#a88229));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.num_bet {
+  line-height: 22px;
+}
+.num_bet:after {
+  content: "";
+  display: inline-block;
+  width: 25px;
+  height: 20px;
+  background: url(../../images/lol/SD.png) no-repeat;
+  vertical-align: middle;
+  margin-left: 2px;
+}
+#slide_notice {
+  position: absolute;
+  height: 25px;
+  line-height: 25px;
+  overflow: hidden;
+  width: 170px;
+  left: 42px;
+  top: 135px;
+  background: url(../../images/lol/line_dot.png) no-repeat center top;
+}
+#slide_notice li {
+  background: url(../../images/lol/icon_talk.png) no-repeat 2px center;
+  text-indent: 15px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+/*window*/
+.window {
+  width: 300px;
+  height: 500px;
+  background: url(../../images/lol/lolbg.png) no-repeat;
+  position: relative;
+  overflow: hidden;
+}
+.window .title {
+  width: 150px;
+  height: 74px;
+  background: url(../../images/lol/title_window.png) no-repeat;
+  margin: 7px auto 0;
+}
+.fail .title {
+  background-position: 0 -75px;
+}
+.window .close {
+  display: block;
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  top: 24px;
+  right: 23px;
+}
+.window .con {
+  height: 76px;
+  text-align: center;
+}
+.window .my {
+  font-size: 36px;
+  display: inline-block;
+  height: 74px;
+  line-height: 74px;
+  vertical-align: top;
+}
+.window .baoji {
+  position: absolute;
+  right: 0;
+  top: 67px;
+  text-align: left;
+  background: url(../../images/lol/baoji.png) no-repeat;
+  width: 140px;
+  color: #f3cb52;
+  height: 40px;
+  font-size: 18px;
+  font-style: italic;
+  font-weight: bold;
+  text-indent: 100px;
+  padding-top: 10px;
+  transition: transform 400ms;
+  transform: scale(1.5);
+}
+.window .baoji_H {
+  background: url(../../images/lol/baoji_H.png) no-repeat;
+  width: 95px;
+  height: 110px;
+  top: 50px;
+}
+.window .prize_cz {
+  display: inline-block;
+  margin-left: 10px;
+  width: 56px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+}
+.window .prize_num {
+  margin-bottom: 5px;
+  margin-left: -5px;
+}
+.window .anim_dou {
+  display: inline-block;
+  background: url(../../images/lol/frames.png);
+  width: 30px;
+  margin-top: -15px;
+  height: 78px;
+  animation: dou 1s step-start 1;
+  animation-fill-mode: forwards ;
+}
+@keyframes dou {
+  0.0% {
+    background-position-x: 0px;
+  }
+  3.8% {
+    background-position-x: -31px;
+  }
+  7.7% {
+    background-position-x: -62px;
+  }
+  11.5% {
+    background-position-x: -93px;
+  }
+  15.4% {
+    background-position-x: -124px;
+  }
+  19.2% {
+    background-position-x: -155px;
+  }
+  23.1% {
+    background-position-x: -186px;
+  }
+  26.9% {
+    background-position-x: -217px;
+  }
+  30.8% {
+    background-position-x: -248px;
+  }
+  34.6% {
+    background-position-x: -279px;
+  }
+  38.5% {
+    background-position-x: -310px;
+  }
+  42.3% {
+    background-position-x: -341px;
+  }
+  46.2% {
+    background-position-x: -372px;
+  }
+  50.0% {
+    background-position-x: -403px;
+  }
+  53.8% {
+    background-position-x: -434px;
+  }
+  57.7% {
+    background-position-x: -465px;
+  }
+  61.5% {
+    background-position-x: -496px;
+  }
+  65.4% {
+    background-position-x: -527px;
+  }
+  69.2% {
+    background-position-x: -558px;
+  }
+  73.1% {
+    background-position-x: -589px;
+  }
+  76.9% {
+    background-position-x: -620px;
+  }
+  80.8% {
+    background-position-x: -651px;
+  }
+  84.6% {
+    background-position-x: -682px;
+  }
+  88.5% {
+    background-position-x: -713px;
+  }
+  92.3% {
+    background-position-x: -744px;
+  }
+  96.2% {
+    background-position-x: -775px;
+  }
+  100.0% {
+    background-position-x: -806px;
+  }
+}
+.my_shundou {
+  margin-left: 19px;
+  margin-top: 22px;
+  width: 155px;
+  float: left;
+}
+.arrow:after {
+  content: "";
+  background: url(../../images/lol/arrow.png) no-repeat top;
+  display: inline-block;
+  width: 9px;
+  height: 11px;
+  margin-left: 3px;
+}
+.btn_exchange {
+  display: inline-block;
+  width: 116px;
+  height: 40px;
+  margin-top: 10px;
+  background: url(../../images/lol/exchange.png) no-repeat;
+}
+.fail .con {
+  background: url(../../images/lol/text_fail.png) no-repeat center -3px;
+}
+.fail .con .zeng {
+  display: inline-block;
+  position: absolute;
+  top: 85px;
+  left: 151px;
+  font-size: 30px;
+  text-align: center;
+  width: 60px;
+}
+.fail .con2 {
+  background-position-y: -100px;
+}
+.download-wrap {
+  border-top: 1px dashed #434e3d;
+  border-bottom: 1px dashed #434e3d;
+  margin: 0 5px;
+  padding: 20px 0;
+}
+.download-wrap p {
+  text-align: center;
+  margin-bottom: 10px;
+}
+.download-wrap p.encourage {
+  font-size: 18px;
+  color: #d7af69;
+}
+.download-wrap p.encourage .blue {
+  color: #03efc0;
+}
+.download-wrap p.encourage .red {
+  color: #db7317;
+}
+.download-wrap p.download {
+  font-size: 14px;
+  color: #459097;
+}
+.download-wrap .img-wrap {
+  width: 140px;
+  height: 140px;
+  margin: 0 auto;
+  padding: 4px;
+  border: 1px solid  #807659;
+  background: #362e1d;
+}
+.download-wrap .img-wrap img {
+  width: 130px;
+  height: 130px;
+  display: block;
+}

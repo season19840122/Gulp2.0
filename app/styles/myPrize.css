@@ -299,6 +299,7 @@
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   border: 1px solid #000;
+  position: relative;
 }
 .team_pane:last-child {
   margin: 0;
@@ -446,6 +447,9 @@
 .team_pane .pageBg {
   background: #1c232b;
   height: 39px;
+  width: 340px;
+  position: absolute;
+  bottom: 0px;
 }
 .team_pane .pageBg .pageBox {
   margin-top: 0;
@@ -752,7 +756,7 @@
 .my_vip_box .left_box .login_box .content_vip,
 .my_vip_box .left_box .login_box .content_detail {
   margin-top: 17px;
-  height: 208px;
+  height: 229px;
   overflow: auto;
   padding: 0 15px 15px 20px;
 }
@@ -795,10 +799,9 @@
 .my_vip_box .left_box .status_box .card_status .card_word {
   display: none;
   position: absolute;
-  padding: 0px 20px 0px 10px;
-  height: 20px;
+  padding: 0 2px 0 2px;
   background: #15151c;
-  left: 0px;
+  left: 0;
   font-size: 12px;
   line-height: 20px;
   top: 22px;
@@ -868,7 +871,6 @@
   overflow: hidden;
   float: left;
   height: 272px;
-  cursor: pointer;
   width: 138px;
 }
 .my_vip_box .right_box .card_box ul.card_ul li .tab_content {
@@ -904,16 +906,16 @@
   position: absolute;
   width: 138px;
   height: 272px;
-  left: 0px;
+  left: 0;
   box-sizing: border-box;
   text-align: center;
-  transition: opacity .1s linear;
-  -webkit-transition: opacity .1s linear;
+  transition: opacity 0.1s linear;
+  -webkit-transition: opacity 0.1s linear;
   padding: 146px 0;
 }
 .my_vip_box .right_box .card_box ul.card_ul li .tip .tip_content {
   font-size: 14px;
-  margin: 0px auto;
+  margin: 0 auto;
   width: 100px;
   height: 30px;
   line-height: 25px;
@@ -921,20 +923,20 @@
 .my_vip_box .right_box .card_box ul.card_ul li .tip .tip_content span {
   color: #c5924b;
 }
-.my_vip_box .right_box .card_box ul.card_ul li.tab1_on {
-  box-shadow: inset 0px 0px 15px 4px #00aeff;
+.my_vip_box .right_box .card_box ul.card_ul li.tab3_on {
+  box-shadow: inset 0 0 15px 4px #e0b112;
   z-index: 100;
 }
 .my_vip_box .right_box .card_box ul.card_ul li.tab2_on {
-  box-shadow: inset 0px 0px 15px 4px #e0b112;
+  box-shadow: inset 0 0 15px 4px #00aeff;
   z-index: 100;
 }
-.my_vip_box .right_box .card_box ul.card_ul li.tab3_on {
-  box-shadow: inset 0px 0px 15px 4px #db5871;
+.my_vip_box .right_box .card_box ul.card_ul li.tab1_on {
+  box-shadow: inset 0 0 15px 4px #db5871;
   z-index: 100;
 }
 .my_vip_box .right_box .card_box ul.card_ul li.open .tip {
-  opacity: 0;
+  display: none;
 }
 .my_vip_box .right_box .card_box ul.card_ul li .s20 {
   font-size: 20px;
@@ -958,6 +960,8 @@
   margin-top: 8px;
   font-size: 16px;
   border-radius: 2px;
+  z-index: 100;
+  cursor: pointer;
 }
 .my_vip_box .right_box .card_box ul.card_ul li .card_button.blue {
   background: #0c92da;
@@ -969,22 +973,22 @@
   background: #0cd063;
 }
 .my_vip_box .right_box .card_box ul.card_ul li.bg1 {
-  background: url("../images/card1_bg.png") no-repeat;
+  background: url("../images/card3_bg.png") no-repeat;
 }
 .my_vip_box .right_box .card_box ul.card_ul li.bg1 .tip {
-  background: url(../images/tip1_bg.png);
+  background: url("../images/tip3_bg.png");
 }
 .my_vip_box .right_box .card_box ul.card_ul li.bg2 {
-  background: url("../images/card2_bg.png");
+  background: url("../images/card1_bg.png");
 }
 .my_vip_box .right_box .card_box ul.card_ul li.bg2 .tip {
-  background: url(../images/tip2_bg.png);
+  background: url("../images/tip1_bg.png");
 }
 .my_vip_box .right_box .card_box ul.card_ul li.bg3 {
-  background: url("../images/card3_bg.png");
+  background: url("../images/card2_bg.png");
 }
 .my_vip_box .right_box .card_box ul.card_ul li.bg3 .tip {
-  background: url(../images/tip3_bg.png);
+  background: url("../images/tip2_bg.png");
 }
 .my_vip_box .right_box .card_box ul.card_ul:after {
   content: "";
@@ -1001,7 +1005,7 @@
 .my_vip_box .right_box ul.power_ul li {
   float: left;
   position: relative;
-  margin: 0px 10px 10px 0px;
+  margin: 0 10px 10px 0;
   background: #161c24;
   width: 343px;
   height: 50px;
@@ -1018,7 +1022,7 @@
 .my_vip_box .right_box ul.power_ul:before,
 .my_vip_box .right_box ul.power_ul:after {
   content: "";
-  width: 0px;
+  width: 0;
   position: absolute;
   border-width: 10px;
   border-style: solid;
@@ -1070,6 +1074,6 @@
   height: 508px;
 }
 .award.new {
-  background: url(../images/bg.jpg);
+  background: url("../images/bg.jpg");
 }
 /** 移动到首页样式结束 **/

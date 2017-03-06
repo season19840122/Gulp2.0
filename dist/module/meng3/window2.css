@@ -1,0 +1,521 @@
+@charset "utf-8";
+/*
+ * Filename: base.css v2.0
+ * Author: Season 朱迎春
+ * Creattime: 2011-09-02
+ * PS: 模块化 CSS 最底层 base.css
+ */
+/*! normalize.css v3.0.2 | MIT License | git.io/normalize */
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  vertical-align: baseline;
+}
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+[hidden],
+template {
+  display: none;
+}
+a {
+  background-color: transparent;
+  text-decoration: none;
+}
+a:active,
+a:hover {
+  outline: 0;
+  text-decoration: none;
+}
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+b,
+strong {
+  font-weight: 700;
+}
+dfn {
+  font-style: italic;
+}
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+mark {
+  background: #ff0;
+  color: #000000;
+}
+small {
+  font-size: 80%;
+}
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+img {
+  border: 0;
+}
+svg:not(:root) {
+  overflow: hidden;
+}
+figure {
+  margin: 1em 40px;
+}
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+pre {
+  overflow: auto;
+}
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace,monospace;
+  font-size: 1em;
+}
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+button {
+  overflow: visible;
+}
+button,
+select {
+  text-transform: none;
+}
+button,
+html input[type=button],
+input[type=reset],
+input[type=submit] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+input {
+  line-height: normal;
+}
+input[type=checkbox],
+input[type=radio] {
+  box-sizing: border-box;
+  padding: 0;
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+input[type=search] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+input[type=search]::-webkit-search-cancel-button,
+input[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+fieldset {
+  border: 1px solid silver;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+legend {
+  border: 0;
+  padding: 0;
+}
+textarea {
+  overflow: auto;
+}
+optgroup {
+  font-weight: 700;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+td,
+th {
+  padding: 0;
+}
+li {
+  list-style: none;
+}
+/*-- 文字排版 --*/
+.fb {
+  font-weight: bold;
+}
+.fn {
+  font-weight: normal;
+}
+.unl {
+  text-decoration: underline;
+}
+.no-unl {
+  text-decoration: none;
+}
+.ti {
+  text-indent: -9999px;
+}
+.eps {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.w {
+  width: 100%;
+}
+.h {
+  height: 100%;
+}
+/*-- 定位 --*/
+.tl {
+  text-align: left;
+}
+.tc {
+  text-align: center;
+}
+.tr {
+  text-align: right;
+}
+.bc {
+  margin-left: 0;
+  margin-right: 0;
+}
+.fl {
+  float: left;
+  display: inline;
+}
+.fr {
+  float: right;
+  display: inline;
+}
+.cb {
+  clear: both;
+}
+.cl {
+  clear: left;
+}
+.cr {
+  clear: right;
+}
+.cf:before,
+.cf:after {
+  content: " ";
+  display: table;
+}
+.cf:after {
+  clear: both;
+}
+.cf {
+  *zoom: 1;
+}
+.vm {
+  vertical-align: middle;
+}
+.pr {
+  position: relative;
+}
+.pa {
+  position: absolute;
+}
+.abs-right {
+  position: absolute;
+  right: 0;
+}
+.zoom {
+  zoom: 1;
+}
+.visible {
+  visibility: visible;
+}
+.hidden {
+  visibility: hidden;
+}
+.none {
+  display: none;
+}
+.block {
+  display: block;
+}
+* {
+  box-sizing: border-box;
+}
+.window_box {
+  width: 300px;
+  height: 500px;
+  position: absolute;
+  background: url(../../images/meng3/meng3bg.jpg);
+  overflow: hidden;
+}
+.window_box > i {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  right: 5px;
+  top: 5px;
+  cursor: pointer;
+}
+.window_box .hide_ {
+  display: none;
+}
+.window_box .btn {
+  position: absolute;
+  background: url(../../images/meng3/meng_btn.png);
+  width: 114px;
+  height: 39px;
+  text-indent: 30px;
+  color: #2e271b;
+  font-size: 14px;
+  line-height: 28px;
+  font-weight: bold;
+  right: 25px;
+  bottom: 8px;
+}
+.window_box .download-wrap {
+  border-top: 1px dashed #434e3d;
+  border-bottom: 1px dashed #434e3d;
+  margin: 172px 5px 0 5px;
+  padding: 20px 0;
+}
+.window_box .download-wrap p {
+  text-align: center;
+  margin-bottom: 10px;
+}
+.window_box .download-wrap p.encourage {
+  font-size: 18px;
+  color: #d7af69;
+}
+.window_box .download-wrap p.encourage .blue {
+  color: #75cc04;
+}
+.window_box .download-wrap p.encourage .red {
+  color: #db7317;
+}
+.window_box .download-wrap p.download {
+  font-size: 14px;
+  color: #e2e2e2;
+}
+.window_box .download-wrap .img-wrap {
+  width: 140px;
+  height: 140px;
+  margin: 0 auto;
+  padding: 4px;
+  border: 1px solid  #807659;
+  background: #362e1d;
+}
+.window_box .download-wrap .img-wrap img {
+  width: 130px;
+  height: 130px;
+  display: block;
+}
+.window_box .up {
+  position: absolute;
+  height: 20px;
+  color: #DB7317;
+  font-size: 12px;
+  left: 27px;
+  bottom: 5px;
+}
+.window_box .up:before {
+  content: "";
+  color: limegreen;
+  position: absolute;
+  width: 0;
+  border-style: solid;
+  border-width: 5px;
+  border-color: transparent transparent limegreen transparent;
+  right: -13px;
+  top: -4px;
+}
+.window_box .up:after {
+  content: "";
+  color: limegreen;
+  position: absolute;
+  width: 4px;
+  height: 7px;
+  background: limegreen;
+  right: -10px;
+  top: 5px;
+}
+.window_box .success_box {
+  text-align: center;
+}
+.window_box .success_box .title {
+  position: absolute;
+  left: 45px;
+  top: 14px;
+}
+.window_box .success_box .sd {
+  position: absolute;
+  top: 67px;
+  left: 93px;
+  width: 30px;
+  height: 78px;
+  background: url(../../images/meng3/frames.png) no-repeat;
+  -webkit-animation: dou 1s step-start 1 forwards;
+  animation: dou 1s step-start 1 forwards;
+}
+.window_box .success_box h1 {
+  position: absolute;
+  font-size: 36px;
+  color: #d7af69;
+  left: 129px;
+  top: 77px;
+}
+.window_box .fail_box {
+  text-align: center;
+}
+.window_box .fail_box .title {
+  position: absolute;
+  left: 26px;
+  top: -3px;
+}
+.window_box .fail_box h2 {
+  position: absolute;
+  left: 50%;
+  width: 250px;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  top: 85px;
+  font-size: 18px;
+  color: #bd9943;
+  font-weight: bold;
+  background-image: -webkit-gradient(linear, 0 0, 0 bottom, from(#fada8e), to(#ac862e));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+@keyframes dou {
+  0.0% {
+    background-position-x: 0px;
+  }
+  3.8% {
+    background-position-x: -31px;
+  }
+  7.7% {
+    background-position-x: -62px;
+  }
+  11.5% {
+    background-position-x: -93px;
+  }
+  15.4% {
+    background-position-x: -124px;
+  }
+  19.2% {
+    background-position-x: -155px;
+  }
+  23.1% {
+    background-position-x: -186px;
+  }
+  26.9% {
+    background-position-x: -217px;
+  }
+  30.8% {
+    background-position-x: -248px;
+  }
+  34.6% {
+    background-position-x: -279px;
+  }
+  38.5% {
+    background-position-x: -310px;
+  }
+  42.3% {
+    background-position-x: -341px;
+  }
+  46.2% {
+    background-position-x: -372px;
+  }
+  50.0% {
+    background-position-x: -403px;
+  }
+  53.8% {
+    background-position-x: -434px;
+  }
+  57.7% {
+    background-position-x: -465px;
+  }
+  61.5% {
+    background-position-x: -496px;
+  }
+  65.4% {
+    background-position-x: -527px;
+  }
+  69.2% {
+    background-position-x: -558px;
+  }
+  73.1% {
+    background-position-x: -589px;
+  }
+  76.9% {
+    background-position-x: -620px;
+  }
+  80.8% {
+    background-position-x: -651px;
+  }
+  84.6% {
+    background-position-x: -682px;
+  }
+  88.5% {
+    background-position-x: -713px;
+  }
+  92.3% {
+    background-position-x: -744px;
+  }
+  96.2% {
+    background-position-x: -775px;
+  }
+  100.0% {
+    background-position-x: -806px;
+  }
+}

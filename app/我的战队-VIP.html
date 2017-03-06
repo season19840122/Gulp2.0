@@ -44,7 +44,7 @@
   						
   						<div class="card_status">
   							<img data-title="小于一天" data-color="#eb3101" src="images/week_tip_off.png"/>
-  							<img data-title="小于一天" data-color="#10b6f0" src="images/month_tip.png"/>
+  							<img data-title="月卡还剩333天" data-color="#10b6f0" src="images/month_tip.png"/>
   							<img data-title="小于一天" data-color="#8c1410" src="images/day_tip.png"/>
   							<div class="card_word"></div>
   						</div>
@@ -108,7 +108,7 @@
 									    每日获得的顺豆基金叠加发放（即获得月卡顺豆，也会获得周卡顺豆）；      顺豆参与“集顺豆，兑点券”活动次数不叠加；
 									    顺豆参与挑战赛次数不叠加；
 									    有效期不叠加，以剩余最大值为准。</p><br>
-									<p>6、火马VIP商品最终解释权归杭州顺网宇酷科技股份优先公司所有。</p>
+									<p>6、火马VIP商品最终解释权归杭州顺网宇酷科技有限公司所有。</p>
 	  						</div>
   						
   						
@@ -121,52 +121,10 @@
   			<div class="right_box">
   				<div class="card_box">
   					<ul class="card_ul">
-  						<li class="bg1" data-style="tab1_on">
-  							<div class="tab_content">
-  							  <h1>
-  							  	<img width="100px" class="card_pic" src="images/card_word1.png"/>
-  								</h1>
-  							  <h1 class="gray2">
-  							  	<span class="s20">￥6</span>
-  								</h1>
-  							  <h1>
-  							  	<a class="card_button green" href="#">立即购买</a>
-  								</h1>
-  							</div>
+  						
+  								<li class="bg1 open" data-style="tab1_on">
   							
-  							<div class="tip">
-  									<img width="80px"  src="images/card_word1.png"/>
-  									<div class="tip_content">
-  										<span>热卖中<span>
-  									</div>
-  							</div>
-  							
-  						</li>
-  						<li class="bg2" data-style="tab2_on">
-  							
-  							<div class="tab_content">
-  							  <h1>
-  							  	<img width="100px" class="card_pic" src="images/card_word2.png"/>
-  								</h1>
-  							  <h1 class="gray2">
-  							  	<span class="s20">￥6</span>
-  								</h1>
-  							  <h1>
-  							  	<a class="card_button orange" href="">立即续费</a>
-  								</h1>
-  							</div>
-  							
-  							<div class="tip">
-  									<img width="80px"  src="images/card_word2.png"/>
-  									<div class="tip_content">
-  										<span>已拥有<span>
-  									</div>
-  							</div>
-  							
-  						</li>
-  						<li class="bg3" data-style="tab3_on">
-  							
-  							<div class="tab_content">
+  							<!--<div class="tab_content">
   							  <h1>
   							  	<img width="100px" class="card_pic" src="images/card_word3.png"/>
   								</h1>
@@ -178,7 +136,7 @@
   								</h1>
   								<h3>2016.1.30 - 2016.12.31 限时体验</h3>
   								<p>今日购买次数已用（1/5）</p>
-  							</div>
+  							</div>-->
   							
   							<div class="tip">
   									<img width="80px"  src="images/card_word3.png"/>
@@ -188,6 +146,52 @@
   							</div>
   							
   						</li>
+  						
+  						
+  						<li class="bg2" data-style="tab2_on">
+  							<div class="tab_content">
+  							  <h1>
+  							  	<img width="100px" class="card_pic" src="images/card_word1.png"/>
+  								</h1>
+  							  <h1 class="gray2">
+  							  	<span class="s20">￥6</span>
+  								</h1>
+  							  <h1>
+  							  	<!--<a class="card_button green" href="#">立即购买</a>-->
+  								</h1>
+  							</div>
+  							
+  							<div class="tip">
+  									<img width="80px"  src="images/card_word1.png"/>
+  									<div class="tip_content">
+  										<span>热卖中<span>
+  									</div>
+  							</div>
+  							
+  						</li>
+  						<li class="bg3" data-style="tab3_on">
+  							
+  							<div class="tab_content">
+  							  <h1>
+  							  	<img width="100px" class="card_pic" src="images/card_word2.png"/>
+  								</h1>
+  							  <h1 class="gray2">
+  							  	<span class="s20">￥6</span>
+  								</h1>
+  							  <h1>
+  							  	<!--<a class="card_button orange" href="">立即续费</a>-->
+  								</h1>
+  							</div>
+  							
+  							<div class="tip">
+  									<img width="80px"  src="images/card_word2.png"/>
+  									<div class="tip_content">
+  										<span>已拥有<span>
+  									</div>
+  							</div>
+  							
+  						</li>
+  				
   					</ul>
   				</div>
   				
@@ -370,9 +374,13 @@
 	}
 	
 	var currentLi =  $(".card_box ul li");
-	$(currentLi.eq(1)).stop().css("width","454px").addClass('open');
-	$(currentLi.eq(1)).addClass('tab2_on');
-	$('.power_ul').addClass('tab2_on');
+	currentLi.each(function(index) {
+		if($(this).hasClass('open')) {
+			$(this).stop().css("width","454px").addClass('open');
+			$(this).addClass($(this).attr('data-style'));
+			$('.power_ul').addClass('tab'+(index+1)+'_on');
+		}
+	})
 	
 	$(currentLi).on('mouseenter',function(e){
 		var this_ = $(this);

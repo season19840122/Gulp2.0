@@ -70,7 +70,7 @@ gulp.task('jade', function () {
 
 // 图片压缩优化
 gulp.task('image', function(){
-  return gulp.src('app/images/**/*.*')
+  return gulp.src('app/images/**')
       .pipe($.imagemin())
       .pipe(gulp.dest('app/images'));
 })
@@ -87,7 +87,8 @@ gulp.task('copy', function () {
     '!app/_*.*',
     '!app/styles/_*.*',
     '!app/scripts/_*.*',
-    '!app/images/**/*bak*.*'
+    '!app/images/**/*bak*.*',
+    '!app/mock/**'
   ], {
     base: 'app',
     dot: true

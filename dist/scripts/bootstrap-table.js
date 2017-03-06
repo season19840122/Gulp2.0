@@ -292,7 +292,7 @@
         columns: [[]],
         data: [],
         totalField: 'total',
-//        dataField: 'rows',
+//        dataField: 'total',
         //minxing
         dataField: 'Records',
         method: 'get',
@@ -408,16 +408,16 @@
         onUncheck: function (row) {
             return false;
         },
-        onCheckAll: function (rows) {
+        onCheckAll: function (total) {
             return false;
         },
-        onUncheckAll: function (rows) {
+        onUncheckAll: function (total) {
             return false;
         },
-        onCheckSome: function (rows) {
+        onCheckSome: function (total) {
             return false;
         },
-        onUncheckSome: function (rows) {
+        onUncheckSome: function (total) {
             return false;
         },
         onLoadSuccess: function (data) {
@@ -471,13 +471,13 @@
             return 'Loading, please wait...';
         },
         formatRecordsPerPage: function (pageNo) {
-            return sprintf('%s rows per page', pageNo);
+            return sprintf('%s total per page', pageNo);
         },
         formatShowingRows: function (pageFrom, pageTo, totalRows) {
-            return sprintf('Showing %s to %s of %s rows', pageFrom, pageTo, totalRows);
+            return sprintf('Showing %s to %s of %s total', pageFrom, pageTo, totalRows);
         },
         formatDetailPagination: function (totalRows) {
-            return sprintf('Showing %s rows', totalRows);
+            return sprintf('Showing %s total', totalRows);
         },
         formatSearch: function () {
             return 'Search';
@@ -708,7 +708,7 @@
 
                 for (tx = x; tx < x + cspan; tx++) { //mark matrix elements occupied by current cell with true
                     for (ty = y; ty < y + rspan; ty++) {
-                        if (!m[ty]) { //fill missing rows
+                        if (!m[ty]) { //fill missing total
                             m[ty] = [];
                         }
                         m[ty][tx] = true;
@@ -2014,7 +2014,8 @@
             dataType: this.options.dataType,
             success: function (res) {
             	
-            	if(res.success && res.code == 0) {
+            	//minxing
+            	if(res.success && res.code == 0 && res.data) {
             		res = res['data'];
             	} else {
             		res = {total:0,Records:[]};
@@ -2599,15 +2600,15 @@
     BootstrapTable.prototype.getHiddenRows = function (show) {
         var that = this,
             data = this.getData(),
-            rows = [];
+            total = [];
 
         $.each(data, function (i, row) {
             if ($.inArray(row, that.hiddenRows) > -1) {
-                rows.push(row);
+                total.push(row);
             }
         });
-        this.hiddenRows = rows;
-        return rows;
+        this.hiddenRows = total;
+        return total;
     };
 
     BootstrapTable.prototype.mergeCells = function (options) {
@@ -2684,9 +2685,9 @@
 
     BootstrapTable.prototype.checkInvert = function () {
         var that = this;
-        var rows = that.$selectItem.filter(':enabled');
-        var checked = rows.filter(':checked');
-        rows.each(function() {
+        var total = that.$selectItem.filter(':enabled');
+        var checked = total.filter(':checked');
+        total.each(function() {
             $(this).prop('checked', !$(this).prop('checked'));
         });
         that.updateRows();
@@ -2697,17 +2698,17 @@
     };
 
     BootstrapTable.prototype.checkAll_ = function (checked) {
-        var rows;
+        var total;
         if (!checked) {
-            rows = this.getSelections();
+            total = this.getSelections();
         }
         this.$selectAll.add(this.$selectAll_).prop('checked', checked);
         this.$selectItem.filter(':enabled').prop('checked', checked);
         this.updateRows();
         if (checked) {
-            rows = this.getSelections();
+            total = this.getSelections();
         }
-        this.trigger(checked ? 'check-all' : 'uncheck-all', rows);
+        this.trigger(checked ? 'check-all' : 'uncheck-all', total);
     };
 
     BootstrapTable.prototype.check = function (index) {
@@ -2739,7 +2740,7 @@
         }
 
         var that = this,
-            rows = [];
+            total = [];
         $.each(this.options.data, function (index, row) {
             if (!row.hasOwnProperty(obj.field)) {
                 return false;
@@ -2748,12 +2749,12 @@
                 var $el = that.$selectItem.filter(':enabled')
                     .filter(sprintf('[data-index="%s"]', index)).prop('checked', checked);
                 row[that.header.stateField] = checked;
-                rows.push(row);
+                total.push(row);
                 that.trigger(checked ? 'check' : 'uncheck', row, $el);
             }
         });
         this.updateSelected();
-        this.trigger(checked ? 'check-some' : 'uncheck-some', rows);
+        this.trigger(checked ? 'check-some' : 'uncheck-some', total);
     };
 
     BootstrapTable.prototype.destroy = function () {

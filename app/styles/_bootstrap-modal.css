@@ -826,7 +826,7 @@ input[type=checkbox]:checked {
 .modal-body .id_box {
   position: relative;
   width: 417px;
-  height: 100px;
+  height: 120px;
   top: 20px;
   z-index: 1;
 }
@@ -858,7 +858,7 @@ input[type=checkbox]:checked {
   width: 417px;
   height: 1px;
   background: #1f2328;
-  bottom: -20px;
+  bottom: 10px;
   left: 0px;
   z-index: 99;
 }
@@ -934,7 +934,7 @@ input[type=checkbox]:checked {
   padding-top: 13px;
 }
 #cash-new-modal .modal-header h1,
-.id_box .modal-header h1 {
+#check-modal .modal-header h1 {
   margin: 0 auto;
   font-size: 18px;
   text-align: center;
@@ -1249,6 +1249,11 @@ input[type=checkbox]:checked {
 .c_modal-lg .modal-body .modal-right p .btn_bind {
   display: inline-block;
   line-height: 24px;
+}
+.c_modal-lg .modal-body .modal-right p .error {
+  margin-left: 5px;
+  font-size: 14px;
+  color: #f00;
 }
 .c_modal-lg .modal-body .modal-right #i_img h4 {
   text-align: left;

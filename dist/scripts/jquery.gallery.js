@@ -165,8 +165,14 @@
 				
 					clearTimeout( _self.slideshow );
 					_self.options.autoplay	= false;
+					
+					setTimeout(function() {
+						_self._startSlideshow();
+						_self.options.autoplay	= true;
+					},3000)
 				
 				}
+
 				
 				_self._navigate('prev');
 				return false;
@@ -180,6 +186,10 @@
 					clearTimeout( _self.slideshow );
 					_self.options.autoplay	= false;
 				
+					setTimeout(function() {
+						_self._startSlideshow();
+						_self.options.autoplay	= true;
+					},3000)
 				}
 				
 				_self._navigate('next');

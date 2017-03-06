@@ -199,18 +199,18 @@
   <div class="modal-body ">
     <div class="modal-left fl">
       <ul>
-        <li class="active"><a href="#i_info" data-toggle="tab"><i class="dialog-ico ico-3"></i>个人信息</a></li>
+        <li><a href="#i_info" data-toggle="tab"><i class="dialog-ico ico-3"></i>个人信息</a></li>
         <li><a href="#i_img" data-toggle="tab"><i class="dialog-ico ico-4"></i>头像设置</a></li>
         <li><a href="#i_account" data-toggle="tab"><i class="dialog-ico ico-5"></i>游戏账号绑定</a></li>
+        <li class="active"><a href="#i_cert" data-toggle="tab"><i class="dialog-ico ico-5"></i>领奖信息认证</a></li>
       </ul>
     </div>
     <div class="modal-right tab-content ">
-      <div class="tab tab-pane fade active in" id="i_info">
+      <div class="tab tab-pane fade" id="i_info">
         <p>
           <label>昵称：</label>
           <input type="text"><span class="darkGray">不超过10个汉字，20个英文字符</span>
         </p>
-
         <p>
           <label>性别：</label>
           <select>
@@ -229,30 +229,13 @@
           <label>微信号：</label>
           <span>已认证</span>
         </p>
-        <p>
-          <label>姓名：</label>
-          <input type="text" disabled value="孙秋时">
-        </p>
-        <p>
-          <label>身份证号：</label>
-          <input type="text" disabled value="426666********9819"><!-- <a class="blue txt-unl btn_bind" href="">绑定</a> -->
-        </p>
-        <p>
-          <label>手机号码：</label>
-          <input type="text" disabled value="177****2856"><!-- <a class="blue txt-unl btn_bind" href="">绑定</a> -->
-        </p>
-        <p>
-          <label>支付宝账号：</label>
-          <input type="text" disabled value="177****2856"><a href="###" class="get_code disabled">审核中</a><a class="get_code" href="###">修改</a><span class="red">照片清晰度不够</span>
-        </p>
       </div>
-      <div class="tab tab-pane fade " id="i_img">
+      <div class="tab tab-pane fade" id="i_img">
         <div class="img_left fl">
           <h4 class="mt10">系统推荐头像：</h4>
           <ul id="img_list" class="smallScroll">
             <li class="selected">
               <img src="images/pics/img03.jpg" alt=""/>
-
               <p class="fontSize12">微信头像</p>
             </li>
             <li>
@@ -348,8 +331,6 @@
             <li>
               <img src="images/pics/img01.jpg" alt=""/>
             </li>
-
-
             <li>
               <img src="images/pics/img02.jpg" alt=""/>
             </li>
@@ -365,20 +346,16 @@
             <li>
               <img src="images/pics/img01.jpg" alt=""/>
             </li>
-
-
           </ul>
         </div>
         <div class="img_right fl">
           <h4>头像预览</h4>
-
           <div class="preview_box">
             <img id="preview_img" src="images/pics/img03.jpg" width="48" height="48"/>
           </div>
         </div>
-
       </div>
-      <div class="tab tab-pane fade " id="i_account">
+      <div class="tab tab-pane fade" id="i_account">
         <div class="smallScroll bind_box" style="overflow:auto; ">
           <div class="text-left text-tips">● tips：每款游戏最多绑定5个游戏帐号，暂不支持解绑和换绑哦~</div>
           <ul id="list_account" >
@@ -630,6 +607,54 @@
           </div>
         </div>
       </div>
+      <div class="tab tab-pane fade active in" id="i_cert">
+        <p>
+          <label>姓名：</label>
+          <input type="text" disabled value="孙秋时">
+        </p>
+        <p>
+          <label>身份证号：</label>
+          <input type="text" disabled value="426666********9819"><!-- <a class="blue txt-unl btn_bind" href="">绑定</a> -->
+          <span class="error">姓名、身份证号绑定后将不可修改，请认证核对信息</span>
+        </p>
+        <p>
+          <label class="w120">收款方式：</label>
+          <input type="radio" name="way_pay" class="way_pay" checked="checked" value="支付宝" data-name="支付宝账号" data-account="支付宝账号"> 支付宝 <span class="fontSize12 gray">(即时)</span>
+          <input type="radio" name="way_pay" class="way_pay ml20" value="银行卡" data-name="银行卡账号" data-account="银行卡卡号"> 银行卡<span class="fontSize12 gray">(7个工作日)</span>
+        </p>
+        <p>
+          <label>支付宝账号：</label>
+          <input type="text" disabled value="177****2856">
+          <span class="error">请确保支付宝、银行卡号与姓名对应，否则将导致奖品发放失败</span>
+        </p>
+        <div class="id_box id-wrap">
+          <label class="w120">手持身份证照片：</label>
+          <!--<span class="success">上传成功</span>-->
+          <span class="error">上传失败，支持jpg、png<br>大小500k以下</span>
+          <img class="id_pic" src="images/id_normal.jpg">
+          <a href="javascript:void(0)" class="option opt1">上传照片</a>
+          <div class="file-upload"></div>
+        </div>
+        <p>
+          <label>手机号码：</label>
+          <input type="text" disabled value="177****2856"><!-- <a class="blue txt-unl btn_bind" href="">绑定</a> -->
+        </p>
+        <p>
+          <label class="w120">验证码：</label>
+          <input type="text" disabled>
+          <!--<a href="javascript:void(0)" class="get_code  code_width_91">获取验证码</a>-->
+          <a href="javascript:void(0)" class="get_code disabled">59秒</a>
+        </p>
+        <p>
+          <label></label>
+          <a class="get_code ml0 edit hide" href="###">编辑资料</a>
+          <span class="save-wrap">
+            <a class="get_code ml0" href="###">保存</a><a class="get_code disabled cancle" href="###">取消</a>
+          </span>
+          <!--认证中-->
+          <!--<a href="###" class="get_code ml0 disabled">认证中</a>-->
+        </p>
+      </div>
     </div>
   </div>
   <div class="modal-footer text-right">
@@ -860,6 +885,17 @@
     DaySelector: ".sel_day"
   });
   $.ms_DatePicker();
+
+  $(function(){
+    $('body').on('click', '.edit', function(e){
+      $(this).hide();
+      $('.save-wrap').show();
+    });
+    $('body').on('click', '.save-wrap .cancle', function(e){
+      $('.save-wrap').hide();
+      $('.edit').show();
+    });
+  })
 </script>
 </body>
 </html>

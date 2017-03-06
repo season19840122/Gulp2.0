@@ -1,4 +1,5 @@
 var detailObj = function(){
+	var this_ = this;
 	this.options = {
 		hostUrl : "",
 		hostImg:"",
@@ -8,6 +9,7 @@ var detailObj = function(){
 		needShowRecord : "",
 		needShowRules : "",
 		matchType : "",
+		limitApply:"",
 		payObj : {
 			timeNum : 300,//倒计时时间
 			timeQuery:"",//轮训查询支付
@@ -31,6 +33,26 @@ var detailObj = function(){
 		interval : 1000,
 		timeBackInte:""
 	}
+	
+	//通用ajax封装
+	this.ajax_ = function(obj) {
+		$.ajax({
+			type: obj.type || 'POST',
+			url: obj.url,
+			dataType: obj.dataType || 'json',
+			timeout: this_.options.ajaxTimeout,
+			success: obj.success,
+			error: obj.error || function() {//如果不传递error，调用公用异常提示
+				this_.errorMsg(obj.name+"调用异常");
+			}
+		});
+	}
+	
+	this.errorMsg = function(msg) {
+		$('#alert_msg .alert_title_h1').html(msg);
+		$('#alert_msg').modal();
+	}
+	
 	//初始化方法
 	this.init = function(options_) {
 		this.options = $.extend({}, this.options, options_);
@@ -40,7 +62,7 @@ var detailObj = function(){
 //init
 var initObj = new detailObj();
 initObj.init({
-	hostUrl : "http://lol.icafe8.com/",
+	hostUrl : "https://client.huoma.cn/",
 	barId : 1111,
 	playerAccount : 254332471,
 	challengeMatchId : $('#challengeMatchId').val() || 44,
@@ -59,6 +81,8 @@ domFun.eventElement();
 actionFun.setTitle();
 //查询挑战赛状态，用于登录判断等
 actionFun.do_queryChallengeMatchState();
+//设置title
+actionFun.do_getAllChallengeMatchInfo();
 //展示纪录和规则
 actionFun.showChallengeRulesList();
 //获取用户信息

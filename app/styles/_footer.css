@@ -1,0 +1,35 @@
+footer {
+  clear: both;
+}
+footer .games {
+  background: url(../images/foot-bg.jpg) no-repeat center top;
+  padding-top: 70px;
+  height: 138px;
+}
+footer .copyright {
+  position: relative;
+  padding: 15px 0;
+  line-height: 2.2;
+  text-align: center;
+  color: #a7a7a7;
+}
+footer .copyright p a {
+  text-decoration: none;
+  color: #a7a7a7;
+}
+footer .wen-logo {
+  margin: -25px 0 0 10px;
+  position: relative;
+  bottom: -10px;
+  width: 36px;
+  height: 36px;
+}
+footer.grey {
+  background: #dadada;
+}
+footer.grey .copyright {
+  color: #898484;
+}
+footer.grey .copyright p a {
+  color: #898484;
+}

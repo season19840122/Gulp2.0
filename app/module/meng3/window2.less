@@ -1,0 +1,178 @@
+@import '../../styles/_base';
+* {
+    box-sizing: border-box;
+}
+
+.window_box{
+    width: 300px;
+    height: 500px;
+    position: absolute;
+    background: url(../../images/meng3/meng3bg.jpg);
+    overflow: hidden;
+     &>i {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        right: 5px;
+        top: 5px;
+        cursor: pointer;
+    }
+    .hide_{display: none}
+    .btn{
+        position: absolute;
+        background: url(../../images/meng3/meng_btn.png);
+        width: 114px;
+        height: 39px;
+        text-indent: 30px;
+        color: #2e271b;
+        font-size: 14px;
+        line-height: 28px;
+        font-weight: bold;
+        right: 25px;
+        bottom: 8px;
+    }
+    .download-wrap{
+        border-top: 1px dashed #434e3d;
+        border-bottom: 1px dashed #434e3d;
+        margin: 172px 5px 0 5px;
+        padding: 20px 0;
+        p{
+            text-align: center;
+            margin-bottom: 10px;
+            &.encourage {
+                font-size: 18px;
+                color: #d7af69;
+                .blue{
+                    color: #75cc04;
+                }
+                .red{
+                    color: #db7317;
+                }
+            }
+            &.download{
+                font-size: 14px;
+                color: #e2e2e2;
+            }
+        }
+        .img-wrap{
+            width: 140px;
+            height: 140px;
+            margin: 0 auto;
+            padding: 4px;
+            border: 1px solid  #807659;
+            background: #362e1d;
+            img{
+                width: 130px;
+                height: 130px;
+                display: block;
+            }
+        }
+    }
+    .up{
+        position: absolute;
+        height: 20px;
+        color: #DB7317;
+        font-size: 12px;
+        left: 27px;
+        bottom: 5px;
+        &:before{
+            content: "";
+            color: limegreen;
+            position: absolute;
+            width: 0;
+            border-style: solid;
+            border-width: 5px;
+            border-color: transparent transparent limegreen transparent;
+                right: -13px;
+                 top: -4px;
+        }
+        &:after{
+            content: "";
+            color: limegreen;
+            position: absolute;
+            width: 4px;
+            height: 7px;
+            background: limegreen;
+            right: -10px;
+            top: 5px;
+        }
+    }
+    .success_box{
+        text-align: center;
+         .title{
+            position: absolute;
+            left: 45px;
+            top: 14px;
+        }
+        .sd{
+            position: absolute;
+            top: 67px;
+            left: 93px;
+            width: 30px;
+            height: 78px;
+            background: url(../../images/meng3/frames.png) no-repeat;
+            -webkit-animation: dou 1s step-start 1 forwards;
+                    animation: dou 1s step-start 1 forwards;
+        }
+        h1{
+            position: absolute;
+            font-size: 36px;
+            color: #d7af69;
+            left: 129px;
+            top: 77px;
+        }
+    }
+    .fail_box{
+        text-align: center;
+        .title{
+            position: absolute;
+            left: 26px;
+            top: -3px;
+        }
+        h2{
+            position: absolute;
+            left: 50%;
+            width: 250px;
+            -webkit-transform: translateX(-50%);
+                -ms-transform: translateX(-50%);
+                    transform: translateX(-50%);
+            top: 85px;
+            font-size: 18px;
+            color: #bd9943;
+            font-weight: bold;
+            background-image: -webkit-gradient(linear, 0 0, 0 bottom, from(#fada8e), to(#ac862e));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+}
+
+@keyframes dou{
+    0.0%{ background-position-x:0px;}
+    3.8%{ background-position-x:-31px;}
+    7.7%{ background-position-x:-62px;}
+    11.5%{ background-position-x:-93px;}
+    15.4%{ background-position-x:-124px;}
+    19.2%{ background-position-x:-155px;}
+    23.1%{ background-position-x:-186px;}
+    26.9%{ background-position-x:-217px;}
+    30.8%{ background-position-x:-248px;}
+    34.6%{ background-position-x:-279px;}
+    38.5%{ background-position-x:-310px;}
+    42.3%{ background-position-x:-341px;}
+    46.2%{ background-position-x:-372px;}
+    50.0%{ background-position-x:-403px;}
+    53.8%{ background-position-x:-434px;}
+    57.7%{ background-position-x:-465px;}
+    61.5%{ background-position-x:-496px;}
+    65.4%{ background-position-x:-527px;}
+    69.2%{ background-position-x:-558px;}
+    73.1%{ background-position-x:-589px;}
+    76.9%{ background-position-x:-620px;}
+    80.8%{ background-position-x:-651px;}
+    84.6%{ background-position-x:-682px;}
+    88.5%{ background-position-x:-713px;}
+    92.3%{ background-position-x:-744px;}
+    96.2%{ background-position-x:-775px;}
+    100.0%{ background-position-x:-806px;}
+}

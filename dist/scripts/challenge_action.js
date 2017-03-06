@@ -87,18 +87,25 @@ var ACTIONFUN = function(initObj) {
 
 	//设置图片 init
 	this.setTitle = function() {
+		var titlePic,bgPic;
 		if(initObj.options.matchType == 1) {
-			$('.challenge_title').attr('src', initObj.options.hostImg+'images/ten_title.png');
-			$('.detail_box').css('background', 'url('+initObj.options.hostImg+'images/challenge_bg_new.jpg) 120px 0px no-repeat');
+			titlePic = initObj.options.hostImg+'images/ten_title.png',
+			bgPic = 'url('+initObj.options.hostImg+'images/challenge_bg_new.jpg) 120px 0px no-repeat';
 		} else if(initObj.options.matchType == 2) {
-			$('.challenge_title').attr('src', initObj.options.hostImg+'images/hunderd_title.png');
-			$('.detail_box').css('background', 'url('+initObj.options.hostImg+'images/challenge_bg_new2.jpg) 120px 0px no-repeat');
+			titlePic = initObj.options.hostImg+'images/hunderd_title.png';
+			bgPic = 'url('+initObj.options.hostImg+'images/challenge_bg_new2.jpg) 120px 0px no-repeat';
+		} else if(initObj.options.matchType == 3 && initObj.options.limitApply == 2) {
+			titlePic = initObj.options.hostImg+'images/double_title.png';
+			bgPic = 'url('+initObj.options.hostImg+'images/challenge_bg_double.jpg) 120px 0px no-repeat';
+		} else if(initObj.options.matchType == 3 && initObj.options.limitApply == 3) {
+			titlePic = initObj.options.hostImg+'images/three_title.png';
+			bgPic = 'url('+initObj.options.hostImg+'images/challenge_bg_double.jpg) 120px 0px no-repeat';
 		}
+		$('.challenge_title').attr('src', titlePic);
+		$('.detail_box').css('background', bgPic);
 		$('.challenge_lol').removeClass('hide');
 		$('.challenge_title').removeClass('hide');
 		$('.title_stone').removeClass('hide');
-		$('.menu-wrap li').removeClass("active");
-		$('.menu-wrap .li_' + initObj.options.matchType).addClass("active");
 	}
 
 	//设置挑战纪录
@@ -146,10 +153,6 @@ var ACTIONFUN = function(initObj) {
 		$('#alert_msg').modal();
 	}
 
-	var errorMsg = function(msg) {
-			$('#alert_msg .alert_title_h1').html(msg);
-			$('#alert_msg').modal();
-		}
 	var isClickTab = true;
 	//总弹出框关闭事件
 	$('#alert_all').on('hidden.bs.modal', function() {
@@ -157,15 +160,41 @@ var ACTIONFUN = function(initObj) {
 		$(this).find('.tab_title div[data_tab="tab2"]').show();
 		isClickTab = true;
 	});
+	
+	//采用防抖动关闭二维码状态：如果切换到顺豆十秒钟后不切换二维码则关闭二维码倒计时，否则不关闭
+	var isCloseQrcodeBack = null;
 	//切换弹出框tab
 	$('#alert_all .tab_title div').on('click',function() {
 		if(!isClickTab) return;
 		var tabId = $(this).attr('data_tab');
+		
+		//如果切换顺豆，关闭二维码倒计时
+		if(tabId == "tab2") {
+			clearTimeout(isCloseQrcodeBack);
+			isCloseQrcodeBack = setTimeout(function() {
+				clearInterval(initObj.options.payObj.timeQuery);
+				clearTimeout(initObj.options.payObj.timeBack);
+				initObj.options.payObj.timeBack = "";
+				initObj.options.payObj.timeNum = 300;
+			},10000)
+		}
+		
+		//如果切换到顺豆支付超过10秒关闭了二维码倒计时，切换回来后再次开启
+		if(!initObj.options.payObj.timeBack) {
+			initObj.options.payObj.timeNum = 300;
+			qrcodeTimeBack();
+			//重新开始查询支付状态
+			initObj.options.payObj.timeQuery = setInterval(function() {
+				this_.do_payFinished();
+			}, 7000);
+		}
+		
 		$(this).siblings('div').removeClass('active');
 		$(this).addClass('active');
 		$('#alert_all .tab_box .tab_content').hide();
 		$('#'+tabId).show();
 	})
+	
 	var alertAll = function(objArr) {
 		var $dom = $('#alert_all');
 		$dom.find('.tab_content').hide();
@@ -209,8 +238,20 @@ var ACTIONFUN = function(initObj) {
 			$dom.find('.tab_shunpay #tab_challenge_num').hide();
 			$dom.find('.tab_shunpay #tab_challenge_num span').html(shunObj.useTimes+"/"+shunObj.totalTimes);
 			if(shunObj.swbean <= 0) {
-				$dom.find('.tab_shunpay .btn_enter').addClass('disable').html("顺豆余额不足");
-				$dom.find('#noShun').show();
+				if(shunObj.isFree) {//第一次顺豆不足免费
+					$dom.find('.tab_shunpay .btn_enter').removeClass('disable').html("首次免费，立刻报名");
+					//绑定顺豆支付确定事件
+					$dom.find('.btn_enter').one('click', function() {
+						this_.do_enterRoom({
+							challengeLevelId:initObj.options.payObj.challengeLevelId,
+							orderId:"",
+							isShowShunResult:true
+						});
+					})
+				} else {
+					$dom.find('.tab_shunpay .btn_enter').addClass('disable').html("顺豆余额不足");
+					$dom.find('#noShun').show();
+				}
 			} else if(shunObj.useTimes >= shunObj.totalTimes && shunObj.totalTimes > 0) {
 				$dom.find('.tab_shunpay .btn_enter').addClass('disable').html("您的挑战次数已用完");
 				$dom.find('.tab_shunpay #tab_challenge_num').show();
@@ -475,11 +516,9 @@ var ACTIONFUN = function(initObj) {
 	this.getUserInfo = function() {
 		//判断是否登录。如果未登录则不查询
 		if(!ClientAPI.getSubAccount(GameID.LOL)) return;
-		$.ajax({
-			type: 'POST',
+		initObj.ajax_({
+			name: "获取用户信息",
 			url: urlList.url_getUserInfo(),
-			dataType: 'json',
-			timeout: initObj.options.ajaxTimeout,
 			success: function(obj) {
 				if(obj['success'] && obj['code'] == 0 && obj['data']) {
 					var data = obj['data'],
@@ -490,20 +529,15 @@ var ACTIONFUN = function(initObj) {
 					$('#battleScore').html(battleScore);
 					$('.status_box').show();
 				}
-			},
-			error: function() {
-				errorMsg("获取用户信息调用异常");
 			}
 		});
 	}
 	
 	//获取挑战赛次数
 	this.do_getChallengeLimitInfo = function() {
-		$.ajax({
-			type: 'POST',
+		initObj.ajax_({
+			name: "获取挑战次数",
 			url: urlList.url_getChallengeLimitInfo(),
-			dataType: 'json',
-			timeout: initObj.options.ajaxTimeout,
 			success: function(obj) {
 				if(obj['success'] && obj['code'] == 0 && obj['data']) {
 					var data = obj['data'];
@@ -512,9 +546,6 @@ var ACTIONFUN = function(initObj) {
 				} else {
 					alertMsg(obj['message'] || "获取挑战次数出错啦~");
 				}
-			},
-			error: function() {
-				errorMsg("获取挑战次数调用异常");
 			}
 		});
 	}
@@ -567,11 +598,9 @@ var ACTIONFUN = function(initObj) {
 
 	//开始挑战
 	this.do_challenge = function(challengeLevelId) {
-		$.ajax({
-			type: 'POST',
+		initObj.ajax_({
+			name: '开始挑战',
 			url: urlList.url_challenge(challengeLevelId),
-			dataType: 'json',
-			timeout: initObj.options.ajaxTimeout,
 			success: function(obj) {
 				if(obj['success'] && obj['code'] == 0) {
 					var data = obj['data'];
@@ -580,9 +609,6 @@ var ACTIONFUN = function(initObj) {
 				} else {
 					alertMsg(obj['message'] || "开始挑战出错啦~");
 				}
-			},
-			error: function() {
-				errorMsg("开始挑战调用异常");
 			}
 		});
 	}
@@ -592,11 +618,9 @@ var ACTIONFUN = function(initObj) {
 		var challengeLevelId =  obj.challengeLevelId,
 			orderId =  obj.orderId,
 			isShowShunResult =  obj.isShowShunResult;
-		$.ajax({
-			type: 'POST',
+		initObj.ajax_({
+			name: '进入房间',
 			url: urlList.url_enterRoom(challengeLevelId, orderId),
-			dataType: 'json',
-			timeout: initObj.options.ajaxTimeout,
 			success: function(obj) {
 				if(obj['success'] && obj['code'] == 0) {
 					var data = obj['data'],
@@ -618,38 +642,31 @@ var ACTIONFUN = function(initObj) {
 			},
 			error: function() {
 				$('#alert_all').modal('hide');
-				errorMsg("进入房间调用异常");
+				initObj.errorMsg("进入房间调用异常");
 			}
 		});
 	}
 
 	//查询支付状态
 	this.do_payFinished = function() {
-		$.ajax({
-			type: 'POST',
+		initObj.ajax_({
+			name: '查询支付',
 			url: urlList.url_payFinished(initObj.options.payObj.orderId),
-			dataType: 'json',
-			timeout: initObj.options.ajaxTimeout,
 			success: function(obj) {
 				if(obj['success'] && obj['code'] == 0) {
 					var data = obj['data'];
 					//支付成功隐藏二维码页面，进入房间
 					this_.closeQrcode(true);
 				}
-			},
-			error: function() {
-				errorMsg("查询支付调用异常");
 			}
 		});
 	}
 
 	//查询挑战赛状态接口
 	this.do_queryChallengeMatchState = function() {
-		$.ajax({
-			type: 'POST',
+		initObj.ajax_({
+			name: '查询挑战赛状态',
 			url: urlList.url_queryChallengeMatchState(),
-			dataType: 'json',
-			timeout: initObj.options.ajaxTimeout,
 			success: function(obj) {
 				if(obj['success'] && obj['code'] == 0) {
 					var data = obj['data'];
@@ -661,43 +678,55 @@ var ACTIONFUN = function(initObj) {
 					initObj.options.challengeStatus.levelLimitMax = data.levelLimitMax;
 					initObj.options.challengeStatus.rankRemark = data.rankRemark;
 				}
-			},
-			error: function() {
-				errorMsg("查询挑战赛状态调用异常");
 			}
 		});
 	}
 
 	//获取所有挑战赛信息，用于切换
 	this.do_getAllChallengeMatchInfo = function() {
-		$.ajax({
-			type: 'POST',
+		initObj.ajax_({
+			name: '获取所有挑战赛',
 			url: urlList.url_getAllChallengeMatchInfo(),
-			dataType: 'json',
-			timeout: initObj.options.ajaxTimeout,
 			success: function(obj) {
 				if(obj['success'] && obj['code'] == 0) {
-					var data = obj['data'];
-					if(data[0].challengeMatchId != initObj.options.challengeMatchId) {
-						location.href = urlList.url_index(data[0].challengeMatchId);
-					} else {
-						location.href = urlList.url_index(data[1].challengeMatchId);
+					var data = obj['data'],
+						titleArr = new Array();
+					for(var i = 0;i<data.length;i++) {
+						var challengeMatchId = data[i].challengeMatchId,
+							limitApply = data[i].limitApply,
+							matchType = data[i].matchType;
+						var title = "";
+						if(matchType == 1) {
+							title = "十人场";
+						} else if(matchType == 2) {
+							title = "百人场";
+						} else if(matchType == 3 && limitApply == 2) {
+							title = "双人场";
+						} else if(matchType == 3 && limitApply == 3) {
+							title = "三人场";
+						}
+						
+						titleArr.push("<li class='li_"+(matchType)+"' data-id='"+challengeMatchId+"'>"+title+"</li>")
 					}
+					$('.menu').html(titleArr.join(""));
+					$('.menu-wrap li').removeClass("active");
+					$('.menu-wrap .li_' + initObj.options.matchType).addClass("active");
+					
+					//绑定点击
+					$('.menu-wrap ul li').on('click', function(data) {
+						var challengeMatchId = $(this).attr('data-id');
+						if(!$(this).hasClass('active')) location.href =  urlList.url_index(challengeMatchId);;
+					});
 				}
-			},
-			error: function() {
-				errorMsg("获取所有挑战赛调用异常");
 			}
 		});
 	}
 
 	//获取挑战场次列表
 	this.do_etChallengeLevelInfo = function() {
-		$.ajax({
-			type: 'POST',
+		initObj.ajax_({
+			name: '场次列表',
 			url: urlList.url_getChallengeLevelInfo(),
-			dataType: 'json',
-			timeout: initObj.options.ajaxTimeout,
 			success: function(obj) {
 				if(obj['success'] && obj['code'] == 0) {
 					var data = obj['data'];
@@ -779,9 +808,6 @@ var ACTIONFUN = function(initObj) {
 				} else {
 					alertMsg(obj['message'] || "场次列表出错啦~");
 				}
-			},
-			error: function() {
-				errorMsg("场次列表调用异常");
 			}
 		});
 	}
@@ -808,6 +834,7 @@ var ACTIONFUN = function(initObj) {
 	 * @param callback 回调逻辑
 	 */
 	this.do_challengeValidate = function(validateLoginOnly, challengeMatchId, levelLimitMin, levelLimitMax ,rankRemark, callBack) {
+		callBack();return;
 		var gameId = GameID.LOL;
 		//校检火马登录
 		var user = ClientAPI.getLoginXingYun();
@@ -853,7 +880,7 @@ var ACTIONFUN = function(initObj) {
 		postData.account = loginGame.account;
 		var resultData = Action.getData(urlList.url_checkChallengeMatchUserState(gameId), postData);
 		if(!resultData) {
-			errorMsg("服务器异常，请稍后再试！");
+			initObj.errorMsg("服务器异常，请稍后再试！");
 			return;
 		}
 
@@ -871,12 +898,12 @@ var ACTIONFUN = function(initObj) {
 						if(retData.success) {
 							$("#quick-switch").modal("hide");
 						} else {
-							errorMsg(retData.message);
+							initObj.errorMsg(retData.message);
 						}
 					});
 				});
 			} else {
-				errorMsg(resultData.message);
+				initObj.errorMsg(resultData.message);
 			}
 			return;
 		}
