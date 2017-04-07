@@ -37,7 +37,7 @@
           <li class="diabled"><a href="#"><img src="images/treasure/jin.png" alt=""></a></li>
         </ul>
       </div>
-	  	<div class="middle_box" v-cloak>
+	  	<div class="middle_box smallScroll" v-cloak>
         <input type="hidden" id="userChestId" value="1">
         <ul>
           <li class="has" v-for="item in chests">
@@ -156,7 +156,7 @@
 </div>
 <script type="text/javascript" src="scripts/jquery-3.1.0.min.js"></script>
 <!--<script type="text/javascript" src="scripts/_vue.js"></script>-->
- <script type="text/javascript" src="scripts/vue.min.js"></script> 
+<script type="text/javascript" src="scripts/vue.min.js"></script> 
 <script type="text/javascript" src="scripts/bootstrap.min.js"></script>
 <script type="text/javascript" src="scripts/jquery.gallery.js"></script>
 <script src="scripts/bootstrap-datepicker.js"></script>
@@ -165,16 +165,28 @@
 
 <script type="text/javascript">
   $(function () {
+    // 添加标记以确定提示层方向
+    var addFlag = function(){
+      var arr1 = [4, 5, 6, 10, 11, 12, 16, 17, 18, 22, 23, 24, 28, 29, 30, 34, 35, 36, 40, 41, 42, 46, 47, 48];
+      var arr2 = [43, 44, 45, 46, 47, 48]
+      arr1.forEach(function(v){
+        if($('.middle_box li').eq(v-1).html() !== ''){
+          // console.log(i);
+          $('.middle_box li').eq(v-1).find('.tips-wrap').addClass('left');
+        }
+      });
+      arr2.forEach(function(v){
+        if($('.middle_box li').eq(v-1).html() !== ''){
+          $('.middle_box li').eq(v-1).find('.tips-wrap').addClass('bottom');
+        }
+      });
+    };
+
     // 碎片提示层
     $('body').on('mouseenter', '.middle_box li', function(){
-      var index = $(this).index();
-      if(index > 11){
-        $(this).find('.tips-wrap').addClass('way1').show();
-      }else{
-        $(this).find('.tips-wrap').show();
-      }
+      addFlag();
+      $(this).find('.tips-wrap').show();
     }).on('mouseleave', '.middle_box li', function(){
-      $(this).find('.tips-wrap').removeClass('way1');
       $('.tips-wrap').hide();
     });
 

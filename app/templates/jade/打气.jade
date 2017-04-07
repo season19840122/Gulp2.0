@@ -1,0 +1,224 @@
+extends _layouts
+block title
+  title 轻松助力·赢顺豆
+block style
+  link(rel='stylesheet', href='styles/encourage.css')
+block tabbar
+block main
+  .wrap
+    a(href="#").back 返回
+    span.times 5
+    p.rules 活动规则：为正在火马平台竞技的玩家打气，TA的胜利也会为你带来顺豆奖励（平台胜率仅供参考）
+    button.refresh.ti 刷新
+  .content
+    .encourage-wrap
+      ul.encourage-ul
+        li.active
+          .items
+            img(src="images/encourage/logo-lol.png", alt="").logo
+            span.title 英雄联盟
+        li
+          .items
+            img(src="images/encourage/logo-m3.png", alt="").logo
+            span.title 梦三国2
+      .lists-wrap.smallScroll
+        ul
+          li
+            .info-wrap
+              .head
+                img(src="images/encourage/img_48x48.png", alt="")
+              .info
+                p.name 给第三方第三方
+                p.other 
+                 span.s1 艾欧尼亚
+                 span.s2 黄金2222
+                 span.s3 胜率：45%
+              .btn
+                button.btn-encourage.already
+          - for(var i=0; i<9; i++)
+            li
+              .info-wrap
+                .head
+                  img(src="images/encourage/img_48x48.png", alt="")
+                .info
+                  p.name 给第三方第三方
+                  p.other 
+                   span.s1 艾欧尼亚
+                   span.s2 黄金2222
+                   span.s3 胜率：45%
+                .btn
+                  button.btn-encourage
+        ul.none
+          li
+            .info-wrap
+              .head
+                img(src="images/encourage/img_48x48.png", alt="")
+              .info
+                p.name 给第三方第三方
+                p.other 
+                 span.s1 艾欧尼亚
+                 span.s2 黄金2222
+                 span.s3 胜率：45%
+              .btn
+                button.btn-encourage
+    .record-wrap
+      .win-wrap
+        button 打气记录
+        span.wins 已赢得：35620
+      .lists-wrap.smallScroll
+        p.no-record.none 已有玩家累积赢得89600顺豆啦！快来参与吧~
+         br
+         | （每场竞技结束后，顺豆自动结算）
+        ul
+          li
+            .info-wrap
+              .head
+                img(src="images/encourage/img_48x48.png", alt="")
+              .info
+                p.name 给第三方第三方
+                p.other 
+                 span.s1 艾欧尼亚
+                 span.s2 黄金2222
+                 span.s3 胜率：45%
+                p.time 2017-05-03 09:02:00
+              .btn
+                p.tips 进行中
+          li
+            .info-wrap
+              .head
+                img(src="images/encourage/img_48x48.png", alt="")
+              .info
+                p.name 给第三方第三方
+                p.other 
+                 span.s1 艾欧尼亚
+                 span.s2 黄金2222
+                 span.s3 胜率：45%
+                p.time 2017-05-03 09:02:00
+              .btn
+                p.tips.error 参与失败
+                p.tip2 顺豆已返还
+          li
+            .info-wrap
+              .head
+                img(src="images/encourage/img_48x48.png", alt="")
+              .info
+                p.name 给第三方第三方
+                p.other 
+                 span.s1 艾欧尼亚
+                 span.s2 黄金2222
+                 span.s3 胜率：45%
+                p.time 2017-05-03 09:02:00
+              .btn
+                p.tips.fail 失败
+          li
+            .info-wrap
+              .head
+                img(src="images/encourage/img_48x48.png", alt="")
+              .info
+                p.name 给第三方第三方
+                p.other 
+                 span.s1 艾欧尼亚
+                 span.s2 黄金2222
+                 span.s3 胜率：45%
+                p.time 2017-05-03 09:02:00
+              .btn
+                p.tips.win +100
+          - for(var i=0; i<6; i++)
+            li
+              .info-wrap
+                .head
+                  img(src="images/encourage/img_48x48.png", alt="")
+                .info
+                  p.name 给第三方第三方
+                  p.other 
+                   span.s1 艾欧尼亚
+                   span.s2 黄金2222
+                   span.s3 胜率：45%
+                  p.time 2017-05-03 09:02:00
+                .btn
+                  p.tips 进行中
+block dialog
+  .masklayer
+  .dialog-wrap
+    .dialog.toast
+      button.btn-close.ti 关闭
+      p.modal-c 顺豆余额不足，无法打气！
+      p.info 2秒后自动关闭
+  .dialog-wrap
+    .dialog.toast
+      button.btn-close.ti 关闭
+      p.modal-c 玩家游戏已结束，不可打气，请刷新！
+      p.info 2秒后自动关闭
+  .dialog-wrap
+    .dialog.toast
+      button.btn-close.ti 关闭
+      .success-wrap
+        i.success
+        span.words 打气成功
+      p.modal-c 胜负请
+       span.orange 稍后查看
+       | 或
+       span.orange 下载火马App
+       | 随时访问！
+      p.info 2秒后自动关闭
+  .dialog-wrap
+    .dialog
+      button.btn-close.ti 关闭
+      p.modal-c 扣除
+       span.orange 100
+       | 顺豆为TA打气？
+      .btn-wrap
+        a(href="javascript:void(0);", class="btn-buy") 确定
+        a(href="javascript:void(0);", class="btn-cancel") 取消
+  .dialog-wrap
+    .dialog.dg2
+      button.btn-close.ti 关闭
+      .middle-wrap
+        img(src="images/encourage/qrcode.png", alt="")
+        .p-wrap
+          p.p1 打气机会已用完
+          p.modal-c 下载火马App，
+           span.orange 不限参与次数
+           | 哦~
+      .btn-wrap.one
+        a(href="javascript:void(0);", class="btn-buy") 确定
+block script
+  script(src='scripts/jquery-3.1.0.min.js')
+  script.
+    (function($){
+      var GLOBAL = {
+        show: function($obj){
+          $obj.fadeIn(200);
+          $('.masklayer').show();
+        },
+        hide: function($obj){
+          $obj.fadeOut(200);
+          $('.masklayer').hide();
+        }
+      };
+        
+      $('body').on('click', '.encourage-ul li', function(event){
+        $(this).addClass('active').siblings().removeClass('active');
+        var index = $(this).index();
+        $('.lists-wrap').eq(0).find('ul').eq(index).show().siblings('').hide();
+      });
+      
+      // Toast
+      $('body').on('click', '.btn-encourage:not(.already)', function(event){
+        $(this).addClass('already');
+        $('.dialog-wrap').eq(0).fadeIn(800).delay(1000).fadeOut(800);
+      });
+
+      // 弹层
+      $('body').on('click', '.btn-encourage:not(.already)', function(event){
+        event.preventDefault();
+        GLOBAL.show($(".dialog-wrap").eq(4));
+      });
+
+      // 隐藏弹层
+      $('body').on('click', '.masklayer, .dialog .btn-close, .dialog .btn-buy, .dialog .btn-cancel', function(event){
+        event.preventDefault();
+        GLOBAL.hide($('.dialog-wrap'));
+      });
+      
+    })(jQuery);

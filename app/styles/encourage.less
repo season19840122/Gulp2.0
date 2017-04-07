@@ -1,0 +1,536 @@
+@import '_base';
+@import '_common';
+
+.smallScroll::-webkit-scrollbar{
+  width: 8px;
+  height: 10px;
+}
+.smallScroll::-webkit-scrollbar-track{
+  border-radius: 5px;
+  background: #130e09;
+}
+.smallScroll::-webkit-scrollbar-thumb{
+  border-radius: 5px;
+  background: #553a21;
+}
+.smallScroll::-webkit-scrollbar-thumb:hover{
+  background: #8c6036;
+}
+.smallScroll::-webkit-scrollbar-thumb:active{
+  background: #694829;
+}
+
+button {
+  outline: 0;
+  border: 0;
+}
+
+.box {
+  background: url('../images/encourage/encourage-bg.jpg') no-repeat;
+}
+
+.wrap {
+  .back {
+    position: absolute;
+    left: 13px;
+    top: 14px;
+    width: 90px;
+    height: 24px;
+    line-height: 24px;
+    text-align: center;
+    border: 1px solid  #31363f;
+    background: #282c33;
+    color: #909090;
+  }
+  .times {
+    font-weight: bold;
+    font-size: 16px;
+    color: #fff;
+    position: absolute;
+    left: 209px;
+    top: 131px;
+    -webkit-transform: rotate(12deg);
+       -moz-transform: rotate(12deg);
+        -ms-transform: rotate(12deg);
+            transform: rotate(12deg);
+    display: inline-block;
+    text-align: center;
+    width: 20px;
+  }
+  .rules {
+    position: absolute;
+    left: 340px;
+    top: 185px;
+    color: #be8e48;
+  }
+  .refresh {
+    background: url('../images/encourage/sprite.png');
+    width: 48px;
+    height: 48px;
+    position: absolute;
+    top: 154px;
+    left: 889px;
+    &:hover {
+      background-position: -48px 0;
+    }
+    &:active {
+      background-position: -48px*2 0;
+    }
+  }
+}
+.content {
+  position: absolute;
+  top: 230px;
+  left: 30px;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  .encourage-wrap {
+    .encourage-ul {
+      display: -webkit-flex;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-align-items: center;
+         -moz-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-justify-content: center;
+         -moz-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      overflow: hidden;
+      li {
+        float: left;
+        margin-right: 3px;
+        // width: 150px;
+        // height: 38px;
+        &.active {
+          border-bottom: 1px solid  #000;
+          .items {
+            background-position: 0 -214px;
+            &:hover, &:active {
+              background-position: 0 -214px;
+            }
+          }
+        }
+        .items {
+          background: url('../images/encourage/sprite.png') -150px -214px;
+          width: 150px;
+          height: 38px;
+          display: -webkit-flex;
+          display: -moz-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-align-items: center;
+             -moz-box-align: center;
+              -ms-flex-align: center;
+                  align-items: center;
+          -webkit-justify-content: center;
+             -moz-box-pack: center;
+              -ms-flex-pack: center;
+                  justify-content: center;
+          cursor: pointer;
+          &:hover {
+            background-position: -150px*2 -214px;
+          }
+          &:active {
+            background-position: -150px*3 -214px;
+          }
+          .logo {
+            width: 38px;
+            height: 30px;
+          }
+          .title {
+            color: #be8e48;
+            font-size: 14px;
+            line-height: 38px;
+          }
+        }
+      }
+    }
+  }
+}
+.lists-wrap {
+  width: 730px;
+  height: 302px;
+  clear: both;
+  padding-top: 9px;
+  padding-bottom: 9px;
+  border: 1px solid  #2a2211;
+  margin-top: -1px;
+  overflow-x: hidden;
+  .no-record {
+    font-size: 14px;
+    color: #583a1d;
+    text-align: center;
+    margin-top: 110px;
+  }
+  ul {
+    li {
+      margin-left: 10px;
+      margin-bottom: 3px;
+      float: left;
+      width: 346px;
+      height: 70px;
+      .info-wrap {
+        display: -webkit-flex;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-align-items: center;
+           -moz-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-justify-content: center;
+           -moz-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        .head {
+          background: url('../images/encourage/sprite.png') 0 -96px;
+          width: 70px;
+          height: 70px;
+          display: -webkit-flex;
+          display: -moz-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-align-items: center;
+             -moz-box-align: center;
+              -ms-flex-align: center;
+                  align-items: center;
+          -webkit-justify-content: center;
+             -moz-box-pack: center;
+              -ms-flex-pack: center;
+                  justify-content: center;
+          img {
+            width: 48px;
+            height: 48px;
+            -moz-border-radius: 50%;
+                 border-radius: 50%;
+            border: 1px solid  #1e160b;
+          }
+        }
+        .info {
+          display: -webkit-flex;
+          display: -moz-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-justify-content: center;
+             -moz-box-pack: center;
+              -ms-flex-pack: center;
+                  justify-content: center;
+          -webkit-flex-direction: column;
+             -moz-box-orient: vertical;
+             -moz-box-direction: normal;
+              -ms-flex-direction: column;
+                  flex-direction: column;
+          border: 1px solid  #1e160b;
+          border-left: 0;
+          border-right: 0;
+          width: 212px;
+          height: 64px;
+          padding-left: 10px;
+          -webkit-flex: 1;
+             -moz-box-flex: 1;
+              -ms-flex: 1;
+                  flex: 1;
+          .name {
+            color: #a88c59;
+            font-size: 14px;
+          }
+          .other {
+            .s1, .s2 {
+              color: #68402e;
+              margin-right: 5px;
+            }
+            .s3 {
+              color: #27677a;
+              margin-right: 5px;
+            }
+          }
+          .time {
+            color: #68402e;
+          }
+        }
+        .btn {
+          width: 64px;
+          height: 64px;
+          border: 1px solid  #1e160b;
+          border-left: 0;
+          display: -webkit-flex;
+          display: -moz-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-align-items: center;
+             -moz-box-align: center;
+              -ms-flex-align: center;
+                  align-items: center;
+          -webkit-justify-content: center;
+             -moz-box-pack: center;
+              -ms-flex-pack: center;
+                  justify-content: center;
+          -webkit-flex-direction: column;
+             -moz-box-orient: vertical;
+             -moz-box-direction: normal;
+              -ms-flex-direction: column;
+                  flex-direction: column;
+          .btn-encourage {
+            background: url('../images/encourage/sprite.png') 0 -308px;
+            width: 64px;
+            height: 64px;
+            &.already {
+              background-position: 0 -440px;
+              width: 34px;
+              height: 33px;
+              &:hover, &:active {
+                background-position: 0 -440px;
+              }
+            }
+            &:hover {
+              background-position: -64px -308px;
+            }
+            &:active {
+              background-position: -64px*2 -308px;
+            }
+          }
+          .tips {
+            font-size: 14px;
+            color: #00aee0;
+            &.error {
+              color: #ab3500;
+            }
+            &.fail {
+              color: #68402e;
+            }
+            &.win {
+              color: #11b700;
+            }
+          }
+          .tip2 {
+            color: #68402e;
+          }
+        }
+      }
+    }
+  }
+}
+.record-wrap {
+  margin-left: 7px;
+  .win-wrap {
+    button {
+      background: url('../images/encourage/sprite.png') 0 -214px;
+      width: 150px;
+      height: 38px;
+      display: -webkit-inline-flex;
+      display: -moz-inline-box;
+      display: -ms-inline-flexbox;
+      display: inline-flex;
+      -webkit-align-items: center;
+         -moz-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-justify-content: center;
+         -moz-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      color: #be8e48;
+      font-size: 14px;
+      line-height: 38px;
+      &:hover, &:active {
+        background-position: 0 -214px;
+      } 
+    }
+    .wins {
+      color: #cf9942;
+      margin-left: 10px;
+    }
+  }
+  .lists-wrap {
+    width: 400px;
+    ul {
+      li {
+        width: 371px;
+      }
+    }
+  }
+}
+
+.masklayer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 30;
+  display: none;
+  background: #000;
+  opacity: .6;
+}
+
+.dialog-wrap {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+     -moz-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 30;
+  display: none;
+  .dialog {
+    background: url('../images/encourage/dialog1.png') no-repeat;
+    width: 372px;
+    height: 180px;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+       -moz-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-justify-content: center;
+       -moz-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-flex-direction: column;
+       -moz-box-orient: vertical;
+       -moz-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    &.toast{
+      background: url('../images/encourage/toast.png') no-repeat;
+      height: 116px;
+      .info {
+        color: #312113;
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        margin-left: -80px/2;
+      }
+      .success-wrap {
+        display: -webkit-flex;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-align-items: center;
+           -moz-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-justify-content: center;
+           -moz-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        .success {
+          background: url('../images/encourage/sprite.png') no-repeat 0 -500px;
+          width: 24px;
+          height: 23px;
+          display:inline-block;
+        }
+        .words {
+          margin-left: 10px;
+          color: #00de00;
+          font-size: 18px;
+        }
+      }
+    }
+    &.dg2 {
+      background: url('../images/encourage/dialog2.png') no-repeat;
+      height: 226px;
+    }
+    .btn-close {
+      background: url('../images/encourage/dialog-close.png') no-repeat;
+      width: 18px;
+      height: 18px;
+      position: absolute;
+      right: 5px;
+      top: 5px;
+    }
+    .modal-c{
+      color: #9d753a;
+      font-size: 14px;
+      margin-top: -10px;
+      .orange {
+        color: #cc7014;
+      }
+    }
+    .middle-wrap {
+      display: -webkit-flex;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-justify-content: center;
+         -moz-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-align-items: center;
+         -moz-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      img {
+        width: 98px;
+        height: 98px;
+        display: inline-block;
+      }
+      .p-wrap {
+        display: -webkit-flex;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-justify-content: center;
+           -moz-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-flex-direction: column;
+           -moz-box-orient: vertical;
+           -moz-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        margin-left: 10px;
+        .p1 {
+          font-size: 18px;
+          font-weight: bold;
+          color: #b37c2c;
+          margin-bottom: 10px;
+        }
+      }
+    }
+    .btn-wrap {
+      position: absolute;
+      left: 50%;
+      bottom: 10px;
+      margin-left: -120px;
+      display: -webkit-flex;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-align-items: center;
+         -moz-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-justify-content: center;
+         -moz-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      &.one {
+        margin-left: -60px;
+      }
+      .btn-buy, .btn-cancel{
+        width: 110px;
+        height: 32px;
+        line-height: 32px;
+        color: #ecca97;
+        border: 1px solid  #7b4815;
+        text-align: center;
+        margin-left: 5px;
+        margin-right: 5px;
+
+      }
+      .btn-buy{
+        background: -moz-linear-gradient(top, #251b11, #5a2f04);
+        background: linear-gradient(to bottom, #251b11, #5a2f04);
+      }
+    }
+  }
+}

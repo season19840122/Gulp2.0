@@ -5,6 +5,7 @@
   <title>弹层-VC</title>
   <link rel="stylesheet" href="styles/index.css"/>
   <link rel="stylesheet" href="styles/modal.css"/>
+  <link rel="stylesheet" href="images/iconfont/iconfont.css"/>
 </head>
 <body>
 <div class="c_modal">
@@ -198,11 +199,12 @@
 <div class="c_modal c_modal-lg">
   <div class="modal-body ">
     <div class="modal-left fl">
-      <ul>
-        <li><a href="#i_info" data-toggle="tab"><i class="dialog-ico ico-3"></i>个人信息</a></li>
-        <li><a href="#i_img" data-toggle="tab"><i class="dialog-ico ico-4"></i>头像设置</a></li>
-        <li><a href="#i_account" data-toggle="tab"><i class="dialog-ico ico-5"></i>游戏账号绑定</a></li>
-        <li class="active"><a href="#i_cert" data-toggle="tab"><i class="dialog-ico ico-5"></i>领奖信息认证</a></li>
+      <ul class="set">
+        <li><a href="#i_info" data-toggle="tab"><i class="iconfont icon-information"></i>个人信息</a></li>
+        <li><a href="#i_img" data-toggle="tab"><i class="iconfont icon-touxiang"></i>头像设置</a></li>
+        <li><a href="#i_account" data-toggle="tab"><i class="iconfont icon-bangding"></i>游戏账号绑定</a></li>
+        <li><a href="#i_cert" data-toggle="tab"><i class="iconfont icon-wodejiangpin"></i>领奖信息认证</a></li>
+        <li class="active"><a href="#i_pwd" data-toggle="tab"><i class="iconfont icon-zhanghaoanquan"></i>账号安全设置</a></li>
       </ul>
     </div>
     <div class="modal-right tab-content ">
@@ -607,7 +609,7 @@
           </div>
         </div>
       </div>
-      <div class="tab tab-pane fade active in" id="i_cert">
+      <div class="tab tab-pane fade" id="i_cert">
         <p>
           <label>姓名：</label>
           <input type="text" disabled value="孙秋时">
@@ -655,6 +657,104 @@
           <!--<a href="###" class="get_code ml0 disabled">认证中</a>-->
         </p>
       </div>
+      
+      <!-- 密码修改开始 -->
+      <div class="tab tab-pane fade active in" id="i_pwd">
+      	<div class="pwd1 ">
+      		<p>
+      			<span>已登录账户：</span>
+      			<span>dfdfdfdfd</span>
+      		</p>
+      		<ul>
+      			<li>
+      				<span>密码修改</span>
+      				<a>修改</a>
+      			</li>
+      		</ul>
+      	</div>
+      	<div class="pwd2 hide_">
+      		<p>
+      			<span>您正在通过“校验当前密码”方式修改密码:</span>
+      		</p>
+      		<div>
+      			<p class="error">
+		          <label>当前密码：</label>
+		          <input type="password" id="passwor">
+		          <a>忘记密码</a>
+		          <span>不超过20位数字、字母或符号的组合</span>
+		        </p>
+	      		<p class="right">
+		          <label>新密码：</label>
+		          <input type="password"  id="passwor2" >
+		          <span>不超过20位数字、字母或符号的组合</span>
+		        </p>
+	      		<p>
+		          <label>确认新密码：</label>
+		          <input type="password"  id="passwor3" >
+		          <span>不超过20位数字、字母或符号的组合</span>
+		        </p>
+      		</div>
+      	</div>
+      	<div class="pwd3 hide_">
+      		<p>
+      			<span>您正在通过“认证绑定手机”方式修改密码:</span>
+      		</p>
+      		<div>
+      			<p class="right">
+		          <label>新密码：</label>
+		          <input type="password" id="new_passwor">
+		          <span>不超过20位数字、字母或符号的组合</span>
+		        </p>
+	      		<p>
+		          <label>确定新密码：</label>
+		          <input type="password"  id="new_passwor1" >
+		          <span>不超过20位数字、字母或符号的组合</span>
+		        </p>
+	      		<p>
+		          <label>验证码：</label>
+		          <label class="label350">当前账号绑定的手机号为103233****32223</label>
+		          <div class="code_div">
+		          	<input type="text"  id="code" >
+			          <div class="code_btn active">获取验证码</div>
+		          </div>
+		        </p>
+      		</div>
+      	</div>
+      	
+      	<div class="pwd4 hide_">
+      		<p>
+      			<span>您正在通过“微信验证”方式修改密码:</span>
+      			<span class="remind">1.输入新密码 &gt; 2.确认新密码 &gt; 3.微信扫码 &gt; 4.完成修改</span>
+      		</p>
+      		<div>
+      			<p class="right">
+		          <label>新密码：</label>
+		          <input type="password" id="">
+		          <span>不超过20位数字、字母或符号的组合</span>
+		        </p>
+	      		<p>
+		          <label>确定新密码：</label>
+		          <input type="password"  id="" >
+		          <span>不超过20位数字、字母或符号的组合</span>
+		        </p>
+      		</div>
+      		<div class="qrcode_box">
+      			<div id="qrcode_pic">
+      				
+      			</div>
+      			<h1>微信认证用户修改密码需进行身份验证</h1>
+      		</div>
+      		
+      	</div>
+      	
+      	<!-- 接口错误提示 -->
+      	<p class="return_msg">
+      		接口调用错误
+      	</p>
+      	
+      </div>
+      
+      
     </div>
   </div>
   <div class="modal-footer text-right">
@@ -896,6 +996,55 @@
       $('.edit').show();
     });
   })
+  
+  //切换密码修改
+  $('#i_pwd .pwd1 a').on('click',function() {
+  	$('#i_pwd>div').hide();
+  	$('.pwd2').show();
+  })
+  $('#i_pwd .pwd2 a').on('click',function() {
+  	$('#i_pwd>div').hide();
+  	$('.pwd3').show();
+  })
+  
+  
+  //获取验证码倒计时
+  var flushDom = function(dom, callBack) {
+		this.num = 10;
+		var this_ = this;
+		dom.removeClass('active');
+		this.backTime = function() {
+			dom.html((this_.num < 10 ? "0" + this_.num : this_.num) + "秒后可操作");
+			this_.num--;
+			setTimeout(function() {
+				if(this_.num <= 0) {
+					this_.num = 10;
+					callBack();
+					return;
+				}
+				this_.backTime(dom, callBack);
+			}, 1000)
+		}
+	};
+  
+  //获取验证码点击
+	(function getCode() {
+		$('.code_btn').on('click', function() {
+				$(this).off('click');
+				if(sendCode()) {//发送成功
+					new flushDom($(this), getCode).backTime();
+				} else {
+					
+					getCode();
+				}
+		}).addClass('active').html("获取验证码");
+	})();
+	
+	function sendCode() {
+		return true;
+	}
+	
+  
 </script>
 </body>
 </html>

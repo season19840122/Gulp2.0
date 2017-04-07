@@ -1,0 +1,89 @@
+@import '_base';
+@import '_common';
+.box{
+    width: 320px;
+    height: 232px;
+    position: relative;
+    margin: 0 auto;
+    box-shadow: inset 0px 0px 0px 1px #323231,0px 0px 0px 1px black; 
+    background: #181b1f;
+    color: #646668;
+    .hide_{display: none;}
+    &:before{
+        position: absolute;
+        content: "";
+        width: 100%;
+        background: #1f242a;
+        border-top: 1px solid #2b2b29;
+        bottom: 0px;
+        height: 60px;
+    }
+    .header_style {
+        position: absolute;
+        width: 140px;
+        height: 10px;
+        background: #3b3d3f;
+        top: 1px;
+        left: 50%;
+        margin-left: -70px;
+        z-index: 0;
+        &:before {
+            content: "";
+            position: absolute;
+            width: 0;
+            top: -10px;
+            left: -10px;
+            z-index: 100;
+            border-width: 10px;
+            border-style: solid;
+            border-color: transparent transparent #181c1f transparent;
+        }
+        &:after {
+            content: "";
+            position: absolute;
+            width: 0;
+            top: -10px;
+            right: -10px;
+            border-width: 10px;
+            border-style: solid;
+            border-color: transparent transparent #181c1f transparent;
+        }
+    }
+    .icon-tianjia{
+        position: absolute;
+        right: 0px;
+        top: -2px;
+        cursor: pointer;
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+        z-index: 100;
+    }
+    .confirm{
+        position: absolute;
+        border-radius: 3px;
+        cursor: pointer;
+        width: 88px;
+        height: 32px;
+        color: white;
+        font-size: 14px;
+        right: 12px;
+        bottom: 14px;
+        text-align: center;
+        line-height: 32px;
+        background-image: -webkit-gradient(linear, 0 0, 0 bottom, from(#0e96d5), to(#037db7));
+    }
+    .msg{
+        text-align: center;
+        font-size: 18px;
+        color: white;
+        margin-top: 76px;
+        span{
+            display: inline-block;
+            &:first-child{
+                font-size: 18px;
+            }
+        }
+        .icon-right1{color: #6fbb34;}
+        .icon-error{color: #ce0000;}
+    }
+}

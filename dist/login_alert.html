@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>登录提示框</title>
+		<link rel="stylesheet" type="text/css" href="styles/_bootstrap.css"/>
+		<link rel="stylesheet" type="text/css" href="styles/login_alert.css"/>
+		<link rel="stylesheet" type="text/css" href="images/iconfont/iconfont.css"/>
+	</head>
+	<body>
+		<div class="box">
+			<div class="header_style"></div>
+			<div class="iconfont icon-tianjia"></div>
+			<div class="msg">
+				<span class="iconfont icon-right1"></span>
+				<span class="iconfont icon-error"></span>
+				<span>密码修改成功</span>
+			</div>
+			<a href="" class="confirm">确定</a>
+		</div>
+	</body>
+	<script src="scripts/jquery-3.1.0.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="scripts/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$('.icon-tianjia,.confirm').on('click',function(e) {
+			e.preventDefault();
+			console.log("关闭");
+		})
+	</script>
+</html>

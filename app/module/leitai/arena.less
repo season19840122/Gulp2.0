@@ -1,0 +1,1068 @@
+@import '../../styles/_base';
+@import '../../styles/_common';
+.box {
+    width: 1196px;
+    height: 600px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 0;
+    .smallScroll2::-webkit-scrollbar {
+        width: 20px !important;
+        height: 20px !important;
+    }
+    .smallScroll2::-webkit-scrollbar-track {
+        border-radius: 10px !important;
+        background: black !important;
+    }
+    .smallScroll2::-webkit-scrollbar-thumb {
+        border-radius: 10px !important;
+        background: #275173 !important;
+    }
+    .smallScroll2::-webkit-scrollbar {
+        width: 6px !important;
+    }
+    .smallScroll2:hover::-webkit-scrollbar-thumb{
+        background: #356e9c !important;
+    }
+    .smallScroll2:active::-webkit-scrollbar-thumb{
+        background: #2f628c !important;
+    }
+    .hide_ {
+        display: none;
+    }
+    .content {
+        font-size: 14px;
+        width: 100%;
+        position: relative;
+        height: 1150px;
+        color: #7c8d96;
+        background: url("../../images/leitai/arena.jpg");
+        .top_box {
+            position: relative;
+            height: 690px;
+            .left_box {
+                position: absolute;
+                top: 0;
+                .dm_box {
+                    width: 840px;
+                    height: 520px;
+                    position: absolute;
+                    overflow: hidden;
+                    top: 147px;
+                    left: 17px;
+                    border: 1px solid #191f28;
+                    iframe{
+                        position: absolute;
+                        left: 0px;
+                        top: 0px;
+                        width: 840px;
+                        height: 520px;
+                    }
+                    .dm_content {
+                        width: 840px;
+                        height: 520px;
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        z-index: 0;
+                    }
+                    div {
+                        position: absolute;
+                        white-space: nowrap;
+                        text-shadow: 0 2px 3px #000000;
+                    }
+                    .dm_switch {
+                        z-index: 10;
+                        position: absolute;
+                        width: 24px;
+                        height: 70px;
+                        right: 0;
+                        top: 100px;
+                        cursor: pointer;
+                        background: rgba(30,68,97,0.3);
+                        text-align: center;
+                        text-shadow: none;
+                        span {
+                            display: block;
+                            color: #84a4cc;
+                            font-size: 12px;
+                        }
+                        &:hover {
+                            background: rgba(30,68,97,0.7);
+                        }
+                        &:active {
+                            background: rgba(30,68,97,0.5);
+                            color: #6499da;
+                        }
+                        &:before {
+                            position: absolute;
+                            content: "";
+                            width: 0;
+                            border-style: solid;
+                            border-width: 18px;
+                            border-color: transparent rgba(30,68,97,0.2) transparent transparent;
+                            left: 6px;
+                            top: -18px;
+                            border-radius: 3px;
+                            -webkit-transform: rotate(-135deg);
+                            transform: rotate(-135deg);
+                        }
+                        &:after {
+                            position: absolute;
+                            content: "";
+                            width: 0;
+                            border-style: solid;
+                            border-radius: 3px;
+                            border-width: 18px;
+                            border-color: transparent rgba(30,68,97,0.2) transparent transparent;
+                            left: 6px;
+                            bottom: -18px;
+                            -webkit-transform: rotate(135deg);
+                            transform: rotate(135deg);
+                        }
+                        &:hover:before {
+                            border-color: transparent rgba(30,68,97,0.7) transparent transparent;
+                        }
+                        &:hover:after {
+                            border-color: transparent rgba(30,68,97,0.7) transparent transparent;
+                        }
+                        &:active:before {
+                            border-color: transparent rgba(30,68,97,0.5) transparent transparent;
+                        }
+                        &:active:after {
+                            border-color: transparent rgba(30,68,97,0.5) transparent transparent;
+                        }
+                    }
+                }
+                .pos {
+                    z-index: 30;
+                    position: absolute;
+                    padding: 10px;
+                    width: 200px;
+                    a {
+                        position: relative;
+                        text-decoration: none;
+                        color: #00b6ff;
+                        &:after {
+                            position: absolute;
+                            content: "";
+                            width: 26px;
+                            height: 1px;
+                            background: #00b6ff;
+                            left: 12px;
+                            bottom: 0;
+                        }
+                    }
+                }
+                .team_box {
+                    width: 840px;
+                    height: 147px;
+                    left: 0;
+                    position: absolute;
+                    top: 0px;
+                    background: url("../../images/leitai/arena_lefttop.png") no-repeat;
+                    .win_box {
+                        display: none;
+                        position: absolute;
+                        width: 850px;
+                        height: 155px;
+                        left: 5px;
+                        top: -7px;
+                        &:after {
+                            position: absolute;
+                            width: 36px;
+                            height: 31px;
+                            content: "";
+                            left: 68px;
+                            top: 61px;
+                            background: url("../../images/leitai/arena_h.png");
+                            -webkit-transform: rotate(67deg);
+                            transform: rotate(67deg);
+                        }
+                        .win_pic {
+                            position: absolute;
+                            width: 58px;
+                            height: 58px;
+                            top: 79px;
+                            left: 30px;
+                        }
+                        h1 {
+                            color: #E10505;
+                            font-style: italic;
+                            font-size: 18px;
+                            position: absolute;
+                            left: 100px;
+                            top: 106px;
+                            width: 134px;
+                            font-weight: bold;
+                            white-space: nowrap;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            text-align: center;
+                        }
+                        h2 {
+                            color: white;
+                            font-style: italic;
+                            font-size: 20px;
+                            position: absolute;
+                            left: 304px;
+                            top: 105px;
+                            width: 495px;
+                            white-space: nowrap;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                        }
+                        &.zhu_win{background: url("../../images/leitai/arena_win_zhu.png");}
+                        &.ke_win{background: url("../../images/leitai/arena_win_ke.png");}
+                    }
+                    .normal_box{
+                        display: none;
+                        .ke,
+                        .zhu {
+                            width: 375px;
+                            height: 147px;
+                            position: absolute;
+                            h1{
+                                display: none;
+                                position: absolute;
+                                width: 90px;
+                                height: 30px;
+                                border:1px solid #0572ae;
+                                top: 116px;
+                                font-size: 12px;
+                                color: white;
+                                background: rgba(0,0,0,0.8);
+                                line-height: 29px;
+                                text-align: center;
+                            }
+                        }
+                        .vs {
+                            position: absolute;
+                            width: 236px;
+                            height: 118px;
+                            background: url("../../images/leitai/arena_vs.png");
+                            left: 303px;
+                            top: 14px;
+                        }
+                        .pic {
+                            position: absolute;
+                            width: 58px;
+                            height: 58px;
+                            top: 71px;
+                        }
+                        .zhu{
+                            left: 34px;
+                            background: url("../../images/leitai/arena_zhu.png") no-repeat 0px -16px;
+                            h1{
+                                left: 100px;
+                            }
+                            .pic {
+                                right: 40px;
+                            }
+                            .zan_off{
+                                display: none;
+                                position: absolute;
+                                top: 95px;
+                                left: 46px;
+                                font-size: 16px;
+                                font-weight: bold;
+                                color: #e88888;
+                            }
+                            .zan_hand {
+                                position: absolute;
+                                top: 73px;
+                                left: 46px;
+                                font-size: 42px;
+                                color: #ffc6c6;
+                                cursor: pointer;
+                                &:before {
+                                    background-image: -webkit-gradient(linear, 0 0, 0 bottom, from(white), to(#e87a7a));
+                                    -webkit-background-clip: text;
+                                    -webkit-text-fill-color: transparent;
+                                }
+                                &.big{
+                                    -webkit-transform: scale(1.5);
+                                    transform: scale(1.5);
+                                }
+                                -webkit-transition: -webkit-transform .1s ease-in;
+                                transition: transform .1s ease-in;
+                            }
+                            .zan_num {
+                                position: absolute;
+                                top: 50px;
+                                width: 100px;
+                                left: 45px;
+                                font-size: 12px;
+                                height: 20px;
+                                color: #ff1010;
+                                font-weight: bold;
+                                &:before {
+                                    font-size: 20px;
+                                    background-image: -webkit-gradient(linear, 0 0, 0 bottom, from(#d46c6c), to(#ff0000));
+                                    -webkit-background-clip: text;
+                                    -webkit-text-fill-color: transparent;
+                                }
+                            }
+                        }
+                        .ke {
+                            right: 0;
+                            background: url("../../images/leitai/arena_ke.png") no-repeat 0px -20px;
+                            h1{
+                                right: 100px;
+                            }
+                            .pic {
+                                left: 40px;
+                            }
+                            .zan_off{
+                                display: none;
+                                position: absolute;
+                                top: 95px;
+                                right: 42px;
+                                font-size: 16px;
+                                font-weight: bold;
+                                color: #9dcff1;
+                            }
+                            .zan_hand {
+                                position: absolute;
+                                top: 73px;
+                                right: 46px;
+                                font-size: 42px;
+                                color: #019eed;
+                                cursor: pointer;
+                                &:before {
+                                    background-image: -webkit-gradient(linear, 0 0, 0 bottom, from(white), to(#9dc7e2));
+                                    -webkit-background-clip: text;
+                                    -webkit-text-fill-color: transparent;
+                                }
+                                &.big{
+                                    -webkit-transform: scale(1.5);
+                                    transform: scale(1.5);
+                                }
+                                -webkit-transition: -webkit-transform .1s ease-in;
+                                transition: transform .1s ease-in;
+                            }
+                            .zan_num {
+                                position: absolute;
+                                top: 50px;
+                                width: 100px;
+                                left: 267px;
+                                font-size: 12px;
+                                height: 20px;
+                                color: #019eed;
+                                font-weight: bold;
+                                &:before {
+                                    font-size: 20px;
+                                    background-image: -webkit-gradient(linear, 0 0, 0 bottom, from(#01a1f1), to(#047dc7));
+                                    -webkit-background-clip: text;
+                                    -webkit-text-fill-color: transparent;
+                                }
+                            }
+                        }
+                        #ke_name,
+                        #zhu_name {
+                            position: absolute;
+                            top: 95px;
+                            width: 140px;
+                            font-size: 18px;
+                            font-weight: bold;
+                            font-style: italic;
+                            white-space: nowrap;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            text-align: center;
+                        }
+                        #zhu_name {
+                            color: #e10505;
+                            right: 103px;
+                        }
+                        #ke_name {
+                            color: #81d4ff;
+                            left: 103px;
+                        }
+                    }
+                    
+                    &.zhu_off{
+                        .zan_num{display: block;}
+                        .zhu{
+                            .zan_off{display: block;}
+                            .zan_hand{display: none;}
+                        }
+                        .ke{
+                            .zan_hand{
+                                cursor: default;
+                                &:before{
+                                    background-image: -webkit-gradient(linear, 0 0, 0 bottom, from(#9dc7e2), to(#46aee7));
+                                    -webkit-background-clip: text;
+                                    -webkit-text-fill-color: transparent;
+                                }
+                            }
+                        }
+                    }
+                    
+                    &.ke_off{
+                        .zan_num{display: block;}
+                        .ke{
+                            .zan_off{display: block;}
+                            .zan_hand{display: none;}
+                        }
+                        .zhu{
+                            .zan_hand{
+                                cursor: default;
+                                &:before{
+                                    background-image: -webkit-gradient(linear, 0 0, 0 bottom, from(#e87a7a), to(#e88888));
+                                    -webkit-background-clip: text;
+                                    -webkit-text-fill-color: transparent;
+                                }
+                            }
+                        }
+                    }
+                    
+                    &.off{
+                        .zan_off{display: none;}
+                        .zan_hand{display: none;}
+                        .zan_num{display: none;}
+                    }
+                    
+                    &.win{
+                        .normal_box{display: none;}
+                        .win_box{display: block;}
+                    }
+                    &.normal{
+                        .normal_box{display: block;}
+                        .win_box{display: none;}
+                    }
+                }
+            }
+            .right_box {
+                position: absolute;
+                width: 300px;
+                height: 650px;
+                background: rgba(255,255,255,0.1);
+                right: 20px;
+                top: 15px;
+                text-align: center;
+                background: url("../../images/leitai/arena_right.png") no-repeat;
+                .top {
+                    position: relative;
+                    height: 136px;
+                    span {
+                        display: inline-block;
+                        width: 122px;
+                        height: 30px;
+                        line-height: 29px;
+                        cursor: pointer;
+                        font-size: 12px;
+                        margin-top: 87px;
+                        &#rules {
+                            color: #9fd9ff;
+                            border: 1px solid #385c73;
+                            margin-right: 5px;
+                            &:hover {
+                                border: 1px solid #4b7d9d;
+                            }
+                            &:active {
+                                border: 1px solid #3f6882;
+                            }
+                        }
+                        &#join {
+                            color: #ffffff;
+                            border: 1px solid #9d3e0a;
+                            background: #813004;
+                            &:hover {
+                                border: 1px solid #b6490e;
+                                background: #a23f0a;
+                            }
+                            &:active {
+                                border: 1px solid #9d3e0a;
+                                background: #903808;
+                            }
+                        }
+                    }
+                }
+                .middle {
+                    position: relative;
+                    height: 220px;
+                    text-align: center;
+                    .play_box {
+                        display: none;
+                        top: 0;
+                        position: absolute;
+                        width: 300px;
+                        height: 220px;
+                        cursor: pointer;
+                        background: rgba(22, 28, 43, 0.72);
+                        &:after {
+                            position: absolute;
+                            width: 69px;
+                            height: 76px;
+                            content: "";
+                            left: 113px;
+                            top: 51px;
+                            z-index: 10;
+                            cursor: pointer;
+                            background: url("../../images/leitai/arena_play.png") no-repeat 0 0;
+                        }
+                        &:hover:after {
+                            background-position-x: -76px;
+                        }
+                        &:active:after {
+                            background-position-x: -152px;
+                        }
+                    }
+                    .title {
+                        text-align: left;
+                        padding-top: 6px;
+                        span {
+                            position: relative;
+                            display: inline-block;
+                            vertical-align: middle;
+                            &:first-child {
+                                margin-left: 32px;
+                                font-size: 14px;
+                                color: #9ac7ff;
+                                &:before {
+                                    position: absolute;
+                                    content: "";
+                                    width: 4px;
+                                    height: 17px;
+                                    background: #0291fd;
+                                    top: 2px;
+                                    left: -10px;
+                                }
+                            }
+                            &#name {
+                                width: 200px;
+                                white-space: nowrap;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                text-indent: 5px;
+                                font-size: 12px;
+                                color: #788d9a;
+                            }
+                        }
+                    }
+                    .zu {
+                        position: relative;
+                        width: 302px;
+                        height: 122px;
+                        top: -24px;
+                        background: url("../../images/leitai/arena_zu.png") no-repeat -5px 0;
+                        span {
+                            position: absolute;
+                            font-size: 12px;
+                            width: 100px;
+                            top: 60px;
+                            white-space: nowrap;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            &#left_zu {
+                                color: #ff8689;
+                                left: 20px;
+                                text-align: right;
+                            }
+                            &#right_zu {
+                                color: #2cabff;
+                                left: 180px;
+                                text-align: left;
+                            }
+                        }
+                    }
+                    #g_win,
+                    #s_win {
+                        font-size: 12px;
+                        color: #aecadb;
+                        background: #080b0f;
+                        position: relative;
+                        display: inline-block;
+                        top: -25px;
+                        width: 122px;
+                        height: 30px;
+                        border: 1px solid #243848;
+                        line-height: 29px;
+                        margin-right: 1px;
+                    }
+                    .dm_btn {
+                        margin: 0 auto;
+                        top: -18px;
+                        position: relative;
+                        width: 250px;
+                        height: 30px;
+                        border: 1px solid #243848;
+                        input {
+                            border: 0;
+                            outline: none;
+                            position: absolute;
+                            left: 0;
+                            text-indent: 10px;
+                            top: 0;
+                            background: #080b0f;
+                            width: 177px;
+                            height: 28px;
+                        }
+                        .send_btn {
+                            font-size: 12px;
+                            width: 77px;
+                            position: absolute;
+                            height: 29px;
+                            right: 0;
+                            top: 0;
+                            line-height: 29px;
+                            color: white;
+                            background: #0970AB;
+                            cursor: pointer;
+                            &:hover {
+                                background: #0e8ad1;
+                            }
+                            &:active {
+                                background: #0e82c4;
+                            }
+                        }
+                    }
+                }
+                .bottom {
+                    position: relative;
+                    height: 100%;
+                    .title {
+                        position: relative;
+                        padding-top: 8px;
+                        box-shadow: inset 0 18px 55px 0 rgba(255,255,255,0.1);
+                        background: -webkit-linear-gradient(left, rgb(10, 16, 32) 0%, rgba(255,255,255,0.1) 51%, rgb(10, 16, 32) 100%);
+                        height: 38px;
+                        &:before {
+                            position: absolute;
+                            content: "";
+                            width: 100%;
+                            height: 1px;
+                            background: -webkit-linear-gradient(left, rgb(10, 16, 32) 0%, rgba(204, 204, 204, 0.62) 51%, rgb(10, 16, 32) 100%);
+                            top: 0;
+                            left: 0;
+                            box-shadow: 0 4px 25px 0 rgba(255,255,255,0.8);
+                        }
+                        span {
+                            position: absolute;
+                            left: 24px;
+                            display: inline-block;
+                            &:first-child {
+                                margin-left: 7px;
+                                font-size: 14px;
+                                color: #9ac7ff;
+                                &:before {
+                                    position: absolute;
+                                    content: "";
+                                    width: 4px;
+                                    height: 17px;
+                                    background: #0291fd;
+                                    top: 2px;
+                                    left: -10px;
+                                }
+                            }
+                        }
+                    }
+                    ul {
+                        list-style: none;
+                        overflow-x: hidden;
+                        overflow-y: auto;
+                        position: relative;
+                        height: 246px;
+                        li {
+                            position: relative;
+                            font-size: 12px;
+                            color: #627d8d;
+                            margin: 0 auto;
+                            border-bottom: 1px solid #1a252f;
+                            height: 30px;
+                            text-align: left;
+                            width: 255px;
+                            white-space: nowrap;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            cursor: pointer;
+                            line-height: 29px;
+                            padding-left: 10px;
+                            &:before {
+                                position: absolute;
+                                content: "";
+                                width: 5px;
+                                height: 5px;
+                                border-radius: 10px;
+                                background: #627d8d;
+                                bottom: 12px;
+                                left: 0;
+                            }
+                            &:hover {
+                                color: #a0c6dd;
+                            }
+                            &.on {
+                                color: #0092ff;
+                                background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0) 0%, #000000 51%, rgba(0, 0, 0, 0) 100%);
+                                &:hover {
+                                    color: #0092ff;
+                                }
+                                &:before {
+                                    position: absolute;
+                                    content: "";
+                                    width: 0;
+                                    bottom: 12px;
+                                    left: 1px;
+                                    background: transparent;
+                                    border-radius: 0;
+                                    border-style: solid;
+                                    border-width: 5px;
+                                    border-color: transparent transparent transparent #0092ff;
+                                }
+                                &::after {
+                                    position: absolute;
+                                    content: "";
+                                    width: 255px;
+                                    height: 9px;
+                                    background: url("../../images/leitai/arena_li.png") no-repeat 0 0;
+                                    bottom: 0;
+                                    left: 0;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &.close_dm {
+                    .middle {
+                        height: 180px;
+                        .dm_btn {
+                            display: none;
+                        }
+                    }
+                    .bottom {
+                        ul {
+                            height: 271px;
+                        }
+                    }
+                    .play_box {
+                        display: none;
+                    }
+                }
+
+                &.remove_dm {
+                    .middle {
+                        display: none;
+                    }
+                    .bottom {
+                        ul {
+                            height: 480px;
+                        }
+                    }
+                    .play_box {
+                        display: none;
+                    }
+                }
+                
+                &.ready_play {
+                    .play_box {
+                        display: block;
+                    }
+                }
+            }
+
+        }
+        .rec_video {
+            position: relative;
+            width: 1152px;
+            left: 17px;
+            min-height: 60px;
+            padding: 1px;
+            background: -webkit-linear-gradient(top, rgba(43,85,116,0.3) 0%, rgba(43,85,116,0.1) 70%, rgba(43,85,116,0.2) 100%);
+            &:before {
+                position: absolute;
+                content: "";
+                width: 4px;
+                height: 16px;
+                background: #0092ff;
+                left: 21px;
+                top: 18px;
+            }
+            &:after {
+                position: absolute;
+                content: "精彩集锦";
+                font-size: 14px;
+                color: #9ac7ff;
+                left: 32px;
+                top: 15px;
+            }
+            ul{
+                position: relative;
+                width: 100%;
+                list-style: none;
+                margin-top: 53px;
+                margin-left: 20px;
+                padding-bottom: 20px;
+                &:after{
+                    width: 0px;
+                    display: block;
+                    clear: both;
+                    content: "";
+                }
+                li{
+                    position: relative;
+                    width: 210px;
+                    height: 185px;
+                    float: left;
+                    cursor: pointer;
+                    margin-right: 12px;
+                    img{
+                        position: relative;
+                        left: 0px;
+                        top: 0px;
+                        width: 210px;
+                        height: 128px;
+                        border: 2px solid #134063;
+                    }
+                    p{
+                        position: relative;
+                        width: 210px;
+                        font-size: 12px;
+                        color: #627d8d;
+                        margin-top: 5px;
+                    }
+                    &:hover{
+                        img{
+                           border: 2px solid #4387be; 
+                        }
+                        p{
+                            color: #5094bd;    
+                        }
+                        &:after{
+                            position: absolute;
+                            width: 69px;
+                            height: 76px;
+                            content: "";
+                            left: 69px;
+                            top: 32px;
+                            z-index: 10;
+                            background: url("../../images/leitai/arena_play.png") no-repeat -76px 0px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .modal {
+        p {
+            text-align: center;
+            color: #ccc;
+            font-size: 16px;
+        }
+        .modal-footer {
+            border-top: 1px #2b2b2a solid;
+            background: #1e242a;
+        }
+        .modal_padding_top_50 {
+            padding-top: 50px;
+        }
+        .modal_pt50_40 {
+            padding: 50px 40px;
+        }
+        .modal_height_150 {
+            height: 150px;
+        }
+        .modal_height_450 {
+            height: 450px;
+        }
+        .modal_height_280 {
+            height: 280px;
+        }
+        .modal_width_500 {
+            width: 500px;
+        }
+        .modal_width_800 {
+            width: 800px;
+        }
+        .modal-header {
+            border: 0;
+            position: relative;
+            .close {
+                margin-top: -10px;
+                margin-right: -5px;
+                opacity: 1;
+                color: #777;
+                text-shadow: none;
+            }
+            .header_style {
+                position: absolute;
+                width: 250px;
+                height: 10px;
+                background: #3b3d3f;
+                top: 1px;
+                left: 50%;
+                margin-left: -125px;
+                z-index: 0;
+                &:before {
+                    content: "";
+                    position: absolute;
+                    width: 0;
+                    top: -10px;
+                    left: -10px;
+                    z-index: 100;
+                    border-width: 10px;
+                    border-style: solid;
+                    border-color: transparent transparent #181c1f transparent;
+                }
+                &:after {
+                    content: "";
+                    position: absolute;
+                    width: 0;
+                    top: -10px;
+                    left: 240px;
+                    border-width: 10px;
+                    border-style: solid;
+                    border-color: transparent transparent #181c1f transparent;
+                }
+            }
+        }
+        .modal_content_bg {
+            background: #181c1f;
+            border: 1px #323231 solid;
+        }
+    }
+    #zan_box{
+        .modal-body{
+            p{
+                color: #B3B3B3;
+                font-size: 18px;
+                font-weight: bold;
+                text-align: left;
+                margin-bottom: 16px;
+            }
+            ul{
+                position: relative;
+                width: 420px;
+                margin: 0 auto;
+                list-style: none;
+                li{
+                    width: 200px;
+                    position: relative;
+                    height: 73px;
+                    border: 1px solid #232b32;
+                    background: #111517;
+                    cursor: pointer;
+                    float: left;
+                    margin-right: 10px;
+                    margin-bottom: 10px;
+                    h1{
+                        font-size: 18px;
+                        color: #b3b3b3;
+                        font-weight: bold;
+                        text-align: center;
+                        margin-bottom: 5px;
+                        margin-top: 17px;
+                    }
+                    h2{
+                        font-size: 14px;
+                        color: #b3b3b3;
+                        text-align: center;
+                    }
+                    &.on{
+                        cursor: default;
+                        border: 1px solid #00adff;
+                        h1,h2{
+                            color: #00adff;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #rules_box{
+        .modal-body{
+            padding: 0px 30px;
+            padding-bottom: 30px;
+            h1{
+                font-size: 24px;
+                color: #B3B3B3;
+                font-weight: bold;
+                text-align: center;
+                margin-top: 20px;
+                margin-bottom: 20px;
+            }
+            p{
+                color: #B3B3B3;
+                font-size: 14px;
+                text-align: left;
+                margin-top: 10px;
+            }
+        }
+    }
+    #team_five{
+        .modal-body{
+            img{
+                padding: 2px;
+                background: black;
+                border: 4px solid #393b3d;
+                width: 110px;
+                height: 110px;
+                display: inline-block;
+                margin-left: 45px;
+            }
+            p{
+                color: #B3B3B3;
+                width: 264px;
+                font-size: 14px;
+                margin-left: 170px;
+                margin-top: -84px;
+                text-align: left;
+                span{
+                    color: #00aeff;
+                }
+            }
+        }
+    }
+    #pay_qrcode{
+        .modal-body{
+            h1{
+                font-size: 16px;
+                color: white;
+                text-align: center;
+            }
+            .qrcode_box{
+                background: #121518;
+                position: absolute;
+                top: 60px;
+                width: 150px;
+                height: 180px;
+                padding: 9px;
+                border: 1px solid #535a63;
+                margin-left: -73px;
+                left: 50%;
+                .alert_img_qrcode {
+                    background: white;
+                    padding: 5px;
+                }
+                .wechat_logo {
+                    position: absolute;
+                    width: 20px;
+                    height: 20px;
+                    bottom: 5px;
+                    right: 38px;
+                }
+                .alipay_logo {
+                    position: absolute;
+                    width: 20px;
+                    height: 20px;
+                    bottom: 5px;
+                    right: 10px;
+                }
+                span {
+                    position: absolute;
+                    width: 100px;
+                    font-size: 15px;
+                    left: 11px;
+                    bottom: 4px;
+                    text-align: left;
+                    color: #ddd;
+                }
+            
+            }
+        }
+    }
+}
