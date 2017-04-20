@@ -459,14 +459,13 @@ body {
 }
 .container .content {
   position: relative;
-  background: url(../../images/school/school_under.png);
+  background: url(../../images/school/school_under.jpg);
 }
 .container .content .top_bg {
   position: relative;
   width: 1196px;
   height: 289px;
   text-align: center;
-  background: url(../../images/school/school_bg_top.png);
 }
 .container .content .top_bg p {
   position: absolute;
@@ -1024,12 +1023,12 @@ body {
   margin-top: -85px;
   padding: 20px 25px;
 }
-.container .alert_box .alert_content p {
+.container .alert_box .alert_content .choose p {
   font-size: 14px;
   margin-bottom: 15px;
 }
-.container .alert_box .alert_content span,
-.container .alert_box .alert_content a {
+.container .alert_box .alert_content .choose span,
+.container .alert_box .alert_content .choose a {
   font-size: 12px;
   color: #2f1919;
   cursor: pointer;
@@ -1041,12 +1040,12 @@ body {
   background: #e0e0e0;
   margin-right: 15px;
 }
-.container .alert_box .alert_content span.on,
-.container .alert_box .alert_content a.on {
+.container .alert_box .alert_content .choose span.on,
+.container .alert_box .alert_content .choose a.on {
   background: white;
   box-shadow: 0px 0px 0px 2px #359be0;
 }
-.container .alert_box .alert_content a {
+.container .alert_box .alert_content .choose a {
   border: 0;
   position: absolute;
   right: 5px;

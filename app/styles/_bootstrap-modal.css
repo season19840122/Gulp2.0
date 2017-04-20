@@ -162,7 +162,7 @@ body.modal-open {
 .modal-body select,
 .modal-body textarea {
   width: 215px;
-  background: #ccc;
+  background: #ccc !important;
   border: none;
   color: #19202a;
   font-size: 14px;
@@ -170,6 +170,9 @@ body.modal-open {
   border-radius: 3px;
   padding: 0px 5px;
   line-height: 24px;
+}
+.modal-body select {
+  padding: 0px;
 }
 .modal-body input.w80 {
   width: 80px;

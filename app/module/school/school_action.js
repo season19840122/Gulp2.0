@@ -325,7 +325,7 @@ var ACTIONFUN = function(initObj) {
 				v.boxDom.find('.tip').html(v.chestPrice);
 				floatBao(v.boxDom);
 			}
-			v.boxDom.find('.btn').html(v.state).removeClass('on');
+			v.boxDom.find('.btn').html(v.state).removeClass('off').removeClass('on');
 			if(v.state.indexOf('未达成') == -1) v.boxDom.addClass('on');
 			if(v.state.indexOf('立即领取') != -1) {
 				v.boxDom.find('.btn').addClass('on');
@@ -362,6 +362,7 @@ var ACTIONFUN = function(initObj) {
 		for(var k in rankLi) {
 			if(data[k] && data[k].length != 0) rankLi[k].list = data[k];
 		}
+		console.log(rankLi);
 		for(var k in rankLi) {
 			rankLi[k].dom.find('.list').html(
 				(rankLi[k].list.map(function(v,index) {

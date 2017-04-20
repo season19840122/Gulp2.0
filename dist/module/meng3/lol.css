@@ -674,7 +674,16 @@ body {
   left: 151px;
   font-size: 30px;
   text-align: center;
-  width: 60px;
+  width: 90px;
+}
+.fail .con .shundou {
+  display: inline-block;
+  background: url(../../images/lol/shundou.png) no-repeat;
+  position: absolute;
+  top: 98px;
+  left: 242px;
+  width: 37px;
+  height: 19px;
 }
 .fail .con2 {
   background-position-y: -100px;

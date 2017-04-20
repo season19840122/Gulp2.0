@@ -1056,7 +1056,6 @@
   left: 120px;
   box-sizing: border-box;
   padding: 10px;
-  background: #19202a;
   overflow: hidden;
 }
 .team_pane.new {
@@ -1074,6 +1073,6 @@
   height: 508px;
 }
 .award.new {
-  background: url("../images/bg.jpg");
+  background: url(../images/team_game_bg.jpg);
 }
 /** 移动到首页样式结束 **/

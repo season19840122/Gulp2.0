@@ -249,12 +249,12 @@ li {
 .cr {
   clear: right;
 }
-.cf:before,
-.cf:after {
-  content: " ";
+.cf::before,
+.cf::after {
+  content: "";
   display: table;
 }
-.cf:after {
+.cf::after {
   clear: both;
 }
 .cf {
@@ -685,20 +685,51 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.box .close_remind h2,
-.box .close_remind h3 {
+.box .close_remind h2 {
   display: block;
   font-size: 14px;
-  font-weight: bold;
-  background-image: -webkit-gradient(linear, 0 0, 0 bottom, from(#fee461), to(#e17405));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: white;
 }
 .box .close_remind h2 {
   margin-top: 20px;
 }
 .box .close_remind h3 {
-  margin-top: 5px;
+  position: relative;
+  padding: 1px;
+  width: 500px;
+  margin: 0 auto;
+  margin-top: 90px;
+  left: 52px;
+}
+.box .close_remind h3 span {
+  margin-top: 0px;
+  font-weight: bold;
+  background-image: -webkit-gradient(linear, 0 0, 0 bottom, from(#fee461), to(#e17405));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 20px;
+}
+.box .close_remind h3:before,
+.box .close_remind h3:after {
+  content: "";
+  width: 175px;
+  height: 3px;
+  background: #143b4c;
+  position: absolute;
+  top: 15px;
+}
+.box .close_remind h3:before {
+  left: 0px;
+}
+.box .close_remind h3:after {
+  right: 0px;
+}
+.box .close_remind h3 p {
+  color: #425161;
+  font-size: 14px;
+  margin-top: 10px;
+  line-height: 18px;
+  text-align: left;
 }
 .box .content_box {
   position: absolute;

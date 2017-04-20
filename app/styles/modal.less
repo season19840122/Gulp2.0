@@ -276,3 +276,222 @@ th .tip_r67{
   z-index: 20;
   cursor: pointer;
 }
+
+/** 20170308新增账号安全 **/
+.set{
+    i{
+        color: #029bd8;
+        margin-right: 5px;
+    }
+}
+#i_pwd{
+    overflow: hidden;
+    position: relative;
+    padding-left: 12px;
+    height: 358px;
+    .hide_{
+        display: none;
+    }
+    .return_msg{
+        color: red;
+        position: absolute;
+        bottom: 25px;
+        text-align: center;
+        width: 85%;
+    }
+    input{
+        width: 206px;
+        height: 26px;
+        text-indent: 10px;
+        display: inline-block;
+        border: 0;
+        outline: none;
+        border-radius: 3px;
+        color: black;
+    }
+    &>div>p{
+        border-bottom: 1px solid #20242a !important;
+        padding-bottom: 14px;
+        span{
+            &.remind{
+                color: #3d4146;
+                margin-left: 120px;
+            }
+        }
+    }
+    label{text-align: left;}
+    .pwd1{
+        ul{
+            width: 640px;
+            padding-top: 50px;
+            padding-left: 80px;
+            li{
+                float: left;
+                position: relative;
+                a{
+                    display: inline-block;
+                    &:last-child{
+                        margin-left: 178px;
+                        color: #029bd8;
+                        text-decoration: underline;
+                        cursor: pointer;
+                    }
+                }
+            }
+        } 
+    }
+    .pwd2,.pwd3,.pwd4,.pwd1{padding: 1px;overflow: hidden;}
+    .pwd2,.pwd3,.pwd4{
+        &>div{
+            p{
+                &.error{
+                    font-size: 14px;
+                    span{
+                        color: red;
+                    }
+                }
+                &.right{
+                    &:after{
+                            position: absolute;
+                            width: 13px;
+                            height: 13px;
+                            content: "";
+                            background: url(../images/bg_checkbox.png);
+                            left: 338px;
+                            top: 5px;
+                    }
+                }
+            }
+        }
+    }
+    
+    .pwd2{
+        &>div{
+            padding-left: 100px;
+            padding-top: 40px;
+            p{
+                position: relative;
+                margin-bottom: 38px;
+                a{
+                    display: inline-block;
+                    margin-left: 30px;
+                    color: #029bd8;
+                    text-decoration: underline;
+                    cursor: pointer;
+                }
+                span{
+                    position: absolute;
+                    bottom: -25px;
+                    right: 307px;
+                    font-size: 12px;
+                    color: #3d4146;
+                }
+            }
+        }
+    }
+    .pwd3{
+        &>div{
+            position: relative;
+            padding-left: 100px;
+            padding-top: 40px;
+            height: 280px;
+            p{
+                position: relative;
+                margin-bottom: 38px;
+                span{
+                    position: absolute;
+                    bottom: -25px;
+                    right: 307px;
+                    font-size: 12px;
+                    color: #3d4146;
+                }
+                .label350{
+                    width: 350px;
+                    text-align: left;
+                }
+            }
+            .code_div{
+                    position: absolute;
+                    top: 205px;
+                    left: 223px;
+                input{
+                    display: inline-block;
+                    width: 96px;
+                    background: white;
+                }
+                .code_btn{
+                    display: inline-block;
+                    width: 91px;
+                    height: 24px;
+                    text-align: center;
+                    line-height: 24px;
+                    border-radius: 3px;
+                    background: #b3b3b3;
+                    color: black;
+                    font-size: 12px;
+                    &.active{
+                        background: #0a8dc9;
+                        cursor: pointer;
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+    .pwd4{
+        position: relative;
+        &>div{
+            position: relative;
+            padding-left: 55px;
+            padding-top: 75px;
+            height: 280px;
+            p{
+                position: relative;
+                margin-bottom: 38px;
+                span{
+                    position: absolute;
+                    bottom: -25px;
+                    right: 353px;
+                    font-size: 12px;
+                    color: #3d4146;
+                }
+                .label350{
+                    width: 350px;
+                    text-align: left;
+                }
+            }
+        }
+        .qrcode_box{
+            width: 290px;
+            height: 194px;
+            position: absolute;
+            border-left: 1px solid #20242a;
+            right: 0px;
+            top: 64px;
+            margin: 0px;
+            h1{
+                position: absolute;
+                top: 176px;
+                left: 22px;
+                color: #ff9700;
+                text-align: center;
+                font-size: 14px;
+            }
+            #qrcode_pic{
+                width: 112px;
+                height: 112px;
+                position: absolute;
+                left: 88px;
+                top: 20px;
+                padding: 0px;
+                overflow: hidden;
+                background: white;
+                iframe{
+                    width: 112px;
+                    height: 112px;
+                    margin: 0px;
+                }
+            }
+        }
+    }
+}

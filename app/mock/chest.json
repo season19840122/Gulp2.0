@@ -19,6 +19,54 @@
           "初级补给箱",
           "新手箱"
         ]
+      },
+      {
+        "userId": 21121,
+        "goodsId": 1,
+        "goodsName": "红米碎片",
+        "price": 1.0,
+        "needCnt": 10,
+        "endTime": null,
+        "winCnt": 199,
+        "totalWinCnt": 8,
+        "pic": null,
+        "sources": [
+          "新手宝箱",
+          "初级补给箱",
+          "新手箱"
+        ]
+      },
+      {
+        "userId": 21121,
+        "goodsId": 1,
+        "goodsName": "红米碎片",
+        "price": 1.0,
+        "needCnt": 10,
+        "endTime": null,
+        "winCnt": 199,
+        "totalWinCnt": 8,
+        "pic": null,
+        "sources": [
+          "新手宝箱",
+          "初级补给箱",
+          "新手箱"
+        ]
+      },
+      {
+        "userId": 21121,
+        "goodsId": 1,
+        "goodsName": "红米碎片",
+        "price": 1.0,
+        "needCnt": 10,
+        "endTime": null,
+        "winCnt": 199,
+        "totalWinCnt": 8,
+        "pic": null,
+        "sources": [
+          "新手宝箱",
+          "初级补给箱",
+          "新手箱"
+        ]
       }
     ],
     "userChestId": null,

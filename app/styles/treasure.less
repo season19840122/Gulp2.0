@@ -70,8 +70,10 @@
       width: 680px;
       border: 1px solid #313a45;
       background: #11161d;
-      padding: 15px 14px;
+      padding: 15px 8px 0 8px;
+      overflow-x: hidden;
       ul{
+        overflow: hidden;
         li{
           float: left;
           width: 100px;
@@ -83,7 +85,7 @@
           align-items: center;
           border: 1px solid  #2b333d;
           margin-right: 10px;
-          margin-bottom: 10px;
+          margin-bottom: 11px;
           position: relative;
           &:nth-of-type(6n){
             margin-right: 0;
@@ -141,9 +143,12 @@
               border: 1px solid  #0078a8;
               background: rgba(24,29,38,.9);
               overflow: hidden;
-              &.way1{
+              &.bottom{
                 top: auto;
                 bottom: -1px;
+              }
+              &.left{
+                left: -230px;
               }
               .title1{
                 font-size: 14px;

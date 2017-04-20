@@ -154,7 +154,7 @@ actionFun1.dom();
 			name: "宝箱数据",
 			url: chestObj.options.hostUrl,
 			success: function(json) {
-				chestVM.num = 24 - (json.data.pieces.length + json.data.chests.length);
+				chestVM.num = 48 - (json.data.pieces.length + json.data.chests.length);
 				chestVM.pieces = json.data.pieces;
 				chestVM.chests = json.data.chests;
 				chestVM.addPieceClass();

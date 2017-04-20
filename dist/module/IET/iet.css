@@ -1,0 +1,1134 @@
+@charset "utf-8";
+/*
+ * Filename: base.css v2.0
+ * Author: Season 朱迎春
+ * Creattime: 2011-09-02
+ * PS: 模块化 CSS 最底层 base.css
+ */
+/*! normalize.css v3.0.2 | MIT License | git.io/normalize */
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  vertical-align: baseline;
+}
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+[hidden],
+template {
+  display: none;
+}
+a {
+  background-color: transparent;
+  text-decoration: none;
+}
+a:active,
+a:hover {
+  outline: 0;
+  text-decoration: none;
+}
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+b,
+strong {
+  font-weight: 700;
+}
+dfn {
+  font-style: italic;
+}
+h1 {
+  font-size: 2em;
+  margin: .67em 0;
+}
+mark {
+  background: #ff0;
+  color: #000;
+}
+small {
+  font-size: 80%;
+}
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -.5em;
+}
+sub {
+  bottom: -.25em;
+}
+img {
+  border: 0;
+}
+svg:not(:root) {
+  overflow: hidden;
+}
+figure {
+  margin: 1em 40px;
+}
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+pre {
+  overflow: auto;
+}
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+button {
+  overflow: visible;
+}
+button,
+select {
+  text-transform: none;
+}
+button,
+html input[type=button],
+input[type=reset],
+input[type=submit] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+input {
+  line-height: normal;
+}
+input[type=checkbox],
+input[type=radio] {
+  box-sizing: border-box;
+  padding: 0;
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+input[type=search] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+input[type=search]::-webkit-search-cancel-button,
+input[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+fieldset {
+  border: 1px solid silver;
+  margin: 0 2px;
+  padding: .35em .625em .75em;
+}
+legend {
+  border: 0;
+  padding: 0;
+}
+textarea {
+  overflow: auto;
+}
+optgroup {
+  font-weight: 700;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+td,
+th {
+  padding: 0;
+}
+li {
+  list-style: none;
+}
+/*-- 文字排版 --*/
+.fb {
+  font-weight: bold;
+}
+.fn {
+  font-weight: normal;
+}
+.unl {
+  text-decoration: underline;
+}
+.no-unl {
+  text-decoration: none;
+}
+.ti {
+  text-indent: -9999px;
+}
+.eps {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.w {
+  width: 100%;
+}
+.h {
+  height: 100%;
+}
+/*-- 定位 --*/
+.tl {
+  text-align: left;
+}
+.tc {
+  text-align: center;
+}
+.tr {
+  text-align: right;
+}
+.bc {
+  margin-left: 0;
+  margin-right: 0;
+}
+.fl {
+  float: left;
+  display: inline;
+}
+.fr {
+  float: right;
+  display: inline;
+}
+.cb {
+  clear: both;
+}
+.cl {
+  clear: left;
+}
+.cr {
+  clear: right;
+}
+.cf:before,
+.cf:after {
+  content: " ";
+  display: table;
+}
+.cf:after {
+  clear: both;
+}
+.cf {
+  *zoom: 1;
+}
+.vm {
+  vertical-align: middle;
+}
+.pr {
+  position: relative;
+}
+.pa {
+  position: absolute;
+}
+.abs-right {
+  position: absolute;
+  right: 0;
+}
+.zoom {
+  zoom: 1;
+}
+.visible {
+  visibility: visible;
+}
+.hidden {
+  visibility: hidden;
+}
+.none {
+  display: none;
+}
+.block {
+  display: block;
+}
+* {
+  box-sizing: border-box;
+}
+img {
+  vertical-align: middle;
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+p {
+  margin: 0;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+.button-sure,
+.button-no {
+  padding: 0;
+  width: 158px;
+  height: 35px;
+  line-height: 35px;
+  color: #271708;
+  border: 0;
+  background-image: -webkit-linear-gradient(top, #c49f58, #c49f58);
+  background-image: -moz-linear-gradient(top, #c49f58, #c49f58);
+  background-image: -o-linear-gradient(top, #c49f58, #c49f58);
+  background-image: -ms-linear-gradient(top, #c49f58, #c49f58);
+  background-image: linear-gradient(top, #c49f58, #c49f58);
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorStr=#c49f58, endColorStr=#c49f58);
+}
+.button-no {
+  color: #271708;
+  background-image: -webkit-linear-gradient(top, #c49f58, #c49f58);
+  background-image: -moz-linear-gradient(top, #c49f58, #c49f58);
+  background-image: -o-linear-gradient(top, #c49f58, #c49f58);
+  background-image: -ms-linear-gradient(top, #c49f58, #c49f58);
+  background-image: linear-gradient(top, #c49f58, #c49f58);
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorStr=#c49f58, endColorStr=#c49f58);
+}
+/*下拉列表*/
+.drop-select {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+}
+.drop-select ul {
+  width: 100%;
+  margin-top: 2px;
+  border: 1px solid #212a36;
+  position: absolute;
+  display: none;
+  z-index: 10;
+  overflow: auto;
+}
+.drop-select ul li {
+  height: 24px;
+  line-height: 24px;
+  text-indent: 10px;
+}
+.drop-select ul li a {
+  display: block;
+  text-decoration: none;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.drop-select ul li a:hover {
+  background: #1d232a;
+}
+/*容器滚动条*/
+.mainScroll::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+}
+.mainScroll::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  background: #000;
+}
+.mainScroll::-webkit-scrollbar-thumb {
+  -webkit-box-shadow: inset 0 0 5px #2d3a48;
+  border-radius: 5px;
+  background: #33383e;
+}
+.mainScroll::-webkit-scrollbar-thumb:hover {
+  background: #5b626c;
+}
+.mainScroll::-webkit-scrollbar-thumb:active {
+  background: #4d525a;
+}
+.smallScroll::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+.smallScroll::-webkit-scrollbar-track {
+  border-radius: 3px;
+  background: #0f1114;
+}
+.smallScroll::-webkit-scrollbar-thumb {
+  border-radius: 3px;
+  background: #2e3740;
+}
+.smallScroll.smallScroll2::-webkit-scrollbar {
+  width: 6px;
+}
+body {
+  font: 12px/1.5 'microsoft yahei';
+}
+.box {
+  width: 1196px;
+  height: 600px;
+  overflow: hidden;
+  position: relative;
+}
+.overDian {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.smallScroll::-webkit-scrollbar {
+  width: 10px !important;
+  height: 10px !important;
+}
+.smallScroll::-webkit-scrollbar-track {
+  border-radius: 0px !important;
+  background: black !important;
+}
+.smallScroll::-webkit-scrollbar-thumb {
+  border-radius: 10px !important;
+  background: #2e3740 !important;
+}
+.smallScroll::-webkit-scrollbar {
+  width: 10px !important;
+}
+.smallScroll:hover::-webkit-scrollbar-thumb {
+  background: #2e3740 !important;
+}
+.smallScroll:active::-webkit-scrollbar-thumb {
+  background: #2e3740 !important;
+}
+.box {
+  width: 1196px;
+  height: 600px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 0;
+}
+.box .hide_ {
+  display: none;
+}
+.box .float_right {
+  position: fixed;
+  width: 120px;
+  height: 332px;
+  background: url("../../images/IET/iet_right.png");
+  right: 10px;
+  top: 217px;
+  z-index: 100;
+}
+.box .float_right .title_right {
+  cursor: pointer;
+  width: 120px;
+  height: 80px;
+  background: url("../../images/IET/iet_btn1.jpg") 0 0;
+}
+.box .float_right .title_right:hover {
+  background-position-y: -80px;
+}
+.box .float_right .title_right:active {
+  background-position-y: -160px;
+}
+.box .float_right h3 {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 120px;
+  height: 30px;
+  cursor: pointer;
+  background: #973601;
+  color: #cccccc;
+  font-size: 12px;
+  text-align: center;
+  line-height: 30px;
+}
+.box .float_right h3:hover {
+  color: white;
+}
+.box .title_top {
+  color: #ace1ff;
+  background: url("../../images/IET/iet_top.png");
+  position: fixed;
+  width: 1196px;
+  height: 105px;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+.box .title_top div.icon-home {
+  position: absolute;
+  top: 18px;
+  left: 27px;
+  font-size: 35px;
+  cursor: pointer;
+  color: #0c337c;
+}
+.box .title_top div.icon-home:after {
+  content: "返回首页";
+  position: absolute;
+  top: 41px;
+  left: -12px;
+  width: 60px;
+  height: 30px;
+  text-align: center;
+  font-size: 12px;
+}
+.box .title_top div.icon-home:hover {
+  color: #27b0ff;
+}
+.box .title_top div.icon-home:active {
+  color: #5bc3ff;
+}
+.box .title_top h1 {
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  position: absolute;
+  top: 42px;
+  left: 120px;
+  width: 145px;
+  height: 30px;
+}
+.box .title_top h1:hover {
+  color: #27b0ff;
+}
+.box .title_top h1:active {
+  color: #5bc3ff;
+}
+.box .title_top ul {
+  margin-left: 303px;
+  margin-top: 20px;
+  list-style: none;
+}
+.box .title_top ul li {
+  float: left;
+  margin-right: 15px;
+}
+.box .title_top ul h2 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 14px;
+  height: 26px;
+  text-align: center;
+  line-height: 26px;
+}
+.box .title_top ul h2 span {
+  font-size: 12px;
+}
+.box .title_top ul h3 {
+  font-weight: bold;
+  font-size: 18px;
+  color: #072253;
+  height: 46px;
+  width: 190px;
+  text-align: center;
+  line-height: 45px;
+  background: url("../../images/IET/iet_btn7.png");
+}
+.box .title_top ul h3.on {
+  cursor: pointer;
+  background-position-y: -46px;
+}
+.box .title_top ul h3.on:hover {
+  color: white;
+  background-position-y: -92px;
+}
+.box .title_top ul h3.on:active {
+  color: #ffaf86;
+  background-position-y: -138px;
+}
+.box .title_top ul h3.off {
+  color: #233239;
+  background-position-y: 0;
+}
+.box .alert_box {
+  display: none;
+  z-index: 101;
+  position: fixed;
+  width: 1196px;
+  height: 600px;
+  top: 0px;
+  left: 0px;
+}
+.box .alert_box .alert_content {
+  display: none;
+  background: url(../../images/IET/iet_alert.jpg);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 596px;
+  height: 200px;
+  margin-left: -298px;
+  margin-top: -100px;
+  padding: 64px 50px;
+}
+.box .alert_box .alert_content div {
+  display: none;
+  cursor: pointer;
+  position: absolute;
+  bottom: 17px;
+  left: 50%;
+  width: 134px;
+  height: 38px;
+  margin-left: -67px;
+  font-size: 14px;
+  color: #daf2ff;
+  background: url(../../images/IET/iet_btn4.png);
+  text-align: center;
+  line-height: 37px;
+}
+.box .alert_box .alert_content div:hover {
+  background-position-y: -38px;
+}
+.box .alert_box .alert_content div:active {
+  background-position-y: -76px;
+}
+.box .alert_box .alert_content p {
+  position: relative;
+  text-align: center;
+  color: #467ca9;
+  font-size: 18px;
+}
+.box .alert_box .alert_content p span {
+  color: #ff4f00;
+}
+.box .alert_box .alert_content p a {
+  cursor: pointer;
+  text-decoration: underline;
+  color: #008bff;
+}
+.box .alert_box .alert_content:before {
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: 3px;
+  width: 590px;
+  height: 206px;
+  border: 1px solid #389bc6;
+}
+.box .alert_box .alert_content i {
+  background: url(../../images/IET/iet_btn5.png) no-repeat 0px 0px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+}
+.box .alert_box .alert_content i:hover {
+  background-position-y: -22px;
+}
+.box .alert_box .alert_content i:active {
+  background-position-y: -44px;
+}
+.box .alert_box .alert_rule {
+  display: none;
+  background: url(../../images/IET/iet_rule.jpg);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 596px;
+  height: 380px;
+  margin-left: -298px;
+  margin-top: -190px;
+  padding: 70px 35px;
+}
+.box .alert_box .alert_rule p {
+  color: #467ca9;
+  font-size: 14px;
+  margin-bottom: 3px;
+}
+.box .alert_box .alert_rule:before {
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: 3px;
+  width: 590px;
+  height: 386px;
+  border: 1px solid #389bc6;
+}
+.box .alert_box .alert_rule i {
+  background: url(../../images/IET/iet_btn5.png) no-repeat 0px 0px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+}
+.box .alert_box .alert_rule i:hover {
+  background-position-y: -22px;
+}
+.box .alert_box .alert_rule i:active {
+  background-position-y: -44px;
+}
+.box .alert_box .alert_rule div {
+  cursor: pointer;
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  width: 134px;
+  height: 38px;
+  margin-left: -67px;
+  font-size: 14px;
+  color: #daf2ff;
+  background: url(../../images/IET/iet_btn4.png);
+  text-align: center;
+  line-height: 37px;
+}
+.box .alert_box .alert_rule div:hover {
+  background-position-y: -38px;
+}
+.box .alert_box .alert_rule div:active {
+  background-position-y: -76px;
+}
+.box .content {
+  font-size: 14px;
+  width: 1196px;
+  position: relative;
+  color: #7c8d96;
+  background: #000b1d;
+  text-align: center;
+  padding-bottom: 100px;
+}
+.box .content .back_time {
+  background: url(../../images/IET/iet_bg_top.jpg) no-repeat;
+  position: relative;
+  width: 100%;
+  height: 700px;
+}
+.box .content .back_time p {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ffde65;
+  position: absolute;
+  top: 520px;
+  left: 0px;
+  width: 100%;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+}
+.box .content > .bottom {
+  background: #06192a;
+  position: relative;
+  width: 1020px;
+  padding-bottom: 80px;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 30px;
+  padding-top: 1px;
+}
+.box .content > .bottom:before {
+  content: "";
+  background: url(../../images/IET/iet_center_title.png) no-repeat;
+  position: absolute;
+  top: -30px;
+  left: 0px;
+  width: 1020px;
+  height: 140px;
+  z-index: 10;
+}
+.box .content > .bottom:after {
+  content: "";
+  border-left: 1px solid #133a63;
+  border-right: 1px solid #133a63;
+  border-bottom: 1px solid #133a63;
+  z-index: 15;
+  position: absolute;
+  top: 0px;
+  left: 3px;
+  width: 1015px;
+  height: 100.3%;
+}
+.box .content > .bottom .prize {
+  width: 884px;
+  height: 385px;
+  margin: 0 auto;
+  margin-top: 150px;
+  background: url("../../images/IET/iet_prize.png");
+}
+.box .content > .bottom .detail {
+  width: 890px;
+  height: 420px;
+  margin: 0 auto;
+  margin-top: 130px;
+  background: url("../../images/IET/iet_detail.png");
+}
+.box .content > .bottom h1 {
+  z-index: 20;
+  position: absolute;
+  top: -104px;
+  left: 50%;
+  width: 200px;
+  height: 200px;
+  margin-left: -100px;
+  background: url("../../images/IET/iet_btn3.png") no-repeat;
+}
+.box .content > .bottom h1.join_on {
+  cursor: pointer;
+  background-position: 0 0;
+}
+.box .content > .bottom h1.join_on:hover {
+  background-position: 0 -200px;
+}
+.box .content > .bottom h1.join_on:active {
+  background-position: 0 -400px;
+}
+.box .content > .bottom h1.join_off {
+  background-position: -200px 0;
+}
+.box .content > .bottom h1.join_close {
+  background-position: -200px -200px;
+}
+.box .content > .bottom h2 {
+  position: absolute;
+  top: 40px;
+  left: 336px;
+  width: 179px;
+  height: 40px;
+  cursor: pointer;
+  background: url("../../images/IET/iet_btn6.png") no-repeat 0px 0px;
+}
+.box .content > .bottom h2:hover {
+  background-position-y: -40px;
+}
+.box .content > .bottom h2:active {
+  background-position-y: -80px;
+}
+.box .content > .bottom h3 {
+  position: absolute;
+  top: 40px;
+  left: 683px;
+  width: 179px;
+  height: 40px;
+  cursor: pointer;
+  background: url("../../images/IET/iet_btn2.png") no-repeat 0px 0px;
+}
+.box .content > .bottom h3:hover {
+  background-position-y: -40px;
+}
+.box .content > .bottom h3:active {
+  background-position-y: -80px;
+}
+.box .content .game_online {
+  position: relative;
+  margin: 0 auto;
+  top: 100px;
+  width: 1020px;
+  height: 500px;
+  padding: 1px;
+  background: url(../../images/IET/iet_online.png) no-repeat 80px 0px;
+}
+.box .content .game_online #team_game {
+  margin-top: 100px;
+  width: 1020px;
+  height: 40px;
+  list-style: none;
+  background: #001325;
+}
+.box .content .game_online #team_game:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.box .content .game_online #team_game li {
+  margin-right: 1px;
+  height: 40px;
+  cursor: pointer;
+  float: left;
+}
+.box .content .game_online #team_game li a {
+  background: #0b2d52;
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+  color: #e0efff;
+}
+.box .content .game_online #team_game li.active {
+  cursor: default;
+  background: #001325;
+}
+.box .content .game_online #team_game li.active a {
+  background: #001325;
+  color: #1b5591;
+}
+.box .content .game_online #team_game li.active a:hover {
+  background: #001325;
+}
+.box .content .game_online #tab_game #game_line {
+  width: 992px;
+  height: 278px;
+  position: absolute;
+  left: 10px;
+  top: 173px;
+}
+.box .content .game_online #tab_game #game_line.team_8 {
+  background: url(../../images/IET/game_line.png);
+}
+.box .content .game_online #tab_game #game_line.team_4 {
+  background: url(../../images/IET/game_line2.png);
+}
+.box .content .game_online #tab_game #game_line.team_2 {
+  background: url(../../images/IET/game_line3.png);
+}
+.box .content .game_online #tab_game #game_line.team_1 {
+  background: url(../../images/IET/game_line4.png);
+}
+.box .content .game_online #tab_game #game_line div {
+  position: absolute;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100px;
+  height: 20px;
+  color: #364461;
+  font-size: 12px;
+}
+.box .content .game_online #tab_game #game_line .team_8_1,
+.box .content .game_online #tab_game #game_line .team_8_2,
+.box .content .game_online #tab_game #game_line .team_8_3,
+.box .content .game_online #tab_game #game_line .team_8_4,
+.box .content .game_online #tab_game #game_line .team_8_5,
+.box .content .game_online #tab_game #game_line .team_8_6,
+.box .content .game_online #tab_game #game_line .team_8_7,
+.box .content .game_online #tab_game #game_line .team_8_8 {
+  text-align: left;
+  left: 0px;
+}
+.box .content .game_online #tab_game #game_line .team_8_1 {
+  top: -18px;
+}
+.box .content .game_online #tab_game #game_line .team_8_2 {
+  top: 22px;
+}
+.box .content .game_online #tab_game #game_line .team_8_3 {
+  top: 62px;
+}
+.box .content .game_online #tab_game #game_line .team_8_4 {
+  top: 102px;
+}
+.box .content .game_online #tab_game #game_line .team_8_5 {
+  top: 140px;
+}
+.box .content .game_online #tab_game #game_line .team_8_6 {
+  top: 180px;
+}
+.box .content .game_online #tab_game #game_line .team_8_7 {
+  top: 220px;
+}
+.box .content .game_online #tab_game #game_line .team_8_8 {
+  top: 260px;
+}
+.box .content .game_online #tab_game #game_line .team_8_9,
+.box .content .game_online #tab_game #game_line .team_8_10,
+.box .content .game_online #tab_game #game_line .team_8_11,
+.box .content .game_online #tab_game #game_line .team_8_12,
+.box .content .game_online #tab_game #game_line .team_8_13,
+.box .content .game_online #tab_game #game_line .team_8_14,
+.box .content .game_online #tab_game #game_line .team_8_15,
+.box .content .game_online #tab_game #game_line .team_8_16 {
+  text-align: right;
+  right: 0px;
+}
+.box .content .game_online #tab_game #game_line .team_8_9 {
+  top: -18px;
+}
+.box .content .game_online #tab_game #game_line .team_8_10 {
+  top: 22px;
+}
+.box .content .game_online #tab_game #game_line .team_8_11 {
+  top: 62px;
+}
+.box .content .game_online #tab_game #game_line .team_8_12 {
+  top: 102px;
+}
+.box .content .game_online #tab_game #game_line .team_8_13 {
+  top: 140px;
+}
+.box .content .game_online #tab_game #game_line .team_8_14 {
+  top: 180px;
+}
+.box .content .game_online #tab_game #game_line .team_8_15 {
+  top: 220px;
+}
+.box .content .game_online #tab_game #game_line .team_8_16 {
+  top: 260px;
+}
+.box .content .game_online #tab_game #game_line .team_4_1,
+.box .content .game_online #tab_game #game_line .team_4_2,
+.box .content .game_online #tab_game #game_line .team_4_3,
+.box .content .game_online #tab_game #game_line .team_4_4 {
+  text-align: left;
+  left: 120px;
+}
+.box .content .game_online #tab_game #game_line .team_4_1 {
+  top: 2px;
+}
+.box .content .game_online #tab_game #game_line .team_4_2 {
+  top: 82px;
+}
+.box .content .game_online #tab_game #game_line .team_4_3 {
+  top: 158px;
+}
+.box .content .game_online #tab_game #game_line .team_4_4 {
+  top: 238px;
+}
+.box .content .game_online #tab_game #game_line .team_4_5,
+.box .content .game_online #tab_game #game_line .team_4_6,
+.box .content .game_online #tab_game #game_line .team_4_7,
+.box .content .game_online #tab_game #game_line .team_4_8 {
+  text-align: right;
+  right: 120px;
+}
+.box .content .game_online #tab_game #game_line .team_4_5 {
+  top: 2px;
+}
+.box .content .game_online #tab_game #game_line .team_4_6 {
+  top: 82px;
+}
+.box .content .game_online #tab_game #game_line .team_4_7 {
+  top: 158px;
+}
+.box .content .game_online #tab_game #game_line .team_4_8 {
+  top: 238px;
+}
+.box .content .game_online #tab_game #game_line .team_2_1,
+.box .content .game_online #tab_game #game_line .team_2_2 {
+  text-align: left;
+  left: 260px;
+}
+.box .content .game_online #tab_game #game_line .team_2_1 {
+  top: 42px;
+}
+.box .content .game_online #tab_game #game_line .team_2_2 {
+  top: 200px;
+}
+.box .content .game_online #tab_game #game_line .team_2_3,
+.box .content .game_online #tab_game #game_line .team_2_4 {
+  text-align: right;
+  right: 260px;
+}
+.box .content .game_online #tab_game #game_line .team_2_3 {
+  top: 42px;
+}
+.box .content .game_online #tab_game #game_line .team_2_4 {
+  top: 200px;
+}
+.box .content .game_online #tab_game #game_line .team_1_1 {
+  left: 320px;
+  top: 130px;
+  text-align: right;
+}
+.box .content .game_online #tab_game #game_line .team_1_2 {
+  right: 320px;
+  top: 130px;
+  text-align: left;
+}
+.box .content .game_online #tab_game #game_line .game_cup {
+  position: absolute;
+  left: 469px;
+  top: 60px;
+}
+.box .content .game_online #tab_game #game_line .cup_box {
+  position: absolute;
+  left: 436px;
+  top: 117px;
+  line-height: 40px;
+  text-align: center;
+  width: 120px;
+  height: 40px;
+  background: #2288b9;
+  color: #4ca8e6;
+}
+.box .content .game_online #tab_game #game_line .cup_box.active {
+  color: white;
+  font-weight: bold;
+}
+.box .content .game_online #tab_game #game_line div.active {
+  color: #a7b7d8;
+}
+.box .content .game_online #tab_game #game_line div.win {
+  color: #2cbafe;
+}
+.box .content .game_online #tab_game #game_line .game_remind {
+  color: #86b1ce;
+  position: absolute;
+  width: 240px;
+  height: 20px;
+  font-size: 14px;
+  left: 378px;
+  top: 200px;
+  text-align: center;
+}
+.box .content .game_online #tab_game #game_line .live {
+  cursor: pointer;
+  background: url(../../images/IET/iet_live.png) no-repeat;
+  position: absolute;
+  width: 120px;
+  height: 40px;
+  left: 435px;
+  color: #ff9f75;
+  text-decoration: none;
+  font-size: 14px;
+  text-align: center;
+  line-height: 39px;
+  top: 180px;
+}
+.box .content .game_online #tab_game #game_line .live:hover {
+  color: #ffd1bd;
+  background-position-y: -40px;
+}
+.box .content .game_online #tab_game #game_line .live:active {
+  color: #ffb595;
+  background-position-y: -80px;
+}
+/*# sourceMappingURL=iet.css.map */

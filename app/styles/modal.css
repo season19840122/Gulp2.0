@@ -249,12 +249,12 @@ li {
 .cr {
   clear: right;
 }
-.cf:before,
-.cf:after {
-  content: " ";
+.cf::before,
+.cf::after {
+  content: "";
   display: table;
 }
-.cf:after {
+.cf::after {
   clear: both;
 }
 .cf {
@@ -579,7 +579,7 @@ body.modal-open {
 .modal-body select,
 .modal-body textarea {
   width: 215px;
-  background: #ccc;
+  background: #ccc !important;
   border: none;
   color: #19202a;
   font-size: 14px;
@@ -587,6 +587,9 @@ body.modal-open {
   border-radius: 3px;
   padding: 0px 5px;
   line-height: 24px;
+}
+.modal-body select {
+  padding: 0px;
 }
 .modal-body input.w80 {
   width: 80px;
@@ -2805,4 +2808,217 @@ th .tip_r67 {
   top: 0px;
   z-index: 20;
   cursor: pointer;
+}
+/** 20170308新增账号安全 **/
+.set i {
+  color: #029bd8;
+  margin-right: 5px;
+}
+#i_pwd {
+  overflow: hidden;
+  position: relative;
+  padding-left: 12px;
+  height: 358px;
+}
+#i_pwd .hide_ {
+  display: none;
+}
+#i_pwd .return_msg {
+  color: red;
+  position: absolute;
+  bottom: 25px;
+  text-align: center;
+  width: 85%;
+}
+#i_pwd input {
+  width: 206px;
+  height: 26px;
+  text-indent: 10px;
+  display: inline-block;
+  border: 0;
+  outline: none;
+  border-radius: 3px;
+  color: black;
+}
+#i_pwd > div > p {
+  border-bottom: 1px solid #20242a !important;
+  padding-bottom: 14px;
+}
+#i_pwd > div > p span.remind {
+  color: #3d4146;
+  margin-left: 120px;
+}
+#i_pwd label {
+  text-align: left;
+}
+#i_pwd .pwd1 ul {
+  width: 640px;
+  padding-top: 50px;
+  padding-left: 80px;
+}
+#i_pwd .pwd1 ul li {
+  float: left;
+  position: relative;
+}
+#i_pwd .pwd1 ul li a {
+  display: inline-block;
+}
+#i_pwd .pwd1 ul li a:last-child {
+  margin-left: 178px;
+  color: #029bd8;
+  text-decoration: underline;
+  cursor: pointer;
+}
+#i_pwd .pwd2,
+#i_pwd .pwd3,
+#i_pwd .pwd4,
+#i_pwd .pwd1 {
+  padding: 1px;
+  overflow: hidden;
+}
+#i_pwd .pwd2 > div p.error,
+#i_pwd .pwd3 > div p.error,
+#i_pwd .pwd4 > div p.error {
+  font-size: 14px;
+}
+#i_pwd .pwd2 > div p.error span,
+#i_pwd .pwd3 > div p.error span,
+#i_pwd .pwd4 > div p.error span {
+  color: red;
+}
+#i_pwd .pwd2 > div p.right:after,
+#i_pwd .pwd3 > div p.right:after,
+#i_pwd .pwd4 > div p.right:after {
+  position: absolute;
+  width: 13px;
+  height: 13px;
+  content: "";
+  background: url(../images/bg_checkbox.png);
+  left: 338px;
+  top: 5px;
+}
+#i_pwd .pwd2 > div {
+  padding-left: 100px;
+  padding-top: 40px;
+}
+#i_pwd .pwd2 > div p {
+  position: relative;
+  margin-bottom: 38px;
+}
+#i_pwd .pwd2 > div p a {
+  display: inline-block;
+  margin-left: 30px;
+  color: #029bd8;
+  text-decoration: underline;
+  cursor: pointer;
+}
+#i_pwd .pwd2 > div p span {
+  position: absolute;
+  bottom: -25px;
+  right: 307px;
+  font-size: 12px;
+  color: #3d4146;
+}
+#i_pwd .pwd3 > div {
+  position: relative;
+  padding-left: 100px;
+  padding-top: 40px;
+  height: 280px;
+}
+#i_pwd .pwd3 > div p {
+  position: relative;
+  margin-bottom: 38px;
+}
+#i_pwd .pwd3 > div p span {
+  position: absolute;
+  bottom: -25px;
+  right: 307px;
+  font-size: 12px;
+  color: #3d4146;
+}
+#i_pwd .pwd3 > div p .label350 {
+  width: 350px;
+  text-align: left;
+}
+#i_pwd .pwd3 > div .code_div {
+  position: absolute;
+  top: 205px;
+  left: 223px;
+}
+#i_pwd .pwd3 > div .code_div input {
+  display: inline-block;
+  width: 96px;
+  background: white;
+}
+#i_pwd .pwd3 > div .code_div .code_btn {
+  display: inline-block;
+  width: 91px;
+  height: 24px;
+  text-align: center;
+  line-height: 24px;
+  border-radius: 3px;
+  background: #b3b3b3;
+  color: black;
+  font-size: 12px;
+}
+#i_pwd .pwd3 > div .code_div .code_btn.active {
+  background: #0a8dc9;
+  cursor: pointer;
+  color: white;
+}
+#i_pwd .pwd4 {
+  position: relative;
+}
+#i_pwd .pwd4 > div {
+  position: relative;
+  padding-left: 55px;
+  padding-top: 75px;
+  height: 280px;
+}
+#i_pwd .pwd4 > div p {
+  position: relative;
+  margin-bottom: 38px;
+}
+#i_pwd .pwd4 > div p span {
+  position: absolute;
+  bottom: -25px;
+  right: 353px;
+  font-size: 12px;
+  color: #3d4146;
+}
+#i_pwd .pwd4 > div p .label350 {
+  width: 350px;
+  text-align: left;
+}
+#i_pwd .pwd4 .qrcode_box {
+  width: 290px;
+  height: 194px;
+  position: absolute;
+  border-left: 1px solid #20242a;
+  right: 0px;
+  top: 64px;
+  margin: 0px;
+}
+#i_pwd .pwd4 .qrcode_box h1 {
+  position: absolute;
+  top: 176px;
+  left: 22px;
+  color: #ff9700;
+  text-align: center;
+  font-size: 14px;
+}
+#i_pwd .pwd4 .qrcode_box #qrcode_pic {
+  width: 112px;
+  height: 112px;
+  position: absolute;
+  left: 88px;
+  top: 20px;
+  padding: 0px;
+  overflow: hidden;
+  background: white;
+}
+#i_pwd .pwd4 .qrcode_box #qrcode_pic iframe {
+  width: 112px;
+  height: 112px;
+  margin: 0px;
 }

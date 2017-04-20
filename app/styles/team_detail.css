@@ -249,12 +249,12 @@ li {
 .cr {
   clear: right;
 }
-.cf:before,
-.cf:after {
-  content: " ";
+.cf::before,
+.cf::after {
+  content: "";
   display: table;
 }
-.cf:after {
+.cf::after {
   clear: both;
 }
 .cf {

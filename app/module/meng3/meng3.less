@@ -367,6 +367,28 @@
                         color: #6cb921;
                         font-size: 12px;
                     }
+                    &>div.tip_free{
+                            overflow: hidden;
+                            width: 57px;
+                            height: 57px;
+                            position: absolute;
+                        &:before{
+                            z-index: 50;
+                             content: "免费";
+                            position: absolute;
+                            width: 52px;
+                            height: 15px;
+                            font-size: 12px;
+                            line-height: 15px;
+                            bottom: 4px;
+                            right: -15px;
+                            -webkit-transform: rotate(-45deg);
+                            transform: rotate(-45deg);
+                            color: white;
+                            background:-webkit-gradient(linear,0 50%,100% 50%,from(#831600),to(#ed3600));/*Old gradient for webkit*/
+                            background:-webkit-linear-gradient(left,#831600,#ed3600);/*new gradient for Webkit*/
+                        }
+                    }
                 }
             }
             .tip{

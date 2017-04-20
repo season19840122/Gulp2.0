@@ -1,15 +1,31 @@
 	//测试调用
 	var ClientAPI = {
-		getSubAccount:function(str) {
-			return 1111111;
+		getSubAccount:function(gameId) {
+			var game =  ClientAPI.getLoginGame(gameId);
+			if(game){
+				return game.subAccount;
+			}
+			return null;
 		},
-		getLoginXingYun:function(str) {
+		getLoginGame : function(gameId){
+			var gameList = ClientAPI.getLoginGameList();
+			if(!gameList){
+				return null;
+			}
+			for (var i = 0, len = gameList.length; i < len; i++) {
+				if(gameList[i].gameId == gameId){
+					return gameList[i];
+				}
+			}
+			return null;
+		},
+		getLoginXingYun:function() {
 			return {"userId":"20001", "nickName":"大家都来撸"};
 		},
 		getLoginGameList: function() {
 			return [
 				{gameId: 13216, account:"28839943", subAccount:"2561_28839943", serverId:"2561", serverName:"黑色玫瑰", playerName:"只吃肉的和尚", headId:"15", level:"30",rank:""}, 
-				{gameId: 13216, account:"699403830",subAccount:"4865_23232312",serverId:"2561", serverName:"诺克萨斯", playerName:"你妹啊", headId:"15", level:"30",rank:""}
+				{gameId: 17049, account:"699403830",subAccount:"4865_23232312",serverId:"2561", serverName:"诺克萨斯", playerName:"你妹啊", headId:"15", level:"30",rank:""}
 			];
 		},
 		getBarId:function() {

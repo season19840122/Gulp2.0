@@ -65,11 +65,11 @@ dfn {
 }
 h1 {
   font-size: 2em;
-  margin: 0.67em 0;
+  margin: .67em 0;
 }
 mark {
   background: #ff0;
-  color: #000000;
+  color: #000;
 }
 small {
   font-size: 80%;
@@ -82,10 +82,10 @@ sup {
   vertical-align: baseline;
 }
 sup {
-  top: -0.5em;
+  top: -.5em;
 }
 sub {
-  bottom: -0.25em;
+  bottom: -.25em;
 }
 img {
   border: 0;
@@ -108,7 +108,7 @@ code,
 kbd,
 pre,
 samp {
-  font-family: monospace,monospace;
+  font-family: monospace, monospace;
   font-size: 1em;
 }
 button,
@@ -168,7 +168,7 @@ input[type=search]::-webkit-search-decoration {
 fieldset {
   border: 1px solid silver;
   margin: 0 2px;
-  padding: 0.35em 0.625em 0.75em;
+  padding: .35em .625em .75em;
 }
 legend {
   border: 0;
@@ -654,10 +654,8 @@ body {
   -webkit-transform: rotate(-45deg);
   color: white;
   font-size: 12px;
-  background: -webkit-gradient(linear, 0 50%, 100% 50%, from(#831600), to(#ed3600));
-  /*Old gradient for webkit*/
-  background: -webkit-linear-gradient(left, #831600, #ed3600);
-  /*new gradient for Webkit*/
+  background: -webkit-gradient(linear, 0 50%, 100% 50%, from(#831600), to(#ed3600));/*Old gradient for webkit*/
+  background: -webkit-linear-gradient(left, #831600, #ed3600);/*new gradient for Webkit*/
 }
 .box .meng_box .apply_box .content_box ul div.tip_free:before {
   z-index: 50;
@@ -672,10 +670,8 @@ body {
   -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg);
   color: white;
-  background: -webkit-gradient(linear, 0 50%, 100% 50%, from(#831600), to(#ed3600));
-  /*Old gradient for webkit*/
-  background: -webkit-linear-gradient(left, #831600, #ed3600);
-  /*new gradient for Webkit*/
+  background: -webkit-gradient(linear, 0 50%, 100% 50%, from(#831600), to(#ed3600));/*Old gradient for webkit*/
+  background: -webkit-linear-gradient(left, #831600, #ed3600);/*new gradient for Webkit*/
 }
 .box .meng_box .apply_box .tip {
   position: absolute;
@@ -787,6 +783,28 @@ body {
   color: #6cb921;
   font-size: 12px;
 }
+.box .meng_box .ld_box .content_box > div > div.tip_free {
+  overflow: hidden;
+  width: 57px;
+  height: 57px;
+  position: absolute;
+}
+.box .meng_box .ld_box .content_box > div > div.tip_free:before {
+  z-index: 50;
+  content: "免费";
+  position: absolute;
+  width: 52px;
+  height: 15px;
+  font-size: 12px;
+  line-height: 15px;
+  bottom: 4px;
+  right: -15px;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  color: white;
+  background: -webkit-gradient(linear, 0 50%, 100% 50%, from(#831600), to(#ed3600));/*Old gradient for webkit*/
+  background: -webkit-linear-gradient(left, #831600, #ed3600);/*new gradient for Webkit*/
+}
 .box .meng_box .ld_box .tip {
   text-indent: 13px;
   position: absolute;
@@ -856,3 +874,4 @@ body {
 .box .meng_box .rules_box .smallScroll.smallScroll2::-webkit-scrollbar {
   width: 6px;
 }
+/*# sourceMappingURL=meng3.css.map */

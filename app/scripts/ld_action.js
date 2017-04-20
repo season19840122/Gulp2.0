@@ -244,6 +244,8 @@ var ACTIONFUN = function(initObj) {
 				} else if(!obj['success']) {
 					$('.content_box').hide();
 					$('.close_remind').show();
+					$('.close_remind h2').html("下次开放时间："+obj.data.nextOpenTime);
+					$('.close_remind h3 p').html(obj.data.nextNotice);
 					$('.close_remind h1').html(obj['message']);
 				}
 			}

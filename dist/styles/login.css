@@ -249,12 +249,12 @@ li {
 .cr {
   clear: right;
 }
-.cf:before,
-.cf:after {
-  content: " ";
+.cf::before,
+.cf::after {
+  content: "";
   display: table;
 }
-.cf:after {
+.cf::after {
   clear: both;
 }
 .cf {
@@ -590,7 +590,7 @@ body {
   padding-top: 2px;
   position: absolute;
   left: 90px;
-  top: 1px;
+  top: 0px;
 }
 .box .create_hm .protocol span:last-child {
   text-decoration: underline;
@@ -637,13 +637,13 @@ body {
 .box .login_hm ul li {
   position: relative;
   display: block;
-  padding-left: 40px;
   margin-bottom: 38px;
 }
 .box .login_hm ul li .input_box {
+  margin: 0 auto;
   border: 1px solid #202327;
   border-radius: 3px;
-  width: 220px;
+  width: 240px;
   height: 30px;
   background: #131518;
   padding-left: 30px;
@@ -660,7 +660,7 @@ body {
 }
 .box .login_hm ul li .input_box span {
   position: absolute;
-  left: 47px;
+  left: 48px;
   top: 1px;
   font-size: 18px;
   color: #0a8ecb;
@@ -719,7 +719,7 @@ body {
   padding-top: 2px;
   position: absolute;
   left: 90px;
-  top: 1px;
+  top: 0px;
 }
 .box .login_hm .protocol span:last-child {
   text-decoration: underline;
@@ -890,7 +890,7 @@ body {
   padding-top: 2px;
   position: absolute;
   left: 90px;
-  top: 1px;
+  top: 0px;
 }
 .box .fast_hm #phone .protocol span:last-child {
   text-decoration: underline;
@@ -952,7 +952,7 @@ body {
   padding-top: 2px;
   position: absolute;
   left: 90px;
-  top: 1px;
+  top: 0px;
 }
 .box .fast_hm #wechat .protocol span:last-child {
   text-decoration: underline;

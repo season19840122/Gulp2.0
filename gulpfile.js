@@ -44,7 +44,7 @@ gulp.task('less', function() {
   return gulp.src('app/styles/*.less')
     .pipe($.less())
     .pipe(gulp.dest('app/styles'))
-    .pipe(browserSync.stream({once: true}));
+    .pipe(browserSync.stream());
 });
 
 // Sass 编译成 css
@@ -52,7 +52,7 @@ gulp.task('sass', function() {
   return gulp.src('app/styles/*.scss')
     .pipe($.less())
     .pipe(gulp.dest('app/styles'))
-    .pipe(browserSync.stream({once: true}));
+    .pipe(browserSync.stream());
 });
 
 // Jade 编译成 html
@@ -64,7 +64,7 @@ gulp.task('jade', function () {
       pretty: true
     }))
     .pipe(gulp.dest('app'))
-    .pipe(browserSync.stream({once: true}));;
+    .pipe(browserSync.stream());
 });
 
 // 图片压缩优化
@@ -116,9 +116,9 @@ gulp.task('serve', ['less', 'jade'], function() {
   gulp.watch('app/templates/jade/*.jade', ['jade']);
   gulp.watch([
     'app/*.html',
-    'app/styles/*.css',
     'app/scripts/*.js',
-    'app/images/**'
+    'app/images/**',
+    'app/mock/**'
   ]).on('change', browserSync.reload);
 });
 
