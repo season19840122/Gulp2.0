@@ -1,5 +1,7 @@
 ;(function($){
-
+	// selectMenu("menu_arena");
+	// ClientAPI.finishLoading();
+	
 	var optionObj = function(options_){
 		var this_ = this;
 		//公用配置参数
@@ -13,8 +15,8 @@
 		this.ajax_ = function(obj) {
 			$.ajax({
 				url: obj.url,
-				// type: obj.type || 'POST',
-				type: obj.type || 'GET',
+				type: obj.type || 'POST',
+				// type: obj.type || 'GET',
 				dataType: obj.dataType || 'json',
 				data: obj.data || null,
 				timeout: this_.options.ajaxTimeout,
@@ -30,6 +32,18 @@
 		this.showMsg = function(msg) {
 			$('#alert_box .modal-body p').html(msg);
 			$('#alert_box').modal();
+		}
+		
+		this.do_getUserId = function() {
+			//校检火马登录
+			var user = ClientAPI.getLoginXingYun();
+			if(!user.hasOwnProperty("userId") || user.userId == 0) {
+				//调起登陆窗
+				ClientAPI.startLogin('VC_LOGIN');
+				return 0;
+			} else {
+				return user.userId;
+			}
 		}
 		
 		// 登录判断
@@ -49,6 +63,15 @@
 	}
 
 	var arenaObj = new optionObj({
+		// hostUrl: [
+		// 	localPath + "arenaMatch/arenaMatchData",
+		// 	localPath + "arenaMatch/teamEnroll",
+		// 	localPath + "arenaMatchGuess/toGuessArena",
+		// 	localPath + "arenaMatchGuess/support",
+		// 	localPath + "arenaMatchGuess/qrcodePayParam",
+		// 	localPath + "arenaMatchGuess/payFinished",
+		// 	localPath + "combatTeam/toMyCombatTeam"
+		// ],
 		hostUrl: [
 			"./mock/擂台赛/arenaMatchData.json",
 			"./mock/擂台赛/teamEnroll.json",
@@ -69,6 +92,7 @@
 	  	video: { 
 	  		show: true 
 	  	},
+	  	isEnd: true,
 	  	nowData: {},
 	  	monthData: [],
 	  	allData: {
@@ -85,14 +109,15 @@
 	    // 仅读取，值只须为函数
 	    getBtnClass: function () {
 	    	if (this.nowData.couldGuess) {
+	    		
 	    		if (this.allData.isGuessed) {
 			    	if (this.allData.guessedTeamId === this.nowData.teamId) {
-			    		return ['already', '已支持', 'support', '支持该战队'];
+			    		return ['already', '已支持', 'support disable', '支持该战队'];
 			    	} else if(this.allData.guessedTeamId === this.nowData.attackTeamId){
-			    		return ['support', '支持该战队', 'already', '已支持'];
+			    		return ['support disable', '支持该战队', 'already', '已支持'];
 			    	}
 		    	} else {
-		    		return ['support disable', '支持该战队', 'support disable', '支持该战队']
+		    		return ['support', '支持该战队', 'support', '支持该战队']
 		    	}
 	    	} else {
 	    		return ['support disable', '支持该战队', 'support disable', '支持该战队']
@@ -112,26 +137,36 @@
 	    	// 页面初始化
 	    	arenaObj.ajax_({
 	    		name: '页面初始化数据',
-	    		url: arenaObj.options.hostUrl[0],
+	    		url: arenaObj.options.hostUrl[0]  + '?userId=' + arenaObj.do_getUserId(),
 	    		success: function(data) {
-	    			if (data.success) {
-            	if (data.data.guess_live_switch === "1") {
-            		// 由于函数的作用域，这里不能用 this
-            		vm.video = {'show':false, 'url':data.data.live_video_url};
-            	} else {
-            		// vm.$set('nowData', data.data.arenaMatch);
-            		vm.nowData = data.data.arenaMatch;
-            		vm.nowData.count = vm.nowData.arenaCnt/(vm.nowData.arenaCnt + vm.nowData.attackCnt)*100;
-            		var arr = [];
-            		for (var i=0; i<data.data.monthMatchVideos.length; i+=3) {
-            			arr.push(data.data.monthMatchVideos.slice(i, i+3));
-            		}
-            		vm.monthData = arr;
-            		vm.allData = data.data;
-            	}
-            } else {
-            	if (data.message) {
-            		arenaObj.showMsg(data.message);
+	    			if(data.data.isEnd){
+	  					$('#isLive').html("观看视频");
+	  				}else{
+	  					$('#isLive').html("观看直播");
+	  				}
+		    		if (data.success) {
+	          	if (data.data.guess_live_switch === "1" && data.data.couldLive === true) {
+	          		// 由于函数的作用域，这里不能用 this
+	          		vm.video = {'show':false, 'url':data.data.live_video_url};
+	          	} else {
+	          		// vm.$set('nowData', data.data.arenaMatch);
+	          		vm.nowData = data.data.arenaMatch;
+	          		vm.nowData.count = vm.nowData.arenaCnt/(vm.nowData.arenaCnt + vm.nowData.attackCnt)*100;
+	          	}
+	        		var arr = [];
+	        		for (var i=0; i<data.data.monthMatchVideos.length; i+=3) {
+	        			arr.push(data.data.monthMatchVideos.slice(i, i+3));
+	        		}
+	        		vm.monthData = arr;
+	        		vm.allData = data.data;
+	        		
+	        		var param = '?userId=' + arenaObj.do_getUserId() +
+	    			'&arenaMatchId=' + vm.nowData.arenaMatchId +
+	    			'&barId=' + ClientAPI.getBarId();
+							vm.param = param;
+	          } else {
+		        	if (data.message) {
+		        		arenaObj.showMsg(data.message);
 							} else {
 								arenaObj.showMsg('数据调用异常！');
 							}
@@ -151,21 +186,21 @@
 	    	// 战队报名
 	    	arenaObj.ajax_({
 	    		name: '战队报名',
-	    		url: arenaObj.options.hostUrl[1],
+	    		url: arenaObj.options.hostUrl[1]  + '?userId=' + arenaObj.do_getUserId(),
 	    		success: function(data) {
 	    			if (data.success) {
             	$("#team_five").modal("show");
             } else {
             	if (data.message) {
-            		if (data.link) {
-		    					vm.creatTeam = {'show':false, 'link':data.link};
-		    				}
-            		arenaObj.showMsg(data.message);
-							} else {
-								arenaObj.showMsg('数据调用异常！');
+		        		if (data.code === 1) {
+		    					vm.creatTeam = {'show':false, 'link':localPath + 'combatTeam/toMyCombatTeam?userId=' + arenaObj.do_getUserId()};
+		    					arenaObj.showMsg(data.message);
+		    				} else {
+									arenaObj.showMsg('数据调用异常！');
+								}
 							}
 						}
-					}
+	    		}
 				});
 	    },
 	    supportTeam: function(event){
@@ -175,15 +210,9 @@
 	    		// 支持该战队
 		    	arenaObj.ajax_({
 		    		name: '支持该战队',
-		    		url: arenaObj.options.hostUrl[2] + '?userId=' + $('.box').data('userid'),
+		    		url: arenaObj.options.hostUrl[2] + '?userId=' + arenaObj.do_getUserId(),
 		    		success: function(data) {
 		    			if (data.success) {
-		    				var param = '?userId=' + $('.box').data('userid') +
-	    					'&teamId=' + $('.flag').data('teamid') +
-	    					'&arenaMatchId=' + vm.nowData.arenaMatchId +
-	    					'&barId=1' +
-	    					'&payValue=' + $('#zan_box .on').data('bean');
-	    					vm.param = param;
 		    				vm.swBean = data.data;
 	            	$("#zan_box").modal("show");
 	            } else {
@@ -195,38 +224,27 @@
 							}
 						}
 					});
-	    		
 	    	}
 	    },
 	    swBeanSupport: function(event){
 	    	var vm = this;
+	    	vm.param += '&teamId=' + $('.flag').data('teamid') +
+			'&payValue=' + $('#zan_box .on').data('bean');
+	    	
     		// 顺豆支持
 	    	arenaObj.ajax_({
 	    		name: '顺豆支持',
-	    		url: arenaObj.options.hostUrl[3],
+	    		url: arenaObj.options.hostUrl[3] + vm.param,
 	    		success: function(data) {
 	    			if (data.success) {
-	    				arenaObj.ajax_({
-				    		name: '顺豆支持',
-				    		url: arenaObj.options.hostUrl[3] + vm.param,
-				    		success: function(data) {
-				    			if (data.success) {
-				    				$("#zan_box").modal('hide');
-				    				arenaObj.showMsg(data.message);
-				    				window.setTimeout(function(){
-				    					location.reload();
-				    				}, 3000)
-			            } else {
-			            	if (data.message) {
-			            		arenaObj.showMsg(data.message);
-										} else {
-											arenaObj.showMsg('数据调用异常！');
-										}
-									}
-								}
-							});
+	    				$("#zan_box").modal('hide');
+	    				arenaObj.showMsg(data.message);
+	    				window.setTimeout(function(){
+	    					location.reload();
+	    				}, 3000)
             } else {
             	if (data.message) {
+            		$("#zan_box").modal('hide');
             		arenaObj.showMsg(data.message);
 							} else {
 								arenaObj.showMsg('数据调用异常！');
@@ -237,6 +255,8 @@
 	    },
 	    qrcodeSupport: function(event){
 	    	var vm = this;
+	    	vm.param += '&teamId=' + $('.flag').data('teamid') +
+			'&payValue=' + $('#zan_box .on').data('money');
     		// 扫码支持
 	    	arenaObj.ajax_({
 	    		name: '扫码支持',
@@ -256,6 +276,7 @@
 								vm.payFinished();
 							}, 3000);
             } else {
+            	$("#zan_box").modal('hide');
             	if (data.message) {
             		arenaObj.showMsg(data.message);
 							} else {
@@ -276,7 +297,7 @@
 							$('#pay_qrcode').modal('hide');
 							arenaObj.ajax_({
 								name: '顺豆支持',
-								url: arenaObj.options.hostUrl[3] + vm.param,
+								url: arenaObj.options.hostUrl[5] + vm.param,
 								success: function(obj) {
 									if(data.success && data.code === 0) {
 										$("#zan_box").modal('hide');
@@ -286,6 +307,7 @@
 				    				}, 3000)
 									} else {
 			            	if (data.message) {
+			            		$("#zan_box").modal('hide');
 			            		arenaObj.showMsg(data.message);
 										} else {
 											arenaObj.showMsg('数据调用异常！');

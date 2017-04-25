@@ -34,8 +34,8 @@
             <p>SOLO赛</p>
           </li-->
       	  <li data-href="4#">
-           	<img src="images/left_tab7.png"/>
-            <p>双旦狂欢</p>
+           	<img src="images/leitai/left-tab-arena.png"/>
+            <p>擂台赛</p>
           </li>
       	  <li data-href="4#">
             <div class="live"></div>
@@ -97,13 +97,13 @@
 									<div class="content-wrap">
 										<div class="captain">
 											<div class="name-wrap">
-												<div class="img-wrap"><img :src="item.defenceTeamLogo" alt=""><i v-if="item.isWin === 0"></i></div>
-												<p class="name">{{ item.teamName }}<span class="blue" v-if="item.isWin === 0">【胜】</span></p>
+												<div class="img-wrap"><img :src="item.defenceTeamLogo" alt=""><i v-if="!item.couldGuess && item.isWin === 0"></i></div>
+												<p class="name">{{ item.teamName }}<span class="blue" v-if="!item.couldGuess &&item.isWin === 0">【胜】</span></p>
 											</div>
 											<div class="vs"></div>
 											<div class="name-wrap">
-												<div class="img-wrap"><img :src="item.attackTeamLogo" alt=""><i v-if="item.isWin === 1"></i></div>
-												<p class="name">{{ item.attackTeamName }}}<span class="blue" v-if="item.isWin === 1">【胜】</span></p>
+												<div class="img-wrap"><img :src="item.attackTeamLogo" alt=""><i v-if="!item.couldGuess && item.isWin === 1"></i></div>
+												<p class="name">{{ item.attackTeamName }}}<span class="blue" v-if="!item.couldGuess && item.isWin === 1">【胜】</span></p>
 											</div>
 										</div>
 									</div>

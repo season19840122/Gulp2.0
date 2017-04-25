@@ -123,13 +123,24 @@ gulp.task('serve', ['less', 'jade'], function() {
 });
 
 // 生产环境
-gulp.task('step1', ['clean'], function() {
-  gulp.start(['less', 'jade', 'image']);
+gulp.task('pre', ['clean'], function(){
+  gulp.start('step1');
 });
 
-gulp.task('build', ['step1'], function(){
-  gulp.start('csso');
+gulp.task('step1', ['less', 'jade', 'image'], function(){
+  gulp.start('step2');
 });
+
+gulp.task('step2', ['csso'], function(){
+  browserSync.init({
+    server: {
+      baseDir: './dist',
+      directory: true
+    }
+  });
+});
+
+gulp.task('build', ['pre']);
 
 // 开发环境
 gulp.task('default', ['serve']);
