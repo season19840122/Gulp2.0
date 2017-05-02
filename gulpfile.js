@@ -42,6 +42,7 @@ gulp.task('sprite', function () {
 // Less 编译成 css
 gulp.task('less', function() {
   return gulp.src('app/styles/*.less')
+    .pipe($.plumber())
     .pipe($.less())
     .pipe(gulp.dest('app/styles'))
     .pipe(browserSync.stream());
@@ -50,7 +51,7 @@ gulp.task('less', function() {
 // Sass 编译成 css
 gulp.task('sass', function() {
   return gulp.src('app/styles/*.scss')
-    .pipe($.less())
+    .pipe($.sass())
     .pipe(gulp.dest('app/styles'))
     .pipe(browserSync.stream());
 });
