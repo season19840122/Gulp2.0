@@ -1,0 +1,116 @@
+@import '../../styles/_base';
+@import '../../styles/_common';
+
+.abTopRight(@width:auto, @height:auto, @top: 0px, @right:0px) {
+    position: absolute;
+    top: @top;
+    right: @right;
+    width: @width;
+    height: @height;
+}
+.abTopLeft(@width:auto, @height:auto, @top: 0px, @left:0px) {
+    position: absolute;
+    top: @top;
+    left: @left;
+    width: @width;
+    height: @height;
+}
+.abBottomRight(@width:auto, @height:auto, @bottom: 0px, @right:0px) {
+    position: absolute;
+    bottom: @bottom;
+    right: @right;
+    width: @width;
+    height: @height;
+}
+.abBottomLeft(@width:auto, @height:auto, @bottom: 0px, @left:0px) {
+    position: absolute;
+    bottom: @bottom;
+    left: @left;
+    width: @width;
+    height: @height;
+}
+.overDian {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.textCenter(@height) {
+    text-align: center;
+    line-height: @height;
+}
+.bg(@pic) {
+    background: url("../../images/IET/@pic");
+}
+.smallScroll::-webkit-scrollbar {
+    width: 10px !important;
+    height: 10px !important;
+}
+.smallScroll::-webkit-scrollbar-track {
+    border-radius: 0px !important;
+    background: black !important;
+}
+.smallScroll::-webkit-scrollbar-thumb {
+    border-radius: 10px !important;
+    background: #2e3740 !important;
+}
+.smallScroll::-webkit-scrollbar {
+    width: 10px !important;
+}
+.smallScroll:hover::-webkit-scrollbar-thumb {
+    background: #2e3740 !important;
+}
+.smallScroll:active::-webkit-scrollbar-thumb {
+    background: #2e3740 !important;
+}
+.box {
+    width: 1196px;
+    height: 600px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: url(../../images/vip/vip_bg.webp);
+    padding: 0;
+    .hide_ {
+        display: none;
+    }
+    .alert_btn{
+        cursor: pointer;
+        font-size: 24px;
+        font-weight: bold;
+        color: white;
+        .textCenter(52px);
+        .abTopLeft(420px,53px,514px,388px);
+        background: url(../../images/vip/vip_btn.jpg) no-repeat;
+        &:hover{
+            background-position-y: -53px;
+        }
+        &:active{
+            background-position-y: -106px;
+        }
+    }
+     .go_back{
+        font-size: 12px;
+        color: #eaeaea;
+        .textCenter(20px);
+        .abTopLeft(90px,22px,10px,10px);
+        background: #282C33;
+        cursor: pointer;
+        text-decoration: none;
+        border: 1px solid #4c525c;
+    }
+    .alert_box{
+        display: none;
+        .abTopLeft(1196px,600px,0px,0px);
+        background: url(../../images/vip/vip_alert.png) no-repeat;
+        i{
+            font-size: 35px;
+            color: white;
+            position: absolute;
+            right: 10px;
+            top: 5px;
+            cursor: pointer;
+        }
+    }
+}

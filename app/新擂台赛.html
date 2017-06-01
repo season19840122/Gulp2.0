@@ -9,6 +9,7 @@
 		<link rel="stylesheet" href="styles/tabBar.css">
 	</head>
 	<body>
+		<!-- <div class="box" :class="allData.arenaMatch?'':'nodata'" id="app" data-userid="20016" v-cloak> -->
 		<div class="box" id="app" data-userid="20016" v-cloak>
 			<!-- 左边导航开始 -->
       <div class="left_main_menu">
@@ -29,10 +30,10 @@
             <img src="images/left_tab3.png"/>
             <p>战队赛</p>
           </li>
-      	  <!--li data-href="4#">
+      	  <!-- <li data-href="4#">
             <img src="images/left_tab4.png"/>
             <p>SOLO赛</p>
-          </li-->
+          </li> -->
       	  <li data-href="4#">
            	<img src="images/leitai/left-tab-arena.png"/>
             <p>擂台赛</p>
@@ -42,7 +43,7 @@
             <p>直播</p>
           </li>
         </ul>
-        <!--img class="download_pic" style="width:110px;position:absolute;bottom:0px;cursor:pointer" src="images/download_pic.png"-->
+        <!-- <img class="download_pic" style="width:110px;position:absolute;bottom:0px;cursor:pointer" src="images/download_pic.png" /> -->
       </div>
       <!-- 左边导航结束 -->
 
@@ -53,7 +54,7 @@
 						<a href="###" class="apply" @click="teamApply">战队报名</a>
 					</div>
         </nav>
-        <section class="content">
+        <section class="content" v-if="allData.arenaMatch">
 	        <div class="winner-wrap" v-if="video.show">
 						<h3 class="title"><span>{{ nowData.playTime }}</span><a :href="nowData.videoUrl" target="_blank" class="btn-watch">观看直播</a></h3>
 						<div class="content-wrap">
@@ -72,17 +73,19 @@
 								<div class="big-img-wrap">
 									<img :src="nowData.teamPhotoUrl" alt="">
 									<a href="###" :data-teamid="nowData.teamId" :class="getBtnClass[0]" @click="supportTeam">{{ getBtnClass[1] }}</a>
+									<i class="win" v-if="nowData.isWin === 0"></i>
 								</div>
 								<div class="big-img-wrap">
 									<img :src="nowData.attackTeamPhotoUrl" alt="">
 									<a href="###" :data-teamid="nowData.attackTeamId" :class="getBtnClass[2]" @click="supportTeam">{{ getBtnClass[3] }}</a>
+									<i class="win right" v-if="nowData.isWin === 1"></i>
 									<!-- <a href="###" class="support disable">支持该战队</a> -->
 								</div>
 							</div>
 							<div class="count">
 								<i class="progress1" :style="{ width: nowData.count + '%'}"></i>
-								<span class="one">{{ nowData.arenaCnt}}</span>
-								<span class="two">{{ nowData.attackCnt}}</span>
+								<span class="one" :style="{ width: nowData.count + '%'}">{{ nowData.arenaCnt}}</span>
+								<span class="two" :style="{ width: (99 - nowData.count) + '%'}">{{ nowData.attackCnt}}</span>
 							</div>
 						</div>
 	        </div>
@@ -93,7 +96,8 @@
 						<ul v-for="(a, b) in monthData" :class="b === 0? 'block': ''">
 							<li v-for="(item, index) in a">
 								<div class="guess">
-									<h3 class="title"><span>{{ item.title }}</span><a :href="item.videoUrl" target="_blank" class="btn-watch">{{ item.couldGuess?'正在直播':'视频' }}</a></h3>
+									<i class="active" v-if="b === 0 && index === 0"></i>
+									<h3 class="title"><span>{{ item.title }}</span><a :href="item.videoUrl" target="_blank" class="btn-watch" v-if="item.couldGuess">{{ item.couldGuess }}</a></h3>
 									<div class="content-wrap">
 										<div class="captain">
 											<div class="name-wrap">
@@ -132,6 +136,7 @@
 						</div>
 	        </div>
         </section>
+
       </article>
 
       <!-- 提示 -->
@@ -165,7 +170,7 @@
 			      </div>
 			      <div class="modal-body">
 			      	<h1>擂台赛规则</h1>
-			      	<p v-html="getRules"></p>
+			      	<p v-html="getRules" class="tableScroll"></p>
 			      </div>
 			       <div class="modal-footer">
 		            <div class="btn_sure"  data-dismiss="modal">我已了解</div>
@@ -262,6 +267,7 @@
 	<script src="scripts/jquery-3.1.0.min.js" type="text/javascript" charset="utf-8"></script>
 	<script src="scripts/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
 	<script src="scripts/jquery.qrcode.min.js" type="text/javascript" charset="utf-8"></script>
+	<!-- <script type="text/javascript" src="scripts/_vue.js"></script> -->
 	<script type="text/javascript" src="scripts/vue.min.js"></script>
 	<script type="text/javascript" src="scripts/vuejs-paginate@0.9.0.js"></script>
 	<script src="scripts/newarena.js"></script>

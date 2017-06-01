@@ -1,0 +1,667 @@
+@charset "utf-8";
+/*
+ * Filename: base.css v2.0
+ * Author: Season 朱迎春
+ * Creattime: 2011-09-02
+ * PS: 模块化 CSS 最底层 base.css
+ */
+/*! normalize.css v3.0.2 | MIT License | git.io/normalize */
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  margin: 0;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  vertical-align: baseline;
+}
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+[hidden],
+template {
+  display: none;
+}
+a {
+  background-color: transparent;
+  text-decoration: none;
+}
+a:active,
+a:hover {
+  outline: 0;
+  text-decoration: none;
+}
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+b,
+strong {
+  font-weight: 700;
+}
+dfn {
+  font-style: italic;
+}
+h1 {
+  font-size: 2em;
+  margin: .67em 0;
+}
+mark {
+  background: #ff0;
+  color: #000;
+}
+small {
+  font-size: 80%;
+}
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -.5em;
+}
+sub {
+  bottom: -.25em;
+}
+img {
+  border: 0;
+}
+svg:not(:root) {
+  overflow: hidden;
+}
+figure {
+  margin: 1em 40px;
+}
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+pre {
+  overflow: auto;
+}
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+button {
+  overflow: visible;
+}
+button,
+select {
+  text-transform: none;
+}
+button,
+html input[type=button],
+input[type=reset],
+input[type=submit] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+input {
+  line-height: normal;
+}
+input[type=checkbox],
+input[type=radio] {
+  box-sizing: border-box;
+  padding: 0;
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+input[type=search] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+input[type=search]::-webkit-search-cancel-button,
+input[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+fieldset {
+  border: 1px solid silver;
+  margin: 0 2px;
+  padding: .35em .625em .75em;
+}
+legend {
+  border: 0;
+  padding: 0;
+}
+textarea {
+  overflow: auto;
+}
+optgroup {
+  font-weight: 700;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+td,
+th {
+  padding: 0;
+}
+li {
+  list-style: none;
+}
+/*-- 文字排版 --*/
+.fb {
+  font-weight: bold;
+}
+.fn {
+  font-weight: normal;
+}
+.unl {
+  text-decoration: underline;
+}
+.no-unl {
+  text-decoration: none;
+}
+.ti {
+  text-indent: -9999px;
+}
+.eps {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.w {
+  width: 100%;
+}
+.h {
+  height: 100%;
+}
+/*-- 定位 --*/
+.tl {
+  text-align: left;
+}
+.tc {
+  text-align: center;
+}
+.tr {
+  text-align: right;
+}
+.bc {
+  margin-left: 0;
+  margin-right: 0;
+}
+.fl {
+  float: left;
+  display: inline;
+}
+.fr {
+  float: right;
+  display: inline;
+}
+.cb {
+  clear: both;
+}
+.cl {
+  clear: left;
+}
+.cr {
+  clear: right;
+}
+.cf::before,
+.cf::after {
+  content: "";
+  display: table;
+}
+.cf::after {
+  clear: both;
+}
+.cf {
+  *zoom: 1;
+}
+.vm {
+  vertical-align: middle;
+}
+.pr {
+  position: relative;
+}
+.pa {
+  position: absolute;
+}
+.abs-right {
+  position: absolute;
+  right: 0;
+}
+.zoom {
+  zoom: 1;
+}
+.visible {
+  visibility: visible;
+}
+.hidden {
+  visibility: hidden;
+}
+.none {
+  display: none;
+}
+.block {
+  display: block;
+}
+* {
+  box-sizing: border-box;
+}
+img {
+  vertical-align: middle;
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+p {
+  margin: 0;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+.button-sure,
+.button-no {
+  padding: 0;
+  width: 158px;
+  height: 35px;
+  line-height: 35px;
+  color: #271708;
+  border: 0;
+  background-image: -webkit-linear-gradient(top, #c49f58, #c49f58);
+  background-image: -moz-linear-gradient(top, #c49f58, #c49f58);
+  background-image: -o-linear-gradient(top, #c49f58, #c49f58);
+  background-image: -ms-linear-gradient(top, #c49f58, #c49f58);
+  background-image: linear-gradient(top, #c49f58, #c49f58);
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorStr=#c49f58, endColorStr=#c49f58);
+}
+.button-no {
+  color: #271708;
+  background-image: -webkit-linear-gradient(top, #c49f58, #c49f58);
+  background-image: -moz-linear-gradient(top, #c49f58, #c49f58);
+  background-image: -o-linear-gradient(top, #c49f58, #c49f58);
+  background-image: -ms-linear-gradient(top, #c49f58, #c49f58);
+  background-image: linear-gradient(top, #c49f58, #c49f58);
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorStr=#c49f58, endColorStr=#c49f58);
+}
+/*下拉列表*/
+.drop-select {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+}
+.drop-select ul {
+  width: 100%;
+  margin-top: 2px;
+  border: 1px solid #212a36;
+  position: absolute;
+  display: none;
+  z-index: 10;
+  overflow: auto;
+}
+.drop-select ul li {
+  height: 24px;
+  line-height: 24px;
+  text-indent: 10px;
+}
+.drop-select ul li a {
+  display: block;
+  text-decoration: none;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.drop-select ul li a:hover {
+  background: #1d232a;
+}
+/*容器滚动条*/
+.mainScroll::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+}
+.mainScroll::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  background: #000;
+}
+.mainScroll::-webkit-scrollbar-thumb {
+  -webkit-box-shadow: inset 0 0 5px #2d3a48;
+  border-radius: 5px;
+  background: #33383e;
+}
+.mainScroll::-webkit-scrollbar-thumb:hover {
+  background: #5b626c;
+}
+.mainScroll::-webkit-scrollbar-thumb:active {
+  background: #4d525a;
+}
+.smallScroll::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+.smallScroll::-webkit-scrollbar-track {
+  border-radius: 3px;
+  background: #0f1114;
+}
+.smallScroll::-webkit-scrollbar-thumb {
+  border-radius: 3px;
+  background: #2e3740;
+}
+.smallScroll.smallScroll2::-webkit-scrollbar {
+  width: 6px;
+}
+body {
+  font: 12px/1.5 'microsoft yahei';
+}
+.box {
+  width: 1196px;
+  height: 600px;
+  overflow: hidden;
+  position: relative;
+}
+.alert_box {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  overflow: hidden;
+  width: 300px;
+  text-align: center;
+  height: 420px;
+  background: url("../../images/lol/lol_bg.jpg");
+}
+.alert_box .hide_ {
+  display: none;
+}
+.alert_box > i {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  right: 8px;
+  top: 8px;
+  cursor: pointer;
+  background: url(../../images/lol/lol_sprit.png) no-repeat -4px -100px;
+}
+.alert_box > i:hover {
+  background-position-y: -124px;
+}
+.alert_box > i:active {
+  background-position: -5px -149px;
+}
+.alert_box .top {
+  position: relative;
+  width: 264px;
+  height: 112px;
+  margin: 0 auto;
+  margin-top: 83px;
+}
+.alert_box .top ul {
+  list-style: none;
+  width: 100%;
+  height: 100%;
+  padding: 36px 50px;
+}
+.alert_box .top ul li {
+  height: 20px;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+.alert_box .top ul li span:first-child {
+  color: #ffffff;
+  float: left;
+}
+.alert_box .top ul li span:last-child {
+  color: #ffffff;
+  float: right;
+}
+.alert_box .top ul li.yes span:last-child {
+  color: #acd548;
+  float: right;
+}
+.alert_box .top ul li.no span:last-child {
+  color: #db6a1a;
+}
+.alert_box .middle {
+  position: relative;
+  width: 264px;
+  height: 112px;
+  padding: 1px;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 0px;
+}
+.alert_box .middle .sd_box h1 {
+  color: #eece5f;
+  font-style: italic;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: left;
+  padding-left: 100px;
+  position: absolute;
+  width: 140px;
+  line-height: 50px;
+  height: 46px;
+  background: url(../../images/lol/lol_boon.png);
+  right: 0px;
+  top: 0px;
+}
+.alert_box .middle .sd_box > span {
+  position: relative;
+  display: inline-block;
+  margin: 0 auto;
+  margin-top: 32px;
+  font-size: 40px;
+  color: #c0f452;
+}
+.alert_box .middle .sd_box > span:before {
+  position: absolute;
+  left: -30px;
+  content: "+";
+  font-size: 45px;
+  color: #c0f452;
+  bottom: 0px;
+  width: 30px;
+  height: 62px;
+}
+.alert_box .middle .sd_box > span:after {
+  position: absolute;
+  right: -27px;
+  content: "";
+  bottom: 10px;
+  width: 23px;
+  height: 17px;
+  background: url(../../images/SD.png);
+}
+.alert_box .middle .sd_box i {
+  cursor: pointer;
+  position: absolute;
+  width: 32px;
+  height: 22px;
+  right: 10px;
+  bottom: 0px;
+  background: url(../../images/lol/lol_sprit.png) no-repeat 0px -226px;
+}
+.alert_box .middle .sd_box i:hover {
+  background-position-y: -251px;
+}
+.alert_box .middle .sd_box i.tip {
+  background-position-y: -175px;
+}
+.alert_box .middle .sd_box i.tip:hover {
+  background-position-y: -200px;
+}
+.alert_box .middle .sd_box p {
+  margin-top: 22px;
+  color: #ba9d5e;
+  font-size: 14px;
+}
+.alert_box .middle .dq_box img {
+  position: absolute;
+  width: 91px;
+  height: 91px;
+  left: 14px;
+  top: 14px;
+}
+.alert_box .middle .dq_box h1 {
+  position: absolute;
+  width: 135px;
+  right: 5px;
+  top: 10px;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: left;
+  color: #818181;
+}
+.alert_box .middle .dq_box h1 span {
+  color: #acd548;
+}
+.alert_box .middle .dq_box h2 {
+  position: absolute;
+  right: 10px;
+  width: 40px;
+  height: 20px;
+  font-size: 14px;
+  text-decoration: underline;
+  color: #ffffff;
+  cursor: pointer;
+  bottom: 0px;
+}
+.alert_box .container {
+  width: 264px;
+  margin: 0 auto;
+  display: inline-block;
+  overflow: hidden;
+  box-sizing: border-box;
+  height: 50px;
+  line-height: 50px;
+  position: relative;
+  cursor: pointer;
+}
+.alert_box .marquee,
+.alert_box *[class^="marquee"] {
+  display: inline-block;
+  white-space: nowrap;
+  position: absolute;
+  left: 0px;
+}
+.alert_box .marquee {
+  margin-left: 25%;
+}
+.alert_box .marquee-content-items {
+  display: inline-block;
+  padding: 5px;
+  margin: 0;
+  height: 45px;
+  position: relative;
+}
+.alert_box .marquee-content-items li {
+  display: inline-block;
+  line-height: 35px;
+  color: #818181;
+}
+.alert_box .bottom {
+  position: relative;
+  width: 264px;
+  height: 44px;
+  margin: 0px auto;
+}
+.alert_box .bottom a {
+  position: absolute;
+  text-decoration: none;
+  width: 94px;
+  height: 32px;
+  cursor: pointer;
+  right: 10px;
+  font-size: 14px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 32px;
+  top: 5px;
+  background: url(../../images/lol/lol_sprit.png) no-repeat 0px 0px;
+}
+.alert_box .bottom a:hover {
+  background-position-y: -32px;
+}
+.alert_box .bottom a:active {
+  background-position-y: -64px;
+}
+.alert_box .bottom h1 {
+  display: inline-block;
+  margin-top: 13px;
+  float: left;
+}
+.alert_box .bottom h1 span {
+  float: left;
+}
+.alert_box .bottom h1 span:first-child {
+  display: inline-block;
+  padding-left: 8px;
+  font-size: 14px;
+  max-width: 148px;
+  color: #ffffff;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.alert_box .bottom h1 span:last-child {
+  display: inline-block;
+  color: #02fd55;
+  font-size: 12px;
+  vertical-align: middle;
+}
+/*# sourceMappingURL=lol_sc.css.map */

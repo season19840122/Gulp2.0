@@ -1,0 +1,270 @@
+@import '../../styles/_base';
+@import '../../styles/_common';
+.alert_box {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    overflow: hidden;
+    width: 300px;
+    text-align: center;
+    height: 420px;
+    background: url("../../images/meng3/m3_scbg.jpg");
+    .hide_ {
+        display: none;
+    }
+    &>i {
+        position: absolute;
+        width: 15px;
+        height: 15px;
+        right: 8px;
+        top: 8px;
+        cursor: pointer;
+        background: url(../../images/meng3/m3_sprit.png) no-repeat -4px -100px;
+        &:hover {
+            background-position-y: -124px;
+        }
+        &:active {
+            background-position: -5px -149px;
+        }
+    }
+    .top {
+        position: relative;
+        width: 264px;
+        height: 112px;
+        margin: 0 auto;
+        margin-top: 83px;
+        ul {
+            list-style: none;
+            width: 100%;
+            height: 100%;
+            padding: 36px 50px;
+            li {
+                height: 20px;
+                margin-bottom: 10px;
+                font-size: 14px;
+                span:first-child {
+                    color: #ebeae8;
+                    float: left;
+                }
+                span:last-child {
+                    color: #ebeae8;
+                    float: right;
+                }
+                &.yes {
+                    span:last-child {
+                        color: #acd548;
+                        float: right;
+                    }
+                }
+                &.no {
+                    span:last-child {
+                        color: #db6a1a;
+                    }
+                }
+            }
+        }
+    }
+    .middle {
+        position: relative;
+        width: 264px;
+        height: 112px;
+        padding: 1px;
+        margin: 0 auto;
+        text-align: center;
+        margin-top: 0px;
+        .sd_box{
+             h1{
+               color: #eece5f;
+                font-style: italic;
+                font-size: 16px;
+                font-weight: bold;
+                text-align: left;
+                padding-left: 100px;
+                position: absolute;
+                width: 140px;
+                line-height: 50px;
+                height: 46px;
+                background: url(../../images/lol/lol_boon.png);
+                right: 0px;
+                top: 0px;
+            }
+            &>span {
+                position: relative;
+                display: inline-block;
+                margin: 0 auto;
+                margin-top: 32px;
+                font-size: 40px;
+                color: #c0f452;
+                &:before {
+                    position: absolute;
+                    left: -30px;
+                    content: "+";
+                    font-size: 45px;
+                    color: #c0f452;
+                    bottom: 0px;
+                    width: 30px;
+                    height: 62px;
+                }
+                &:after {
+                    position: absolute;
+                    right: -27px;
+                    content: "";
+                    bottom: 10px;
+                    width: 23px;
+                    height: 17px;
+                    background: url(../../images/SD.png);
+                }
+            }
+            i {
+                cursor: pointer;
+                position: absolute;
+                width: 32px;
+                height: 22px;
+                right: 10px;
+                bottom: 0px;
+                background: url(../../images/meng3/m3_sprit.png) no-repeat 0px -226px;
+                &:hover {
+                    background-position-y: -251px;
+                }
+                &.tip {
+                    background-position-y: -175px;
+                    &:hover {
+                        background-position-y: -200px;
+                    }
+                }
+            }
+            p{
+                margin-top: 22px;
+                color: #8b7053;
+                font-size: 14px;
+            }
+        }
+        
+        .dq_box{
+            img{
+                position: absolute;
+                width: 91px;
+                height: 91px;
+                left: 14px;
+                top: 14px;
+                
+            }
+            h1{
+                position: absolute;
+                width: 135px;
+                right: 5px;
+                top: 10px;
+                font-size: 14px;
+                line-height: 17px;
+                text-align: left;
+                span{
+                    color: #acd548;
+                }
+                color: #8b7053;
+            }
+            h2{
+                position: absolute;
+                right: 10px;
+                width: 40px;
+                height: 20px;
+                font-size: 14px;
+                text-decoration: underline;
+                color: #ebeae8;
+                cursor: pointer;
+                bottom: 0px;
+                
+            }
+        }
+        
+    }
+    
+    .container {
+          width: 264px;
+          margin: 0 auto;
+          display: inline-block;
+          overflow: hidden;
+          box-sizing: border-box;
+          height: 50px;
+          line-height: 50px;
+          position: relative;
+          cursor: pointer;
+        }
+ 
+ 
+        .marquee,*[class^="marquee"] {
+          display: inline-block;
+          white-space: nowrap;
+          position: absolute;
+          left: 0px;
+        }
+         
+        .marquee { margin-left: 25%; }
+         
+        .marquee-content-items {
+          display: inline-block;
+          padding: 5px;
+          margin: 0;
+          height: 45px;
+          position: relative;
+        }
+         
+        .marquee-content-items li {
+          display: inline-block;
+          line-height: 35px;
+          color: #fdc82c;
+        }
+    
+    .bottom {
+        position: relative;
+        width: 264px;
+        height: 44px;
+        margin: 0px auto;
+        a{
+            position: absolute;
+            text-decoration: none;
+            width: 94px;
+            height: 32px;
+            cursor: pointer;
+            right: 10px;
+            font-size: 14px;
+            color: #ebeae8;
+            text-align: center;
+            line-height: 32px;
+            top: 5px;
+            background: url(../../images/meng3/m3_sprit.png) no-repeat 0px 0px;
+            &:hover{
+                background-position-y: -32px;
+            }
+            &:active{
+                background-position-y: -64px;
+            }
+        }
+        h1{
+            display: inline-block;
+            margin-top: 13px;
+            float: left;
+            span{
+                float: left;
+            }
+            span:first-child{
+                display: inline-block;
+                padding-left: 8px;
+                font-size: 14px;
+                max-width: 148px;
+                color: #ffffff;
+                    white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+            span:last-child{
+                display: inline-block;
+                color: #02fd55;
+                font-size: 12px;
+                vertical-align: middle;
+            }
+        }
+    }
+    
+    
+    
+}

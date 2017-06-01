@@ -191,16 +191,6 @@ th {
 li {
   list-style: none;
 }
-*:focus,
-*:active,
-a:active,
-a:focus,
-input:focus,
-input:active {
-  -moz-outline-style: none;
-  outline: none;
-  outline: 0;
-}
 /*-- 文字排版 --*/
 .fb {
   font-weight: bold;
@@ -3031,6 +3021,162 @@ th .tip_r67 {
   width: 112px;
   height: 112px;
   margin: 0px;
+}
+#pay_qrcode p {
+  text-align: center;
+  color: #ccc;
+  font-size: 16px;
+}
+#pay_qrcode .modal-footer {
+  border-top: 1px #2b2b2a solid;
+  background: #1e242a;
+  padding: 15px;
+  text-align: right;
+}
+#pay_qrcode .modal-footer .btn_sure {
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: 0;
+  margin-right: 15px;
+  display: inline-block;
+  text-align: center;
+  min-width: 92px;
+  padding: 0 10px;
+  height: 32px;
+  line-height: 32px;
+  border-radius: 3px;
+  color: #fff;
+  background: -webkit-linear-gradient(bottom, #0d6892, #0c7fb4);
+  background: -o-linear-gradient(bottom, #0d6892, #0c7fb4);
+  background: linear-gradient(to top, #0d6892, #0c7fb4);
+}
+#pay_qrcode .modal-footer .btn_sure:hover,
+#pay_qrcode .modal-footer .btn_sure:active {
+  background: -webkit-linear-gradient(bottom, #179bc3, #0abce8);
+  background: -o-linear-gradient(bottom, #179bc3, #0abce8);
+  background: linear-gradient(to top, #179bc3, #0abce8);
+  text-decoration: none;
+}
+#pay_qrcode .modal_padding_top_50 {
+  padding-top: 50px;
+}
+#pay_qrcode .modal_pt50_40 {
+  padding: 50px 40px;
+}
+#pay_qrcode .modal_height_150 {
+  height: 150px;
+}
+#pay_qrcode .modal_height_450 {
+  height: 450px;
+}
+#pay_qrcode .modal_height_280 {
+  height: 280px;
+}
+#pay_qrcode .modal_width_500 {
+  width: 500px;
+}
+#pay_qrcode .modal_width_800 {
+  width: 800px;
+}
+#pay_qrcode .modal-header {
+  border: 0;
+  position: relative;
+}
+#pay_qrcode .modal-header .close {
+  margin-top: 0px;
+  margin-right: 0;
+  opacity: 1;
+  color: #777;
+  text-shadow: none;
+}
+#pay_qrcode .modal-header .header_style {
+  position: absolute;
+  width: 250px;
+  height: 10px;
+  background: #3b3d3f;
+  top: 1px;
+  left: 50%;
+  margin-left: -125px;
+  z-index: 0;
+}
+#pay_qrcode .modal-header .header_style:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  top: -10px;
+  left: -10px;
+  z-index: 100;
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent transparent #181c1f transparent;
+}
+#pay_qrcode .modal-header .header_style:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  top: -10px;
+  left: 240px;
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent transparent #181c1f transparent;
+}
+#pay_qrcode .modal_content_bg {
+  background: #181c1f;
+  border: 1px #323231 solid;
+  position: relative;
+}
+#pay_qrcode .modal-body {
+  padding: 10px 50px;
+}
+#pay_qrcode .modal-body p {
+  margin-top: 0;
+  font-size: 14px;
+  color: white;
+  text-align: left;
+  color: #ddd;
+}
+#pay_qrcode .modal-body p.center {
+  text-align: center;
+}
+#pay_qrcode .modal-body .qrcode_box {
+  background: #121518;
+  position: absolute;
+  top: 105px;
+  width: 150px;
+  height: 180px;
+  padding: 9px;
+  border: 1px solid #535a63;
+  margin-left: -73px;
+  left: 50%;
+}
+#pay_qrcode .modal-body .qrcode_box .alert_img_qrcode {
+  width: auto;
+  height: auto;
+  background: white;
+  padding: 5px;
+}
+#pay_qrcode .modal-body .qrcode_box .wechat_logo {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  bottom: 5px;
+  right: 38px;
+}
+#pay_qrcode .modal-body .qrcode_box .alipay_logo {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  bottom: 5px;
+  right: 10px;
+}
+#pay_qrcode .modal-body .qrcode_box span {
+  position: absolute;
+  width: 100px;
+  font-size: 15px;
+  left: 11px;
+  bottom: 4px;
+  text-align: left;
+  color: #ddd;
 }
 /** 我的宝箱 **/
 .tab-content {

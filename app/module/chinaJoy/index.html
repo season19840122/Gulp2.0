@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>chinaJoy</title>
+		<link rel="stylesheet" type="text/css" href="../../styles/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="../../images/iconfont/iconfont.css" />
+		<link rel="stylesheet" type="text/css" href="chinaJoy.css" />
+		<script data-main="main.js" src="require.min.js"></script>
+	</head>
+	<body>
+		<div class="box" v-cloak>
+			<div class="box_left">
+				<div class="title">参赛信息</div>
+				<div v-show = "flag.remind_box" class="alert_box">
+					<div v-show="flag.remind" class="alert_content">{{alert_c}}</div>
+					<tem_status :class = "statusClass" :msg = "c_status_msg"></tem_status>
+					<p>您可以点击右侧“加入官方赛事群，了解更多详情按钮”加入官方赛<br>事QQ群，本次活动的运营公告，赛事安排和官方通知会第一时间在<br>群里发布。</p>
+				</div>
+				<div v-show = "flag.input_box" class="input_box">
+					<ul>
+						<li>
+							<label>战队名称：</label>
+							<div class="content">{{input.phone+'--'+input.school}}</div>
+						</li>
+						<li>
+							<label>联系电话：</label>
+							<div class="content">
+								<input v-model="input.phone" type="text" name="phone" id="phone" value="" :placeholder="phone_remind"/>
+							</div>
+						</li>
+						<li>
+							<label>所属高校：</label>
+							<div class="content">
+								<input  @click="getSchool" readonly="readonly" type="text"  name="school" id="schoolName" :value="input.school" :placeholder="school_remind"/>
+							</div>
+						</li>
+						<li>
+							<label>上传证件：</label>
+							<div class="content">
+								<div v-for="n in 5" class="add iconfont icon-tianjia">
+									<a href="">浏览</a>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="content">
+								<p>*请上传您和队员手持学生证首页的照片</p>
+								<p>*如有学生证遗失的，提交学信网截图证明</p>
+							</div>
+						</li>
+						<li>
+							<div class="content">
+								<div class="confirm">
+									提交信息
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="box_right">
+				<div class="title">赛事规则</div>
+				<p>1.参赛选手均必须是高校在校生，且参赛者至少有3人来自同一所高校；</p>
+				<p>2.参赛队伍需在火马电竞平台（www.huoma.cn）-<span>艾欧尼亚</span>区服创建一支满5人，最多不超过9人的战队；</p>
+				<p>3.线上赛期间每个队员必须全程开启火马电竞，且必须通过火马电竞的战队赛插件来创建或加入比赛房间；</p>
+				<p>4.根据火马电竞工作人员安排，准时参加小组赛，如遇特殊情况无法按时参赛，至少提前一天告知工作人员，无故临时弃权作永久禁赛处理；</p>
+				<p>5.所有线上小组选拔除决赛外均为BO1赛制，<span>小组决赛为BO3制</span>；</p>
+				<p>6.线上赛小组冠亚军晋级24强，分配6组进行4进1线上赛，每个小组冠军晋级8强；</p>
+				<p>7.火马电竞高校联赛安徽赛区总冠军、南京赛区总冠军，享有8强名额资格；</p>
+				<p>8.八强线上赛全程视频比赛，请自备电脑/手机摄像头，决出<span>前2名</span>进入<span>上海China Joy火马电竞现场决赛</span>；</p>
+				<p>9.本赛事的最终解释权归杭州顺网科技股份有限公司所有。</p>
+				<p>注意：1.所有奖金均为税前奖金；2.奖金含差旅费用在内。</p>
+				<div class="check_game">查看比赛进程</div>
+				<a href="" class="join">加入官方赛事群，了解更多详情</a>
+			</div>
+			
+			
+			<div @click="hideSheng($event)" v-show="flag.school_box" id="proSchool" class="provinceSchool">
+			    <div class="head"><span>请选择学校</span></div>
+			    <div class="proSelect">
+			        <div id="sheng">
+			        	<input @click="getSheng" :data-num="shengNum" type="text" readonly="readonly" id="shengName"  :value="shengStr" />
+			        	<span @click="getSheng" class="iconfont icon-xia"></span>
+			        	<div v-show="flag.sheng_list" class="list smallScroll">
+			        		<ul>
+			        			<li @click="getSchoolList(v)" v-for="(v, n) in province" :value="v[0]">{{v[1]}}</li>
+			        		</ul>
+			        	</div>
+			        </div>
+			        <p v-show="flag.p">如没找到选择项，请选择其他手动填写</p>
+			        <input v-show="flag.userInput" class="userInput" type="text" v-model="input.otherSchool" />
+			    </div>
+			    <div id="schoolList" class="smallScroll">
+			        <ul>
+			        	<li v-if="shengNum != 99" @click="setSchool(v)" v-for="(v, n) in school_list">{{v}}</li>
+			        	<li v-else class='entertext'>请在输入框内手动输入学校！</li>
+			        </ul>
+			    </div>
+			    <div @click="closeSchool" class="button">确定</div>
+			</div>	
+			
+			
+		</div>
+	</body>
+</html>

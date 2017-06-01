@@ -191,16 +191,6 @@ th {
 li {
   list-style: none;
 }
-*:focus,
-*:active,
-a:active,
-a:focus,
-input:focus,
-input:active {
-  -moz-outline-style: none;
-  outline: none;
-  outline: 0;
-}
 /*-- 文字排版 --*/
 .fb {
   font-weight: bold;
@@ -755,26 +745,27 @@ body {
 .box .content_box .title h1 {
   position: relative;
   margin: 0 auto;
-  width: 300px;
+}
+.box .content_box .title h1 span {
+  color: #161a22;
+  display: inline-block;
+  -webkit-text-fill-color: initial;
+  line-height: 18px;
+  width: 65px;
+  height: 18px;
+  font-size: 12px;
+  border-radius: 4px;
+  vertical-align: top;
+  margin-top: 10px;
+  background: #f9f9f9;
+}
+.box .content_box .title h1 div {
+  display: inline-block;
   font-size: 48px;
   font-weight: bold;
   background-image: -webkit-gradient(linear, 0 0, 0 bottom, from(#f9f9f9), to(#b2bec3));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-}
-.box .content_box .title h1:before {
-  content: "乱斗规则";
-  position: absolute;
-  color: #161a22;
-  -webkit-text-fill-color: initial;
-  line-height: 18px;
-  width: 52px;
-  height: 18px;
-  font-size: 12px;
-  border-radius: 4px;
-  left: -2px;
-  top: 8px;
-  background: #f9f9f9;
 }
 .box .content_box .title h2 {
   margin-top: 10px;

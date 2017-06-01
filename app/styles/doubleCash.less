@@ -1,0 +1,463 @@
+@import '_base';
+@import '_common';
+
+[v-cloak] {
+    display: none;
+}
+
+a, a:hover, a:active {
+    text-decoration: none;
+}
+
+*:focus,
+*:active,
+a:active,
+a:focus,
+input:focus,
+input:active { 
+    -moz-outline-style: none;
+    outline:none;
+    outline: 0;
+    text-decoration: none;
+}
+
+body{
+  font: 12px/1.5 'microsoft yahei';
+}
+
+/* 表格滚动条 */
+.tableScroll::-webkit-scrollbar{
+  width: 8px;
+  height: 66px;
+  border-radius: 5px;
+}
+.tableScroll::-webkit-scrollbar-track{
+  border-radius: 5px;
+  background: #111318;
+}
+.tableScroll::-webkit-scrollbar-thumb{
+  border-radius: 5px;
+  background: #09748a;
+  &:hover {
+    background: #139bb7;
+  }
+  &:active {
+    background: #0b8098;
+  }
+}
+
+.box {
+  background: url(../images/bg.jpg) no-repeat;
+  .main {
+    float: left;
+    width: 1075px;
+    height: 600px;
+    position: relative;
+    .caption {
+      .refresh {
+        position: absolute;
+        right: 17px;
+        top: 15px;
+        color: #b1b2b2;
+        display: -webkit-flex;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-align-items: center;
+           -moz-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        i {
+          background: url(../images/doubleCash/sprite-doublecash.png) no-repeat;
+          width: 14px;
+          height: 12px;
+          display: inline-block;
+          margin-right: 5px;
+        }
+      }
+      .divide {
+        margin-top: 41px;
+        height: 1px;
+        width: 100%;
+        background: #42484d;
+        opacity: .3;
+      }
+      .headline {
+        margin-left: 42px;
+        font-size: 55px;
+        font-weight: bold;
+        color: #e1eafd;
+        text-shadow: -3px -3px #293b56, 3px -3px #293b56, 3px 3px #293b56, -3px 3px #293b56;
+        margin-top: 15px;
+      }
+      .statement {
+        margin-left: 42px;
+        font-size: 24px;
+        font-weight: bold;
+        color: #e2ebfd;
+        text-shadow: -2px -2px #293b56, 2px -2px #293b56, 2px 2px #293b56, -2px 2px #293b56;
+        .rules {
+          color: #00a2ff;
+          margin-left: 5px;
+          font-size: 18px;
+          font-weight: normal;
+          text-shadow: none;
+          text-decoration: underline;
+          vertical-align: bottom;
+          &:hover {
+            color: #00e4ff;
+          }
+          &:active {
+            color: #00b4b2;
+          }
+        }
+      }
+    }
+    .content{
+      margin-top: 60px;
+      margin-left: 42px;
+      background: url(../images/doubleCash/table-bg.png) no-repeat left bottom;
+      width: 982px;
+      height: 277px;
+      .tab-wrap {
+        display: -webkit-flex;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-align-items: center;
+           -moz-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-justify-content: space-between;
+           -moz-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        a {
+          width: 160px;
+          height: 42px;
+          line-height: 42px;
+          font-weight: bold;
+          font-size: 14px;
+          display: inline-block;
+          text-align: center;
+          color: #f3faff;
+          &:hover {
+            background: url(../images/doubleCash/a-hover.png) no-repeat center bottom;
+          }
+          &.active {
+            color: #fcde5e;
+            background: url(../images/doubleCash/a-active.png) no-repeat center bottom;
+          }
+        }
+      }
+      .tbl-wrap {
+        width: 900px;
+        margin: 28px auto 0;
+        &.myGame-wrap {
+          .none;
+          th, td {
+            &:last-of-type {
+              text-align: left;
+              text-indent: 50px;
+            }
+          }
+        }
+        .thead-wrap {
+          width: 100%;
+          table-layout: fixed;
+          th {
+            font-size: 14px;
+            height: 38px;
+            line-height: 38px;
+            font-weight: bold;
+            text-align: center;
+            color: #7e99ad;
+            .yellow {
+              color: #dca600;
+            }
+          }
+        }
+        .item-wrap {
+          width: 900px + 10;
+          height: 145px;
+          overflow-x: hidden;
+          table {
+            width: 100%;
+            table-layout: fixed;
+            td {
+              .eps;
+              font-size: 14px;
+              text-align: center;
+              color: #70899e;
+              height: 28px;
+              line-height: 28px;
+              border-top: 1px solid  #122e34;
+              &.yellow {
+                color: #dca600;
+              }
+              &.green {
+                color: #00d428;
+              }
+              &.red {
+                color: #d24000;
+              }
+              &.ochre {
+                color: #b29753;
+              }
+              .check {
+                margin-left: 20px;
+                color: #00a2ff;
+                &:hover {
+                  color: #00e4ff;
+                }
+                &:active {
+                  color: #00b4b2;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .btn-wrap {
+      margin-top: 19px;
+      text-align: center;
+      .btn-join {
+        background: url(../images/doubleCash/sprite-doublecash.png) no-repeat 0 -469px;
+        width: 260px;
+        height: 50px;
+        display: inline-block;
+        &:hover {
+          background-position: 0 -519px;
+        }
+        &:active {
+          background-position: 0 -569px;
+        }
+      }
+    }
+  }
+}
+
+@-webkit-keyframes up {
+  0% {bottom: -413px;}
+  100% {bottom: 0;}
+}
+
+@-moz-keyframes up {
+  0% {bottom: -413px;}
+  100% {bottom: 0;}
+}
+
+@keyframes up {
+  0% {bottom: -413px;}
+  100% {bottom: 0;}
+}
+@-webkit-keyframes down {
+  0% {bottom: 0;}
+  100% {bottom: -413px;}
+}
+@-moz-keyframes down {
+  0% {bottom: 0;}
+  100% {bottom: -413px;}
+}
+@keyframes down {
+  0% {bottom: 0;}
+  100% {bottom: -413px;}
+}
+
+
+.modals {
+  background: url(../images/doubleCash/modal-bg.png) no-repeat;
+  width: 966px;
+  height: 413px;
+  position: absolute;
+  left: 57px;
+  bottom: -413px;
+  .btn-down {
+    position: absolute;
+    right: 0;
+    top: 4px;
+    width: 70px;
+    height: 70px;
+  }
+  &.up {
+    -webkit-animation: up 1s 1 forwards;
+       -moz-animation: up 1s 1 forwards;
+            animation: up 1s 1 forwards;
+  }
+  &.down {
+    -webkit-animation: down 1s 1 forwards;
+       -moz-animation: down 1s 1 forwards;
+            animation: down 1s 1 forwards;
+  }
+  &.dialog-rules {
+    padding: 60px 0 0 60px;
+    .txt{
+      margin-bottom: 20px;
+      h3 {
+        font-weight: bold;
+        font-size: 18px;
+        color: #02c6e9;
+      }
+      p {
+        font-size: 14px;
+        color: #bae4ff;
+        width: 680px;
+        span {
+          display: block;
+          margin-left: 30px;
+        }
+      }
+    }
+  }
+  &.dialog-table {
+    h2 {
+      width: 876px;
+      text-align: center;
+      font-weight: bold;
+      font-size: 30px;
+      color: #02c6e9;
+      margin-top: 40px;
+      margin-left: 12px;
+    }
+    .tbl-wrap {
+      width: 810px;
+      margin: 28px 0 0 46px;
+      .thead-wrap {
+        width: 100%;
+        table-layout: fixed;
+        thead {
+          background: url(../images/doubleCash/thead-bg.png) no-repeat left bottom;
+          th {
+            font-size: 14px;
+            height: 38px;
+            line-height: 38px;
+            text-align: center;
+            color: #bae4ff;
+            font-weight: normal;
+          }
+        }
+        tr {
+          &:first-of-type {
+            td {
+              border-bottom: 1px solid  #15374d;
+            }
+          }
+        }
+        td {
+          .eps;
+          font-size: 14px;
+          text-align: center;
+          color: #31a3ba;
+          height: 38px;
+          line-height: 38px;
+          &.orange {
+            color: #db8100;
+          }
+        }
+      }
+    }
+  }
+}
+
+.masklayer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 30;
+  display: none;
+  background: #000;
+  opacity: .6;
+}
+
+.dialog-wrap {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+     -moz-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 30;
+  display: none;
+  .dialog {
+    background: url('../images/doubleCash/dialog.png') no-repeat;
+    width: 524px;
+    height: 354px;
+    padding: 80px 40px 0;
+    .btn-close {
+      position: absolute;
+      right: 20px;
+      top: 18px;
+      width: 20px;
+      height: 20px;
+      opacity: 0;
+    }
+    .content-wrap {
+      .center {
+        font-size: 18px;
+        text-align: center;
+        margin-top: 30px;
+      }
+      .modal-c {
+        color: #b3b3b3;
+        font-size: 14px;
+      }
+      .cdkey-wrap {
+        display: -webkit-flex;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: flex;
+        margin-top: 20px;
+        .cdkey {
+          color: #d17b01;
+          font-size: 30px;
+          width: 308px;
+          height: 58px;
+          line-height: 50px;
+          background: #090a0c;
+          border: 1px solid  #242627;
+          text-align: center;
+          -moz-border-radius: 1px;
+               border-radius: 1px;
+          display: inline-block;
+        }
+        img {
+          padding: 3px;
+          border: 1px solid  #242627;
+          background: #090a0c;
+          margin-left: 11px;
+          display: inline-block;
+        }
+      }
+      .info {
+        position: absolute;
+        left: 120px;
+        top: 190px;
+        color: #363e4a;
+      }
+    }
+    .btn-wrap {
+      position: absolute;
+      right: 40px;
+      bottom: 30px;
+      .btn-sure {
+        display: inline-block;
+        text-align: center;
+        min-width: 112px;
+        padding: 0 10px;
+        height: 32px;
+        line-height: 32px;
+        -moz-border-radius: 3px;
+             border-radius: 3px;
+        color: #fff;
+        border: 1px solid #057cb3;
+        background: -moz-linear-gradient(bottom, #0d6892, #0c7fb4);
+        background: linear-gradient(to top, #0d6892, #0c7fb4);
+        background: -webkit-linear-gradient(bottom, #0d6892, #0c7fb4);
+      }
+    }
+  }
+}

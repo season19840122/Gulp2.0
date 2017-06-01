@@ -249,12 +249,12 @@ li {
 .cr {
   clear: right;
 }
-.cf:before,
-.cf:after {
-  content: " ";
+.cf::before,
+.cf::after {
+  content: "";
   display: table;
 }
-.cf:after {
+.cf::after {
   clear: both;
 }
 .cf {
@@ -639,6 +639,10 @@ body {
 }
 .box .meng_box .apply_box .content_box ul li.off {
   background: url(../../images/meng3/box2.png) no-repeat;
+  cursor: default;
+}
+.box .meng_box .apply_box .content_box ul li.off h1 {
+  margin-top: 8px;
 }
 .box .meng_box .apply_box .content_box ul div.tip_vip:before {
   z-index: 50;

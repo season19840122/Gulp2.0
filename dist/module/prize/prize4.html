@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>vip抽奖</title>
+		<link rel="stylesheet" type="text/css" href="../../styles/bootstrap.min.css"/>
+		<link rel="stylesheet" type="text/css" href="prize4.css"/>
+	</head>
+	<body>
+		<div class="box">
+			<input type="hidden" name="activityId" id="activityId" value="" />
+			<div class="back"><img src="../../images/bg_detail_back.png"><span>返回</span></div>
+			<div class="free_btn">免费抽奖机会</div>
+			<div class="rules_ac">活动规则</div>
+			<div class="rules_dh">奖品兑换规则</div>
+			<!-- 抽奖模块 -->
+			<div class="prize_box">
+				<div class="prize_div" id="prize0" title="" data-placement="bottom">
+				</div>
+				<div class="prize_div" id="prize1" title="" data-placement="bottom">
+				</div>
+				<div class="prize_div" id="prize2" title="" data-placement="bottom">
+				</div>
+				<div class="prize_div" id="prize7" title="" data-placement="bottom">
+				</div>
+				<div class="prize_enter_box">
+					<div class="prize_enter normal">
+						<p>点击抽奖</p>
+						<h2>抽奖中</h2>
+						<h3>1000顺豆/次</h3>
+					</div>
+				</div>
+				<div class="prize_div" id="prize3" title="" data-placement="bottom">
+				</div>
+				<div class="prize_div" id="prize6" title="" data-placement="top">
+				</div>
+				<div class="prize_div" id="prize5" title="" data-placement="top">
+				</div>
+				<div class="prize_div" id="prize4" title="" data-placement="top">
+				</div>
+				<div class="bg"></div>
+			</div>
+			
+			<div class="rules_box">
+				<i></i>
+				<h1>1. 参与条件</h1>
+				<p>参与本次活动用户须为火马电竞注册用户，并完成手机或微信认证。参与用户的顺豆账户余额须满足每次抽奖的顺豆支出额度。</p>
+				<h1>2. 抽奖规则</h1>
+				<p>每次抽奖将消耗1500至2000顺豆，用户账户顺豆余额满足单次抽奖消耗顺豆数即可参与活动，用户累计抽奖次数不限。</p>
+				<p><span>火马电竞APP和VIP用户可获得一定次数的<strong>免费抽奖机会</strong></span></p>
+				<h1>3. 奖品兑换与发放</h1>
+				<p>3.1关于奖品“碎片”</p>
+				<p class="text_indent24">奖品“碎片”为奖品的拆分部分，用户抽奖集齐规定数量的奖品“碎片”后，即可合成并兑换该奖品。</p>
+				<p class="text_indent24"><span>用户通过本次活动所获取的奖品“碎片”仅在活动期间（2017年5月27日-2017年6月12日）有效，活动结束后所有奖品“碎片”将自动作废。</span></p>
+				<p>3.2奖品兑换方法</p>
+				<p class="text_indent24">当用户抽中某类奖品，并满足该奖品的兑换条件时，用户可点击奖品上方的“可兑换”按钮进行兑换。</p>
+				<p>3.3关于奖品发放</p>
+				<p class="text_indent24">获奖用户须在活动有效期内准确填写奖品寄送地址。火马电竞工作人员将在活动结束后3个工作日内完成获奖信息核对，14个工作日内完成奖品发放。</p>
+				<p>*本活动最终解释权归杭州顺网宇酷科技有限公司所有。</p>
+			</div>
+			
+			<!-- 邮编奖品 -->
+			<section class="lottery_box">
+				<div class="inset">
+			      <div class="award">
+			        <ul class="ul-award"></ul>
+			      </div>
+			      <div class="record">
+			        <h3 class="title">获奖记录</h3>
+			        <p></p>
+			        <ul class="ul-record smallScroll">
+			        </ul>
+			      </div>
+			    </div>
+		    </section>
+			
+			<div class="rulesDh_box">
+				<i></i>
+				<h1>兑换规则</h1>
+				<p>1.点券、Q币奖品需集齐所需碎片后一次性兑换；</p>
+				<p>2.顺豆类奖品为即时到账；</p>
+				<p>3.手机、礼盒、滑板车等实物奖品将在活动结束后寄送；</p>
+				<p>4.所有奖品碎片将在活动结束后自动失效。</p>
+			</div>
+			
+			<div class="free_box">
+				<i></i>
+				<h1 class="t4">免费参与抽奖</h1>
+	            <p>1.火马电竞APP用户每日可获得1次免费抽奖机会；</p>
+				<p>2.用户抽奖时为火马电竞VIP身份的可享受VIP免费抽奖优惠（每日限1次）。活动期间某日新激活VIP身份的用户，第二日才可享受免费抽奖优惠（且抽奖时须为VIP身份）。</p>
+				<img src="../../images/prize/prize4_down.png"/>
+			</div>
+			
+			
+			<div class="alert_box">
+				<div class="alert_content">
+					<i class="pic_close"></i>
+					<div class="prize_msg">
+						<img src="../../images/jiang.jpg"/>
+						<p></p>
+					</div>
+					<div class="remind_msg"></div>
+				</div>
+			</div>
+		</div>
+		
+		
+		
+	</body>
+	<script src="../../scripts/jquery-3.1.0.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../scripts/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="prize_action4.js" type="text/javascript" charset="utf-8"></script>
+	<script src="prize_main4.js" type="text/javascript" charset="utf-8"></script>
+</html>

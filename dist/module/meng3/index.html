@@ -40,7 +40,7 @@
 				<!-- 扫码 结束 -->
 				
 				<!-- 顺豆赌博 开始 -->
-				<div class="apply_box hide_">
+				<div class="apply_box">
 					<h1>集顺豆，兑电魂币</h1>
 					<div class="content_box">
 						<ul>
@@ -67,7 +67,7 @@
 							</li>
 							<li class="off">
 								<div class="tip_free">
-									<h1>土豪</h1>
+									<h1>暂不<br>可用</h1>
 									<h2 data-value="500">500</h2>
 									<h3 data-value="0.5">￥0.5</h3>
 								</div>
@@ -79,7 +79,7 @@
 				<!-- 顺豆赌博 结束 -->
 				
 				<!-- 顺豆赌博新模式 开始 -->
-				<div class="ld_box">
+				<div class="ld_box hide_">
 					<h1>集顺豆，兑电魂币</h1>
 					<div class="content_box">
 						<h1>本局挑战：十步一杀</h1>
@@ -129,6 +129,7 @@
 			//顺豆支付绑定hover
 			function dom_hover() {
 				$('.apply_box .content_box li,.ld_box .content_box>div').hover(function(){
+					if($(this).hasClass('off')) return;
 					$(this).find('h1,h2,h3').hide();
 					if(isShunHover) {
 						$(this).find('h2').show();

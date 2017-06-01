@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>csgo</title>
+		<link rel="stylesheet" type="text/css" href="../../styles/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="csgo.css" />
+	</head>
+
+	<body>
+		<div class="box">
+			<a class="go_back" href="">返回</a>
+			<div class="logo"></div>
+			<div class="challenge_box">
+				<div class="left_line"></div>
+				<div class="right_line"></div>
+				<div class="title_left">
+					<span>每日</span>参与<span>火马电竞平台</span><br>游戏活动<span>均可</span>获得一次
+				</div>
+				<div class="title_right">
+					抽取CS:GO激活码<span>的机会</span>
+				</div>
+				<div class="line"></div>
+				<ul>
+					<li>
+						<h1>参加火马<span></span>挑战赛</h1>
+						<h2>0/1</h2>
+					</li>
+					<li>
+						<h1>参加火马<span></span>乱斗场</h1>
+						<h2>0/1</h2>
+					</li>
+					<li class="active">
+						<h1>参加火马<span></span>胜场有你</h1>
+						<h2>0/1</h2>
+					</li>
+					<li>
+						<h1>成为火马<span></span>VIP</h1>
+						<h2>0/1</h2>
+					</li>
+					<li>
+						<h1>使用“火马电竞”手机应用签到</h1>
+						<h2>0/1</h2>
+					</li>
+				</ul>
+			</div>
+
+			<div class="btn1 hide_">
+				<h1>抽取CS：GO激活码</h1>
+				<h2>还有2次抽将机会</h2>
+			</div>
+			<div class="btn1-2 hide_">
+				<h1>您的火马账号尚未认证</h1>
+				<a>前往认证</a>
+			</div>
+			<div class="btn1-3">
+				<h1>已通过本活动获得激活码</h1>
+				<h2>48小时内未激活的码将被放入淘号池</h2><a href="http://www.csgo.com.cn/" target="_blank">激活CS:GO</a>
+			</div>
+			<div class="btn2">下载火马电竞APP</div>
+			<div class="btn3">活动规则<span>(每日限抽5次)</span></div>
+		</div>
+
+		<!-- 提示 -->
+		<div id="alert_box" tabindex="-1" role="dialog" aria-hidden="true" class="modal modal-s" data-backdrop="static">
+			<div class="modal-dialog modal_width_500">
+				<div class="modal-content modal_content_bg">
+					<div class="modal-header">
+						<div class="header_style"></div>
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+					</div>
+
+					<div class="modal-body modal_height_200 modal_padding_top_50">
+						<!-- 二维码下载块开始 -->
+						<div class="qrcode_box hide_">
+							<div class="pic">
+								<img src="../../images/csgo/cs_download.jpg"/>
+							</div>
+							<span>扫描二维码下载火马电竞APP<br>支持IOS、Android</span>
+						</div>
+						<!-- 二维码下载块结束 -->
+
+						<!-- 领取提示块开始 -->
+						<div class="prize hide_">
+							<h1>领取奖品</h1>
+							<p>您的CS：GO激活码已经以手机短信的方式发送到您的手机<span>185****0083</span>，请注意查收。同时，您还可以在火马电竞“我的”——“<span>我的奖品</span>”页面查看CS：GO激活码</p>
+						</div>
+						<!-- 领取提示块结束 -->
+
+
+						<!-- 普通提示块开始 -->
+						<div class="normal hide_">
+							<p>很遗憾未抽中</p>
+						</div>
+						<!-- 普通提示块结束 -->
+
+						<!-- 抽中块开始 -->
+						<div class="code_box hide_">
+							<p>恭喜您，抽到CS：GO激活码：</p>
+							<div class="code">
+								XXXX-XXXX-XXXX-XXXX
+							</div>
+						</div>
+						<!-- 抽中块结束 -->
+						
+						
+						<!-- 领取块开始 -->
+						<div class="input_box">
+							<h1>领取奖品</h1>
+							<div class="content">
+								<input type="text" name="phone" id="phone" value="" placeholder="请输入手机号" />
+								<input type="text" name="phone" id="code" value="" placeholder="请输入验证码" />
+								<div class="btn_sure" >获取验证码</div>
+								<!--<div class="btn_sure off" >24s</div>-->
+								
+								<div class="error_msg">*手机号错误</div>
+							</div>
+							
+						</div>
+						<!-- 领取块结束 -->
+
+					</div>
+
+					<div class="modal-footer">
+						<div class="btn_sure" data-dismiss="modal">确认</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		
+		
+		<!-- 规则 -->
+		<div id="rules_box" tabindex="-1" role="dialog" aria-hidden="true" class="modal modal-s" data-backdrop="static">
+			<div class="modal-dialog modal_width_800">
+				<div class="modal-content modal_content_bg">
+					<div class="modal-header">
+						<div class="header_style"></div>
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+					</div>
+
+					<div class="modal-body modal_height_350">
+						<div class="rules_scroll smallScroll">
+							<div class="rules_content">
+								<h1>活动规则</h1>
+								<p>1.活动限制，本次活动必须是火马电竞平台进行过手机或微信验证的用户才能参加；</p>
+								<p>2.活动期间，玩家通过参与火马电竞平台赛事和活动（挑战赛，乱斗场，胜场有你，手机端签到以及激活VIP身份）的方式完成任务，获得抽取CS:GO国服激活码资格；</p>
+								<p>3.活动期间，每日玩家获取的激活码抽取次数可以一直累加，但每人每日可抽取次数上限为5次；</p>
+								<p>4.本次活动，每个玩家最多可获得1个CS:GO激活码；</p>
+								<p>5.本次活动，48小时内未激活的码将被放入淘号池（在淘号池里你将有机会抽取到已经发放给别人的激活码，火马不担保淘号池里号码的有效性）；</p>
+								<p>6.抽取获得的账号激活码为程序自动发放，玩家可在【我的】-【我的奖品】中查看抽到的激活码，也可以在活动专题页面将激活码发送到手机。</p>
+								<h1>CS:GO激活码使用规则</h1>
+								<p>1、获取激活码后，下载客户端并安装;</p>
+								<p>2、进入客户端launcher，注册CS:GO账号。（已有国际服账号的CS:GO玩家及国服账号的Data2玩家无需注册，可直接登录）;</p>
+								<p>3、注册完美通行证并与CS:GO账号做绑定。（已有国服Data2账号的玩家自动绑定）;</p>
+								<p>4、完成荣耀认证并激活游戏。（官网已认证的用户无需再次认证）;</p>
+								<p>5、以上所有步骤，都可在客户端内一次性完成，我们也强烈建议您在客户端内完成；</p>
+								<p>* 本活动最终解释权归杭州顺网宇酷科技有限公司所有。</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="modal-footer">
+						<div class="btn_sure" data-dismiss="modal">确认</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="../../scripts/jquery-3.1.0.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../scripts/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		function showMsg(type,msg) {
+			$('#alert_box .modal-body>div').hide();
+			var funArr = [
+				function() {//下载app
+					$('#alert_box').modal();
+					$('#alert_box .modal-body>.qrcode_box').show();
+				},
+				function() {//普通提示未抽中信息
+					$('#alert_box').modal();
+					$('#alert_box .modal-body>.normal').show();
+					$('#alert_box .modal-body>.normal p').html(msg);
+				},
+				function() {//抽中提示领取信息输入，手机号
+//					$('#alert_box').modal();
+//					$('#alert_box .modal-body>.prize').show();
+//					$('#alert_box .modal-body>.prize p span').eq(0).html(msg);
+				},
+				function() {//提示激活码
+					$('#alert_box').modal();
+					$('#alert_box .modal-body>.code_box').show();
+				},
+				function() {//输入验证码
+					$('#alert_box').modal();
+					$('#alert_box .modal-body>.input_box').show();
+				},
+				function() {//显示规则
+					$('#rules_box').modal();
+				}
+			];
+			funArr[type]();
+		}
+		$('.btn2').on('click',function() {
+			showMsg(0);
+		})
+		$('.btn3').on('click',function() {
+			showMsg(5);
+		})
+	</script>
+</html>

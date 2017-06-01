@@ -218,6 +218,14 @@
     color: #13D4A4;
     background-position: -50px 0;
 }
+.tableW1140 .ly-btnE {
+    font-size: 14px;
+    color: #13D4A4;
+    text-decoration: underline;
+    &.icon-kuaidi:before{
+        margin-right: 5px;
+    }
+}
 .tableW1140 .ly-btnC {
     color: #ff9910;
 }
@@ -1093,3 +1101,154 @@
     background: url(../images/team_game_bg.jpg);
 }
 /** 移动到首页样式结束 **/
+    
+/** 新添翻查样式和我的比赛下拉列表移动到左边menu **/
+#myGame{
+   .game_menu{
+       text-decoration: none;
+        width: 120px;
+        height: 470px;
+        background: #15191e;
+        float: left;
+        li{
+            display: inline-block;
+            a{
+                background: #191d23;
+                position: relative;
+                display: inline-block;
+                width: 120px;
+                height: 70px;
+                line-height: 70px;
+                color: #B8C1CB;
+                font-size: 14px;
+                text-align: center;
+                text-decoration: none;
+                &:before{
+                    content: "";
+                    position: absolute;
+                    width: 4px;
+                    height: 68px;
+                    top: 1px;
+                    left: 0px;
+                    background: #29333c;
+                }
+                &:hover:before{
+                    background: #0c6e9c;
+                }
+                &:active:before{
+                    background: #0a3f58;
+                }
+            }
+            &.active{
+                a{
+                    color: #0095db;
+                    &:before{
+                        background: #0c6e9c;
+                    }
+                    background: #15191e;
+                    &:after{
+                       content: "";
+                        position: absolute;
+                        width: 0px;
+                        height: 0px;
+                        top: 26px;
+                        right: -19px;
+                        border-style: solid;
+                        border-width: 10px;
+                        border-color: transparent transparent transparent #15191e;
+                    }
+                }
+            }
+        }
+    }
+    &>.tab{
+        width: 974px;
+        float: right;
+    }
+    .check{
+        color: #0095db;
+        text-decoration: underline;
+        cursor: pointer;
+    }
+}
+#check-code{
+    .modal-body{
+        h1{
+                font-size: 14px;
+                color: #d5d7da;
+                margin-bottom: 15px;
+            }
+        .code_box{
+            &:after{
+                content: "";
+                width: 0px;
+                display: block;
+                clear: both;
+            }
+            div.code{
+                width: 178px;
+                height: 46px;
+                background: white;
+                float: left;
+                img{
+                    width: 178px;
+                    height: 46px;
+                }
+            }
+            .codeStr{
+                margin-left: 15px;
+                width: 240px;
+                height: 47px;
+                border-radius: 3px;
+                text-indent: 15px;
+                font-size: 24px;
+                color: #697180;
+                background: #090a0c;
+            }
+        }
+        p{
+            margin-left: 190px;
+            color: #c40000;
+            font-size: 14px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+    }
+}
+#loading_box{
+    display: none;
+    width: 350px;
+    height: 80px;
+    position: absolute;
+    left: 50%;
+    margin-left: -165px;
+    top: 50%;
+    margin-top: -40px;
+    border-radius: 10px;
+    background: rgba(0,0,0,0.8);
+    color: #b8c1cb;
+    line-height: 80px;
+    text-align: center;
+    .icon-loading{
+        margin-right: 5px;
+        display: inline-block;
+        -webkit-animation: loading 1s linear infinite;
+        animation:  loading 1s linear infinite;
+    }
+}
+@-webkit-keyframes loading {
+    0%{
+        -webkit-transform: rotate(0deg);
+    }
+    100%{
+        -webkit-transform: rotate(360deg);
+    }
+}
+@keyframes loading {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}

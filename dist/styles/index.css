@@ -191,16 +191,6 @@ th {
 li {
   list-style: none;
 }
-*:focus,
-*:active,
-a:active,
-a:focus,
-input:focus,
-input:active {
-  -moz-outline-style: none;
-  outline: none;
-  outline: 0;
-}
 /*-- 文字排版 --*/
 .fb {
   font-weight: bold;
@@ -791,6 +781,7 @@ body {
 }
 #indexArousel img {
   width: 778px;
+  height: 221px;
 }
 #indexArousel .carousel-control {
   position: absolute;

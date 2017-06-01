@@ -253,7 +253,7 @@ var ACTIONFUN = function(initObj) {
 	}
 	
 	var setInfo = function(obj) {
-		$('.content_box .title h1').html(obj.ruleTitle);
+		$('.content_box .title h1 div').html(obj.ruleTitle);
 		$('.content_box .title h2').html(obj.ruleSubTitle+"的玩家平分奖池");
 		$('.content_box .prize_box span').html(obj.rewardPool);
 		$('.content_box .btn_box span').html(obj.achieveCnt);

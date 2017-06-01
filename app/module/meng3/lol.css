@@ -116,12 +116,12 @@ body {
   width: 100px;
   height: 0;
   animation: dong 4s step-start infinite;
-  animation-fill-mode: forwards ;
+  animation-fill-mode: forwards;
   transition: height 1.5s 1s;
 }
 .full {
   position: absolute;
-  bottom: 0 ;
+  bottom: 0;
   left: 0px;
   background: url(../../images/lol/fluid_full.png) no-repeat left center;
   width: 76px;
@@ -502,8 +502,8 @@ body {
   width: 18px;
   height: 18px;
   position: absolute;
-  top: 24px;
-  right: 23px;
+  top: 8px;
+  right: 24px;
 }
 .window .con {
   height: 76px;
@@ -558,7 +558,7 @@ body {
   margin-top: -15px;
   height: 78px;
   animation: dou 1s step-start 1;
-  animation-fill-mode: forwards ;
+  animation-fill-mode: forwards;
 }
 @keyframes dou {
   0.0% {
@@ -717,7 +717,7 @@ body {
   height: 140px;
   margin: 0 auto;
   padding: 4px;
-  border: 1px solid  #807659;
+  border: 1px solid #807659;
   background: #362e1d;
 }
 .download-wrap .img-wrap img {

@@ -396,9 +396,9 @@ var ACTIONFUN = function(initObj) {
 							imgSrc = v.pic?initObj.options.hostImg+"images/"+v.pic : initObj.options.hostImg+'images/prize_no2.png';
 						
 						var widthNum = "width:"+winCnt/needCnt*100+"%";
-						var clickClass = (winCnt >= needCnt && catalog != 5)?'tip':'tip none';
-						var progressClass = (winCnt >= needCnt && catalog == 5)?'progress al_get':'progress';
-						var count = (winCnt >= needCnt && catalog == 5)? "已获得":winCnt+"/"+needCnt;
+						var clickClass = (winCnt >= needCnt && !entityPrizeHasGet)?'tip':'tip none';
+						var progressClass = (entityPrizeHasGet)?'progress al_get':'progress';
+						var count = (entityPrizeHasGet)? "已获得":winCnt+"/"+needCnt;
 						
 						arrStr.push("<li><div class='item'><div class='img-wrap'>");
 						arrStr.push("<img src='"+imgSrc+"'><a data-pic="+imgSrc+" data-name="+productName+" data-id="+awardProductId+" class='"+clickClass+"'>点击兑换</a>");

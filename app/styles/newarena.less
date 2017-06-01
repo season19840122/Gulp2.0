@@ -21,8 +21,32 @@ input:active {
     text-decoration: none;
 }
 
+/* 表格滚动条 */
+.tableScroll::-webkit-scrollbar{
+  width: 8px;
+  height: 66px;
+  border-radius: 5px;
+}
+.tableScroll::-webkit-scrollbar-track{
+  border-radius: 5px;
+  background: #111318;
+}
+.tableScroll::-webkit-scrollbar-thumb{
+  border-radius: 5px;
+  background: #09748a;
+  &:hover {
+    background: #139bb7;
+  }
+  &:active {
+    background: #0b8098;
+  }
+}
+
 .box {
     background: url(../images/bg.jpg) no-repeat;
+    &.nodata {
+        background: url(../images/leitai/nodata.jpg) no-repeat;
+    }
     .main {
         float: left;
         width: 1075px;
@@ -43,7 +67,7 @@ input:active {
                     height: 32px;
                     line-height: 28px;
                     font-size: 14px;
-                    background: #40476b;
+                    // background: #40476b;
                     color: #cbffff;
                     text-align: center;
                     display: inline-block;
@@ -106,6 +130,7 @@ input:active {
                         margin-right: 8px;
                         font-size: 12px;
                         font-weight: normal;
+                        cursor: pointer;
                         &:hover {
                             background: #224e75;
                             color: #b3e3ff;
@@ -221,6 +246,18 @@ input:active {
                                }
                             }
                         }
+                        .win {
+                            background: url(../images/leitai/sprite-leitai.png) no-repeat 0 -583px;
+                            width: 100px;
+                            height: 50px;
+                            position: absolute;
+                            left: 32px;
+                            top: -40px;
+                            &.right {
+                                left: auto;
+                                right: 32px;
+                            }
+                        }
                     }
                 }
                 .count {
@@ -242,12 +279,14 @@ input:active {
                     }
                     .progress1 {
                         background: -moz-linear-gradient(#26556f, #14646d);
+                        background: -webkit-linear-gradient(#26556f, #14646d);
                         background: linear-gradient(#26556f, #14646d);
                         -moz-border-radius-topleft: 12px;
                              border-top-left-radius: 12px;
                         -moz-border-radius-bottomleft: 12px;
                              border-bottom-left-radius: 12px;
                         position: absolute;
+                        top: 0;
                         left: 0;
                         width: 50%;
                         height: 26px;
@@ -260,7 +299,6 @@ input:active {
                 > ul {
                     width: 300px;
                     height: 426px;
-                    overflow: hidden;
                     display: none;
                     &.block {
                         display: block;
@@ -272,6 +310,15 @@ input:active {
                         .guess {
                             width: 300px;
                             height: 134px;
+                            position: relative;
+                            .active {
+                                background: url('../images/leitai/active.png') no-repeat;
+                                width: 305px;
+                                height: 134px;
+                                position: absolute;
+                                left: -5px;
+                                top: 0;
+                            }
                             .title {
                                 height: 40px;
                                 line-height: 40px;
@@ -303,9 +350,13 @@ input:active {
                                     line-height: 24px;
                                     text-align: center;
                                     background: #1c3144;
-                                    margin-right: 8px;
                                     font-size: 12px;
                                     font-weight: normal;
+                                    cursor: pointer;
+                                    position: absolute;
+                                    top: 8px;
+                                    right: 8px;
+                                    z-index: 10;
                                     &:hover {
                                         background: #224e75;
                                         color: #b3e3ff;
@@ -378,11 +429,13 @@ input:active {
                     }
                 }
                 .page-wrap {
+                    width: 300px;
+                    text-align: center;
                     ul {
                         li {
                             width: 30px;
                             height: 32px;
-                            float: left;
+                            display: inline-block;
                             &.active {
                                 a {
                                     color: #ade1ff;
@@ -576,7 +629,6 @@ input:active {
 #rules_box{
     .modal-body{
         padding: 0px 30px;
-        padding-bottom: 30px;
         h1{
             font-size: 24px;
             color: #B3B3B3;
@@ -589,7 +641,9 @@ input:active {
             color: #B3B3B3;
             font-size: 14px;
             text-align: left;
-            margin-top: 10px;
+            margin: 10px 0 20px;
+            max-height: 256px;
+            overflow-x: hidden;
         }
     }
 }

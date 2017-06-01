@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>vip</title>
+		<link rel="stylesheet" type="text/css" href="../../styles/bootstrap.min.css"/>
+		<link rel="stylesheet" type="text/css" href="vip.css"/>
+		<link rel="stylesheet" type="text/css" href="../../images/iconfont/iconfont.css"/>
+	</head>
+	<body>
+		<div class="box">
+			<a class="go_back" href="">返回</a>
+			<div class="alert_btn">我要代言</div>
+			<div class="alert_box"><i class="iconfont icon-guanbi"></i></div>
+		</div>
+	</body>
+	<script src="../../scripts/jquery-3.1.0.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$('.alert_btn').on('click',function() {
+			$('.alert_box').show();
+		})
+		$('.alert_box i').on('click',function() {
+			$('.alert_box').hide();
+		})
+		$('.go_back').on('click',function() {
+			
+		})
+	</script>
+</html>

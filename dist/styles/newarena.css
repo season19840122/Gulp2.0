@@ -191,16 +191,6 @@ th {
 li {
   list-style: none;
 }
-*:focus,
-*:active,
-a:active,
-a:focus,
-input:focus,
-input:active {
-  -moz-outline-style: none;
-  outline: none;
-  outline: 0;
-}
 /*-- 文字排版 --*/
 .fb {
   font-weight: bold;
@@ -444,8 +434,31 @@ input:active {
   outline: 0;
   text-decoration: none;
 }
+/* 表格滚动条 */
+.tableScroll::-webkit-scrollbar {
+  width: 8px;
+  height: 66px;
+  border-radius: 5px;
+}
+.tableScroll::-webkit-scrollbar-track {
+  border-radius: 5px;
+  background: #111318;
+}
+.tableScroll::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background: #09748a;
+}
+.tableScroll::-webkit-scrollbar-thumb:hover {
+  background: #139bb7;
+}
+.tableScroll::-webkit-scrollbar-thumb:active {
+  background: #0b8098;
+}
 .box {
   background: url(../images/bg.jpg) no-repeat;
+}
+.box.nodata {
+  background: url(../images/leitai/nodata.jpg) no-repeat;
 }
 .box .main {
   float: left;
@@ -470,7 +483,6 @@ input:active {
   height: 32px;
   line-height: 28px;
   font-size: 14px;
-  background: #40476b;
   color: #cbffff;
   text-align: center;
   display: inline-block;
@@ -536,6 +548,7 @@ input:active {
   margin-right: 8px;
   font-size: 12px;
   font-weight: normal;
+  cursor: pointer;
 }
 .box .main .content .winner-wrap .title .btn-watch:hover {
   background: #224e75;
@@ -650,6 +663,18 @@ input:active {
   color: #ff5629;
   background: #cd3006;
 }
+.box .main .content .winner-wrap .big-img .big-img-wrap .win {
+  background: url(../images/leitai/sprite-leitai.png) no-repeat 0 -583px;
+  width: 100px;
+  height: 50px;
+  position: absolute;
+  left: 32px;
+  top: -40px;
+}
+.box .main .content .winner-wrap .big-img .big-img-wrap .win.right {
+  left: auto;
+  right: 32px;
+}
 .box .main .content .winner-wrap .count {
   margin-top: 9px;
   width: 724px;
@@ -670,12 +695,14 @@ input:active {
 }
 .box .main .content .winner-wrap .count .progress1 {
   background: -moz-linear-gradient(#26556f, #14646d);
+  background: -webkit-linear-gradient(#26556f, #14646d);
   background: linear-gradient(#26556f, #14646d);
   -moz-border-radius-topleft: 12px;
   border-top-left-radius: 12px;
   -moz-border-radius-bottomleft: 12px;
   border-bottom-left-radius: 12px;
   position: absolute;
+  top: 0;
   left: 0;
   width: 50%;
   height: 26px;
@@ -687,7 +714,6 @@ input:active {
 .box .main .content .guess-wrap > ul {
   width: 300px;
   height: 426px;
-  overflow: hidden;
   display: none;
 }
 .box .main .content .guess-wrap > ul.block {
@@ -701,6 +727,15 @@ input:active {
 .box .main .content .guess-wrap > ul li .guess {
   width: 300px;
   height: 134px;
+  position: relative;
+}
+.box .main .content .guess-wrap > ul li .guess .active {
+  background: url('../images/leitai/active.png') no-repeat;
+  width: 305px;
+  height: 134px;
+  position: absolute;
+  left: -5px;
+  top: 0;
 }
 .box .main .content .guess-wrap > ul li .guess .title {
   height: 40px;
@@ -736,9 +771,13 @@ input:active {
   line-height: 24px;
   text-align: center;
   background: #1c3144;
-  margin-right: 8px;
   font-size: 12px;
   font-weight: normal;
+  cursor: pointer;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  z-index: 10;
 }
 .box .main .content .guess-wrap > ul li .guess .title .btn-watch:hover {
   background: #224e75;
@@ -806,10 +845,14 @@ input:active {
   width: 39px;
   height: 18px;
 }
+.box .main .content .guess-wrap .page-wrap {
+  width: 300px;
+  text-align: center;
+}
 .box .main .content .guess-wrap .page-wrap ul li {
   width: 30px;
   height: 32px;
-  float: left;
+  display: inline-block;
 }
 .box .main .content .guess-wrap .page-wrap ul li.active a {
   color: #ade1ff;
@@ -989,7 +1032,6 @@ input:active {
 }
 #rules_box .modal-body {
   padding: 0px 30px;
-  padding-bottom: 30px;
 }
 #rules_box .modal-body h1 {
   font-size: 24px;
@@ -1003,7 +1045,9 @@ input:active {
   color: #B3B3B3;
   font-size: 14px;
   text-align: left;
-  margin-top: 10px;
+  margin: 10px 0 20px;
+  max-height: 256px;
+  overflow-x: hidden;
 }
 #team_five .modal-body img {
   padding: 2px;

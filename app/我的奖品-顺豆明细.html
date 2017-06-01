@@ -7,6 +7,7 @@
   <link href="styles/myPrize.css" rel="stylesheet" type="text/css"/>
   <link href="styles/index.css" rel="stylesheet" type="text/css"/>
   <link href="styles/modal.css" rel="stylesheet" type="text/css">
+  <link href="images/iconfont/iconfont.css" rel="stylesheet" type="text/css">
   <!--日历 css-->
   <link href="styles/bootstrap-datepicker.css" rel="stylesheet" type="text/css"/>
   <link href="styles/dropdown.css" rel="stylesheet" type="text/css"/>
@@ -18,14 +19,14 @@
   <div class="header_award">
     <ul class="tab_award" class="clearfix">
       <li ><a href="#myTeam" data-toggle="tab"><b class="ico ico-8"></b>我的战队</a></li>
-      <li id="myGame" class="active">
+      <li class="active">
         <a href="#myGame" data-toggle="tab"><b class="ico ico-7"></b>我的比赛</a>
-        <div class="select-wrap">
+        <!--<div class="select-wrap">
           <ul class="select-ul">
             <li><a class="select-a" href="###">个人赛</a></li>
             <li><a class="select-a" href="###">挑战赛</a></li>
           </ul>
-        </div>
+        </div>-->
       </li>
       <li><a href="#myPrize" data-toggle="tab"><b class="ico ico-1"></b>我的奖品<span class="orange">(2)</span></a></li>
       <li><a href="#sdDetail" data-toggle="tab"><b class="ico ico-2"></b>顺豆明细</a></li>
@@ -38,70 +39,100 @@
 
   <div class="tab-content tableW1140">
     <div class="tab tab-pane fade" id="myTeam">
-      我的战队
+      		我的战队
     </div>
     <div class="tab tab-pane fade active in" id="myGame">
-      <div class="stripped">
-        <table width="100%">
-          <thead>
-          <tr>
-            <th width="27%">比赛名称</th>
-            <th width="27%">账号</th>
-            <th width="24%">比赛时间</th>
-            <th width="9%">排名</th>
-            <th >奖励</th>
-          </tr>
-          </thead>
-          <tbody>
-          <tr>
-            <td>沈阳赛区4月第一轮LOL杀神之王</td>
-            <td>英雄联盟－皮城警备－哈哈哈哈哈哈哈哈</td>
-            <td>2015.8.26 10:08:34</td>
-            <td>333</td>
-            <td>5000顺豆</td>
-          </tr>
-          <tr>
-            <td>沈阳赛区4月第一轮LOL杀神之王</td>
-            <td>英雄联盟－皮城警备－哈哈哈哈哈哈哈哈</td>
-            <td>2015.8.26 10:08:34</td>
-            <td>333</td>
-            <td>5000顺豆</td>
-          </tr>
-          <tr class="blue">
-            <td>沈阳赛区4月第一轮LOL杀神之王</td>
-            <td>英雄联盟－皮城警备－哈哈哈哈哈哈哈哈</td>
-            <td>2015.8.26 10:08:34</td>
-            <td>四强</td>
-            <td>5000顺豆</td>
-          </tr>          <tr>
-            <td>沈阳赛区4月第一轮LOL杀神之王</td>
-            <td>英雄联盟－皮城警备－哈哈哈哈哈哈哈哈</td>
-            <td>2015.8.26 10:08:34</td>
-            <td>333</td>
-            <td>5000顺豆</td>
-          </tr>
-          <tr>
-            <td>沈阳赛区4月第一轮LOL杀神之王</td>
-            <td>英雄联盟－皮城警备－哈哈哈哈哈哈哈哈</td>
-            <td>2015.8.26 10:08:34</td>
-            <td>333</td>
-            <td>5000顺豆</td>
-          </tr>          <tr>
-            <td>沈阳赛区4月第一轮LOL杀神之王</td>
-            <td>英雄联盟－皮城警备－哈哈哈哈哈哈哈哈</td>
-            <td>2015.8.26 10:08:34</td>
-            <td>333</td>
-            <td>5000顺豆</td>
-          </tr>
-          </tbody>
-        </table>
-      </div>
-      <div class="pageBox">
-        <a href="javascript:void(0)" class="pageCur">1</a>
-        <a href="javascript:void(0)" >2</a>
-        <a href="javascript:void(0)">3</a>
-        <a href="javascript:void(0)">4</a>
-      </div>
+    	<ul class="game_menu">
+    		<li class="active">
+    			<a href="#gameList1" data-toggle="tab">我的战队</a>
+    		</li>
+    		<li>
+    			<a href="#gameList2" data-toggle="tab">我的战队</a>
+    		</li>
+    		<li>
+    			<a href="#gameList3" data-toggle="tab">我的战队</a>
+    		</li>
+    		<li>
+    			<a href="#gameList4" data-toggle="tab">我的战队</a>
+    		</li>
+    	</ul>
+    	<div class="tab tab-pane fade active in" id="gameList1">
+    		<div class="stripped">
+	        <table width="100%">
+	          <thead>
+	          <tr>
+	            <th width="25%">比赛名称</th>
+	            <th width="25%">账号</th>
+	            <th width="20%">比赛时间</th>
+	            <th width="10%">排名</th>
+	            <th width="10%">备注</th>
+	            <th >奖励</th>
+	          </tr>
+	          </thead>
+	          <tbody>
+	          <tr>
+	            <td>沈阳赛区4月第一轮LOL杀神之王</td>
+	            <td>英雄联盟－皮城警备－哈哈哈哈哈哈哈哈</td>
+	            <td>2015.8.26 10:08:34</td>
+	            <td>333</td>
+	            <td><a class="check">没有战绩？</a></td>
+	            <td>5000顺豆</td>
+	          </tr>
+	          <tr>
+	            <td>沈阳赛区4月第一轮LOL杀神之王</td>
+	            <td>英雄联盟－皮城警备－哈哈哈哈哈哈哈哈</td>
+	            <td>2015.8.26 10:08:34</td>
+	            <td>333</td>
+	            <td>未完成目标</td>
+	            <td>5000顺豆</td>
+	          </tr>
+	          <tr class="blue">
+	            <td>沈阳赛区4月第一轮LOL杀神之王</td>
+	            <td>英雄联盟－皮城警备－哈哈哈哈哈哈哈哈</td>
+	            <td>2015.8.26 10:08:34</td>
+	            <td>四强</td>
+	            <td>已达成目标</td>
+	            <td>5000顺豆</td>
+	          </tr>          <tr>
+	            <td>沈阳赛区4月第一轮LOL杀神之王</td>
+	            <td>英雄联盟－皮城警备－哈哈哈哈哈哈哈哈</td>
+	            <td>2015.8.26 10:08:34</td>
+	            <td>333</td>
+	            <td>已达成目标</td>
+	            <td>5000顺豆</td>
+	          </tr>
+	          <tr>
+	            <td>沈阳赛区4月第一轮LOL杀神之王</td>
+	            <td>英雄联盟－皮城警备－哈哈哈哈哈哈哈哈</td>
+	            <td>2015.8.26 10:08:34</td>
+	            <td>333</td>
+	            <td>已达成目标</td>
+	            <td>5000顺豆</td>
+	          </tr>          <tr>
+	            <td>沈阳赛区4月第一轮LOL杀神之王</td>
+	            <td>英雄联盟－皮城警备－哈哈哈哈哈哈哈哈</td>
+	            <td>2015.8.26 10:08:34</td>
+	            <td>333</td>
+	            <td>已达成目标</td>
+	            <td>5000顺豆</td>
+	          </tr>
+	          </tbody>
+	        </table>
+	      </div>
+	      <div class="pageBox">
+	        <a href="javascript:void(0)" class="pageCur">1</a>
+	        <a href="javascript:void(0)" >2</a>
+	        <a href="javascript:void(0)">3</a>
+	        <a href="javascript:void(0)">4</a>
+	      </div>
+    	</div>
+    	
+    	<div class="tab tab-pane fade active in" id="gameList2">2</div>
+    	<div class="tab tab-pane fade active in" id="gameList3">3</div>
+    	<div class="tab tab-pane fade active in" id="gameList4">4</div>
+    	
+    	
+      
     </div>
     <div class="tab tab-pane fade " id="myPrize">
       <div class="stripped">
@@ -131,7 +162,9 @@
               <td>皮尔特沃弗</td>
               <td>baba巴巴罢罢罢</td>
               <td>顺网</td>
-              <td><a class="ly-btnB" href="">已领取</a></td>
+              <td>
+              	<a class="ly-btnE iconfont icon-kuaidi" href="">已领取</a>
+              </td>
             </tr>
             <tr>
               <td>2015.8.26 10:08:34</td>
@@ -616,6 +649,37 @@
   </div>
 </div>
 
+<!-- 翻查框 -->
+<div id="check-code" tabindex="-1" role="dialog" aria-hidden="true" class="modal hide modal-s" data-backdrop="static">
+  <div class="modal-dialog modal-md">
+    <div class="modal-content">
+    	<div class="modal-header">
+	        <a data-dismiss="modal" aria-hidden="true" class="close"></a>
+	      </div>
+      <div class="modal-body ptb20">
+        <div class="intro">
+					<h1>请输入验证码，系统帮您确认战绩</h1>
+					<div class="code_box">
+						<div class="code">
+							<img src=""/>
+						</div>
+						<input type="text" class="codeStr">
+					</div>
+					<p>*验证码有误</p>				
+        </div>
+      </div>
+      <div class="modal-footer text-right">
+        <div class="modal-btns">
+          <a href="javascript:void(0)" data-dismiss="modal" aria-hidden="true" class="btn_sure close" >提交</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="loading_box">
+	<span class="iconfont icon-loading"></span>查询中...
+</div>
 
 <script src="scripts/jquery-3.1.0.min.js"></script>
 <script type="text/javascript" src="scripts/bootstrap.min.js"></script>
@@ -664,16 +728,14 @@
       $(".select-wrap").hide();
     });
 
-    $("#myGame").click(function(event){
-      event.stopPropagation();
-      $(this).tab('show');
-      var ul = $(".select-wrap");
-      if(ul.css("display")=="none"){
-        ul.slideDown("fast");
-      }else{
-        ul.slideUp("fast");
-      }
+    $("#myGame").on('click','.check',function(event){
+      $('#check-code').modal();
     });
+    
+	  $('#loading_box').show();
+
+//	  $('#loading_box').hide();
+    
     
     //领奖信息tip
     $('#cash-new-modal .modal-header h1 span,#cash-new-modal .tip_content').hover(function() {
