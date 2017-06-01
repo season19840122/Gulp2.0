@@ -17,20 +17,20 @@ var spriteConfig = {
 gulp.task('sprite', function () {
   return gulp.src(spriteConfig.imgSrc)
     .pipe($.spritesmith({
-      imgName: spriteConfig.imgSprite // 保存合并后图片的地址
-      ,cssName: spriteConfig.cssName // 保存合并后对于css样式的地址
-      ,padding: spriteConfig.padding // 合并时两个图片的间距
-      ,algorithm: 'binary-tree' // 注释1
-      ,cssTemplate: function (data) {
-        var arr=[];
+      imgName: spriteConfig.imgSprite, // 保存合并后图片的地址
+      cssName: spriteConfig.cssName, // 保存合并后对于 css 样式的地址
+      padding: spriteConfig.padding, // 合并时两个图片的间距
+      algorithm: 'binary-tree', // 注释1
+      cssTemplate: function (data) {
+        var arr = [];
         data.sprites.forEach(function (sprite) {
-          arr.push(".icon-"+sprite.name+
+          arr.push(".icon-" + sprite.name+
           "{" +
-          "background-image: url('"+sprite.escaped_image+"');"+
-          "background-repeat: no-repeat;"+
-          "background-position: "+sprite.px.offset_x+" "+sprite.px.offset_y+";"+
-          "width:"+sprite.px.width+";"+
-          "height:"+sprite.px.height+";"+
+          "background-image: url('" + sprite.escaped_image + "');"+
+          "background-repeat: no-repeat;" +
+          "background-position: " + sprite.px.offset_x + " " + sprite.px.offset_y + ";" +
+          "width:" + sprite.px.width + ";" +
+          "height:" + sprite.px.height + ";" +
           "}\n");
         });
         return arr.join("");
@@ -66,6 +66,8 @@ gulp.task('scripts', function() {
     ,compress: false // 类型：Boolean 默认：true 是否完全压缩
     ,output: {
       beautify: true
+      ,indent_level: 2
+      ,indent_start: 4
       ,comments: /^!|@preserve|@license|@cc_on/i 
     } // 保留指定的注释信息
   }))
@@ -103,6 +105,8 @@ gulp.task('jade', function () {
         ,compress: false // 类型：Boolean 默认：true 是否完全压缩
         ,output: {
           beautify: true
+          ,indent_level: 2
+          ,indent_start: 4
           ,comments: /^!|@preserve|@license|@cc_on/i 
         } 
       }, // 压缩页面 JS
