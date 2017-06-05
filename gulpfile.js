@@ -107,12 +107,12 @@ gulp.task('jade', function () {
           beautify: true
           ,indent_level: 2
           ,indent_start: 4
-          ,comments: /^!|@preserve|@license|@cc_on/i 
+          ,comments: /^!|@preserve|@license|@cc_on/i
         } 
-      }, // 压缩页面 JS
-      minifyCSS: {
+      } // 压缩页面 JS
+      ,minifyCSS: {
         compatibility: 'ie9' // 兼容 IE9
-        ,format: 'beautify' // 不压缩成 1 行，输出非常好的代码
+        ,format: 'keep-breaks' // 不压缩成 1 行，输出非常好的代码
       } // 压缩页面 CSS
     }))
     .pipe(gulp.dest('app'))
