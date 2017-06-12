@@ -56,7 +56,7 @@ gulp.task('sass', function() {
     .pipe(browserSync.stream());
 });
 
-gulp.task('scripts', function() {
+gulp.task('script', function() {
   gulp.src([
     'app/scripts/u/**/*.js'
   ])
@@ -173,7 +173,7 @@ gulp.task('cleantmp', require('del').bind(null, ['.tmp']));
 gulp.task('clean', require('del').bind(null, ['dist']));
 
 // 启一个 Browser-sync 服务器并监听文件改动
-gulp.task('serve', ['less', 'scripts', 'jade'], function() {
+gulp.task('serve', ['less', 'script', 'jade'], function() {
   browserSync.init({
     server: {
       baseDir: ['app', '.tmp']
@@ -181,7 +181,7 @@ gulp.task('serve', ['less', 'scripts', 'jade'], function() {
     }
   });
   gulp.watch('app/styles/*.less', ['less']);
-  gulp.watch('app/scripts/**/*.js', ['scripts']);
+  gulp.watch('app/scripts/**/*.js', ['script']);
   gulp.watch('app/templates/jade/*.jade', ['jade']);
   gulp.watch([
     'app/*.html'
@@ -195,7 +195,7 @@ gulp.task('pre', ['clean'], function(){
   gulp.start('step1');
 });
 
-gulp.task('step1', ['less', 'scripts', 'jade', 'image'], function(){
+gulp.task('step1', ['less', 'script', 'jade', 'image'], function(){
   gulp.start('step2');
 });
 
